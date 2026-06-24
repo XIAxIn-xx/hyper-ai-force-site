@@ -208,7 +208,7 @@ const content = {
       challenge:
         "GLP needed reliable fire-safety and security patrol coverage across an industrial park, including roads, warehouse surroundings, perimeter areas and night-time routine checks.",
       solution:
-        "Hyper AI Force supported the deployment of robotic dogs for scheduled park patrols, remote monitoring, abnormal-event awareness and on-site evidence capture across daily security routes.",
+        "Hyper AI Force supported the deployment of robotic dogs for scheduled park patrols, teleoperation, abnormal-event awareness and on-site evidence capture across daily security routes.",
       outcomes: [
         "Expanded patrol coverage across the industrial park",
         "Improved fire-safety and security visibility",
@@ -219,7 +219,7 @@ const content = {
       eyebrow: "Support & Service Network",
       title: "From solution design to full-cycle support.",
       copy:
-        "Hyper AI Force positions robotics as an integrated service, not a standalone device. Deployment includes solution design, technical support, maintenance planning, operator training, robot leasing and remote operation.",
+        "Hyper AI Force positions robotics as an integrated service, not a standalone device. Deployment includes solution design, technical support, maintenance planning, operator training, robot leasing and teleoperation.",
       items: [
         { icon: "Handshake", label: "Solution Design" },
         { icon: "Cpu", label: "Technical Support" },
