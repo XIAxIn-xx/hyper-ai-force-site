@@ -43,30 +43,16 @@ export function Header({ content }: HeaderProps) {
       )}
     >
       <div className="section-shell flex h-16 items-center justify-between">
-        <Link href={homeHref} className="group flex items-center gap-3">
-          <span
-            className={cn(
-              "flex h-9 w-9 items-center justify-center rounded-md border text-sm font-black tracking-tight shadow-glow transition-colors",
+        <Link href={homeHref} className="group flex items-center">
+          <img
+            src={
               scrolled || open
-                ? "border-cyan-500/35 bg-white text-cyan-700"
-                : "border-cyan-300/40 bg-cyan-300/10 text-cyan-200"
-            )}
-          >
-            HF
-          </span>
-          <span className="leading-tight">
-            <span className="block text-sm font-bold tracking-wide">
-              Hyper AI Force
-            </span>
-            <span
-              className={cn(
-                "block text-[11px] uppercase tracking-[0.28em] transition-colors",
-                scrolled || open ? "text-slate-500" : "text-slate-400"
-              )}
-            >
-              AI Robotics
-            </span>
-          </span>
+                ? "/images/logo/ai-force-logo-dark.png"
+                : "/images/logo/ai-force-logo-light.png"
+            }
+            alt="AIForce"
+            className="h-11 w-auto object-contain"
+          />
         </Link>
 
         <nav
