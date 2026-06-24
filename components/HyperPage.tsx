@@ -21,7 +21,7 @@ export function HyperPage({ locale }: HyperPageProps) {
   const content = getHyperContent(locale);
 
   return (
-    <>
+    <div className="pretty-copy">
       <Header content={content} />
       <main>
         <HeroSection content={content} />
@@ -36,6 +36,6 @@ export function HyperPage({ locale }: HyperPageProps) {
         <ContactSection content={content} />
       </main>
       <Footer content={content} />
-    </>
+    </div>
   );
 }

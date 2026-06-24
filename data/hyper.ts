@@ -116,13 +116,13 @@ const content = {
           icon: "BrainCircuit",
           title: "Full-stack AI autonomy",
           text:
-            "AI perception, anomaly detection, sensor fusion and task-level decision logic support autonomous patrol and inspection."
+            "AI perception, anomaly detection, sensor fusion and task-level decision logic support autonomous patrol."
         },
         {
           icon: "Bot",
-          title: "Multi-form robot matrix",
+          title: "Robot fleet coordination",
           text:
-            "Quadruped, wheeled, spherical and aerial platforms can be configured for different terrain, payload and safety scenarios."
+            "Quadruped and wheeled robots can operate as a coordinated fleet, with unified task assignment, status awareness and field execution."
         },
         {
           icon: "Route",
@@ -131,10 +131,10 @@ const content = {
             "Navigation, obstacle avoidance and route planning help robots operate across factories, campuses, utilities and outdoor facilities."
         },
         {
-          icon: "Globe2",
-          title: "Global service readiness",
+          icon: "Radio",
+          title: "Teleoperation",
           text:
-            "International channel experience, remote diagnostics and service network planning reduce deployment and maintenance friction."
+            "Low-latency remote operation keeps operators in the loop for real-time supervision, emergency takeover and precise field intervention."
         }
       ]
     },
@@ -350,13 +350,13 @@ const content = {
           icon: "BrainCircuit",
           title: "全棧 AI 自主能力",
           text:
-            "AI 感知、異常識別、多傳感器融合與任務級決策邏輯，支撐自主巡邏巡檢"
+            "AI 感知、異常識別、多傳感器融合與任務級決策邏輯，支撐自主巡邏"
         },
         {
           icon: "Bot",
-          title: "多形態機器人矩陣",
+          title: "機器人隊列協同",
           text:
-            "四足、輪式、球形與空中平台可按地形、載荷與安全場景靈活配置"
+            "四足與輪式機器人可組成統一隊列，支援任務分配、狀態感知與現場協同執行"
         },
         {
           icon: "Route",
@@ -365,10 +365,10 @@ const content = {
             "導航、避障與路徑規劃能力，支援工廠、園區、能源設施與戶外場地運行"
         },
         {
-          icon: "Globe2",
-          title: "全球服務部署能力",
+          icon: "Radio",
+          title: "遠程遙操能力",
           text:
-            "國際渠道經驗、遠程診斷與服務網絡規劃，降低部署與維護摩擦"
+            "低延遲遠程遙操讓操作人員保持在回路中，支援實時監督、緊急接管與精準現場干預"
         }
       ]
     },
@@ -565,13 +565,13 @@ const content = {
           icon: "BrainCircuit",
           title: "全栈 AI 自主能力",
           text:
-            "AI 感知、异常识别、多传感器融合与任务级决策逻辑，支撑自主巡逻巡检"
+            "AI 感知、异常识别、多传感器融合与任务级决策逻辑，支撑自主巡逻"
         },
         {
           icon: "Bot",
-          title: "多形态机器人矩阵",
+          title: "机器人队列协同",
           text:
-            "四足、轮式、球形与空中平台可按地形、载荷与安全场景灵活配置"
+            "四足与轮式机器人可组成统一队列，支持任务分配、状态感知与现场协同执行"
         },
         {
           icon: "Route",
@@ -580,10 +580,10 @@ const content = {
             "导航、避障与路径规划能力，支持工厂、园区、能源设施与户外场地运行"
         },
         {
-          icon: "Globe2",
-          title: "全球服务部署能力",
+          icon: "Radio",
+          title: "远程遥操能力",
           text:
-            "国际渠道经验、远程诊断与服务网络规划，降低部署与维护摩擦"
+            "低延迟远程遥操让操作人员保持在回路中，支持实时监督、紧急接管与精准现场干预"
         }
       ]
     },

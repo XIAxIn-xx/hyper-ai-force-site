@@ -49,3 +49,11 @@ body {
   background-size: 44px 44px;
   mask-image: linear-gradient(to bottom, black, transparent 78%);
 }
+
+.pretty-copy h1,
+.pretty-copy h2,
+.pretty-copy h3,
+.pretty-copy p {
+  text-wrap: pretty;
+  word-break: auto-phrase;
+}
