@@ -21,9 +21,6 @@ export function AboutSection({ content }: AboutSectionProps) {
               className="object-cover object-[50%_82%] opacity-78"
             />
             <div className="absolute inset-0 bg-gradient-to-br from-[#050B14]/85 via-[#050B14]/35 to-cyan-950/50" />
-            <div className="absolute left-6 top-6 rounded-md border border-cyan-300/30 bg-cyan-300/10 px-4 py-3 text-sm font-bold text-cyan-100">
-              Hong Kong · Global Robotics
-            </div>
           </div>
         </Reveal>
         <Reveal delay={0.1}>

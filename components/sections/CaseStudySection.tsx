@@ -23,10 +23,10 @@ export function CaseStudySection({ content }: CaseStudySectionProps) {
             <div className="absolute inset-0 bg-gradient-to-t from-[#050B14]/70 via-transparent to-transparent" />
             <div className="absolute bottom-5 left-5 right-5 rounded-lg border border-white/15 bg-[#050B14]/75 p-5 text-white backdrop-blur">
               <p className="text-sm font-semibold text-cyan-200">
-                Autonomous Inspection Workflow
+                {content.caseStudy.imageTitle}
               </p>
               <p className="mt-2 text-sm text-slate-300">
-                Route execution, anomaly detection and remote monitoring for high-value facilities.
+                {content.caseStudy.imageText}
               </p>
             </div>
           </div>
@@ -40,11 +40,11 @@ export function CaseStudySection({ content }: CaseStudySectionProps) {
           </h2>
           <div className="mt-7 grid gap-5 text-base leading-8 text-slate-600">
             <p>
-              <span className="font-bold text-slate-950">Challenge: </span>
+              <span className="font-bold text-slate-950">{content.caseStudy.labels.challenge}: </span>
               {content.caseStudy.challenge}
             </p>
             <p>
-              <span className="font-bold text-slate-950">Solution: </span>
+              <span className="font-bold text-slate-950">{content.caseStudy.labels.solution}: </span>
               {content.caseStudy.solution}
             </p>
           </div>
@@ -57,7 +57,7 @@ export function CaseStudySection({ content }: CaseStudySectionProps) {
             ))}
           </div>
           <a href="#contact" className="mt-9 inline-flex items-center gap-2 text-sm font-bold text-cyan-700 hover:text-cyan-600">
-            Start a deployment conversation
+            {content.caseStudy.cta}
             <ArrowRight className="h-4 w-4" />
           </a>
         </Reveal>

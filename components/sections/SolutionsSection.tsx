@@ -31,9 +31,9 @@ export function SolutionsSection({ content }: SolutionsSectionProps) {
                     <div>
                       <h3 className="text-2xl font-bold text-slate-950">{item.title}</h3>
                       <div className="mt-5 grid gap-4 text-sm leading-7 text-slate-600">
-                        <p><span className="font-bold text-slate-950">Problem: </span>{item.problem}</p>
-                        <p><span className="font-bold text-slate-950">Solution: </span>{item.solution}</p>
-                        <p><span className="font-bold text-slate-950">Value: </span>{item.value}</p>
+                        <p><span className="font-bold text-slate-950">{content.solutions.labels.problem}: </span>{item.problem}</p>
+                        <p><span className="font-bold text-slate-950">{content.solutions.labels.solution}: </span>{item.solution}</p>
+                        <p><span className="font-bold text-slate-950">{content.solutions.labels.value}: </span>{item.value}</p>
                       </div>
                     </div>
                   </div>

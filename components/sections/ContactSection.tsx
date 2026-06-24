@@ -30,7 +30,7 @@ export function ContactSection({ content }: ContactSectionProps) {
             </div>
             <div className="flex items-center gap-3">
               <MapPin className="h-5 w-5 text-cyan-300" />
-              Building 19W, No.19 Science Park West Avenue, Hong Kong Science Park, Pak Shek Kok, New Territories, Hong Kong (Tai Po Town Lot No.204)
+              {content.contact.address}
             </div>
           </div>
         </Reveal>
