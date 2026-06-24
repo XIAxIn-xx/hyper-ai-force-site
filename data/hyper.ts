@@ -371,9 +371,9 @@ const content = {
         },
         {
           icon: "Radio",
-          title: "遠程操控解決方案（Teleoperation）",
+          title: "遠程操控解決方案",
           problem: "複雜場地中的機器人仍需要人在回路決策與緊急接管能力",
-          solution: "Teleoperation 提供低延遲實時遠程控制，並以 Remote Control 作為輔助操作與緊急干預方式",
+          solution: "遠程操縱提供低延遲實時遠程控制，並以人工接管作為輔助操作與緊急干預方式",
           value: "在需要人工判斷、安全升級或精準遠程操作時，讓操作人員始終保持可控"
         },
         {
@@ -385,10 +385,10 @@ const content = {
         },
         {
           icon: "CloudCog",
-          title: "Robot Scheduling Platform (RSP) 平台",
+          title: "機器人調度平台平台(RSP)",
           problem: "多機器人部署需要統一的任務調度、分發與協同運營中樞",
           solution: "RSP平台支援多機器人任務調度、機器人集群管理、遠程任務分發與工作流自動化",
-          value: "作為連接硬件、AI 與 Teleoperation 的中樞平台，支撐可擴展的機器人運營"
+          value: "作為連接硬件、AI 與遠程操縱的中樞平台，支撐可擴展的機器人運營"
         }
       ]
     },
@@ -396,8 +396,8 @@ const content = {
       eyebrow: "應用場景",
       title: "服務於重視安全、覆蓋與穩定運行的設施",
       items: [
-        { icon: "Flame", label: "消防與應急" },
-        { icon: "Map", label: "倉儲與物流" },
+        { icon: "Flame", label: "消防應急" },
+        { icon: "Map", label: "倉儲物流" },
         { icon: "RadioTower", label: "能源與公用設施" },
         { icon: "Factory", label: "工業廠區" },
         { icon: "Building2", label: "智慧園區" },
