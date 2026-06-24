@@ -13,7 +13,8 @@ export const metadata: Metadata = {
     canonical: "/zh-hk",
     languages: {
       en: "/",
-      "zh-HK": "/zh-hk"
+      "zh-HK": "/zh-hk",
+      "zh-CN": "/zh-cn"
     }
   },
   openGraph: {

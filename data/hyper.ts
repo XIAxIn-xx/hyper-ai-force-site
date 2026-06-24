@@ -21,7 +21,7 @@ import {
   Wrench
 } from "lucide-react";
 
-export type Locale = "en" | "zh-hk";
+export type Locale = "en" | "zh-hk" | "zh-cn";
 
 export type HyperContent = ReturnType<typeof getHyperContent>;
 
@@ -455,6 +455,198 @@ const content = {
       options: ["自主巡航", "遠程操控（Teleoperation）", "AI巡檢", "RSP平台"]
     },
     footer: "AI 機器人、自主巡航與遠程操縱方案"
+  },
+  "zh-cn": {
+    lang: "zh-CN",
+    localeName: "简体中文",
+    switchLabel: "EN",
+    switchHref: "/",
+    nav: [
+      { label: "技术能力", href: "#technology" },
+      { label: "解决方案", href: "#solutions" },
+      { label: "应用场景", href: "#applications" },
+      { label: "服务支持", href: "#service" },
+      { label: "关于我们", href: "#about" }
+    ],
+    seo: {
+      title: "Hyper AI Force Limited | 超流智能有限公司",
+      description:
+        "超流智能有限公司专注 AI Robotics、具身智能、自主巡逻与工业巡检系统，服务物理安全、设施运维与关键基础设施场景",
+      keywords: [
+        "超流智能有限公司",
+        "Hyper AI Force",
+        "AI Robotics",
+        "具身智能",
+        "自主巡逻机器人",
+        "工业巡检"
+      ]
+    },
+    hero: {
+      eyebrow: "超流智能有限公司",
+      title: "面向真实产业场景的 AI 机器人智能系统",
+      subtitle:
+        "我们将 AI 感知、自主巡航、远程操纵、运动控制与场景交付能力结合，为物理安全、工业巡检与设施运维提供可部署的机器人方案",
+      primaryCta: "预约演示",
+      secondaryCta: "了解技术",
+      stats: [
+        { value: "24/7", label: "自主巡逻与值守能力" },
+        { value: "AI +", label: "感知、决策与边缘智能" },
+        { value: "全球化", label: "全球市场与服务视野" }
+      ]
+    },
+    market: {
+      eyebrow: "市场痛点",
+      title: "让机器人进入高风险、重复性与安防盲区场景",
+      copy:
+        "物理安全与工业巡检仍高度依赖人工巡逻、人工观察与事后处理。Hyper AI Force 将机器人移动能力、AI 异常识别与远程操纵整合为可落地的运营平台",
+      points: [
+        "大范围巡逻人力成本高，难以持续扩展",
+        "夜间、周界与重复检查容易出现注意力下降",
+        "危险、偏远或户外环境会增加人员暴露风险",
+        "突发事件需要即时警报、证据留存与远程操纵"
+      ]
+    },
+    strengths: {
+      eyebrow: "核心优势",
+      title: "为真实部署而生，不止于实验室展示",
+      items: [
+        {
+          icon: "BrainCircuit",
+          title: "全栈 AI 自主能力",
+          text:
+            "AI 感知、异常识别、多传感器融合与任务级决策逻辑，支撑自主巡逻与巡检"
+        },
+        {
+          icon: "Bot",
+          title: "多形态机器人矩阵",
+          text:
+            "四足、轮式、球形与空中平台可按地形、载荷与安全场景灵活配置"
+        },
+        {
+          icon: "Route",
+          title: "自适应导航",
+          text:
+            "导航、避障与路径规划能力，支持工厂、园区、能源设施与户外场地运行"
+        },
+        {
+          icon: "Globe2",
+          title: "全球服务部署能力",
+          text:
+            "国际渠道经验、远程诊断与服务网络规划，降低部署与维护摩擦"
+        }
+      ]
+    },
+    technology: {
+      eyebrow: "机器人智能平台",
+      title: "面向自主机器人队伍的软件化运营层",
+      copy:
+        "操作人员可通过浏览器或平板分配任务、查看实时数据、接收警报并监督多台机器人。平台连接边缘 AI、云端监控与人工介入",
+      capabilities: [
+        "AI 感知与威胁检测",
+        "自主导航与路径规划",
+        "多传感器融合",
+        "运动控制与地形适应",
+        "边缘计算与云端监控",
+        "远程操纵与机队管理"
+      ]
+    },
+    solutions: {
+      eyebrow: "产品与方案",
+      title: "面向真实工业环境的能力组合",
+      items: [
+        {
+          icon: "Route",
+          title: "自主巡航解决方案",
+          problem: "工业场景需要机器人在较少人工干预下持续自主运行",
+          solution: "AI 驱动自主导航、巡逻路径规划、实时环境感知与边缘端部署能力，支持现场连续运行",
+          value: "减少人工巡逻干预，提升工业环境中的覆盖效率、稳定性与响应能力"
+        },
+        {
+          icon: "Radio",
+          title: "远程操控解决方案",
+          problem: "复杂场地中的机器人仍需要人在回路决策与紧急接管能力",
+          solution: "远程操纵提供低延迟实时远程控制，并以人工接管作为辅助操作与紧急干预方式",
+          value: "在需要人工判断、安全升级或精准远程操作时，让操作人员始终保持可控"
+        },
+        {
+          icon: "Activity",
+          title: "AI 巡检解决方案",
+          problem: "工业巡检任务重复、数据量大，且高风险环境会增加人员暴露",
+          solution: "机器人执行工业场景自动巡检，结合 AI 视觉缺陷检测、安全监测、数据分析与异常识别",
+          value: "提升巡检一致性、安全可视性与基于数据的维护决策能力"
+        },
+        {
+          icon: "CloudCog",
+          title: "机器人调度平台平台(RSP)",
+          problem: "多机器人部署需要统一的任务调度、分发与协同运营中枢",
+          solution: "RSP平台支持多机器人任务调度、机器人集群管理、远程任务分发与工作流自动化",
+          value: "作为连接硬件、AI 与远程操纵的中枢平台，支撑可扩展的机器人运营"
+        }
+      ]
+    },
+    applications: {
+      eyebrow: "应用场景",
+      title: "服务于重视安全、覆盖与稳定运行的设施",
+      items: [
+        { icon: "Flame", label: "消防应急" },
+        { icon: "Map", label: "仓储物流" },
+        { icon: "RadioTower", label: "能源与公用设施" },
+        { icon: "Factory", label: "工业厂区" },
+        { icon: "Building2", label: "智慧园区" },
+        { icon: "Siren", label: "公共安全" }
+      ]
+    },
+    caseStudy: {
+      eyebrow: "案例场景",
+      title: "普洛斯工业园区机器狗巡逻部署",
+      challenge:
+        "普洛斯需要在工业园区道路、仓库周边、周界区域及夜间例行巡查中，获得更稳定的消防与安防巡逻覆盖",
+      solution:
+        "Hyper AI Force 支持部署机器狗执行园区定时巡逻、远程监看、异常事件感知与现场证据采集，服务日常安防巡逻路线",
+      outcomes: ["扩大工业园区巡逻覆盖", "提升消防与安防可视性", "减少重复性周界巡逻工作"]
+    },
+    service: {
+      eyebrow: "支持与服务网络",
+      title: "从方案设计到全程支持",
+      copy:
+        "Hyper AI Force 将机器人视为整合服务，而非单一设备。交付包括方案设计、技术支持、维护规划、操作培训、机器租赁与远程代操",
+      items: [
+        { icon: "Handshake", label: "方案设计" },
+        { icon: "Cpu", label: "技术支持" },
+        { icon: "Wrench", label: "售后维护" },
+        { icon: "BadgeCheck", label: "操作培训" },
+        { icon: "PackageCheck", label: "机器租赁" },
+        { icon: "Radio", label: "远程代操" }
+      ]
+    },
+    about: {
+      eyebrow: "关于 Hyper AI Force",
+      title: "连接自主智能与真实运营场景的 AI 机器人公司",
+      copy:
+        "超流智能有限公司专注 AI 感知、自主移动、远程操纵与边缘智能系统。团队面向物理安全、工业巡检、设施巡逻与自动化运维构建机器人系统，帮助组织将智能机器部署到可衡量的实际流程中",
+      bullets: [
+        "面向物理世界产业的具身智能",
+        "以香港为起点的全球市场视野",
+        "硬件、软件与 AI 的一体化交付"
+      ]
+    },
+    contact: {
+      eyebrow: "联系我们",
+      title: "为你的场地规划机器人部署",
+      copy:
+        "告诉我们你的设施、巡逻工作量或巡检场景。我们将协助匹配合适的机器人形态、AI 能力与服务模型",
+      button: "预约演示",
+      fields: {
+        name: "姓名",
+        company: "公司",
+        email: "电邮",
+        phone: "电话",
+        interest: "感兴趣的产品 / 方案",
+        message: "需求描述"
+      },
+      options: ["自主巡航", "远程操控（Teleoperation）", "AI巡检", "RSP平台"]
+    },
+    footer: "AI 机器人、自主巡航与远程操纵方案"
   }
 } as const;
 

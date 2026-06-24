@@ -12,9 +12,17 @@ type HeaderProps = {
   content: HyperContent;
 };
 
+const languageLinks = [
+  { lang: "en", label: "EN", href: "/" },
+  { lang: "zh-HK", label: "繁中", href: "/zh-hk" },
+  { lang: "zh-CN", label: "简中", href: "/zh-cn" }
+];
+
 export function Header({ content }: HeaderProps) {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const homeHref =
+    content.lang === "zh-HK" ? "/zh-hk" : content.lang === "zh-CN" ? "/zh-cn" : "/";
 
   useEffect(() => {
     const updateScrolled = () => setScrolled(window.scrollY > 48);
@@ -35,7 +43,7 @@ export function Header({ content }: HeaderProps) {
       )}
     >
       <div className="section-shell flex h-16 items-center justify-between">
-        <Link href={content.lang === "zh-HK" ? "/zh-hk" : "/"} className="group flex items-center gap-3">
+        <Link href={homeHref} className="group flex items-center gap-3">
           <span
             className={cn(
               "flex h-9 w-9 items-center justify-center rounded-md border text-sm font-black tracking-tight shadow-glow transition-colors",
@@ -82,18 +90,24 @@ export function Header({ content }: HeaderProps) {
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">
-          <Button
-            asChild
-            variant="outline"
-            size="sm"
-            className={cn(
-              scrolled || open
-                ? "border-slate-300 text-slate-800 hover:bg-white"
-                : "border-white/20 text-white hover:bg-white/10"
-            )}
-          >
-            <Link href={content.switchHref}>{content.switchLabel}</Link>
-          </Button>
+          <div className="flex items-center gap-2">
+            {languageLinks.map((item) => (
+              <Button
+                key={item.lang}
+                asChild
+                variant="outline"
+                size="sm"
+                className={cn(
+                  scrolled || open
+                    ? "border-slate-300 text-slate-800 hover:bg-white"
+                    : "border-white/20 text-white hover:bg-white/10",
+                  content.lang === item.lang ? "bg-white/15 text-cyan-200" : ""
+                )}
+              >
+                <Link href={item.href}>{item.label}</Link>
+              </Button>
+            ))}
+          </div>
           <Button asChild size="sm">
             <a href="#contact">{content.contact.button}</a>
           </Button>
@@ -126,15 +140,23 @@ export function Header({ content }: HeaderProps) {
                 {item.label}
               </a>
             ))}
-            <div className="grid grid-cols-2 gap-3 pt-2">
-              <Button
-                asChild
-                variant="outline"
-                size="sm"
-                className="border-slate-300 text-slate-800 hover:bg-white"
-              >
-                <Link href={content.switchHref}>{content.switchLabel}</Link>
-              </Button>
+            <div className="grid grid-cols-4 gap-3 pt-2">
+              {languageLinks.map((item) => (
+                <Button
+                  key={item.lang}
+                  asChild
+                  variant="outline"
+                  size="sm"
+                  className={cn(
+                    "border-slate-300 text-slate-800 hover:bg-white",
+                    content.lang === item.lang ? "bg-white text-cyan-700" : ""
+                  )}
+                >
+                  <Link href={item.href} onClick={() => setOpen(false)}>
+                    {item.label}
+                  </Link>
+                </Button>
+              ))}
               <Button asChild size="sm">
                 <a href="#contact" onClick={() => setOpen(false)}>
                   {content.contact.button}

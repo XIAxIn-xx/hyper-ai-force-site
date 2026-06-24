@@ -3,14 +3,14 @@ import type { Metadata } from "next";
 import { HyperPage } from "@/components/HyperPage";
 import { getHyperContent } from "@/data/hyper";
 
-const content = getHyperContent("en");
+const content = getHyperContent("zh-cn");
 
 export const metadata: Metadata = {
   title: content.seo.title,
   description: content.seo.description,
   keywords: [...content.seo.keywords],
   alternates: {
-    canonical: "/",
+    canonical: "/zh-cn",
     languages: {
       en: "/",
       "zh-HK": "/zh-hk",
@@ -20,11 +20,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: content.seo.title,
     description: content.seo.description,
-    url: "/",
-    locale: "en_US"
+    url: "/zh-cn",
+    locale: "zh_CN"
   }
 };
 
-export default function Home() {
-  return <HyperPage locale="en" />;
+export default function ZhCnHome() {
+  return <HyperPage locale="zh-cn" />;
 }
