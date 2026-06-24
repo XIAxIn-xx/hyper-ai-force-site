@@ -96,7 +96,7 @@ const content = {
       eyebrow: "Market Pain & Opportunity",
       title: "Robots extend human security teams into risky, repetitive and blind-spot environments.",
       copy:
-        "Physical security and industrial inspection still depend on high-cost patrol labor, manual observation and delayed response. Hyper AI Force turns robotic mobility, AI detection and teleoperation into a deployable operating platform.",
+        "Physical security and industrial inspection still depend on high-cost patrol labor, manual observation and delayed response. Hyper AI Force turns autonomous naviagation, AI detection and teleoperation into a deployable operating platform.",
       points: [
         "Labor-intensive patrols are costly and hard to scale.",
         "Human attention drops during repetitive night and perimeter checks.",
@@ -260,7 +260,7 @@ const content = {
       eyebrow: "Contact",
       title: "Plan a robotics deployment for your site.",
       copy:
-        "Tell us about your facility, patrol workload or inspection scenario. Our team will map the right robot form, AI capabilities and service model.",
+        "Tell us about your facility, patrol workload or inspection scenario. Our team will map the appropriate solutions.",
       button: "Request a Demo",
       address:
         "Building 19W, No.19 Science Park West Avenue, Hong Kong Science Park, Pak Shek Kok, New Territories, Hong Kong",
@@ -326,7 +326,7 @@ const content = {
       eyebrow: "市場痛點",
       title: "讓機器人進入高風險、重複性與安防盲區場景",
       copy:
-        "物理安全與工業巡檢仍高度依賴人工巡邏、人工觀察與事後處理。超流智能將機器人移動能力、AI 異常識別與遠程遙操整合為可落地的運營平台",
+        "物理安全與工業巡檢仍高度依賴人工巡邏、人工觀察與事後處理。超流智能將機器人自主巡航、AI 異常識別與遠程遙操整合為可落地的運營平台",
       points: [
         "大範圍巡邏人力成本高，難以持續擴展",
         "夜間、周界與重複檢查容易出現注意力下降",
@@ -477,7 +477,7 @@ const content = {
       eyebrow: "聯絡我們",
       title: "為你的場地規劃機器人部署",
       copy:
-        "告訴我們你的設施、巡邏工作量或巡檢場景。我們將協助匹配合適的機器人形態、AI 能力與服務模型",
+        "告訴我們你的設施、巡邏工作量或巡檢場景。我們將協助匹配合適的解決方案",
       button: "預約演示",
       address: "香港新界白石角香港科學園科技大道西19號19W大樓",
       fields: {
@@ -536,7 +536,7 @@ const content = {
       eyebrow: "市场痛点",
       title: "让机器人进入高风险、重复性与安防盲区场景",
       copy:
-        "物理安全与工业巡检仍高度依赖人工巡逻、人工观察与事后处理。超流智能将机器人移动能力、AI 异常识别与远程遥操整合为可落地的运营平台",
+        "物理安全与工业巡检仍高度依赖人工巡逻、人工观察与事后处理。超流智能将机器人自主巡航、AI 异常识别与远程遥操整合为可落地的运营平台",
       points: [
         "大范围巡逻人力成本高，难以持续扩展",
         "夜间、周界与重复检查容易出现注意力下降",
@@ -687,7 +687,7 @@ const content = {
       eyebrow: "联系我们",
       title: "为你的场地规划机器人部署",
       copy:
-        "告诉我们你的设施、巡逻工作量或巡检场景。我们将协助匹配合适的机器人形态、AI 能力与服务模型",
+        "告诉我们你的设施、巡逻工作量或巡检场景。我们将协助匹配合适的解决方案",
       button: "预约演示",
       address: "香港新界白石角香港科学园科技大道西19号19W大楼",
       fields: {
