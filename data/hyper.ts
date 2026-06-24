@@ -87,10 +87,14 @@ const content = {
       primaryCta: "Request a Demo",
       secondaryCta: "Explore Technology",
       stats: [
-        { value: "24/7", label: "Autonomous patrol readiness" },
-        { value: "AI +", label: "Perception, decision and edge intelligence" },
-        { value: "Global", label: "Channel and service mindset" }
-      ]
+  { value: "Autonomous Patrol", label: "Autonomous navigation and intelligent patrol execution" },
+
+  { value: "Teleoperation", label: "Remote control and real-time robotic operation" },
+
+  { value: "AI +", label: "Perception, decision-making and edge intelligence" },
+
+  { value: "24/7", label: "Continuous operation readiness and always-on deployment" }
+]
     },
     market: {
       eyebrow: "Market Pain & Opportunity",
@@ -317,10 +321,14 @@ const content = {
       primaryCta: "預約演示",
       secondaryCta: "了解技術",
       stats: [
-        { value: "24/7", label: "自主巡邏與值守能力" },
-        { value: "AI +", label: "感知、決策與邊緣智能" },
-        { value: "全球化", label: "全球市場與服務視野" }
-      ]
+  { value: "自主巡航", label: "自主巡航與智能巡邏執行能力" },
+
+  { value: "遠程遙操", label: "遠程控制與實時機器人操作能力" },
+
+  { value: "AI +", label: "感知、決策與邊緣智能" },
+
+  { value: "24/7", label: "持續運行準備與全天候部署能力" }
+]
     },
     market: {
       eyebrow: "市場痛點",
@@ -528,10 +536,14 @@ const content = {
       primaryCta: "预约演示",
       secondaryCta: "了解技术",
       stats: [
-        { value: "24/7", label: "自主巡逻与值守能力" },
-        { value: "AI +", label: "感知、决策与边缘智能" },
-        { value: "全球化", label: "全球市场与服务视野" }
-      ]
+  { value: "自主巡航", label: "自主巡航与智能巡逻执行能力" },
+
+  { value: "远程遥操", label: "远程控制与实时机器人操作能力" },
+
+  { value: "AI +", label: "感知、决策与边缘智能" },
+
+  { value: "24/7", label: "持续运行准备与全天候部署能力" }
+]
     },
     market: {
       eyebrow: "市场痛点",
