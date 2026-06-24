@@ -153,40 +153,40 @@ const content = {
       title: "Capability packages for real industrial environments.",
       items: [
         {
-          icon: "ShieldAlert",
-          title: "Autonomous Patrol Robot",
-          problem: "Security teams need continuous coverage across large sites.",
+          icon: "Route",
+          title: "Autonomous Patrol",
+          problem: "Industrial sites need robots that can run patrol missions with minimal manual intervention.",
           solution:
-            "Robots execute scheduled patrols, detect abnormal events and send alerts to operators.",
+            "AI-driven autonomous navigation, patrol route planning, real-time environmental perception and edge deployment support continuous field operation.",
           value:
-            "Improves perimeter visibility, reduces repetitive patrol workload and creates traceable records."
+            "Reduces manual patrol effort while improving coverage, consistency and response readiness across industrial environments."
+        },
+        {
+          icon: "Radio",
+          title: "Teleoperation",
+          problem: "Robots in complex sites still need human-in-the-loop decisions and emergency takeover.",
+          solution:
+            "Teleoperation enables low-latency real-time robot control, with Remote Control support for assisted operation and emergency intervention.",
+          value:
+            "Keeps operators in control when judgment, safety escalation or precise remote action is required."
         },
         {
           icon: "Activity",
-          title: "AI Inspection Robot",
-          problem: "Industrial equipment checks are manual, inconsistent and sometimes hazardous.",
+          title: "AI Inspection",
+          problem: "Industrial inspections are repetitive, data-heavy and often expose workers to high-risk environments.",
           solution:
-            "Robots collect imagery, sensor readings and inspection evidence along defined routes.",
+            "Robots perform automated industrial inspection with AI visual defect detection, safety monitoring, data analysis and anomaly recognition.",
           value:
-            "Supports predictive maintenance, equipment monitoring and safer inspection workflows."
+            "Improves inspection reliability, safety visibility and evidence-based maintenance decisions."
         },
         {
           icon: "CloudCog",
-          title: "Robotic Intelligence Platform",
-          problem: "Robot fleets need mission planning, alerts and remote control in one system.",
+          title: "Robot Scheduling Platform (RSP)",
+          problem: "Multi-robot deployments need a central platform for scheduling, dispatch and coordinated operation.",
           solution:
-            "A unified platform connects robot terminals, cloud analysis and operator dashboards.",
+            "The RSP platform manages multi-robot task scheduling, fleet management, remote task distribution and workflow automation.",
           value:
-            "Enables multi-robot teleoperation, faster response and scalable service operations."
-        },
-        {
-          icon: "Wrench",
-          title: "Custom Robotic Solutions",
-          problem: "Every site has different terrain, payloads, rules and integration needs.",
-          solution:
-            "Hardware, software and AI modules are configured around field requirements.",
-          value:
-            "Delivers scenario-specific systems for security, utilities, research and facility operations."
+            "Acts as the hub connecting hardware, AI and Teleoperation for scalable robotic operations."
         }
       ]
     },
@@ -255,10 +255,10 @@ const content = {
         message: "Message"
       },
       options: [
-        "Autonomous Patrol Robot",
-        "AI Inspection Robot",
-        "Robotic Intelligence Platform",
-        "Custom Robotic Solutions"
+        "Autonomous Patrol",
+        "Teleoperation",
+        "AI Inspection",
+        "RSP Platform"
       ]
     },
     footer:
@@ -363,32 +363,32 @@ const content = {
       title: "面向真實工業環境的能力組合",
       items: [
         {
-          icon: "ShieldAlert",
-          title: "自主巡邏機器人",
-          problem: "大型場地需要長時間、連續性的安防覆蓋",
-          solution: "機器人執行定時巡邏，識別異常事件並向操作人員發出警報",
-          value: "提升周界可視性，減少重複巡邏工作，形成可追溯記錄"
+          icon: "Route",
+          title: "自主巡航解決方案",
+          problem: "工業場景需要機器人在較少人工干預下持續自主運行",
+          solution: "AI 驅動自主導航、巡邏路徑規劃、實時環境感知與邊緣端部署能力，支援現場連續運行",
+          value: "減少人工巡邏干預，提升工業環境中的覆蓋效率、穩定性與響應能力"
+        },
+        {
+          icon: "Radio",
+          title: "遠程操控解決方案（Teleoperation）",
+          problem: "複雜場地中的機器人仍需要人在回路決策與緊急接管能力",
+          solution: "Teleoperation 提供低延遲實時遠程控制，並以 Remote Control 作為輔助操作與緊急干預方式",
+          value: "在需要人工判斷、安全升級或精準遠程操作時，讓操作人員始終保持可控"
         },
         {
           icon: "Activity",
-          title: "AI 工業巡檢機器人",
-          problem: "設備巡檢常依賴人工，結果不穩定且部分場景存在風險",
-          solution: "機器人按路線採集圖像、傳感器讀數與巡檢證據",
-          value: "支援預測性維護、設備監測與更安全的巡檢流程"
+          title: "AI 巡檢解決方案",
+          problem: "工業巡檢任務重複、數據量大，且高風險環境會增加人員暴露",
+          solution: "機器人執行工業場景自動巡檢，結合 AI 視覺缺陷檢測、安全監測、數據分析與異常識別",
+          value: "提升巡檢一致性、安全可視性與基於數據的維護決策能力"
         },
         {
           icon: "CloudCog",
-          title: "機器人智能平台",
-          problem: "機器人隊伍需要統一的任務規劃、警報與遠程操縱系統",
-          solution: "平台連接終端機器人、雲端分析與操作看板",
-          value: "支援多機器人監督、更快響應與可擴展服務運營"
-        },
-        {
-          icon: "Wrench",
-          title: "定制化機器人方案",
-          problem: "不同場地在地形、載荷、規則與系統整合上各不相同",
-          solution: "按現場需求配置硬件、軟件與 AI 模組",
-          value: "為安防、能源、公用設施、科研與設施運維提供場景化系統"
+          title: "Robot Scheduling Platform (RSP) 平台",
+          problem: "多機器人部署需要統一的任務調度、分發與協同運營中樞",
+          solution: "RSP平台支援多機器人任務調度、機器人集群管理、遠程任務分發與工作流自動化",
+          value: "作為連接硬件、AI 與 Teleoperation 的中樞平台，支撐可擴展的機器人運營"
         }
       ]
     },
@@ -452,7 +452,7 @@ const content = {
         interest: "感興趣的產品 / 方案",
         message: "需求描述"
       },
-      options: ["自主巡邏機器人", "AI 工業巡檢機器人", "機器人智能平台", "定制化機器人方案"]
+      options: ["自主巡航", "遠程操控（Teleoperation）", "AI巡檢", "RSP平台"]
     },
     footer: "AI 機器人、自主巡航與遠程操縱方案"
   }
