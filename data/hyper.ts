@@ -80,7 +80,7 @@ const content = {
       ]
     },
     hero: {
-      eyebrow: "Hong Kong AI Robotics Company",
+      eyebrow: "Hyper AI Force Limited",
       title: "AI-Powered Robotics for Real-World Industrial Intelligence",
       subtitle:
         "We develop autonomous robotic systems that combine AI perception, navigation, motion control and service delivery for physical security, inspection and facility operations.",
@@ -96,7 +96,7 @@ const content = {
       eyebrow: "Market Pain & Opportunity",
       title: "Robots extend human security teams into risky, repetitive and blind-spot environments.",
       copy:
-        "Physical security and industrial inspection still depend on high-cost patrol labor, manual observation and delayed response. Hyper AI Force turns robotic mobility, AI detection and remote supervision into a deployable operating layer.",
+        "Physical security and industrial inspection still depend on high-cost patrol labor, manual observation and delayed response. Hyper AI Force turns robotic mobility, AI detection and remote control into a deployable operating platform.",
       points: [
         "Labor-intensive patrols are costly and hard to scale.",
         "Human attention drops during repetitive night and perimeter checks.",
@@ -106,7 +106,7 @@ const content = {
     },
     strengths: {
       eyebrow: "Core Strengths",
-      title: "Built for field deployment, not lab demos.",
+      title: "Built for field deployment, not lab demos",
       items: [
         {
           icon: "BrainCircuit",
@@ -145,7 +145,7 @@ const content = {
         "Multi-sensor fusion",
         "Motion control and terrain adaptation",
         "Edge computing and cloud monitoring",
-        "Remote supervision and fleet management"
+        "Remote control and fleet management"
       ]
     },
     solutions: {
@@ -177,7 +177,7 @@ const content = {
           solution:
             "A unified platform connects robot terminals, cloud analysis and operator dashboards.",
           value:
-            "Enables multi-robot supervision, faster response and scalable service operations."
+            "Enables multi-robot teleoperation, faster response and scalable service operations."
         },
         {
           icon: "Wrench",
@@ -233,7 +233,7 @@ const content = {
       eyebrow: "About Hyper AI Force",
       title: "A Hong Kong AI robotics company connecting autonomy with real-world operations.",
       copy:
-        "Hyper AI Force Limited focuses on AI perception, autonomous mobility, robot control and edge intelligence. The team builds robotic systems for physical security, industrial inspection, facility patrol and automated operations, helping organizations deploy intelligent machines into practical, measurable workflows.",
+        "Hyper AI Force Limited focuses on AI perception, autonomous mobility, remote control and edge intelligence. The team builds robotic systems for physical security, industrial inspection, facility patrol and automated operations, helping organizations deploy intelligent machines into practical, measurable workflows.",
       bullets: [
         "Embodied intelligence for physical-world industries",
         "Global market orientation from Hong Kong",
@@ -262,7 +262,7 @@ const content = {
       ]
     },
     footer:
-      "AI robotics, autonomous patrol and industrial inspection solutions."
+      "AI robotics, autonomous patrol and remote control solutions."
   },
   "zh-hk": {
     lang: "zh-HK",
@@ -290,7 +290,7 @@ const content = {
       ]
     },
     hero: {
-      eyebrow: "香港 AI Robotics 科技公司",
+      eyebrow: "超流智能有限公司",
       title: "面向真實產業場景的 AI 機器人智能系統",
       subtitle:
         "我們將 AI 感知、自主導航、運動控制與場景交付能力結合，為物理安全、工業巡檢與設施運維提供可部署的機器人方案",
@@ -306,12 +306,12 @@ const content = {
       eyebrow: "市場痛點",
       title: "讓機器人進入高風險、重複性與安防盲區場景",
       copy:
-        "物理安全與工業巡檢仍高度依賴人工巡邏、人工觀察與事後處理。Hyper AI Force 將機器人移動能力、AI 異常識別與遠程監督整合為可落地的運營層",
+        "物理安全與工業巡檢仍高度依賴人工巡邏、人工觀察與事後處理。Hyper AI Force 將機器人移動能力、AI 異常識別與遠程操縱整合為可落地的運營平台",
       points: [
         "大範圍巡邏人力成本高，難以持續擴展",
         "夜間、周界與重複檢查容易出現注意力下降",
         "危險、偏遠或戶外環境會增加人員暴露風險",
-        "突發事件需要即時警報、證據留存與遠程處置"
+        "突發事件需要即時警報、證據留存與遠程操縱"
       ]
     },
     strengths: {
@@ -355,7 +355,7 @@ const content = {
         "多傳感器融合",
         "運動控制與地形適應",
         "邊緣計算與雲端監控",
-        "遠程監督與機隊管理"
+        "遠程操縱與機隊管理"
       ]
     },
     solutions: {
@@ -379,7 +379,7 @@ const content = {
         {
           icon: "CloudCog",
           title: "機器人智能平台",
-          problem: "機器人隊伍需要統一的任務規劃、警報與遠程控制系統",
+          problem: "機器人隊伍需要統一的任務規劃、警報與遠程操縱系統",
           solution: "平台連接終端機器人、雲端分析與操作看板",
           value: "支援多機器人監督、更快響應與可擴展服務運營"
         },
@@ -431,7 +431,7 @@ const content = {
       eyebrow: "關於 Hyper AI Force",
       title: "連接自主智能與真實運營場景的香港 AI 機器人公司",
       copy:
-        "超流智能有限公司專注 AI 感知、自主移動、機器人控制與邊緣智能系統。團隊面向物理安全、工業巡檢、設施巡邏與自動化運維構建機器人系統，幫助組織將智能機器部署到可衡量的實際流程中",
+        "超流智能有限公司專注 AI 感知、自主移動、遠程操縱與邊緣智能系統。團隊面向物理安全、工業巡檢、設施巡邏與自動化運維構建機器人系統，幫助組織將智能機器部署到可衡量的實際流程中",
       bullets: [
         "面向物理世界產業的具身智能",
         "以香港為起點的全球市場視野",
@@ -454,7 +454,7 @@ const content = {
       },
       options: ["自主巡邏機器人", "AI 工業巡檢機器人", "機器人智能平台", "定制化機器人方案"]
     },
-    footer: "AI 機器人、自主巡邏與工業巡檢方案"
+    footer: "AI 機器人、自主巡航與遠程操縱方案"
   }
 } as const;
 
