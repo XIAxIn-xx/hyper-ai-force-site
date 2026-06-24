@@ -55,5 +55,6 @@ body {
 .pretty-copy h3,
 .pretty-copy p {
   text-wrap: pretty;
-  word-break: auto-phrase;
+  word-break: keep-all;
+  line-break: strict;
 }

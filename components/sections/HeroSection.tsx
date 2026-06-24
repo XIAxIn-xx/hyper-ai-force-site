@@ -54,7 +54,11 @@ export function HeroSection({ content }: HeroSectionProps) {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="mt-7 max-w-3xl text-5xl font-black leading-[1.02] tracking-normal md:text-7xl"
           >
-            {content.hero.title}
+            {content.hero.title.split("\n").map((line) => (
+              <span key={line} className="block">
+                {line}
+              </span>
+            ))}
           </motion.h1>
           <motion.p
             initial={false}
