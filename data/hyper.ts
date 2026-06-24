@@ -139,6 +139,9 @@ const content = {
       title: "A software-defined operating layer for autonomous robotic teams.",
       copy:
         "Operators can assign missions from a browser or tablet, monitor live data, review alerts and supervise multiple robots. The platform connects edge AI, cloud monitoring and human-in-the-loop intervention.",
+      imageTitle: "Multi-robot Mission Layer",
+      imageText:
+        "Mission planning, robot telemetry, abnormal-event alerts and operator supervision in one deployable workflow.",
       capabilities: [
         "AI perception and threat detection",
         "Autonomous navigation and path planning",
@@ -276,8 +279,10 @@ const content = {
         "RSP Platform"
       ]
     },
+    footerCompany: "Hyper AI Force Limited",
     footer:
-      "AI robotics, autonomous patrol and teleoperation solutions."
+      "AI robotics, autonomous patrol and teleoperation solutions.",
+    footerRights: "All rights reserved."
   },
   "zh-hk": {
     lang: "zh-HK",
@@ -364,6 +369,9 @@ const content = {
       title: "面向自主機器人隊伍的軟件化運營層",
       copy:
         "操作人員可通過瀏覽器或平板分配任務、查看實時數據、接收警報並監督多台機器人。平台連接邊緣 AI、雲端監控與人工介入",
+      imageTitle: "多機器人任務層",
+      imageText:
+        "將任務規劃、機器人遙測、異常事件警報與操作人員監督整合為可部署的工作流程。",
       capabilities: [
         "AI 感知與威脅檢測",
         "自主導航與路徑規劃",
@@ -483,7 +491,9 @@ const content = {
       },
       options: ["自主巡航", "遠程遙操", "AI巡檢", "RSP平台"]
     },
-    footer: "AI 機器人、自主巡航與遠程遙操方案"
+    footerCompany: "超流智能有限公司",
+    footer: "AI 機器人、自主巡航與遠程遙操方案",
+    footerRights: "版權所有。"
   },
   "zh-cn": {
     lang: "zh-CN",
@@ -570,6 +580,9 @@ const content = {
       title: "面向自主机器人队伍的软件化运营层",
       copy:
         "操作人员可通过浏览器或平板分配任务、查看实时数据、接收警报并监督多台机器人。平台连接边缘 AI、云端监控与人工介入",
+      imageTitle: "多机器人任务层",
+      imageText:
+        "将任务规划、机器人遥测、异常事件警报与操作人员监督整合为可部署的工作流程。",
       capabilities: [
         "AI 感知与威胁检测",
         "自主导航与路径规划",
@@ -689,7 +702,9 @@ const content = {
       },
       options: ["自主巡航", "远程遥操", "AI巡检", "RSP平台"]
     },
-    footer: "AI 机器人、自主巡航与远程遥操方案"
+    footerCompany: "超流智能有限公司",
+    footer: "AI 机器人、自主巡航与远程遥操方案",
+    footerRights: "版权所有。"
   }
 } as const;
 

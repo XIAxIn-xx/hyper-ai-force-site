@@ -41,10 +41,10 @@ export function PlatformSection({ content }: PlatformSectionProps) {
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_72%_22%,rgba(34,211,238,0.3),transparent_26%),linear-gradient(180deg,rgba(2,6,23,0.15),rgba(2,6,23,0.88))]" />
             <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
               <p className="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-200">
-                Multi-robot Mission Layer
+                {content.technology.imageTitle}
               </p>
               <p className="mt-3 max-w-xl text-sm leading-7 text-slate-300">
-                Mission planning, robot telemetry, abnormal-event alerts and operator supervision in one deployable workflow.
+                {content.technology.imageText}
               </p>
             </div>
           </div>
