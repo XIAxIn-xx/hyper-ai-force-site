@@ -249,11 +249,11 @@ const content = {
       eyebrow: "About Hyper AI Force",
       title: "An AI robotics company connecting autonomous navigation with teleoperation.",
       copy:
-        "Hyper AI Force Limited focuses on AI perception, autonomous mobility, teleoperation and edge intelligence. The team builds robotic systems for physical security, industrial inspection, warehouse patrol and automated operations, helping organizations deploy intelligent robots into practical, measurable workflows.",
+        "Hyper AI Force focuses on core capabilities including AI perception, autonomous patrol, teleoperation, RSP platform and edge intelligence. The team helps customers deploy intelligent robotic systems into real-world application scenarios, including physical security, industrial inspection, facility patrol, and automated operations, enabling large-scale deployment and stable operation. By replacing manual operations with robotics, the system reduces labor costs, improves operational efficiency, and enhances safety, achieving significant cost reduction and productivity gains.",
       bullets: [
         "Embodied intelligence for physical-world industries",
-        "Global market orientation from Hong Kong",
-        "Integrated hardware, software and AI delivery"
+        "Integrated hardware, software and AI delivery",
+        "Innovative Robotics Leasing Solution"
       ]
     },
     contact: {
@@ -467,10 +467,11 @@ const content = {
       eyebrow: "關於超流智能",
       title: "連接自主智能與真實運營場景的 AI 機器人公司",
       copy:
-        "超流智能專注 AI 感知、自主移動、遠程遙操與邊緣智能系統。團隊面向物理安全、工業巡檢、園區巡邏與自動化運維構建機器人系統，幫助客戶將智能機器人部署到可衡量的實際流程中",
+        "超流智能專注 AI 感知、自主巡航、遠程遙操、 RSP 平台與邊緣智能系統等核心技術能力。團隊協助客戶將智能機器人系統部署到實際應用場景中，包括物理安全、工業巡檢、園區巡邏與自動化運維等領域，實現規模化落地與穩定運行。通過以機器人替代人工操作，有效降低人力成本，提升作業效率與安全性，實現顯著的降本增效。",
       bullets: [
         "面向物理世界產業的具身智能",
-        "軟硬件與 AI 的一體化交付"
+        "軟硬件與 AI 的一體化交付",
+        "創新的機器人租賃解決方案"
       ]
     },
     contact: {
@@ -677,10 +678,11 @@ const content = {
       eyebrow: "关于超流智能",
       title: "连接自主智能与真实运营场景的 AI 机器人公司",
       copy:
-        "超流智能专注 AI 感知、自主移动、远程遥操与边缘智能系统。团队面向物理安全、工业巡检、园区巡逻与自动化运维构建机器人系统，帮助客户将智能机器人部署到可衡量的实际流程中",
+        "超流智能专注 AI 感知、自主巡航、远程遥操、 RSP 平台与边缘智能系统等核心技术能力。团队帮助客户将智能机器人部署到实际应用场景中，包括物理安全、工业巡检、园区巡逻与自动化运维等领域，实现规模化落地与稳定运行。通过机器人替代人工操作，有效降低人力成本，提升作业效率与安全性，实现降本增效。",
       bullets: [
         "面向物理世界产业的具身智能",
-        "软硬件与 AI 的一体化交付"
+        "软硬件与 AI 的一体化交付",
+        "创新的机器人租赁解决方案"
       ]
     },
     contact: {
