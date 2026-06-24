@@ -83,7 +83,7 @@ const content = {
       eyebrow: "Hyper AI Force Limited",
       title: "AI-Powered Robotics for Real-World Industrial Intelligence",
       subtitle:
-        "We develop autonomous robotic systems that combine AI perception, navigation, motion control and service delivery for physical security, inspection and facility operations.",
+        "We develop autonomous robotic systems that combine AI perception, navigation, teleoperation, motion control and service delivery for physical security, inspection and facility operations.",
       primaryCta: "Request a Demo",
       secondaryCta: "Explore Technology",
       stats: [
@@ -96,12 +96,12 @@ const content = {
       eyebrow: "Market Pain & Opportunity",
       title: "Robots extend human security teams into risky, repetitive and blind-spot environments.",
       copy:
-        "Physical security and industrial inspection still depend on high-cost patrol labor, manual observation and delayed response. Hyper AI Force turns robotic mobility, AI detection and remote control into a deployable operating platform.",
+        "Physical security and industrial inspection still depend on high-cost patrol labor, manual observation and delayed response. Hyper AI Force turns robotic mobility, AI detection and teleoperation into a deployable operating platform.",
       points: [
         "Labor-intensive patrols are costly and hard to scale.",
         "Human attention drops during repetitive night and perimeter checks.",
         "Hazardous, remote or weather-exposed sites increase personnel risk.",
-        "Critical incidents need real-time alerts, evidence and remote control."
+        "Critical incidents need real-time alerts, evidence and teleoperation."
       ]
     },
     strengths: {
@@ -145,7 +145,7 @@ const content = {
         "Multi-sensor fusion",
         "Motion control and terrain adaptation",
         "Edge computing and cloud monitoring",
-        "Remote control and fleet management"
+        "Teleoperation and fleet management"
       ]
     },
     solutions: {
@@ -186,7 +186,7 @@ const content = {
           solution:
             "The RSP platform manages multi-robot task scheduling, fleet management, remote task distribution and workflow automation.",
           value:
-            "Acts as the hub connecting hardware, AI and Teleoperation for scalable robotic operations."
+            "Acts as the hub to connect hardware, AI and Teleoperation for scalable robotic operations."
         }
       ]
     },
@@ -231,9 +231,9 @@ const content = {
     },
     about: {
       eyebrow: "About Hyper AI Force",
-      title: "A Hong Kong AI robotics company connecting autonomy with real-world operations.",
+      title: "An AI robotics company connecting autonomous navigation with teleoperation.",
       copy:
-        "Hyper AI Force Limited focuses on AI perception, autonomous mobility, remote control and edge intelligence. The team builds robotic systems for physical security, industrial inspection, facility patrol and automated operations, helping organizations deploy intelligent machines into practical, measurable workflows.",
+        "Hyper AI Force Limited focuses on AI perception, autonomous mobility, teleoperation and edge intelligence. The team builds robotic systems for physical security, industrial inspection, facility patrol and automated operations, helping organizations deploy intelligent machines into practical, measurable workflows.",
       bullets: [
         "Embodied intelligence for physical-world industries",
         "Global market orientation from Hong Kong",
@@ -262,7 +262,7 @@ const content = {
       ]
     },
     footer:
-      "AI robotics, autonomous patrol and remote control solutions."
+      "AI robotics, autonomous patrol and teleoperation solutions."
   },
   "zh-hk": {
     lang: "zh-HK",
@@ -338,7 +338,7 @@ const content = {
         },
         {
           icon: "Globe2",
-          title: "全球服務準備度",
+          title: "全球服务部署能力",
           text:
             "國際渠道經驗、遠程診斷與服務網絡規劃，降低部署與維護摩擦"
         }
