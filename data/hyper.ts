@@ -216,7 +216,7 @@ const content = {
     },
     caseStudy: {
       eyebrow: "Case Study",
-      title: "Quadruped robot patrol deployment for a GLP industrial park",
+      title: "Quadruped robot patrol deployment for a GLP industrial logistics park",
       labels: {
         challenge: "Challenge",
         solution: "Solution"
