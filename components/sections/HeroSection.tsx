@@ -88,10 +88,10 @@ export function HeroSection({ content }: HeroSectionProps) {
             initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.75, delay: 0.32 }}
-            className="mt-12 grid gap-3 sm:grid-cols-3"
+            className="mx-auto mt-12 grid max-w-[680px] gap-4 sm:grid-cols-2"
           >
             {content.hero.stats.map((stat) => (
-              <div key={stat.label} className="rounded-lg border border-white/12 bg-white/[0.06] p-4 backdrop-blur">
+              <div key={stat.label} className="min-h-[132px] rounded-lg border border-white/12 bg-white/[0.06] p-5 backdrop-blur">
                 <div className="flex items-center gap-2 text-2xl font-black text-cyan-200">
                   <ShieldCheck className="h-5 w-5" />
                   {stat.value}
