@@ -216,7 +216,7 @@ const content = {
     },
     caseStudy: {
       eyebrow: "Case Study",
-      title: "Robotic dog patrol deployment for a GLP industrial park.",
+      title: "Quadruped robot patrol deployment for a GLP industrial park",
       labels: {
         challenge: "Challenge",
         solution: "Solution"
@@ -442,7 +442,7 @@ const content = {
     },
     caseStudy: {
       eyebrow: "案例場景",
-      title: "普洛斯工業園區機器狗巡邏部署",
+      title: "普洛斯物流園區機器狗巡邏部署",
       labels: {
         challenge: "挑戰",
         solution: "方案"
@@ -657,7 +657,7 @@ const content = {
     },
     caseStudy: {
       eyebrow: "案例场景",
-      title: "普洛斯工业园区机器狗巡逻部署",
+      title: "普洛斯物流园区机器狗巡逻部署",
       labels: {
         challenge: "挑战",
         solution: "方案"
