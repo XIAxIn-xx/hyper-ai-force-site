@@ -24,7 +24,7 @@ export function SectionHeading({
         {title}
       </h2>
       {copy ? (
-        <p className={light ? "mt-5 text-base leading-8 text-slate-300" : "mt-5 text-base leading-8 text-slate-600"}>
+        <p className={light ? "mt-5 text-base leading-8 text-slate-300 [word-break:normal] [overflow-wrap:break-word]" : "mt-5 text-base leading-8 text-slate-600 [word-break:normal] [overflow-wrap:break-word]"}>
           {copy}
         </p>
       ) : null}

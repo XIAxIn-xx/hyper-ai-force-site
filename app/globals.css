@@ -55,6 +55,15 @@ body {
 .pretty-copy h3,
 .pretty-copy p {
   text-wrap: pretty;
-  word-break: keep-all;
   line-break: strict;
+  word-break: normal;
+  overflow-wrap: break-word;
+}
+
+.pretty-copy :where(h1, h2, h3, p, li, span) {
+  word-break: auto-phrase;
+}
+
+.pretty-copy :where(article, div) {
+  min-width: 0;
 }

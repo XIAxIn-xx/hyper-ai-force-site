@@ -25,7 +25,7 @@ export function MarketSection({ content }: MarketSectionProps) {
             {content.market.points.map((point, index) => (
               <div
                 key={point}
-                className="flex gap-4 rounded-lg border border-white/10 bg-white/[0.06] p-5"
+                className="flex gap-5 rounded-lg border border-white/10 bg-white/[0.06] p-5"
               >
                 <div className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-cyan-300/12 text-cyan-200">
                   {index === 0 ? (
@@ -34,7 +34,7 @@ export function MarketSection({ content }: MarketSectionProps) {
                     <CheckCircle2 className="h-5 w-5" />
                   )}
                 </div>
-                <p className="text-base leading-7 text-slate-300">{point}</p>
+                <p className="text-lg leading-8 text-slate-300 [word-break:normal] [overflow-wrap:break-word]">{point}</p>
               </div>
             ))}
           </div>
