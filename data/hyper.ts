@@ -98,7 +98,7 @@ const content = {
     },
     market: {
       eyebrow: "Market Pain & Opportunity",
-      title: "Robots extend human security teams into risky, repetitive and blind-spot environments.",
+      title: "Deploy robotic systems into high-risk, repetitive and blind-spot operational environments.",
       copy:
         "Physical security and industrial inspection still depend on high-cost patrol labor, manual observation and delayed response. Hyper AI Force turns autonomous naviagation, AI detection and teleoperation into a deployable operating platform.",
       points: [
@@ -332,7 +332,7 @@ const content = {
     },
     market: {
       eyebrow: "市場痛點",
-      title: "機器人將人類安防團隊的能力延伸至高風險、重複性任務及視野盲區環境中",
+      title: "將機器人系統部署至高風險、重複性及視野盲區作業環境中",
       copy:
         "物理安全與工業巡檢仍高度依賴人工巡邏、人工觀察與事後處理。超流智能將機器人自主巡航、AI異常識別與遠程遙操整合為可落地的運營平台",
       points: [
@@ -547,7 +547,7 @@ const content = {
     },
     market: {
       eyebrow: "市场痛点",
-      title: "机器人将人类安防团队的能力延伸至高风险、重复性任务及视野盲区环境中",
+      title: "将机器人部署至高风险、重复性及视野盲区作业环境中",
       copy:
         "物理安全与工业巡检仍高度依赖人工巡逻、人工观察与事后处理。超流智能将机器人自主巡航、AI异常识别与远程遥操整合为可落地的运营平台",
       points: [
