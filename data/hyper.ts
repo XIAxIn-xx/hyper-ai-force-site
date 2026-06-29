@@ -140,7 +140,7 @@ const content = {
     },
     technology: {
       eyebrow: "Robotic Intelligence Platform",
-      title: "A software-defined operating layer for autonomous robotic teams.",
+      title: "A software-defined operating layer for autonomous robotic teams",
       copy:
         "Operators can assign missions from a browser or tablet, monitor live data, review alerts and supervise multiple robots. The platform connects edge AI, cloud monitoring and human-in-the-loop intervention.",
       imageTitle: "Multi-robot Mission Layer",
@@ -157,7 +157,7 @@ const content = {
     },
     solutions: {
       eyebrow: "Products & Solutions",
-      title: "Capability packages for real industrial environments.",
+      title: "Capability packages for real industrial environments",
       labels: {
         problem: "Problem",
         solution: "Solution",
@@ -239,19 +239,19 @@ const content = {
       eyebrow: "Support & Service Network",
       title: "From solution design to full-cycle support.",
       copy:
-        "Hyper AI Force positions robotics as an integrated service, not a standalone device. Deployment includes solution design, technical support, maintenance planning, operator training, robot leasing and teleoperation.",
+        "Hyper AI Force positions robotics as an integrated service, instead of a standalone device. Deployment includes solution design, technical support, maintenance planning, operator training, robot leasing and teleoperation.",
       items: [
         { icon: "Handshake", label: "Solution Design" },
         { icon: "Cpu", label: "Technical Support" },
         { icon: "Wrench", label: "After-sales Care" },
         { icon: "BadgeCheck", label: "Operator Training" },
         { icon: "PackageCheck", label: "Robot Leasing" },
-        { icon: "Radio", label: "Remote Operation" }
+        { icon: "Radio", label: "Teleoperation" }
       ]
     },
     about: {
       eyebrow: "About Hyper AI Force",
-      title: "An AI robotics company connecting autonomous navigation with teleoperation.",
+      title: "An AI robotics company connecting autonomous navigation and teleoperation.",
       copy:
         "Hyper AI Force focuses on core capabilities including AI perception, autonomous patrol, teleoperation, RSP platform and edge intelligence. The team helps customers deploy intelligent robotic systems into real-world application scenarios, including physical security, industrial inspection, facility patrol, and automated operations, enabling large-scale deployment and stable operation. By replacing manual operations with robotics, the system reduces labor costs, improves operational efficiency, and enhances safety, achieving significant cost reduction and productivity gains.",
       bullets: [
