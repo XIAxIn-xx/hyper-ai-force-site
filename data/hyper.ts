@@ -67,11 +67,11 @@ const content = {
     ],
     seo: {
       title:
-        "Hyper AI Force Limited | AI Robotics for Industrial Intelligence",
+        "Hyper AIForce Limited | AI Robotics for Industrial Intelligence",
       description:
-        "Hyper AI Force Limited develops embodied AI robotics, autonomous patrol and inspection systems for industrial security, facilities and critical infrastructure.",
+        "Hyper AIForce Limited develops embodied AI robotics, autonomous patrol and inspection systems for industrial security, facilities and critical infrastructure.",
       keywords: [
-        "Hyper AI Force",
+        "Hyper AIForce",
         "AI Robotics",
         "Embodied Intelligence",
         "Autonomous Patrol Robot",
@@ -80,7 +80,7 @@ const content = {
       ]
     },
     hero: {
-      eyebrow: "Hyper AI Force Limited",
+      eyebrow: "Hyper AIForce Limited",
       title: "AI-Powered Robotics for Real-World Industrial Intelligence",
       subtitle:
         "We develop autonomous robotic systems that combine AI perception, navigation, teleoperation, motion control and service delivery for physical security, inspection and facility operations.",
@@ -100,7 +100,7 @@ const content = {
       eyebrow: "Market Pain & Opportunity",
       title: "Deploy robotic systems into high-risk, repetitive and blind-spot operational environments.",
       copy:
-        "Physical security and industrial inspection still depend on high-cost patrol labor, manual observation and delayed response. Hyper AI Force turns autonomous naviagation, AI detection and teleoperation into a deployable operating platform.",
+        "Physical security and industrial inspection still depend on high-cost patrol labor, manual observation and delayed response. Hyper AIForce turns autonomous naviagation, AI detection and teleoperation into a deployable operating platform.",
       points: [
         "Labor-intensive patrols are costly and hard to scale.",
         "Human attention drops during repetitive night and perimeter checks.",
@@ -227,7 +227,7 @@ const content = {
       challenge:
         "GLP needed reliable fire-safety and security patrol coverage across an industrial park, including roads, warehouse surroundings, perimeter areas and night-time routine checks.",
       solution:
-        "Hyper AI Force supported the deployment of robotic dogs for scheduled park patrols, teleoperation, abnormal-event awareness and on-site evidence capture across daily security routes.",
+        "Hyper AIForce supported the deployment of robotic dogs for scheduled park patrols, teleoperation, abnormal-event awareness and on-site evidence capture across daily security routes.",
       outcomes: [
         "Expanded patrol coverage across the industrial park",
         "Improved fire-safety and security visibility",
@@ -239,7 +239,7 @@ const content = {
       eyebrow: "Support & Service Network",
       title: "From solution design to full-cycle support.",
       copy:
-        "Hyper AI Force positions robotics as an integrated service, instead of a standalone device. Deployment includes solution design, technical support, maintenance planning, operator training, robot leasing and teleoperation.",
+        "Hyper AIForce positions robotics as an integrated service, instead of a standalone device. Deployment includes solution design, technical support, maintenance planning, operator training, robot leasing and teleoperation.",
       items: [
         { icon: "Handshake", label: "Solution Design" },
         { icon: "Cpu", label: "Technical Support" },
@@ -250,10 +250,10 @@ const content = {
       ]
     },
     about: {
-      eyebrow: "About Hyper AI Force",
+      eyebrow: "About Hyper AIForce",
       title: "An AI robotics company connecting autonomous navigation and teleoperation.",
       copy:
-        "Hyper AI Force focuses on core capabilities including AI perception, autonomous patrol, teleoperation, RSP platform and edge intelligence. The team helps customers deploy intelligent robotic systems into real-world application scenarios, including physical security, industrial inspection, facility patrol, and automated operations, enabling large-scale deployment and stable operation. By replacing manual operations with robotics, the system reduces labor costs, improves operational efficiency, and enhances safety, achieving significant cost reduction and productivity gains.",
+        "Hyper AIForce focuses on core capabilities including AI perception, autonomous patrol, teleoperation, RSP platform and edge intelligence. The team helps customers deploy intelligent robotic systems into real-world application scenarios, including physical security, industrial inspection, facility patrol, and automated operations, enabling large-scale deployment and stable operation. By replacing manual operations with robotics, the system reduces labor costs, improves operational efficiency, and enhances safety, achieving significant cost reduction and productivity gains.",
       bullets: [
         "Embodied intelligence for physical-world industries",
         "Integrated hardware, software and AI delivery",
@@ -283,7 +283,7 @@ const content = {
         "RSP Platform"
       ]
     },
-    footerCompany: "Hyper AI Force Limited",
+    footerCompany: "Hyper AIForce Limited",
     footer:
       "AI robotics, autonomous patrol and teleoperation solutions.",
     footerRights: "All rights reserved."
@@ -301,12 +301,12 @@ const content = {
       { label: "關於我們", href: "#about" }
     ],
     seo: {
-      title: "Hyper AI Force Limited | 超流智能有限公司",
+      title: "Hyper AIForce Limited | 超流智能有限公司",
       description:
         "超流智能有限公司專注 AI Robotics、具身智能、自主巡航與巡邏巡檢系統，服務物理安全、設施運維與關鍵基礎設施場景",
       keywords: [
         "超流智能有限公司",
-        "Hyper AI Force",
+        "Hyper AIForce",
         "AI Robotics",
         "具身智能",
         "自主巡邏機器人",
@@ -516,12 +516,12 @@ const content = {
       { label: "关于我们", href: "#about" }
     ],
     seo: {
-      title: "Hyper AI Force Limited | 超流智能有限公司",
+      title: "Hyper AIForce Limited | 超流智能有限公司",
       description:
         "超流智能有限公司专注 AI Robotics、具身智能、自主巡航与巡逻巡检系统，服务物理安全、设施运维与关键基础设施场景",
       keywords: [
         "超流智能有限公司",
-        "Hyper AI Force",
+        "Hyper AIForce",
         "AI Robotics",
         "具身智能",
         "自主巡逻机器人",
