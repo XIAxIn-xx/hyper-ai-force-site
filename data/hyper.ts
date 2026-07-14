@@ -81,7 +81,7 @@ const content = {
     },
     hero: {
       eyebrow: "Hyper AIForce Limited",
-      title: "AI-Powered Robotics for Real-World Industrial Intelligence",
+      title: "AI-Powered Robotic Inspection Solutions for Physical Security",
       subtitle:
         "We develop autonomous robotic systems that combine AI perception, navigation, teleoperation, motion control and service delivery for physical security, inspection and facility operations.",
       primaryCta: "Request a Demo",
@@ -315,9 +315,9 @@ const content = {
     },
     hero: {
       eyebrow: "超流智能有限公司",
-      title: "面向真實產業場景的\nAI 機器人智能系統",
+      title: "面向物理安全的機器人智能巡檢解決方案",
       subtitle:
-        "我們將 AI 感知、自主巡航、遠程遙操、運動控制與場景交付能力相結合，為物理安全、巡邏巡檢與設施運維等場景提供可部署的機器人方案",
+        "我們將 AI 感知、自主巡航、遠程遙操、運動控制與場景交付能力相結合，為物理安全与巡邏巡檢等場景提供可部署的機器人方案",
       primaryCta: "預約演示",
       secondaryCta: "了解技術",
       stats: [
@@ -530,9 +530,9 @@ const content = {
     },
     hero: {
       eyebrow: "超流智能有限公司",
-      title: "面向真实产业场景的\nAI 机器人智能系统",
+      title: "面向物理安全的机器人智能巡检解决方案",
       subtitle:
-        "我们将 AI 感知、自主巡航、远程遥操、运动控制与场景交付能力相结合，为物理安全、巡逻巡检与设施运维等场景提供可部署的机器人方案",
+        "我们将 AI 感知、自主巡航、远程遥操、运动控制与场景交付能力相结合，为物理安全与巡逻巡检等场景提供可部署的机器人方案",
       primaryCta: "预约演示",
       secondaryCta: "了解技术",
       stats: [
