@@ -4,6 +4,7 @@ import { Check } from "lucide-react";
 import type { HyperContent } from "@/data/hyper";
 import { Reveal } from "@/components/sections/Reveal";
 import { SectionHeading } from "@/components/sections/SectionHeading";
+import { ZhText } from "@/components/ui/ZhText";
 
 type PlatformSectionProps = {
   content: HyperContent;
@@ -25,7 +26,7 @@ export function PlatformSection({ content }: PlatformSectionProps) {
                 <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-md bg-cyan-100 text-cyan-700">
                   <Check className="h-4 w-4" />
                 </span>
-                {capability}
+                <ZhText>{capability}</ZhText>
               </div>
             ))}
           </div>
@@ -40,11 +41,11 @@ export function PlatformSection({ content }: PlatformSectionProps) {
             />
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_72%_22%,rgba(34,211,238,0.3),transparent_26%),linear-gradient(180deg,rgba(2,6,23,0.15),rgba(2,6,23,0.88))]" />
             <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-              <p className="text-lg font-semibold tracking-normal text-cyan-200 [word-break:normal]">
-                {content.technology.imageTitle}
+              <p className="zh-title text-lg font-semibold tracking-normal text-cyan-200 [word-break:normal]">
+                <ZhText>{content.technology.imageTitle}</ZhText>
               </p>
-              <p className="mt-3 max-w-xl text-base leading-8 text-slate-300 [word-break:normal] [overflow-wrap:break-word]">
-                {content.technology.imageText}
+              <p className="zh-copy mt-3 max-w-xl text-base leading-8 text-slate-300 [word-break:normal] [overflow-wrap:break-word]">
+                <ZhText>{content.technology.imageText}</ZhText>
               </p>
             </div>
           </div>

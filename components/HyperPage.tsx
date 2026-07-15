@@ -21,7 +21,7 @@ export function HyperPage({ locale }: HyperPageProps) {
   const content = getHyperContent(locale);
 
   return (
-    <div className="pretty-copy">
+    <div className={content.lang === "en" ? "pretty-copy" : "pretty-copy zh-page"}>
       <Header content={content} />
       <main>
         <HeroSection content={content} />

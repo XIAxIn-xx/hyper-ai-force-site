@@ -1,3 +1,5 @@
+import { ZhText } from "@/components/ui/ZhText";
+
 type SectionHeadingProps = {
   eyebrow: string;
   title: string;
@@ -20,12 +22,16 @@ export function SectionHeading({
       <p className={light ? "text-sm font-semibold uppercase tracking-[0.22em] text-cyan-300" : "text-sm font-semibold uppercase tracking-[0.22em] text-cyan-700"}>
         {eyebrow}
       </p>
-      <h2 className={light ? "mt-4 text-3xl font-bold tracking-normal text-white md:text-5xl" : "mt-4 text-3xl font-bold tracking-normal text-slate-950 md:text-5xl"}>
-        {title}
+      <h2 className={light ? "zh-title mt-4 text-3xl font-bold tracking-normal text-white md:text-5xl" : "zh-title mt-4 text-3xl font-bold tracking-normal text-slate-950 md:text-5xl"}>
+        {title.split("\n").map((line, index) => (
+          <span key={line + "-" + index} className="block">
+            <ZhText>{line}</ZhText>
+          </span>
+        ))}
       </h2>
       {copy ? (
-        <p className={light ? "mt-5 text-base leading-8 text-slate-300 [word-break:normal] [overflow-wrap:break-word]" : "mt-5 text-base leading-8 text-slate-600 [word-break:normal] [overflow-wrap:break-word]"}>
-          {copy}
+        <p className={light ? "zh-copy mt-5 text-base leading-8 text-slate-300 [word-break:normal] [overflow-wrap:break-word]" : "zh-copy mt-5 text-base leading-8 text-slate-600 [word-break:normal] [overflow-wrap:break-word]"}>
+          <ZhText>{copy}</ZhText>
         </p>
       ) : null}
     </div>

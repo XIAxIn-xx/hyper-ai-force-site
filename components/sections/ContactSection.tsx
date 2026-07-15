@@ -7,6 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import type { HyperContent } from "@/data/hyper";
 import { Reveal } from "@/components/sections/Reveal";
 import { SectionHeading } from "@/components/sections/SectionHeading";
+import { ZhText } from "@/components/ui/ZhText";
 
 type ContactSectionProps = {
   content: HyperContent;
@@ -30,7 +31,7 @@ export function ContactSection({ content }: ContactSectionProps) {
             </div>
             <div className="flex items-center gap-3">
               <MapPin className="h-5 w-5 text-cyan-300" />
-              {content.contact.address}
+              <ZhText>{content.contact.address}</ZhText>
             </div>
           </div>
         </Reveal>

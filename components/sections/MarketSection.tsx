@@ -3,6 +3,7 @@ import { AlertTriangle, CheckCircle2 } from "lucide-react";
 import type { HyperContent } from "@/data/hyper";
 import { Reveal } from "@/components/sections/Reveal";
 import { SectionHeading } from "@/components/sections/SectionHeading";
+import { ZhText } from "@/components/ui/ZhText";
 
 type MarketSectionProps = {
   content: HyperContent;
@@ -34,7 +35,7 @@ export function MarketSection({ content }: MarketSectionProps) {
                     <CheckCircle2 className="h-5 w-5" />
                   )}
                 </div>
-                <p className="text-lg leading-8 text-slate-300 [word-break:normal] [overflow-wrap:break-word]">{point}</p>
+                <p className="zh-copy text-lg leading-8 text-slate-300 [word-break:normal] [overflow-wrap:break-word]"><ZhText>{point}</ZhText></p>
               </div>
             ))}
           </div>

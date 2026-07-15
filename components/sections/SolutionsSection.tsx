@@ -2,6 +2,7 @@ import type { HyperContent } from "@/data/hyper";
 import { getIcon } from "@/data/hyper";
 import { Reveal } from "@/components/sections/Reveal";
 import { SectionHeading } from "@/components/sections/SectionHeading";
+import { ZhText } from "@/components/ui/ZhText";
 
 type SolutionsSectionProps = {
   content: HyperContent;
@@ -29,11 +30,11 @@ export function SolutionsSection({ content }: SolutionsSectionProps) {
                       <Icon className="h-7 w-7" />
                     </div>
                     <div className="min-w-0">
-                      <h3 className="text-2xl font-bold text-slate-950 [word-break:normal]">{item.title}</h3>
+                      <h3 className="zh-title text-2xl font-bold text-slate-950 [word-break:normal]"><ZhText>{item.title}</ZhText></h3>
                       <div className="mt-5 grid gap-4 text-base leading-8 text-slate-600 [word-break:normal] [overflow-wrap:break-word]">
-                        <p><span className="font-bold text-slate-950">{content.solutions.labels.problem}: </span>{item.problem}</p>
-                        <p><span className="font-bold text-slate-950">{content.solutions.labels.solution}: </span>{item.solution}</p>
-                        <p><span className="font-bold text-slate-950">{content.solutions.labels.value}: </span>{item.value}</p>
+                        <p className="zh-copy"><span className="font-bold text-slate-950"><ZhText>{content.solutions.labels.problem}: </ZhText></span><ZhText>{item.problem}</ZhText></p>
+                        <p className="zh-copy"><span className="font-bold text-slate-950"><ZhText>{content.solutions.labels.solution}: </ZhText></span><ZhText>{item.solution}</ZhText></p>
+                        <p className="zh-copy"><span className="font-bold text-slate-950"><ZhText>{content.solutions.labels.value}: </ZhText></span><ZhText>{item.value}</ZhText></p>
                       </div>
                     </div>
                   </div>

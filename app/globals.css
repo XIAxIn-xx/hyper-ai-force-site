@@ -67,3 +67,22 @@ body {
 .pretty-copy :where(article, div) {
   min-width: 0;
 }
+
+.zh-page .zh-title {
+  line-break: strict;
+  word-break: normal;
+  overflow-wrap: normal;
+  text-wrap: balance;
+}
+
+.zh-page .zh-copy {
+  line-break: strict;
+  word-break: normal;
+  overflow-wrap: break-word;
+  text-wrap: pretty;
+}
+
+.zh-page .zh-phrase {
+  display: inline-block;
+  white-space: nowrap;
+}

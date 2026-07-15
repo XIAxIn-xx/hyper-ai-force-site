@@ -2,6 +2,7 @@ import { getIcon } from "@/data/hyper";
 import type { HyperContent } from "@/data/hyper";
 import { Reveal } from "@/components/sections/Reveal";
 import { SectionHeading } from "@/components/sections/SectionHeading";
+import { ZhText } from "@/components/ui/ZhText";
 
 type ServiceNetworkSectionProps = {
   content: HyperContent;
@@ -28,7 +29,7 @@ export function ServiceNetworkSection({ content }: ServiceNetworkSectionProps) {
                     <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-md bg-orange-100 text-orange-600">
                       <Icon className="h-6 w-6" />
                     </div>
-                    <p className="font-bold text-slate-950">{item.label}</p>
+                    <p className="zh-copy font-bold text-slate-950"><ZhText>{item.label}</ZhText></p>
                   </div>
                 );
               })}

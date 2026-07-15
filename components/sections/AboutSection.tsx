@@ -3,6 +3,7 @@ import { CheckCircle2 } from "lucide-react";
 
 import type { HyperContent } from "@/data/hyper";
 import { Reveal } from "@/components/sections/Reveal";
+import { ZhText } from "@/components/ui/ZhText";
 
 type AboutSectionProps = {
   content: HyperContent;
@@ -25,17 +26,21 @@ export function AboutSection({ content }: AboutSectionProps) {
         </Reveal>
         <Reveal delay={0.1}>
           <p className="text-sm font-semibold uppercase tracking-[0.22em] text-cyan-700">
-            {content.about.eyebrow}
+            <ZhText>{content.about.eyebrow}</ZhText>
           </p>
-          <h2 className="mt-4 text-3xl font-bold tracking-normal text-slate-950 md:text-5xl">
-            {content.about.title}
+          <h2 className="zh-title mt-4 text-3xl font-bold tracking-normal text-slate-950 md:text-5xl">
+            {content.about.title.split("\n").map((line, index) => (
+              <span key={line + "-" + index} className="block">
+                <ZhText>{line}</ZhText>
+              </span>
+            ))}
           </h2>
-          <p className="mt-6 text-base leading-8 text-slate-600">{content.about.copy}</p>
+          <p className="zh-copy mt-6 text-base leading-8 text-slate-600"><ZhText>{content.about.copy}</ZhText></p>
           <div className="mt-8 grid gap-3">
             {content.about.bullets.map((bullet) => (
               <div key={bullet} className="flex items-center gap-3 text-sm font-semibold text-slate-800">
                 <CheckCircle2 className="h-5 w-5 text-cyan-600" />
-                {bullet}
+                <ZhText>{bullet}</ZhText>
               </div>
             ))}
           </div>

@@ -6,6 +6,7 @@ import { ArrowRight, Cpu, ShieldCheck } from "lucide-react";
 import { motion } from "framer-motion";
 
 import { Button } from "@/components/ui/button";
+import { ZhText } from "@/components/ui/ZhText";
 import type { HyperContent } from "@/data/hyper";
 
 type HeroSectionProps = {
@@ -46,17 +47,17 @@ export function HeroSection({ content }: HeroSectionProps) {
             className="inline-flex items-center gap-2 rounded-full border border-cyan-300/25 bg-cyan-300/10 px-4 py-2 text-sm font-medium text-cyan-100"
           >
             <Cpu className="h-4 w-4" />
-            {content.hero.eyebrow}
+            <ZhText>{content.hero.eyebrow}</ZhText>
           </motion.div>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="mt-7 max-w-3xl text-5xl font-black leading-[1.02] tracking-normal md:text-7xl"
+            className="zh-title mt-7 max-w-3xl text-5xl font-black leading-[1.02] tracking-normal md:text-7xl"
           >
             {content.hero.title.split("\n").map((line) => (
               <span key={line} className="block">
-                {line}
+                <ZhText>{line}</ZhText>
               </span>
             ))}
           </motion.h1>
@@ -64,9 +65,9 @@ export function HeroSection({ content }: HeroSectionProps) {
             initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.75, delay: 0.16 }}
-            className="mt-7 max-w-2xl text-lg leading-8 text-slate-300 md:text-xl"
+            className="zh-copy mt-7 max-w-2xl text-lg leading-8 text-slate-300 md:text-xl"
           >
-            {content.hero.subtitle}
+            <ZhText>{content.hero.subtitle}</ZhText>
           </motion.p>
           <motion.div
             initial={false}
@@ -94,9 +95,9 @@ export function HeroSection({ content }: HeroSectionProps) {
               <div key={stat.label} className="min-h-[132px] rounded-lg border border-white/12 bg-white/[0.06] p-5 backdrop-blur">
                 <div className="flex items-center gap-2 text-2xl font-black text-cyan-200">
                   <ShieldCheck className="h-5 w-5" />
-                  {stat.value}
+                  <ZhText>{stat.value}</ZhText>
                 </div>
-                <p className="mt-2 text-sm leading-6 text-slate-400">{stat.label}</p>
+                <p className="zh-copy mt-2 text-sm leading-6 text-slate-400"><ZhText>{stat.label}</ZhText></p>
               </div>
             ))}
           </motion.div>

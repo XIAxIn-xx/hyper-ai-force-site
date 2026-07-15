@@ -1,3 +1,4 @@
+import { headers } from "next/headers";
 import type { Metadata } from "next";
 
 import "./globals.css";
@@ -33,8 +34,15 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const pathname = headers().get("x-hyper-pathname") ?? "/";
+  const lang = pathname.startsWith("/zh-hk")
+    ? "zh-HK"
+    : pathname.startsWith("/zh-cn")
+      ? "zh-CN"
+      : "en";
+
   return (
-    <html lang="en">
+    <html lang={lang}>
       <body className="font-sans antialiased">{children}</body>
     </html>
   );

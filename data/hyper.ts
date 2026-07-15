@@ -315,9 +315,9 @@ const content = {
     },
     hero: {
       eyebrow: "超流智能有限公司",
-      title: "面向物理安全的機器人智能巡檢解決方案",
+      title: "面向物理安全的\n機器人智能巡檢解決方案",
       subtitle:
-        "我們將 AI 感知、自主巡航、遠程遙操、運動控制與場景交付能力相結合，為物理安全与巡邏巡檢等場景提供可部署的機器人方案",
+        "我們將 AI 感知、自主巡航、遠程遙操、運動控制與場景交付能力相結合，為物理安全與巡邏巡檢等場景提供可部署的機器人方案",
       primaryCta: "預約演示",
       secondaryCta: "了解技術",
       stats: [
@@ -344,7 +344,7 @@ const content = {
     },
     strengths: {
       eyebrow: "核心優勢",
-      title: "為真實部署而生，不止於實驗室展示",
+      title: "為真實部署而生，\n不止於實驗室展示",
       items: [
         {
           icon: "BrainCircuit",
@@ -374,7 +374,7 @@ const content = {
     },
     technology: {
       eyebrow: "機器人智能平台",
-      title: "面向自主機器人隊伍的軟件化平台",
+      title: "面向自主機器人隊伍的\n軟件化平台",
       copy:
         "操作人員可通過瀏覽器或平板分配任務、查看實時數據、接收警報並監督多台機器人。平台連接邊緣 AI、雲端監控與人工介入",
       imageTitle: "多機器人調度平台",
@@ -391,7 +391,7 @@ const content = {
     },
     solutions: {
       eyebrow: "產品與方案",
-      title: "面向真實工業環境的能力組合",
+      title: "面向真實工業環境的\n能力組合",
       labels: {
         problem: "問題",
         solution: "方案",
@@ -430,7 +430,7 @@ const content = {
     },
     applications: {
       eyebrow: "應用場景",
-      title: "服務於重視安全、覆蓋與穩定運行的設施",
+      title: "服務於重視安全、覆蓋\n與穩定運行的設施",
       items: [
         { icon: "Flame", label: "消防應急" },
         { icon: "Map", label: "倉儲物流" },
@@ -442,7 +442,7 @@ const content = {
     },
     caseStudy: {
       eyebrow: "案例場景",
-      title: "普洛斯物流園區機器狗巡邏部署",
+      title: "普洛斯物流園區\n機器狗巡邏部署",
       labels: {
         challenge: "挑戰",
         solution: "方案"
@@ -530,7 +530,7 @@ const content = {
     },
     hero: {
       eyebrow: "超流智能有限公司",
-      title: "面向物理安全的机器人智能巡检解决方案",
+      title: "面向物理安全的\n机器人智能巡检解决方案",
       subtitle:
         "我们将 AI 感知、自主巡航、远程遥操、运动控制与场景交付能力相结合，为物理安全与巡逻巡检等场景提供可部署的机器人方案",
       primaryCta: "预约演示",
@@ -559,7 +559,7 @@ const content = {
     },
     strengths: {
       eyebrow: "核心优势",
-      title: "为真实部署而生，不止于实验室展示",
+      title: "为真实部署而生，\n不止于实验室展示",
       items: [
         {
           icon: "BrainCircuit",
@@ -589,7 +589,7 @@ const content = {
     },
     technology: {
       eyebrow: "机器人智能平台",
-      title: "面向自主机器人队伍的软件化运营平台",
+      title: "面向自主机器人队伍的\n软件化运营平台",
       copy:
         "操作人员可通过浏览器或平板分配任务、查看实时数据、接收警报并监督多台机器人。平台连接边缘 AI、云端监控与人工介入",
       imageTitle: "多机器人调度平台",
@@ -606,7 +606,7 @@ const content = {
     },
     solutions: {
       eyebrow: "产品与方案",
-      title: "面向真实工业环境的能力组合",
+      title: "面向真实工业环境的\n能力组合",
       labels: {
         problem: "问题",
         solution: "方案",
@@ -645,7 +645,7 @@ const content = {
     },
     applications: {
       eyebrow: "应用场景",
-      title: "服务于重视安全、覆盖与稳定运行的设施",
+      title: "服务于重视安全、覆盖\n与稳定运行的设施",
       items: [
         { icon: "Flame", label: "消防应急" },
         { icon: "Map", label: "仓储物流" },
@@ -657,7 +657,7 @@ const content = {
     },
     caseStudy: {
       eyebrow: "案例场景",
-      title: "普洛斯物流园区机器狗巡逻部署",
+      title: "普洛斯物流园区\n机器狗巡逻部署",
       labels: {
         challenge: "挑战",
         solution: "方案"
