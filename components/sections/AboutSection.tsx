@@ -28,7 +28,7 @@ export function AboutSection({ content }: AboutSectionProps) {
           <p className="text-sm font-semibold uppercase tracking-[0.22em] text-cyan-700">
             <ZhText>{content.about.eyebrow}</ZhText>
           </p>
-          <h2 className="zh-title mt-4 text-3xl font-bold tracking-normal text-slate-950 md:text-5xl">
+          <h2 className="zh-title mt-4 text-3xl font-bold tracking-normal text-slate-950 md:text-5xl xl:w-[calc(100%+32px)] xl:max-w-none">
             {content.about.title.split("\n").map((line, index) => (
               <span key={line + "-" + index} className="block">
                 <ZhText>{line}</ZhText>

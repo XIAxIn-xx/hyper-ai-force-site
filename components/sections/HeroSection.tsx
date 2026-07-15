@@ -39,7 +39,7 @@ export function HeroSection({ content }: HeroSectionProps) {
       <div className="absolute bottom-0 left-0 h-48 w-full bg-gradient-to-t from-[#050B14] to-transparent" />
 
       <div className="section-shell relative z-10 flex min-h-[690px] items-center">
-        <div className="max-w-3xl py-24">
+        <div className="max-w-[840px] py-24">
           <motion.div
             initial={false}
             animate={{ opacity: 1, y: 0 }}
@@ -53,7 +53,7 @@ export function HeroSection({ content }: HeroSectionProps) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="zh-title mt-7 max-w-3xl text-5xl font-black leading-[1.02] tracking-normal md:text-7xl"
+            className="zh-title mt-7 max-w-[840px] text-5xl font-black leading-[1.02] tracking-normal md:text-7xl"
           >
             {content.hero.title.split("\n").map((line) => (
               <span key={line} className="block">
