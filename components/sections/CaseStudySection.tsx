@@ -45,11 +45,11 @@ export function CaseStudySection({ content }: CaseStudySectionProps) {
           </h2>
           <div className="mt-7 grid gap-5 text-base leading-8 text-slate-600">
             <p>
-              <span className="font-bold text-slate-950"><ZhText>{content.caseStudy.labels.challenge}: </ZhText></span>
+              <span className="font-bold text-slate-950"><ZhText>{`${content.caseStudy.labels.challenge}: `}</ZhText></span>
               <ZhText>{content.caseStudy.challenge}</ZhText>
             </p>
             <p>
-              <span className="font-bold text-slate-950"><ZhText>{content.caseStudy.labels.solution}: </ZhText></span>
+              <span className="font-bold text-slate-950"><ZhText>{`${content.caseStudy.labels.solution}: `}</ZhText></span>
               <ZhText>{content.caseStudy.solution}</ZhText>
             </p>
           </div>
