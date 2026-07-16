@@ -317,7 +317,7 @@ const content = {
       eyebrow: "超流智能有限公司",
       title: "面向物理安全的\n機器人智能巡檢解決方案",
       subtitle:
-        "我們將 AI 感知、自主巡航、遠程遙操、運動控制與場景交付能力相結合，<br / >為物理安全與園區巡邏巡檢提供可部署的機器人解決方案。",
+        "我們將 AI 感知、自主巡航、遠程遙操、運動控制與場景交付能力相結合，\n為物理安全與園區巡邏巡檢提供可部署的機器人解決方案。",
       primaryCta: "預約演示",
       secondaryCta: "了解技術",
       stats: [
@@ -341,7 +341,7 @@ const content = {
     },
     strengths: {
       eyebrow: "核心優勢",
-      title: "為真實部署而生，\n不止於實驗室展示",
+      title: "為真實部署而生，不止於實驗室展示",
       items: [
         {
           icon: "BrainCircuit",
@@ -529,7 +529,7 @@ const content = {
       eyebrow: "超流智能有限公司",
       title: "面向物理安全的\n机器人智能巡检解决方案",
       subtitle:
-        "我们将 AI 感知、自主巡航、远程遥操、运动控制与场景交付能力相结合，<br />为物理安全与园区巡逻巡检提供可部署的机器人解决方案。",
+        "我们将 AI 感知、自主巡航、远程遥操、运动控制与场景交付能力相结合，\n为物理安全与园区巡逻巡检提供可部署的机器人解决方案。",
       primaryCta: "预约演示",
       secondaryCta: "了解技术",
       stats: [
@@ -553,7 +553,7 @@ const content = {
     },
     strengths: {
       eyebrow: "核心优势",
-      title: "为真实部署而生，\n不止于实验室展示",
+      title: "为真实部署而生，不止于实验室展示",
       items: [
         {
           icon: "BrainCircuit",
