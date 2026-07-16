@@ -430,7 +430,7 @@ const content = {
     },
     applications: {
       eyebrow: "應用場景",
-      title: "服務於重視安全、\n覆蓋與穩定運行的設施",
+      title: "服務於重視安全、\n覆蓋與穩定運行的場景",
       items: [
         { icon: "Flame", label: "消防應急" },
         { icon: "Map", label: "倉儲物流" },
@@ -645,7 +645,7 @@ const content = {
     },
     applications: {
       eyebrow: "应用场景",
-      title: "服务于重视安全、\n覆盖与稳定运行的设施",
+      title: "服务于重视安全、\n覆盖与稳定运行的场景",
       items: [
         { icon: "Flame", label: "消防应急" },
         { icon: "Map", label: "仓储物流" },
