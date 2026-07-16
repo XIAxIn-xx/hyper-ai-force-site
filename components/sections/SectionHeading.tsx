@@ -18,7 +18,7 @@ export function SectionHeading({
   className = ""
 }: SectionHeadingProps) {
   return (
-    <div className={`zh-section-heading ${align === "center" ? "mx-auto max-w-3xl text-center" : "max-w-3xl"} ${className}`}>
+    <div className={`zh-section-heading ${align === "center" ? "zh-section-heading-center mx-auto max-w-3xl text-center" : "max-w-3xl"} ${className}`}>
       <p className={light ? "zh-eyebrow text-sm font-semibold uppercase tracking-[0.22em] text-cyan-300" : "zh-eyebrow text-sm font-semibold uppercase tracking-[0.22em] text-cyan-700"}>
         {eyebrow}
       </p>

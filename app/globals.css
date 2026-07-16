@@ -72,7 +72,7 @@ body {
   line-break: strict;
   word-break: normal;
   overflow-wrap: normal;
-  text-wrap: balance;
+  text-wrap: pretty;
   font-weight: 700;
   letter-spacing: -0.01em;
 }
@@ -88,7 +88,7 @@ body {
 }
 
 .zh-page .zh-phrase {
-  display: inline-block;
+  display: inline;
   white-space: nowrap;
 }
 
@@ -119,10 +119,12 @@ body {
 
 .zh-page .zh-title-line {
   display: inline;
+  word-break: normal;
+  overflow-wrap: normal;
 }
 
 .zh-page .zh-hero-title {
-  max-width: 700px;
+  max-width: 760px;
   font-size: clamp(46px, 4.4vw, 68px);
   font-weight: 700;
   line-height: 1.08;
@@ -154,6 +156,10 @@ body {
   margin-top: 48px;
 }
 
+.zh-page .zh-section-heading-center .zh-section-title {
+  text-wrap: balance;
+}
+
 .zh-page .zh-market-point-icon {
   align-self: center;
   margin-top: 0;
@@ -164,7 +170,7 @@ body {
   letter-spacing: 0;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .zh-page .zh-title-line {
     display: block;
   }

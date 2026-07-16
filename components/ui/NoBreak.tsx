@@ -8,5 +8,5 @@ type NoBreakProps = {
 };
 
 export function NoBreak({ children, className }: NoBreakProps) {
-  return <span className={cn("zh-phrase inline-block whitespace-nowrap", className)}>{children}</span>;
+  return <span className={cn("zh-phrase whitespace-nowrap", className)}>{children}</span>;
 }
