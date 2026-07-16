@@ -33,12 +33,12 @@ export function CaseStudySection({ content }: CaseStudySectionProps) {
           </div>
         </Reveal>
         <Reveal delay={0.1}>
-          <p className="text-sm font-semibold uppercase tracking-[0.22em] text-cyan-700">
+          <p className="zh-eyebrow text-sm font-semibold uppercase tracking-[0.22em] text-cyan-700">
             <ZhText>{content.caseStudy.eyebrow}</ZhText>
           </p>
-          <h2 className="zh-title mt-4 text-3xl font-bold tracking-normal text-slate-950 md:text-5xl">
+          <h2 className="zh-title zh-section-title mt-4 text-3xl font-bold tracking-normal text-slate-950 md:text-5xl">
             {content.caseStudy.title.split("\n").map((line, index) => (
-              <span key={line + "-" + index} className="block">
+              <span key={line + "-" + index} className="zh-title-line">
                 <ZhText>{line}</ZhText>
               </span>
             ))}

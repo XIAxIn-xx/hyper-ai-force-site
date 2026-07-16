@@ -53,10 +53,14 @@ export function HeroSection({ content }: HeroSectionProps) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="zh-title mt-7 max-w-[840px] text-5xl font-black leading-[1.02] tracking-normal md:text-7xl"
+            className={
+              content.lang === "en"
+                ? "zh-title mt-7 max-w-[840px] text-5xl font-black leading-[1.02] tracking-normal md:text-7xl"
+                : "zh-title zh-hero-title mt-7 max-w-[700px]"
+            }
           >
             {content.hero.title.split("\n").map((line) => (
-              <span key={line} className="block">
+              <span key={line} className="zh-title-line">
                 <ZhText>{line}</ZhText>
               </span>
             ))}
@@ -65,7 +69,7 @@ export function HeroSection({ content }: HeroSectionProps) {
             initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.75, delay: 0.16 }}
-            className="zh-copy mt-7 max-w-2xl text-lg leading-8 text-slate-300 md:text-xl"
+            className="zh-copy zh-hero-copy mt-7 max-w-2xl text-lg leading-8 text-slate-300 md:text-xl"
           >
             <ZhText>{content.hero.subtitle}</ZhText>
           </motion.p>
@@ -93,7 +97,7 @@ export function HeroSection({ content }: HeroSectionProps) {
           >
             {content.hero.stats.map((stat) => (
               <div key={stat.label} className="min-h-[132px] rounded-lg border border-white/12 bg-white/[0.06] p-5 backdrop-blur">
-                <div className="flex items-center gap-2 text-2xl font-black text-cyan-200">
+                <div className="zh-card-title flex items-center gap-2 text-2xl font-black text-cyan-200">
                   <ShieldCheck className="h-5 w-5" />
                   <ZhText>{stat.value}</ZhText>
                 </div>

@@ -30,7 +30,7 @@ export function ApplicationsSection({ content }: ApplicationsSectionProps) {
                   <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-md bg-cyan-300/12 text-cyan-200">
                     <Icon className="h-6 w-6" />
                   </div>
-                  <h3 className="zh-title text-xl font-bold text-white"><ZhText>{item.label}</ZhText></h3>
+                  <h3 className="zh-title zh-card-title text-xl font-bold text-white"><ZhText>{item.label}</ZhText></h3>
                 </div>
               </Reveal>
             );

@@ -19,9 +19,11 @@ type HyperPageProps = {
 
 export function HyperPage({ locale }: HyperPageProps) {
   const content = getHyperContent(locale);
+  const localeClass =
+    content.lang === "zh-CN" ? "zh-cn-page" : content.lang === "zh-HK" ? "zh-hk-page" : "";
 
   return (
-    <div className={content.lang === "en" ? "pretty-copy" : "pretty-copy zh-page"}>
+    <div className={`${content.lang === "en" ? "pretty-copy" : "pretty-copy zh-page"} ${localeClass}`}>
       <Header content={content} />
       <main>
         <HeroSection content={content} />

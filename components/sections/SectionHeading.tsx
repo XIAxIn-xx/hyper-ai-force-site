@@ -18,13 +18,13 @@ export function SectionHeading({
   className = ""
 }: SectionHeadingProps) {
   return (
-    <div className={`${align === "center" ? "mx-auto max-w-3xl text-center" : "max-w-3xl"} ${className}`}>
-      <p className={light ? "text-sm font-semibold uppercase tracking-[0.22em] text-cyan-300" : "text-sm font-semibold uppercase tracking-[0.22em] text-cyan-700"}>
+    <div className={`zh-section-heading ${align === "center" ? "mx-auto max-w-3xl text-center" : "max-w-3xl"} ${className}`}>
+      <p className={light ? "zh-eyebrow text-sm font-semibold uppercase tracking-[0.22em] text-cyan-300" : "zh-eyebrow text-sm font-semibold uppercase tracking-[0.22em] text-cyan-700"}>
         {eyebrow}
       </p>
-      <h2 className={light ? "zh-title mt-4 text-3xl font-bold tracking-normal text-white md:text-5xl" : "zh-title mt-4 text-3xl font-bold tracking-normal text-slate-950 md:text-5xl"}>
+      <h2 className={light ? "zh-title zh-section-title mt-4 text-3xl font-bold tracking-normal text-white md:text-5xl" : "zh-title zh-section-title mt-4 text-3xl font-bold tracking-normal text-slate-950 md:text-5xl"}>
         {title.split("\n").map((line, index) => (
-          <span key={line + "-" + index} className="block">
+          <span key={line + "-" + index} className="zh-title-line">
             <ZhText>{line}</ZhText>
           </span>
         ))}

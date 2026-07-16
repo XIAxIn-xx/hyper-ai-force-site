@@ -66,6 +66,7 @@ export function Header({ content }: HeaderProps) {
               key={item.href}
               className={cn(
                 "transition",
+                content.lang !== "en" ? "zh-nav text-sm font-medium tracking-normal" : "",
                 scrolled || open ? "hover:text-cyan-700" : "hover:text-cyan-200"
               )}
               href={item.href}
@@ -84,10 +85,16 @@ export function Header({ content }: HeaderProps) {
                 variant="outline"
                 size="sm"
                 className={cn(
-                  scrolled || open
-                    ? "border-slate-300 text-slate-800 hover:bg-white"
-                    : "border-white/20 text-white hover:bg-white/10",
-                  content.lang === item.lang ? "bg-white/15 text-cyan-200" : ""
+                  content.lang === "en"
+                    ? scrolled || open
+                      ? "border-slate-300 text-slate-800 hover:bg-white"
+                      : "border-white/20 text-white hover:bg-white/10"
+                    : content.lang === item.lang
+                      ? "border-cyan-300 bg-cyan-400 text-slate-950 hover:bg-cyan-300"
+                      : scrolled || open
+                        ? "border-slate-300 bg-white/70 text-slate-800 hover:bg-white"
+                        : "border-white/20 bg-white/5 text-white hover:bg-white/10",
+                  content.lang !== "en" ? "zh-language-button text-sm font-medium tracking-normal" : ""
                 )}
               >
                 <Link href={item.href}>{item.label}</Link>
@@ -135,7 +142,13 @@ export function Header({ content }: HeaderProps) {
                   size="sm"
                   className={cn(
                     "border-slate-300 text-slate-800 hover:bg-white",
-                    content.lang === item.lang ? "bg-white text-cyan-700" : ""
+                    content.lang !== "en" && content.lang === item.lang
+                      ? "border-cyan-500 bg-cyan-400 text-slate-950 hover:bg-cyan-300"
+                      : content.lang !== "en"
+                        ? "bg-white text-slate-800"
+                        : content.lang === item.lang
+                          ? "bg-white text-cyan-700"
+                          : ""
                   )}
                 >
                   <Link href={item.href} onClick={() => setOpen(false)}>

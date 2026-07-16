@@ -29,7 +29,7 @@ export function StrengthsSection({ content }: StrengthsSectionProps) {
                   <div className="flex h-12 w-12 items-center justify-center rounded-md bg-[#050B14] text-cyan-200">
                     <Icon className="h-6 w-6" />
                   </div>
-                  <h3 className="zh-title mt-6 text-xl font-bold text-slate-950 [word-break:normal]"><ZhText>{item.title}</ZhText></h3>
+                  <h3 className="zh-title zh-card-title mt-6 text-xl font-bold text-slate-950 [word-break:normal]"><ZhText>{item.title}</ZhText></h3>
                   <p className="zh-copy mt-4 text-base leading-8 text-slate-600 [word-break:normal] [overflow-wrap:break-word]"><ZhText>{item.text}</ZhText></p>
                 </div>
               </Reveal>

@@ -73,6 +73,8 @@ body {
   word-break: normal;
   overflow-wrap: normal;
   text-wrap: balance;
+  font-weight: 700;
+  letter-spacing: -0.01em;
 }
 
 .zh-page .zh-copy {
@@ -80,9 +82,100 @@ body {
   word-break: normal;
   overflow-wrap: break-word;
   text-wrap: pretty;
+  font-weight: 400;
+  line-height: 1.8;
+  letter-spacing: 0;
 }
 
 .zh-page .zh-phrase {
   display: inline-block;
   white-space: nowrap;
+}
+
+.zh-page.zh-cn-page {
+  font-family:
+    "PingFang SC",
+    "Hiragino Sans GB",
+    "Microsoft YaHei",
+    "Noto Sans CJK SC",
+    system-ui,
+    sans-serif;
+}
+
+.zh-page.zh-hk-page {
+  font-family:
+    "PingFang TC",
+    "Noto Sans CJK TC",
+    "Microsoft JhengHei",
+    system-ui,
+    sans-serif;
+}
+
+.zh-page .zh-eyebrow {
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: 1.5;
+}
+
+.zh-page .zh-title-line {
+  display: inline;
+}
+
+.zh-page .zh-hero-title {
+  max-width: 700px;
+  font-size: clamp(46px, 4.4vw, 68px);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+}
+
+.zh-page .zh-section-title {
+  font-size: clamp(34px, 3.2vw, 50px);
+  font-weight: 700;
+  line-height: 1.14;
+  letter-spacing: -0.01em;
+}
+
+.zh-page .zh-card-title {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+
+.zh-page .zh-hero-copy {
+  max-width: 680px;
+  font-size: clamp(16px, 1.25vw, 18px);
+  line-height: 1.8;
+}
+
+.zh-page .zh-section-heading .zh-section-title + .zh-copy {
+  margin-top: 48px;
+}
+
+.zh-page .zh-market-point-icon {
+  align-self: center;
+  margin-top: 0;
+}
+
+.zh-page .zh-nav,
+.zh-page .zh-language-button {
+  letter-spacing: 0;
+}
+
+@media (min-width: 768px) {
+  .zh-page .zh-title-line {
+    display: block;
+  }
+
+  .zh-page main > section:not(:first-child) {
+    padding-block: clamp(96px, 8vw, 128px);
+  }
+}
+
+@media (max-width: 767px) {
+  .zh-page main > section:not(:first-child) {
+    padding-block: clamp(64px, 18vw, 80px);
+  }
 }

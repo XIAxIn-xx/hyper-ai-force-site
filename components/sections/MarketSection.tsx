@@ -12,7 +12,11 @@ type MarketSectionProps = {
 export function MarketSection({ content }: MarketSectionProps) {
   return (
     <section className="bg-[#050B14] py-24 text-white">
-      <div className="section-shell grid gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+      <div
+        className={`section-shell grid gap-12 lg:items-center ${
+          content.lang === "en" ? "lg:grid-cols-[0.95fr_1.05fr]" : "lg:grid-cols-[560px_minmax(0,1fr)]"
+        }`}
+      >
         <Reveal>
           <SectionHeading
             eyebrow={content.market.eyebrow}
@@ -26,9 +30,9 @@ export function MarketSection({ content }: MarketSectionProps) {
             {content.market.points.map((point, index) => (
               <div
                 key={point}
-                className="flex gap-5 rounded-lg border border-white/10 bg-white/[0.06] p-5"
+                className="zh-market-point flex gap-5 rounded-lg border border-white/10 bg-white/[0.06] p-5"
               >
-                <div className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-cyan-300/12 text-cyan-200">
+                <div className="zh-market-point-icon mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-cyan-300/12 text-cyan-200">
                   {index === 0 ? (
                     <AlertTriangle className="h-5 w-5" />
                   ) : (

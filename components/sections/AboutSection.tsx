@@ -25,12 +25,12 @@ export function AboutSection({ content }: AboutSectionProps) {
           </div>
         </Reveal>
         <Reveal delay={0.1}>
-          <p className="text-sm font-semibold uppercase tracking-[0.22em] text-cyan-700">
+          <p className="zh-eyebrow text-sm font-semibold uppercase tracking-[0.22em] text-cyan-700">
             <ZhText>{content.about.eyebrow}</ZhText>
           </p>
-          <h2 className="zh-title mt-4 text-3xl font-bold tracking-normal text-slate-950 md:text-5xl xl:w-[calc(100%+32px)] xl:max-w-none">
+          <h2 className="zh-title zh-section-title mt-4 text-3xl font-bold tracking-normal text-slate-950 md:text-5xl xl:w-[calc(100%+32px)] xl:max-w-none">
             {content.about.title.split("\n").map((line, index) => (
-              <span key={line + "-" + index} className="block">
+              <span key={line + "-" + index} className="zh-title-line">
                 <ZhText>{line}</ZhText>
               </span>
             ))}

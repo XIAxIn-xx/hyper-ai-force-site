@@ -41,7 +41,7 @@ export function PlatformSection({ content }: PlatformSectionProps) {
             />
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_72%_22%,rgba(34,211,238,0.3),transparent_26%),linear-gradient(180deg,rgba(2,6,23,0.15),rgba(2,6,23,0.88))]" />
             <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-              <p className="zh-title text-lg font-semibold tracking-normal text-cyan-200 [word-break:normal]">
+              <p className="zh-title zh-card-title text-lg font-semibold tracking-normal text-cyan-200 [word-break:normal]">
                 <ZhText>{content.technology.imageTitle}</ZhText>
               </p>
               <p className="zh-copy mt-3 max-w-xl text-base leading-8 text-slate-300 [word-break:normal] [overflow-wrap:break-word]">
