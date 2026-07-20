@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
+import { Globe2, Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 
 import { Button } from "@/components/ui/button";
@@ -20,6 +20,7 @@ const languageLinks = [
 
 export function Header({ content }: HeaderProps) {
   const [open, setOpen] = useState(false);
+  const [languageOpen, setLanguageOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const homeHref =
     content.lang === "zh-HK" ? "/zh-hk" : content.lang === "zh-CN" ? "/zh-cn" : "/";
@@ -32,6 +33,43 @@ export function Header({ content }: HeaderProps) {
 
     return () => window.removeEventListener("scroll", updateScrolled);
   }, []);
+
+  const languageMenu = (className: string) => (
+    <div className={cn("rounded-lg border border-[#E6EAF0] bg-[#F5F7FA] p-1.5 shadow-[0_16px_36px_rgba(15,23,42,0.16)]", className)}>
+      {languageLinks.map((item) => (
+        <Link
+          key={item.lang}
+          href={item.href}
+          onClick={() => setLanguageOpen(false)}
+          className={cn(
+            "flex h-9 items-center rounded-md px-3 text-sm font-medium transition-colors",
+            content.lang === item.lang
+              ? "bg-cyan-400 text-slate-950"
+              : "text-slate-700 hover:bg-white hover:text-cyan-700"
+          )}
+        >
+          {item.label}
+        </Link>
+      ))}
+    </div>
+  );
+
+  const languageTrigger = (
+    <button
+      type="button"
+      aria-label="切换语言"
+      aria-expanded={languageOpen}
+      onClick={() => setLanguageOpen((value) => !value)}
+      className={cn(
+        "inline-flex h-10 w-10 items-center justify-center rounded-md border transition-colors",
+        scrolled || open || languageOpen
+          ? "border-slate-300 bg-white/70 text-slate-900 hover:bg-white"
+          : "border-white/15 text-white hover:bg-white/10"
+      )}
+    >
+      <Globe2 className="h-5 w-5" />
+    </button>
+  );
 
   return (
     <header
@@ -77,48 +115,36 @@ export function Header({ content }: HeaderProps) {
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">
-          <div className="flex items-center gap-2">
-            {languageLinks.map((item) => (
-              <Button
-                key={item.lang}
-                asChild
-                variant="outline"
-                size="sm"
-                className={cn(
-                  content.lang === "en"
-                    ? scrolled || open
-                      ? "border-slate-300 text-slate-800 hover:bg-white"
-                      : "border-white/20 text-white hover:bg-white/10"
-                    : content.lang === item.lang
-                      ? "border-cyan-300 bg-cyan-400 text-slate-950 hover:bg-cyan-300"
-                      : scrolled || open
-                        ? "border-slate-300 bg-white/70 text-slate-800 hover:bg-white"
-                        : "border-white/20 bg-white/5 text-white hover:bg-white/10",
-                  content.lang !== "en" ? "zh-language-button text-sm font-medium tracking-normal" : ""
-                )}
-              >
-                <Link href={item.href}>{item.label}</Link>
-              </Button>
-            ))}
+          <div className="relative">
+            {languageTrigger}
+            {languageOpen ? languageMenu("absolute right-0 top-full z-10 mt-2 w-32") : null}
           </div>
           <Button asChild size="sm">
             <a href="#contact">{content.contact.button}</a>
           </Button>
         </div>
 
-        <button
-          className={cn(
-            "inline-flex h-10 w-10 items-center justify-center rounded-md border transition-colors lg:hidden",
-            scrolled || open
-              ? "border-slate-300 bg-white/70 text-slate-900"
-              : "border-white/15 text-white"
-          )}
-          aria-label="Toggle navigation"
-          onClick={() => setOpen((value) => !value)}
-        >
-          {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-        </button>
+        <div className="flex items-center gap-2 lg:hidden">
+          {languageTrigger}
+          <button
+            className={cn(
+              "inline-flex h-10 w-10 items-center justify-center rounded-md border transition-colors",
+              scrolled || open
+                ? "border-slate-300 bg-white/70 text-slate-900"
+                : "border-white/15 text-white"
+            )}
+            aria-label="Toggle navigation"
+            onClick={() => {
+              setOpen((value) => !value);
+              setLanguageOpen(false);
+            }}
+          >
+            {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </button>
+        </div>
       </div>
+
+      {languageOpen ? <div className="absolute right-4 top-16 lg:hidden">{languageMenu("w-32")}</div> : null}
 
       {open ? (
         <div className="border-t border-[#E6EAF0] bg-[#F5F7FA]/95 shadow-[0_18px_36px_rgba(15,23,42,0.08)] backdrop-blur-xl lg:hidden">
@@ -127,35 +153,16 @@ export function Header({ content }: HeaderProps) {
               <a
                 key={item.href}
                 href={item.href}
-                onClick={() => setOpen(false)}
+                onClick={() => {
+                  setOpen(false);
+                  setLanguageOpen(false);
+                }}
                 className="rounded-md px-2 py-2 hover:bg-white"
               >
                 {item.label}
               </a>
             ))}
-            <div className="grid grid-cols-4 gap-3 pt-2">
-              {languageLinks.map((item) => (
-                <Button
-                  key={item.lang}
-                  asChild
-                  variant="outline"
-                  size="sm"
-                  className={cn(
-                    "border-slate-300 text-slate-800 hover:bg-white",
-                    content.lang !== "en" && content.lang === item.lang
-                      ? "border-cyan-500 bg-cyan-400 text-slate-950 hover:bg-cyan-300"
-                      : content.lang !== "en"
-                        ? "bg-white text-slate-800"
-                        : content.lang === item.lang
-                          ? "bg-white text-cyan-700"
-                          : ""
-                  )}
-                >
-                  <Link href={item.href} onClick={() => setOpen(false)}>
-                    {item.label}
-                  </Link>
-                </Button>
-              ))}
+            <div className="pt-2">
               <Button asChild size="sm">
                 <a href="#contact" onClick={() => setOpen(false)}>
                   {content.contact.button}

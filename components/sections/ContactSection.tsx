@@ -27,7 +27,7 @@ export function ContactSection({ content }: ContactSectionProps) {
           <div className="mt-10 grid gap-4 text-sm text-slate-300">
             <div className="flex items-center gap-3">
               <Mail className="h-5 w-5 text-cyan-300" />
-              contact@hyperaiforce.com
+              contact@haiforce.ai
             </div>
             <div className="flex items-center gap-3">
               <MapPin className="h-5 w-5 text-cyan-300" />

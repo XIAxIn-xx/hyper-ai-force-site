@@ -81,6 +81,7 @@ const content = {
     },
     hero: {
       eyebrow: "Hyper AIForce Limited",
+      slogan: "AI Force Be With You.",
       title: "AI-Powered Robotic Inspection Solutions for Physical Security",
       subtitle:
         "We develop autonomous robotic systems that combine AI perception, navigation, teleoperation, motion control and service delivery for physical security, inspection and facility operations.",
@@ -97,7 +98,7 @@ const content = {
 ]
     },
     market: {
-      eyebrow: "Market Pain & Opportunity",
+      eyebrow: "WHY ROBOTIC SECURITY",
       title: "Deploy robotic systems into high-risk, repetitive and blind-spot operational environments.",
       copy:
         "Physical security and industrial inspection still depend on high-cost patrol labor, manual observation and delayed response. Hyper AIForce turns autonomous naviagation, AI detection and teleoperation into a deployable operating platform.",
@@ -206,12 +207,10 @@ const content = {
       eyebrow: "Applications",
       title: "Designed for facilities where uptime, safety and coverage matter.",
       items: [
-        { icon: "Flame", label: "Fire & Emergency" },
         { icon: "Map", label: "Warehouse & Logistics" },
-        { icon: "RadioTower", label: "Energy & Utilities" },
-        { icon: "Factory", label: "Industrial Facilities" },
-        { icon: "Building2", label: "Smart Campus" },
-        { icon: "Siren", label: "Public Safety" }
+        { icon: "Building2", label: "Campus Security" },
+        { icon: "Flame", label: "Fire & Emergency" },
+        { icon: "Siren", label: "Community Security" }
       ]
     },
     caseStudy: {
@@ -315,6 +314,7 @@ const content = {
     },
     hero: {
       eyebrow: "超流智能有限公司",
+      slogan: "AI Force Be With You.",
       title: "面向物理安全的\n機器人智能巡檢解決方案",
       subtitle:
         "我們將 AI 感知、自主巡航、遠程遙操、運動控制與場景交付能力相結合，為物理安全與園區巡邏巡檢提供可部署的機器人解決方案。",
@@ -328,7 +328,7 @@ const content = {
       ]
     },
     market: {
-      eyebrow: "市場痛點",
+      eyebrow: "為什麼需要機器人安防",
       title: "將機器人部署至高風險、重複性及有視野盲區的作業環境中",
       copy:
         "物理安全與工業巡檢仍高度依賴人工巡邏、現場觀察和事後處置。超流智能將自主巡航、AI 異常識別與遠程接管結合，形成可持續運行的機器人巡檢能力。",
@@ -429,12 +429,10 @@ const content = {
       eyebrow: "應用場景",
       title: "服務於重視安全、覆蓋與穩定運行的場景",
       items: [
-        { icon: "Flame", label: "消防應急" },
         { icon: "Map", label: "倉儲物流" },
-        { icon: "RadioTower", label: "能源與公用設施" },
-        { icon: "Factory", label: "工業廠區" },
-        { icon: "Building2", label: "智慧園區" },
-        { icon: "Siren", label: "公共安全" }
+        { icon: "Building2", label: "園區安防" },
+        { icon: "Flame", label: "消防應急" },
+        { icon: "Siren", label: "社區安防" }
       ]
     },
     caseStudy: {
@@ -527,6 +525,7 @@ const content = {
     },
     hero: {
       eyebrow: "超流智能有限公司",
+      slogan: "AI Force Be With You.",
       title: "面向物理安全的\n机器人智能巡检解决方案",
       subtitle:
         "我们将 AI 感知、自主巡航、远程遥操、运动控制与场景交付能力相结合，为物理安全与园区巡逻巡检提供可部署的机器人解决方案。",
@@ -540,7 +539,7 @@ const content = {
       ]
     },
     market: {
-      eyebrow: "市场痛点",
+      eyebrow: "为什么需要机器人安防",
       title: "将机器人部署至高风险、重复性及有视野盲区的作业环境中",
       copy:
         "物理安全与工业巡检仍高度依赖人工巡逻、现场观察和事后处置。超流智能将自主巡航、AI 异常识别与远程接管结合，形成可持续运行的机器人巡检能力。",
@@ -641,12 +640,10 @@ const content = {
       eyebrow: "应用场景",
       title: "服务于重视安全、覆盖与稳定运行的场景",
       items: [
-        { icon: "Flame", label: "消防应急" },
         { icon: "Map", label: "仓储物流" },
-        { icon: "RadioTower", label: "能源与公用设施" },
-        { icon: "Factory", label: "工业厂区" },
-        { icon: "Building2", label: "智慧园区" },
-        { icon: "Siren", label: "公共安全" }
+        { icon: "Building2", label: "园区安防" },
+        { icon: "Flame", label: "消防应急" },
+        { icon: "Siren", label: "社区安防" }
       ]
     },
     caseStudy: {
