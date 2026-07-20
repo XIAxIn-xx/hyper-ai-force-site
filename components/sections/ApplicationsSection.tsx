@@ -26,11 +26,11 @@ export function ApplicationsSection({ content }: ApplicationsSectionProps) {
             const Icon = getIcon(item.icon);
             return (
               <Reveal key={item.label} delay={index * 0.04}>
-                <div className="group flex min-h-32 items-center gap-5 rounded-lg border border-white/10 bg-white/[0.06] p-6 transition hover:border-cyan-300/60 hover:bg-cyan-300/10">
+                <div className="group flex min-h-32 flex-col items-center justify-center gap-4 rounded-lg border border-white/10 bg-white/[0.06] p-6 text-center transition hover:border-cyan-300/60 hover:bg-cyan-300/10">
                   <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-md bg-cyan-300/12 text-cyan-200">
                     <Icon className="h-6 w-6" />
                   </div>
-                  <h3 className="zh-title zh-card-title text-xl font-bold text-white"><ZhText>{item.label}</ZhText></h3>
+                  <h3 className="zh-title zh-card-title text-center text-xl font-bold text-white"><ZhText>{item.label}</ZhText></h3>
                 </div>
               </Reveal>
             );

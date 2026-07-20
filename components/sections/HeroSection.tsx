@@ -15,7 +15,7 @@ type HeroSectionProps = {
 
 export function HeroSection({ content }: HeroSectionProps) {
   return (
-    <section className="relative min-h-[760px] overflow-hidden bg-[#050B14] pt-16 text-white">
+    <section className="relative min-h-[760px] overflow-hidden bg-[#050B14] pt-20 text-white">
       <Image
         src="/images/generated/hyper-hero-robotics.png"
         alt="Autonomous quadruped inspection robot in an industrial facility"
@@ -49,9 +49,6 @@ export function HeroSection({ content }: HeroSectionProps) {
             <Cpu className="h-5 w-5" />
             <ZhText>{content.hero.eyebrow}</ZhText>
           </motion.div>
-          <p className="mt-4 text-base font-semibold tracking-[0.12em] text-cyan-100/85">
-            {content.hero.slogan}
-          </p>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

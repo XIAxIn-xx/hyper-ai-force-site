@@ -80,8 +80,8 @@ export function Header({ content }: HeaderProps) {
           : "border-white/10 bg-transparent text-white"
       )}
     >
-      <div className="section-shell flex h-16 items-center justify-between">
-        <Link href={homeHref} className="group flex items-center">
+      <div className="section-shell flex h-20 items-center justify-between">
+        <Link href={homeHref} className="group flex flex-col items-start justify-center">
           <img
             src={
               scrolled || open
@@ -91,6 +91,14 @@ export function Header({ content }: HeaderProps) {
             alt="AIForce"
             className="h-11 w-auto object-contain"
           />
+          <span
+            className={cn(
+              "mt-0.5 whitespace-nowrap text-[10px] font-semibold leading-3 tracking-[0.12em]",
+              scrolled || open ? "text-slate-500" : "text-cyan-100/80"
+            )}
+          >
+            {content.hero.slogan}
+          </span>
         </Link>
 
         <nav
@@ -144,7 +152,7 @@ export function Header({ content }: HeaderProps) {
         </div>
       </div>
 
-      {languageOpen ? <div className="absolute right-4 top-16 lg:hidden">{languageMenu("w-32")}</div> : null}
+      {languageOpen ? <div className="absolute right-4 top-20 lg:hidden">{languageMenu("w-32")}</div> : null}
 
       {open ? (
         <div className="border-t border-[#E6EAF0] bg-[#F5F7FA]/95 shadow-[0_18px_36px_rgba(15,23,42,0.08)] backdrop-blur-xl lg:hidden">
