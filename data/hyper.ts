@@ -264,7 +264,7 @@ const content = {
       title: "Plan a robotics deployment for your site.",
       copy:
         "Tell us about your facility, patrol workload or inspection scenario. Our team will map the appropriate solutions.",
-      button: "Request a Demo",
+      button: "Request a Demo / Contact Us",
       address:
         "Building 19W, No.19 Science Park West Avenue, Hong Kong Science Park, Pak Shek Kok, New Territories, Hong Kong",
       fields: {
@@ -272,6 +272,7 @@ const content = {
         company: "Company",
         email: "Email",
         phone: "Phone",
+        countryCode: "Country / region code",
         interest: "Interest / Product category",
         message: "Message"
       },
@@ -279,8 +280,25 @@ const content = {
         "Autonomous Patrol",
         "Teleoperation",
         "AI Inspection",
-        "RSP Platform"
-      ]
+        "RSP Platform",
+        "Others"
+      ],
+      countryCodes: [
+        { value: "+852", label: "Hong Kong (+852)" },
+        { value: "+86", label: "Mainland China (+86)" },
+        { value: "+1", label: "United States / Canada (+1)" },
+        { value: "+44", label: "United Kingdom (+44)" },
+        { value: "+81", label: "Japan (+81)" },
+        { value: "+82", label: "South Korea (+82)" },
+        { value: "+65", label: "Singapore (+65)" },
+        { value: "+61", label: "Australia (+61)" },
+        { value: "+886", label: "Taiwan (+886)" },
+        { value: "+91", label: "India (+91)" },
+        { value: "+971", label: "United Arab Emirates (+971)" }
+      ],
+      privacy:
+        "I agree that Hyper AIForce may use my information to respond to this inquiry.",
+      captcha: "Security verification"
     },
     footerCompany: "Hyper AIForce Limited",
     footer:
@@ -482,17 +500,33 @@ const content = {
       title: "為您的場地規劃機器人部署",
       copy:
         "告訴我們您的設施、巡邏工作量或巡檢場景。我們將協助匹配合適的解決方案",
-      button: "預約演示",
+      button: "預約演示 / 聯絡我們",
       address: "香港新界白石角香港科學園科技大道西19號19W大樓",
       fields: {
         name: "姓名",
         company: "公司",
         email: "電郵",
         phone: "電話",
+        countryCode: "國家 / 地區號碼",
         interest: "感興趣的產品 / 方案",
         message: "需求描述"
       },
-      options: ["自主巡航", "遠程遙操", "AI巡檢", "RSP平台"]
+      options: ["自主巡航", "遠程遙操", "AI巡檢", "RSP平台", "其他"],
+      countryCodes: [
+        { value: "+852", label: "香港（+852）" },
+        { value: "+86", label: "中國內地（+86）" },
+        { value: "+1", label: "美國 / 加拿大（+1）" },
+        { value: "+44", label: "英國（+44）" },
+        { value: "+81", label: "日本（+81）" },
+        { value: "+82", label: "韓國（+82）" },
+        { value: "+65", label: "新加坡（+65）" },
+        { value: "+61", label: "澳洲（+61）" },
+        { value: "+886", label: "台灣（+886）" },
+        { value: "+91", label: "印度（+91）" },
+        { value: "+971", label: "阿聯酋（+971）" }
+      ],
+      privacy: "我同意超流智能使用以上資料回覆此查詢。",
+      captcha: "安全驗證"
     },
     footerCompany: "超流智能有限公司",
     footer: "AI 機器人、自主巡航與遠程遙操方案",
@@ -693,17 +727,33 @@ const content = {
       title: "为您的场地规划机器人部署",
       copy:
         "告诉我们您的设施、巡逻工作量或巡检场景。我们将协助匹配合适的解决方案",
-      button: "预约演示",
+      button: "预约演示 / 联系我们",
       address: "香港新界白石角香港科学园科技大道西19号19W大楼",
       fields: {
         name: "姓名",
         company: "公司",
         email: "电邮",
         phone: "电话",
+        countryCode: "国家 / 地区号",
         interest: "感兴趣的产品 / 方案",
         message: "需求描述"
       },
-      options: ["自主巡航", "远程遥操", "AI巡检", "RSP平台"]
+      options: ["自主巡航", "远程遥操", "AI巡检", "RSP平台", "其他"],
+      countryCodes: [
+        { value: "+852", label: "香港（+852）" },
+        { value: "+86", label: "中国内地（+86）" },
+        { value: "+1", label: "美国 / 加拿大（+1）" },
+        { value: "+44", label: "英国（+44）" },
+        { value: "+81", label: "日本（+81）" },
+        { value: "+82", label: "韩国（+82）" },
+        { value: "+65", label: "新加坡（+65）" },
+        { value: "+61", label: "澳大利亚（+61）" },
+        { value: "+886", label: "中国台湾（+886）" },
+        { value: "+91", label: "印度（+91）" },
+        { value: "+971", label: "阿联酋（+971）" }
+      ],
+      privacy: "我同意超流智能使用以上信息回复本次咨询。",
+      captcha: "安全验证"
     },
     footerCompany: "超流智能有限公司",
     footer: "AI 机器人、自主巡航与远程遥操方案",
