@@ -1,3 +1,6 @@
+"use client";
+
+import { useState, type FormEvent } from "react";
 import { Mail, MapPin } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -14,6 +17,34 @@ type ContactSectionProps = {
 };
 
 export function ContactSection({ content }: ContactSectionProps) {
+  const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
+  const isChinese = content.lang !== "en";
+
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    setStatus("submitting");
+
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(Object.fromEntries(formData.entries()))
+      });
+
+      if (!response.ok) {
+        throw new Error("Contact submission failed");
+      }
+
+      form.reset();
+      setStatus("success");
+    } catch {
+      setStatus("error");
+    }
+  }
+
   return (
     <section id="contact" className="bg-[#050B14] py-24 text-white">
       <div className="section-shell grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
@@ -36,16 +67,16 @@ export function ContactSection({ content }: ContactSectionProps) {
           </div>
         </Reveal>
         <Reveal delay={0.1}>
-          <form className="grid gap-4 rounded-lg border border-[#E6EAF0] bg-white p-5 text-slate-950 shadow-[0_18px_50px_rgba(2,6,23,0.18)] md:p-7">
+          <form onSubmit={handleSubmit} className="grid gap-4 rounded-lg border border-[#E6EAF0] bg-white p-5 text-slate-950 shadow-[0_18px_50px_rgba(2,6,23,0.18)] md:p-7">
             <div className="grid gap-4 md:grid-cols-2">
-              <Input placeholder={content.contact.fields.name} aria-label={content.contact.fields.name} />
-              <Input placeholder={content.contact.fields.company} aria-label={content.contact.fields.company} />
+              <Input name="name" required placeholder={content.contact.fields.name} aria-label={content.contact.fields.name} />
+              <Input name="company" placeholder={content.contact.fields.company} aria-label={content.contact.fields.company} />
             </div>
             <div className="grid gap-4 md:grid-cols-2">
-              <Input type="email" placeholder={content.contact.fields.email} aria-label={content.contact.fields.email} />
-              <Input placeholder={content.contact.fields.phone} aria-label={content.contact.fields.phone} />
+              <Input name="email" type="email" required placeholder={content.contact.fields.email} aria-label={content.contact.fields.email} />
+              <Input name="phone" placeholder={content.contact.fields.phone} aria-label={content.contact.fields.phone} />
             </div>
-            <Select aria-label={content.contact.fields.interest} defaultValue="">
+            <Select name="interest" aria-label={content.contact.fields.interest} defaultValue="">
               <option value="" disabled>
                 {content.contact.fields.interest}
               </option>
@@ -55,10 +86,23 @@ export function ContactSection({ content }: ContactSectionProps) {
                 </option>
               ))}
             </Select>
-            <Textarea placeholder={content.contact.fields.message} aria-label={content.contact.fields.message} />
-            <Button type="button" variant="dark" size="lg" className="mt-2 w-full md:w-fit">
-              {content.contact.button}
+            <Textarea name="message" required placeholder={content.contact.fields.message} aria-label={content.contact.fields.message} />
+            <Input
+              name="website"
+              tabIndex={-1}
+              autoComplete="off"
+              aria-hidden="true"
+              className="absolute -left-[9999px] h-px w-px overflow-hidden opacity-0"
+            />
+            <Button type="submit" disabled={status === "submitting"} variant="dark" size="lg" className="mt-2 w-full md:w-fit">
+              {status === "submitting"
+                ? isChinese ? "发送中…" : "Sending…"
+                : content.contact.button}
             </Button>
+            <p aria-live="polite" className="text-sm" role="status">
+              {status === "success" && (isChinese ? "提交成功，我们会尽快联系您。" : "Thanks — we will get back to you soon.")}
+              {status === "error" && (isChinese ? "提交失败，请稍后重试或直接发送邮件。" : "Submission failed. Please try again or email us directly.")}
+            </p>
           </form>
         </Reveal>
       </div>
