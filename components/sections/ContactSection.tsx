@@ -55,7 +55,6 @@ export function ContactSection({ content }: ContactSectionProps) {
   const [errors, setErrors] = useState<Partial<Record<ErrorKey, string>>>({});
   const [privacyAccepted, setPrivacyAccepted] = useState(false);
   const [turnstileToken, setTurnstileToken] = useState("");
-  const [turnstileLoaded, setTurnstileLoaded] = useState(false);
   const turnstileRef = useRef<HTMLDivElement>(null);
   const turnstileWidgetId = useRef<string | null>(null);
   const turnstileSiteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
@@ -101,23 +100,41 @@ export function ContactSection({ content }: ContactSectionProps) {
           };
 
   useEffect(() => {
-    if (!turnstileSiteKey || !turnstileLoaded || !turnstileRef.current || !window.turnstile) {
-      return;
-    }
+    if (!turnstileSiteKey || !turnstileRef.current) return;
 
-    turnstileWidgetId.current = window.turnstile.render(turnstileRef.current, {
-      sitekey: turnstileSiteKey,
-      callback: setTurnstileToken,
-      "expired-callback": () => setTurnstileToken(""),
-      "error-callback": () => setTurnstileToken("")
-    });
+    const renderTurnstile = () => {
+      if (!window.turnstile || !turnstileRef.current || turnstileWidgetId.current) {
+        return Boolean(turnstileWidgetId.current);
+      }
+
+      turnstileWidgetId.current = window.turnstile.render(turnstileRef.current, {
+        sitekey: turnstileSiteKey,
+        callback: setTurnstileToken,
+        "expired-callback": () => setTurnstileToken(""),
+        "error-callback": () => setTurnstileToken("")
+      });
+      return true;
+    };
+
+    if (!renderTurnstile()) {
+      const intervalId = window.setInterval(renderTurnstile, 100);
+      const timeoutId = window.setTimeout(() => window.clearInterval(intervalId), 10000);
+
+      return () => {
+        window.clearInterval(intervalId);
+        window.clearTimeout(timeoutId);
+        if (turnstileWidgetId.current) {
+          window.turnstile?.remove?.(turnstileWidgetId.current);
+        }
+      };
+    }
 
     return () => {
       if (turnstileWidgetId.current) {
         window.turnstile?.remove?.(turnstileWidgetId.current);
       }
     };
-  }, [turnstileLoaded, turnstileSiteKey]);
+  }, [turnstileSiteKey]);
 
   function fieldError(key: ErrorKey) {
     const error = errors[key];
@@ -203,7 +220,6 @@ export function ContactSection({ content }: ContactSectionProps) {
         <Script
           src="https://challenges.cloudflare.com/turnstile/v0/api.js"
           strategy="afterInteractive"
-          onLoad={() => setTurnstileLoaded(true)}
         />
       )}
       <div className="section-shell grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
@@ -256,8 +272,10 @@ export function ContactSection({ content }: ContactSectionProps) {
                   </Select>
                   <Input name="phone" type="tel" inputMode="tel" required placeholder={content.contact.fields.phone} aria-label={content.contact.fields.phone} aria-invalid={Boolean(errors.phone)} aria-describedby={errors.phone ? "phone-error" : undefined} />
                 </div>
-                {fieldError("countryCode")}
-                {fieldError("phone")}
+                <div className="grid gap-1">
+                  {fieldError("countryCode")}
+                  {fieldError("phone")}
+                </div>
               </div>
             </div>
             <Select name="interest" aria-label={content.contact.fields.interest} defaultValue="">
