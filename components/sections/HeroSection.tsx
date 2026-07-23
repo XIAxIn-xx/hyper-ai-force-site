@@ -44,7 +44,7 @@ export function HeroSection({ content }: HeroSectionProps) {
             initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.65 }}
-            className="zh-eyebrow text-base font-semibold uppercase tracking-[0.16em] text-cyan-200/90 md:text-lg"
+            className="zh-eyebrow text-lg font-semibold uppercase tracking-[0.16em] text-cyan-200/90 md:text-xl"
           >
             <ZhText>{content.hero.eyebrow}</ZhText>
           </motion.div>

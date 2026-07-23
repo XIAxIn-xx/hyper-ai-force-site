@@ -112,7 +112,7 @@ body {
 }
 
 .zh-page .zh-eyebrow {
-  font-size: clamp(16px, 1.25vw, 18px);
+  font-size: clamp(18px, 1.5vw, 20px);
   letter-spacing: 0;
   line-height: 1.5;
 }
