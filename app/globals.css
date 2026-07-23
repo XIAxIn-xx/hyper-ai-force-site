@@ -50,6 +50,33 @@ body {
   mask-image: linear-gradient(to bottom, black, transparent 78%);
 }
 
+@keyframes rail-scan {
+  0% {
+    transform: translateX(-60%);
+    opacity: 0;
+  }
+
+  18%,
+  82% {
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: translateX(60%);
+    opacity: 0;
+  }
+}
+
+.rail-scan {
+  animation: rail-scan 6s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rail-scan {
+    animation: none;
+  }
+}
+
 .pretty-copy h1,
 .pretty-copy h2,
 .pretty-copy h3,

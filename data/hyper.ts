@@ -100,14 +100,14 @@ const content = {
     },
     market: {
       eyebrow: "WHY ROBOTIC SECURITY",
-      title: "Night-time, wide-area patrols are difficult to sustain with traditional security.",
+      title: "Deploy robotic systems into high-risk, repetitive and blind-spot operational environments.",
       copy:
-        "Traditional security still depends on shift-based patrols, manual observation and fragmented incident handling. Hyper AIForce brings robots, an operating platform and remote operations into one deployable model.",
+        "Physical security and security patrol still depend on high-cost patrol labor, manual observation and delayed response. Hyper AIForce combines autonomous patrol, AI perception and teleoperation into a deployable robotic operating platform.",
       points: [
-        "Night-time and wide-area patrols depend on continuous staffing, driving up labor cost.",
-        "Perimeters, warehouse blind spots and equipment areas are difficult to cover continuously.",
-        "Hazardous areas, night scenes and unexpected incidents increase personnel exposure.",
-        "Detection, reporting, recording and response are often disconnected."
+        "Labor-intensive patrols are costly and hard to scale.",
+        "Repetitive night patrols and perimeter checks make it harder to maintain consistent attention.",
+        "Hazardous, remote or weather-exposed sites increase personnel risk.",
+        "Critical incidents need real-time alerts, evidence and teleoperation."
       ]
     },
     strengths: {
