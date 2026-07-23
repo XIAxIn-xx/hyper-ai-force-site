@@ -2,7 +2,6 @@ import { AboutSection } from "@/components/sections/AboutSection";
 import { ApplicationsSection } from "@/components/sections/ApplicationsSection";
 import { CaseStudySection } from "@/components/sections/CaseStudySection";
 import { ContactSection } from "@/components/sections/ContactSection";
-import { DeploymentPathSection } from "@/components/sections/DeploymentPathSection";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { MarketSection } from "@/components/sections/MarketSection";
 import { PlatformSection } from "@/components/sections/PlatformSection";
@@ -35,7 +34,6 @@ export function HyperPage({ locale }: HyperPageProps) {
         <ApplicationsSection content={content} />
         <CaseStudySection content={content} />
         <ServiceNetworkSection content={content} />
-        <DeploymentPathSection content={content} />
         <AboutSection content={content} />
         <ContactSection content={content} />
       </main>

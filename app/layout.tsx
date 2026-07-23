@@ -10,11 +10,11 @@ export const metadata: Metadata = {
     template: "%s"
   },
   description:
-    "Hyper AIForce Limited provides deployable robotic security solutions for fire response, campus security, warehouse logistics and community security.",
+    "Hyper AI Force Limited develops robotic systems for physical security, autonomous patrol and facility operations.",
   openGraph: {
     title: "Hyper AI Force Limited",
     description:
-      "Deployable robotic security solutions for fire response, campus security, warehouse logistics and community security.",
+      "Robotic solutions for physical security, autonomous patrol and facility operations.",
     type: "website",
     locale: "en_US",
     alternateLocale: ["zh_HK"],

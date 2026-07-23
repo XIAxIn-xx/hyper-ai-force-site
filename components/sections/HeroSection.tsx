@@ -62,7 +62,7 @@ export function HeroSection({ content }: HeroSectionProps) {
           >
             {content.hero.title.split("\n").map((line) => (
               <span key={line} className="zh-title-line">
-                {content.lang === "en" ? <ZhText>{line}</ZhText> : line}
+                <ZhText>{line}</ZhText>
               </span>
             ))}
           </motion.h1>

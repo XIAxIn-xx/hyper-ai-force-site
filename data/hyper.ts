@@ -6,6 +6,7 @@ import {
   Building2,
   CloudCog,
   Cpu,
+  Factory,
   Flame,
   Globe2,
   Handshake,
@@ -32,6 +33,7 @@ const iconMap = {
   Building2,
   CloudCog,
   Cpu,
+  Factory,
   Flame,
   Globe2,
   Handshake,
@@ -67,7 +69,7 @@ const content = {
       title:
         "Hyper AIForce Limited | Robotic Security Solutions",
       description:
-        "Hyper AIForce Limited provides deployable robotic security solutions for fire response, campus security, warehouse logistics and community security.",
+        "Hyper AIForce Limited develops robotic systems for physical security, autonomous patrol and facility operations.",
       keywords: [
         "Hyper AIForce",
         "AI Robotics",
@@ -83,7 +85,7 @@ const content = {
       slogan: "AI Force Be With You",
       title: "Robotic Inspection Solutions for Physical Security",
       subtitle:
-        "We combine RSP scheduling, autonomous patrol, AI perception, modular payloads and teleoperation to provide deployable robotic solutions for fire response, campus security, warehouse logistics and community security.",
+        "We combine AI perception, autonomous patrol, teleoperation, motion control and service delivery to provide deployable robotic solutions for physical security and security patrol.",
       primaryCta: "Request a Demo",
       secondaryCta: "Explore Technology",
       stats: [
@@ -98,123 +100,123 @@ const content = {
     },
     market: {
       eyebrow: "WHY ROBOTIC SECURITY",
-      title: "Night-time, wide-area patrols are difficult to sustain with traditional security.",
+      title: "Deploy robotic systems into high-risk, repetitive and blind-spot operational environments.",
       copy:
-        "Traditional security still depends on shift-based patrols, manual observation and fragmented incident handling. Hyper AIForce brings robots, an operating platform and remote operations into one deployable model.",
+        "Physical security and security patrol still depend on high-cost patrol labor, manual observation and delayed response. Hyper AIForce combines autonomous patrol, AI perception and teleoperation into a deployable robotic operating platform.",
       points: [
-        "Night-time and wide-area patrols depend on continuous staffing, driving up labor cost.",
-        "Perimeters, warehouse blind spots and equipment areas are difficult to cover continuously.",
-        "Hazardous areas, night scenes and unexpected incidents increase personnel exposure.",
-        "Detection, reporting, recording and response are often disconnected."
+        "Labor-intensive patrols are costly and hard to scale.",
+        "Human attention drops during repetitive night and perimeter checks.",
+        "Hazardous, remote or weather-exposed sites increase personnel risk.",
+        "Critical incidents need real-time alerts, evidence and teleoperation."
       ]
     },
     strengths: {
-      eyebrow: "THE OPERATING MODEL",
-      title: "From autonomous patrol to remote intervention, one operating loop for physical security.",
-      copy:
-        "Autonomous patrol, teleoperation, AI perception and modular payloads work together as a repeatable security operation.",
+      eyebrow: "Core Strengths",
+      title: "Designed for real-world operations",
       items: [
         {
           icon: "BrainCircuit",
-          title: "Autonomous Patrol",
+          title: "Full-stack AI autonomy",
           text:
-            "Route planning, perception and obstacle avoidance for repeatable patrol missions."
+            "AI perception, anomaly detection, sensor fusion and task-level decision logic support autonomous patrol."
         },
         {
           icon: "Bot",
+          title: "Robot fleet coordination",
+          text:
+            "Quadruped and wheeled robots can operate as a coordinated fleet, with unified task assignment, status awareness and field execution."
+        },
+        {
+          icon: "Route",
+          title: "Adaptive navigation",
+          text:
+            "Navigation, obstacle avoidance and route planning help robots operate across campuses, perimeters, utilities and outdoor facilities."
+        },
+        {
+          icon: "Radio",
           title: "Teleoperation",
           text:
-            "Real-time control and exception intervention across sites and operating areas."
-        },
-        {
-          icon: "Activity",
-          title: "AI Perception",
-          text:
-            "Environmental recognition, risk judgment and anomaly alerts from multi-sensor data."
-        },
-        {
-          icon: "PackageCheck",
-          title: "Modular Payloads",
-          text:
-            "Perception, communication, task and edge-computing modules for different security work."
+            "Low-latency remote operation keeps operators in the loop for real-time supervision, emergency takeover and precise field intervention."
         }
       ]
     },
     technology: {
-      eyebrow: "ROBOT SCHEDULING PLATFORM",
-      title: "RSP: one operating layer for every robot, mission and review",
+      eyebrow: "Robotic Operations Platform",
+      title: "A unified operating platform for autonomous inspection robot fleets",
       copy:
-        "From mission creation and robot queues to remote commands and data review, RSP gives multiple robots one operating workflow.",
-      imageTitle: "RSP Command View",
+        "Operators can assign missions from a browser or tablet, monitor live data, review alerts and supervise multiple robots. The platform connects edge AI, cloud monitoring and human takeover to keep the robot fleet running.",
+      imageTitle: "Multi-robot Mission Layer",
       imageText:
-        "Mission scheduling, robot queues, remote instructions and data review in one operating layer.",
+        "Mission planning, robot telemetry, abnormal-event alerts and operator supervision in one deployable workflow.",
       capabilities: [
-        "Mission scheduling",
-        "Robot queue management",
-        "Remote command delivery",
-        "Data review"
+        "AI perception and threat detection",
+        "Autonomous navigation and path planning",
+        "Multi-sensor fusion",
+        "Motion control and terrain adaptation",
+        "Edge computing and cloud monitoring",
+        "Teleoperation and fleet management"
       ]
     },
     solutions: {
       eyebrow: "Products & Solutions",
-      title: "Build the complete loop from mission to execution",
+      title: "Capability packages for real security environments",
       labels: {
-        problem: "Task",
-        solution: "Capability",
-        value: "Result"
+        problem: "Problem",
+        solution: "Solution",
+        value: "Value"
       },
       items: [
         {
           icon: "Route",
           title: "Autonomous Patrol",
-          problem: "Run repeatable patrol missions with stable execution.",
+          problem: "Security patrols need robots that can run continuously with minimal manual intervention.",
           solution:
-            "LiDAR-inertial SLAM, route planning, perception and dynamic obstacle avoidance support repeatable patrols and local operation.",
+            "AI-driven autonomous navigation, patrol route planning, real-time environmental perception and edge deployment support continuous campus and perimeter patrols.",
           value:
-            "Less night-time manual patrol work, lower personnel exposure, and improved safety and operating efficiency."
+            "Reduces night-time and high-risk-area manual patrols, lowers personnel exposure, and improves safety and operating efficiency."
         },
         {
           icon: "Radio",
           title: "Teleoperation",
-          problem: "Complex or abnormal scenes need timely human intervention.",
+          problem: "Robots in complex sites still need human-in-the-loop decisions and emergency takeover.",
           solution:
-            "Synchronized video and control, multi-network communication and remote takeover support real-time intervention across sites.",
+            "Teleoperation enables low-latency real-time robot control, with Remote Control support for assisted operation and emergency intervention.",
           value:
-            "Operators can handle exceptions without sending people into the scene."
+            "Keeps operators in control when judgment, safety escalation or precise remote action is required."
         },
         {
           icon: "Activity",
-          title: "AI Perception",
-          problem: "Field anomalies need early detection and traceable evidence.",
+          title: "AI Inspection",
+          problem: "Security patrols are repetitive and generate dispersed field data; incidents need to be identified early.",
           solution:
-            "Vision, thermal imaging and multi-sensor data analysis support environmental recognition, risk assessment and anomaly alerts.",
+            "Robots perform automated patrol inspection, combining AI perception with data analysis from backpack sensors and other devices to flag fire, smoke and intrusion risks early.",
           value:
-            "Earlier fire, smoke and intrusion alerts, with field data that can be reviewed."
+            "Improves the timeliness of fire and intrusion alerts, reduces night-time manual review and creates traceable inspection data."
         },
         {
-          icon: "PackageCheck",
-          title: "Modular AI Payloads",
-          problem: "Different security tasks need different sensing, communication and task interfaces.",
+          icon: "CloudCog",
+          title: "Robot Scheduling Platform (RSP)",
+          problem: "Multi-robot deployments need a central platform for scheduling, dispatch and coordinated operation.",
           solution:
-            "Configure perception, communication, task and edge-computing payloads, with support for existing devices or systems.",
+            "The RSP platform manages multi-robot task scheduling, fleet management, remote task distribution and workflow automation.",
           value:
-            "One robotic system can adapt to fire response, campus security, warehouse logistics and community security."
+            "Connects hardware, AI and teleoperation as a central platform for scalable robot operations."
         }
       ]
     },
     applications: {
       eyebrow: "Applications",
-      title: "Four physical-security scenarios built for repeatable deployment.",
+      title: "Designed for facilities where uptime, safety and coverage matter.",
       items: [
-        { icon: "Flame", label: "Fire & Emergency", detail: "Hazardous-area entry, situational feeds and thermal checks." },
-        { icon: "Building2", label: "Campus Security", detail: "Perimeter patrol and anomaly detection across large sites." },
-        { icon: "Map", label: "Warehouse & Logistics", detail: "Warehouse patrols and yard risk checks." },
-        { icon: "Siren", label: "Community Security", detail: "Community patrols and resident safety checks." }
+        { icon: "Map", label: "Warehouse & Logistics" },
+        { icon: "Building2", label: "Campus Security" },
+        { icon: "Flame", label: "Fire & Emergency" },
+        { icon: "Siren", label: "Community Security" }
       ]
     },
     caseStudy: {
       eyebrow: "Case Study",
-      title: "GLP logistics park\nnight-time security patrol deployment",
+      title: "Quadruped robot patrol deployment for a GLP industrial logistics park",
       labels: {
         challenge: "Challenge",
         solution: "Solution"
@@ -223,49 +225,36 @@ const content = {
       imageText:
         "Route execution, anomaly detection and remote monitoring for high-value facilities.",
       challenge:
-        "GLP needed reliable fire-safety and security patrol coverage across roads, warehouse surroundings, perimeter areas and night-time routine checks at a logistics park.",
+        "GLP needed reliable fire-safety and security patrol coverage across an industrial park, including roads, warehouse surroundings, perimeter areas and night-time routine checks.",
       solution:
         "Hyper AIForce supported the deployment of robotic dogs for scheduled park patrols, teleoperation, abnormal-event awareness and on-site evidence capture across daily security routes.",
       outcomes: [
-        "Expanded night-time patrol coverage across the logistics park",
+        "Expanded night-time patrol coverage across the industrial park",
         "Improved fire-safety and security visibility",
         "Reduced night-time repetitive perimeter patrol workload"
       ],
       cta: "Start a deployment conversation"
     },
     service: {
-      eyebrow: "COLLABORATION & DEPLOYMENT",
+      eyebrow: "Support & Service Network",
       title: "Three collaboration models for different deployment needs.",
       copy:
         "Choose between RaaS leasing, module enablement or full-stack purchase based on project stage, site requirements and operating model. Hyper AIForce supports the full path from solution design and deployment to ongoing operations.",
       items: [
-        { icon: "PackageCheck", label: "RaaS Leasing", description: "Use robots and RSP by month or operating period for pilots and ongoing patrols." },
-        { icon: "Cpu", label: "Module Enablement", description: "Configure AI perception, communication, task and edge modules for existing systems." },
-        { icon: "Handshake", label: "Full-Stack Procurement", description: "Procure the robot, platform, deployment and operations support as one system." }
+        { icon: "PackageCheck", label: "RaaS Leasing" },
+        { icon: "Cpu", label: "Module Enablement" },
+        { icon: "Handshake", label: "Full-Stack Purchase" }
       ]
     },
     about: {
-      eyebrow: "COMPANY POSITIONING",
-      title: "More than a robot supplier: a new operating model for physical security.",
+      eyebrow: "About Hyper AIForce",
+      title: "Putting robots to work in security and campus operations.",
       copy:
-        "Hyper AIForce focuses on physical-security operations across fire response, campus security, warehouse logistics and community security. We combine robots, RSP and remote teleoperation to help customers validate a scene, deploy a repeatable patrol workflow and scale operations. Robots take on night-time, repetitive and high-risk tasks, reducing personnel exposure and improving safety.",
+        "Hyper AIForce focuses on AI perception, autonomous patrol and teleoperation, with the RSP platform connecting robots, missions and field data. The team helps customers deploy robots in real-world applications, including security patrol, campus inspection and automated operations as part of physical security. Robots take on night-time, repetitive and high-risk patrol tasks, reducing personnel exposure and improving safety and operating efficiency.",
       bullets: [
-        "Robots + RSP + remote operations",
-        "From pilot validation to scaled operations",
-        "RaaS leasing / module enablement / full-stack procurement"
-      ]
-    },
-    deployment: {
-      eyebrow: "DEPLOYMENT PATH",
-      title: "From scene validation to scaled security operations",
-      copy:
-        "A staged deployment path turns a first patrol route into a repeatable operating model.",
-      steps: [
-        { title: "Scene screening", description: "Identify patrol routes, risk points and suitable operating areas." },
-        { title: "Solution design", description: "Plan robots, routes, RSP rules, communication and power conditions." },
-        { title: "Pilot validation", description: "Test patrol stability, exception response and operating templates." },
-        { title: "Multi-robot rollout", description: "Assign missions across robots and supervise multiple areas remotely." },
-        { title: "Scaled operations", description: "Standardize patrol tasks and keep improving through field data." }
+        "Embodied intelligence for physical-world industries",
+        "AI-enabled integrated hardware and software delivery",
+        "Innovative Robotics Leasing Solution"
       ]
     },
     contact: {
@@ -289,8 +278,7 @@ const content = {
       options: [
         "Autonomous Patrol",
         "Teleoperation",
-        "AI Perception",
-        "Modular AI Payloads",
+        "AI Inspection",
         "RSP Platform",
         "Others"
       ],
@@ -345,7 +333,7 @@ const content = {
     seo: {
       title: "Hyper AIForce Limited | 超流智能有限公司",
       description:
-        "超流智能有限公司面向消防應急、園區安防、倉儲物流與社區安防場景，提供機器人安防解決方案",
+        "超流智能有限公司專注 AI Robotics、具身智能、自主巡航與巡邏巡檢系統，服務物理安全、設施運維與關鍵基礎設施場景",
       keywords: [
         "超流智能有限公司",
         "Hyper AIForce",
@@ -360,122 +348,122 @@ const content = {
       slogan: "AI Force Be With You",
       title: "面向物理安全的機器人\n智能巡檢解決方案",
       subtitle:
-        "我們將 RSP調度、自主巡航、AI感知、模組化載荷與遠程遙操組合，為消防應急、園區安防、倉儲物流與社區安防提供可部署的機器人解決方案。",
+        "我們將 AI 感知、自主巡航、遠程遙操、運動控制與場景交付能力相結合，為安防巡邏等物理安全領域提供可部署的機器人解決方案。",
       primaryCta: "預約演示",
       secondaryCta: "了解技術",
       stats: [
         { value: "自主巡航", label: "自主巡邏與智能巡檢執行能力" },
         { value: "遠程接管", label: "低延遲遠程操控與緊急介入能力" },
-        { value: "AI感知", label: "異常識別與多傳感器融合能力" },
+        { value: "AI 感知", label: "異常識別與多傳感器融合能力" },
         { value: "7×24 運行", label: "持續運行與全天候覆蓋能力" }
       ]
     },
     market: {
       eyebrow: "為什麼需要機器人安防",
-      title: "夜間、大範圍巡邏，傳統安防難以持續覆蓋",
+      title: "將機器人部署至高風險、重複性及有視野盲區的作業環境中",
       copy:
-        "傳統安防依賴持續排班、人工觀察與分散的事件處理。超流智能將機器人、RSP平台與遠程運營組合成可部署的安防運營模式。",
+        "物理安全與安防巡邏仍高度依賴人工巡邏、現場觀察和事後處置。超流智能將自主巡航、AI 異常識別與遠程接管結合，形成可持續運行的機器人巡邏能力。",
       points: [
-        "夜間與大範圍巡邏依賴持續排班，人力成本高",
-        "園區邊界、倉儲死角與設備區域難以長時間連續覆蓋",
-        "危險區域、夜間場景與突發事件增加人員暴露",
-        "異常發現、上報、記錄與處置難以形成閉環"
+        "大範圍巡邏依賴人力，成本高且難以長期覆蓋",
+        "夜間、周界與重複檢查容易出現注意力下降",
+        "高風險、偏遠或戶外環境增加人員暴露",
+        "突發事件需要及時告警、證據留存與遠程處置"
       ]
     },
     strengths: {
-      eyebrow: "安防運營模式",
-      title: "從自主巡航到遠程介入，形成安防能力閉環",
-      copy:
-        "自主巡航、遠程遙操、AI感知與模組化載荷協同工作，形成可複製的機器人安防運營能力。",
+      eyebrow: "核心優勢",
+      title: "面向真實場景，服務實際營運",
       items: [
         {
           icon: "BrainCircuit",
-          title: "自主巡航",
+          title: "AI 自主巡檢能力",
           text:
-            "路徑規劃、感知避障與路線復用，穩定執行重複巡邏任務。"
+            "結合環境感知、異常識別、多傳感器融合與任務決策，實現機器人自主完成巡邏與巡檢任務。"
+        },
+        {
+          icon: "Bot",
+          title: "多機器人協同",
+          text:
+            "四足與輪式機器人可接入統一任務體系，支援任務分配、狀態監控與現場協同執行。"
+        },
+        {
+          icon: "Route",
+          title: "自適應導航",
+          text:
+            "提供地圖構建、導航、避障與路徑規劃能力，支援工廠、園區、能源設施及戶外場地運行。"
         },
         {
           icon: "Radio",
-          title: "遠程遙操",
+          title: "遠程接管能力",
           text:
-            "實時控制與異常介入，支援跨區域遠程執行任務。"
-        },
-        {
-          icon: "Activity",
-          title: "AI感知",
-          text:
-            "環境識別、風險判斷與異常告警，形成可追溯的現場數據。"
-        },
-        {
-          icon: "PackageCheck",
-          title: "模組化載荷",
-          text:
-            "按需配置感知、通信、任務與邊緣計算模組，適配不同安防任務。"
+            "通過低延遲遠程操控，讓操作人員持續掌握現場狀態，並在異常情況下快速接管和精準介入。"
         }
       ]
     },
     technology: {
-      eyebrow: "機器人調度平台",
-      title: "RSP平台：讓多台機器人統一管理、統一調度",
+      eyebrow: "機器人運營平台",
+      title: "自主巡檢機器人隊伍的\n統一運營平台",
       copy:
-        "從任務創建、機器人隊列到遠程指令與數據復盤，RSP讓多台機器人具備可調度、可管理、可復盤的運營能力。",
-      imageTitle: "RSP Command View",
+        "操作人員可通過瀏覽器或平板分配任務、查看實時數據、接收告警，並統一監管多台機器人。平台連接邊緣 AI、雲端監控與人工接管，實現機器人隊伍持續運營。",
+      imageTitle: "多機器人調度平台",
       imageText:
-        "任務調度、機器人隊列、遠程指令與數據復盤集中在同一個運營平台。",
+        "整合任務規劃、機器人遙測、異常事件警報與操作人員監督。",
       capabilities: [
-        "任務調度",
-        "機器人隊列管理",
-        "遠程指令下發",
-        "數據復盤"
+        "AI感知與異常檢測",
+        "自主導航與路徑規劃",
+        "多傳感器融合",
+        "運動控制與地形適應",
+        "邊緣計算與雲端監控",
+        "遠程接管與隊伍管理"
       ]
     },
     solutions: {
       eyebrow: "產品與方案",
-      title: "構建從任務到執行的機器人能力閉環",
+      title: "面向真實安防環境的能力組合",
       labels: {
-        problem: "任務",
-        solution: "能力",
-        value: "結果"
+        problem: "問題",
+        solution: "方案",
+        value: "價值"
       },
       items: [
         {
           icon: "Route",
-          title: "自主巡航",
-          problem: "穩定執行重複巡檢任務",
-          solution: "基於 LiDAR-Inertial SLAM，結合定位、路徑規劃、感知避障與本地運行能力，支援路線復用與定點巡檢",
-          value: "減少夜間人工巡邏，降低人員暴露，在提升安全性的同時降低運營成本"
+          title: "自主巡航解決方案",
+          problem: "安防巡邏需要機器人在較少人工干預下持續自主運行",
+          solution: "AI驅動自主導航、巡邏路徑規劃、實時環境感知與邊緣端部署能力，支援園區與周界持續巡邏",
+          value: "減少夜間與高風險區域的人工巡邏，降低人員暴露，兼顧安全與降本增效"
         },
         {
           icon: "Radio",
-          title: "遠程遙操",
-          problem: "複雜或異常場景需要及時人工介入",
-          solution: "同步現場畫面與控制，支援移動網絡及 Wi-Fi 多鏈路通信，讓操作人員跨區域遠程處理任務",
-          value: "無需人員進入現場，也能完成異常處理與安全升級"
+          title: "遠程遙操解決方案",
+          problem: "在複雜場景下，機器人系統需具備人機協同決策與即時緊急接管能力",
+          solution: "遠程遙操提供低延遲實時遠程控制，並以人工接管作為輔助操作與緊急干預方式",
+          value: "在需要人工判斷、安全升級或精準遠程遙操時，讓操作人員始終保持可控"
         },
         {
           icon: "Activity",
-          title: "AI感知",
-          problem: "現場異常需要及早發現並留存證據",
-          solution: "通過視覺、熱成像與多傳感器數據分析識別環境與風險，輸出異常告警及任務數據",
-          value: "支持煙火、入侵等異常提前預警，形成可復盤的現場數據"
+          title: "AI巡檢解決方案",
+          problem: "安防巡邏任務重複、現場數據分散，異常情況需要及早識別",
+          solution: "機器人執行自動巡檢，結合AI感知與背包傳感器等設備的數據分析，對煙火、入侵等情況提前預警",
+          value: "提升防火、防盜等異常預警的及時性，減少夜間人工復核，形成可追溯的巡檢數據"
         },
         {
           icon: "CloudCog",
-          title: "模組化載荷",
-          problem: "不同安防任務需要不同的感知、通信與任務接口",
-          solution: "按需配置感知、通信、任務與邊緣計算載荷，並可接入現有設備或系統",
-          value: "同一套機器人系統適配消防應急、園區安防、倉儲物流與社區安防"
+          title: "機器人調度平台（RSP）",
+          problem: "多機器人部署需要統一的任務調度、分發與協同運營中樞",
+          solution: "RSP平台支援多機器人任務調度、機器人集群管理、遠程任務分發與工作流自動化",
+          value: "作為連接硬件、AI 與遠程遙操的中樞平台，實現可擴展的機器人運營"
         }
       ]
     },
     applications: {
       eyebrow: "應用場景",
-      title: "四類可規模化部署的物理安全場景",
+      title: "服務於重視安全、覆蓋與穩定運行的場景",
       items: [
-        { icon: "Flame", label: "消防應急", detail: "危險區域進入、現場態勢回傳與熱成像排查" },
-        { icon: "Building2", label: "園區安防", detail: "周界巡邏與異常發現" },
-        { icon: "Map", label: "倉儲物流", detail: "倉內巡查與堆場風險排查" },
-        { icon: "Siren", label: "社區安防", detail: "社區巡邏與住戶巡護" }
+        { icon: "Map", label: "倉儲物流" },
+        { icon: "Building2", label: "園區安防" },
+        { icon: "Flame", label: "消防應急" },
+        { icon: "Siren", label: "社區安防" }
       ]
     },
     caseStudy: {
@@ -489,45 +477,32 @@ const content = {
       imageText:
         "為高價值設施提供路線執行、異常識別與遠程監看能力。",
       challenge:
-        "普洛斯需要在物流園區道路、倉庫周邊、周界區域及夜間例行巡查中，獲得更穩定的消防與安防巡邏覆蓋",
+        "普洛斯需要在工業園區道路、倉庫周邊、周界區域及夜間例行巡查中，獲得更穩定的消防與安防巡邏覆蓋",
       solution:
         "超流智能支持部署機器狗執行園區定時巡邏、遠程監看、異常事件感知與現場證據採集，服務日常安防巡邏路線",
-      outcomes: ["擴大夜間物流園區巡邏覆蓋", "提升消防與安防可視性", "減少夜間重複性周界巡邏工作"],
+      outcomes: ["擴大夜間工業園區巡邏覆蓋", "提升消防與安防可視性", "減少夜間重複性周界巡邏工作"],
       cta: "開啟部署溝通"
     },
     service: {
-      eyebrow: "合作與部署方式",
+      eyebrow: "支持與服務網絡",
       title: "三種合作方式，匹配不同部署需求",
       copy:
-        "客戶可根據自身運營階段，選擇 RaaS租賃、模組賦能或全棧式採購。超流智能提供從方案設計、部署交付到持續營運的支持。",
+        "根據項目階段、現場需求與營運方式，可選擇 RaaS租賃、模組賦能或全棧式購買。超流智能提供從方案設計、部署交付到持續營運的支持。",
       items: [
-        { icon: "PackageCheck", label: "RaaS租賃", description: "按月或按週期使用機器人與RSP，適合試點驗證及持續巡邏。" },
-        { icon: "Cpu", label: "模組賦能", description: "按需配置 AI感知、通信、任務與邊緣計算模組，可接入現有系統。" },
-        { icon: "Handshake", label: "全棧式採購", description: "一次性採購機器人、平台、部署與運維服務，長期自持運行。" }
+        { icon: "PackageCheck", label: "RaaS租賃" },
+        { icon: "Cpu", label: "模組賦能" },
+        { icon: "Handshake", label: "全棧式購買" }
       ]
     },
     about: {
-      eyebrow: "公司定位",
-      title: "不只提供機器人設備，而是重構安防運營模式",
+      eyebrow: "關於超流智能",
+      title: "讓機器人真正進入安防與園區營運",
       copy:
-        "超流智能面向消防應急、園區安防、倉儲物流與社區安防，提供由機器人、RSP平台與遠程遙操組成的安防解決方案。不只交付機器人設備，也協助客戶完成場景驗證、部署運營與後續複製，讓機器人逐步替代高風險、重複性及大範圍巡邏中的人工值守。",
+        "超流智能聚焦 AI感知、自主巡航與遠程遙操等機器人能力，並通過 RSP平台連接機器人、任務與現場數據。團隊協助客戶將機器人部署到實際場景，包括安防巡邏、園區巡檢與自動化運維等物理安全領域，逐步實現穩定運行與規模化應用。通過機器人承擔夜間、重複和高風險巡邏任務，減少人員暴露，提升安全性與營運效率。",
       bullets: [
-        "機器人 + RSP平台 + 遠程運營",
-        "從試點驗證到規模化運營",
-        "RaaS租賃 / 模組賦能 / 全棧式採購"
-      ]
-    },
-    deployment: {
-      eyebrow: "合作與部署流程",
-      title: "從場景驗證到規模化安防運營",
-      copy:
-        "通過分階段部署，將第一條巡邏路線逐步沉澱為可複製的運營模式。",
-      steps: [
-        { title: "場景篩選與風險識別", description: "判斷適合機器人巡檢的區域，明確風險點與難點。" },
-        { title: "部署方案設計", description: "規劃機器人數量、路線、RSP策略、通信與供電條件。" },
-        { title: "小規模試運行", description: "驗證巡檢穩定性、異常響應與可複製運行模板。" },
-        { title: "多機器人協同部署", description: "分配多機器人任務，支持夜間及多區域並行巡檢。" },
-        { title: "規模化安防運營", description: "形成標準巡檢任務體系，持續降低人工巡邏依賴。" }
+        "面向物理世界產業的具身智能",
+        "基於AI能力的軟硬件一體化交付",
+        "創新的機器人租賃解決方案"
       ]
     },
     contact: {
@@ -547,7 +522,7 @@ const content = {
         interest: "感興趣的產品 / 方案",
         message: "需求描述"
       },
-      options: ["自主巡航", "遠程遙操", "AI感知", "模組化載荷", "RSP平台", "其他"],
+      options: ["自主巡航", "遠程遙操", "AI巡檢", "RSP平台", "其他"],
       countryCodes: [
         { value: "+852", label: "香港（+852）" },
         { value: "+86", label: "中國內地（+86）" },
@@ -598,7 +573,7 @@ const content = {
     seo: {
       title: "Hyper AIForce Limited | 超流智能有限公司",
       description:
-        "超流智能有限公司面向消防应急、园区安防、仓储物流与社区安防场景，提供机器人安防解决方案",
+        "超流智能有限公司专注 AI Robotics、具身智能、自主巡航与巡逻巡检系统，服务物理安全、设施运维与关键基础设施场景",
       keywords: [
         "超流智能有限公司",
         "Hyper AIForce",
@@ -613,122 +588,122 @@ const content = {
       slogan: "AI Force Be With You",
       title: "面向物理安全的机器人\n智能巡检解决方案",
       subtitle:
-        "我们将 RSP调度、自主巡航、AI感知、模块化载荷与远程遥操组合，为消防应急、园区安防、仓储物流与社区安防提供可部署的机器人解决方案。",
+        "我们将 AI 感知、自主巡航、远程遥操、运动控制与场景交付能力相结合，为安防巡逻等物理安全领域提供可部署的机器人解决方案。",
       primaryCta: "预约演示",
       secondaryCta: "了解技术",
       stats: [
         { value: "自主巡航", label: "自主巡逻与智能巡检执行能力" },
         { value: "远程接管", label: "低延迟远程操控与紧急介入能力" },
-        { value: "AI感知", label: "异常识别与多传感器融合能力" },
+        { value: "AI 感知", label: "异常识别与多传感器融合能力" },
         { value: "7×24 运行", label: "持续运行与全天候覆盖能力" }
       ]
     },
     market: {
       eyebrow: "为什么需要机器人安防",
-      title: "夜间、大范围巡逻，传统安防难以持续覆盖",
+      title: "将机器人部署至高风险、重复性及有视野盲区的作业环境中",
       copy:
-        "传统安防依赖持续排班、人工观察与分散的事件处理。超流智能将机器人、RSP平台与远程运营组合成可部署的安防运营模式。",
+        "物理安全与安防巡逻仍高度依赖人工巡逻、现场观察和事后处置。超流智能将自主巡航、AI 异常识别与远程接管结合，形成可持续运行的机器人巡逻能力。",
       points: [
-        "夜间与大范围巡逻依赖持续排班，人力成本高",
-        "园区边界、仓储死角与设备区域难以长时间连续覆盖",
-        "危险区域、夜间场景与突发事件增加人员暴露",
-        "异常发现、上报、记录与处置难以形成闭环"
+        "大范围巡逻依赖人力，成本高且难以长期覆盖",
+        "夜间、周界与重复检查容易出现注意力下降",
+        "高风险、偏远或户外环境增加人员暴露",
+        "突发事件需要及时告警、证据留存与远程处置"
       ]
     },
     strengths: {
-      eyebrow: "安防运营模式",
-      title: "从自主巡航到远程介入，形成安防能力闭环",
-      copy:
-        "自主巡航、远程遥操、AI感知与模块化载荷协同工作，形成可复制的机器人安防运营能力。",
+      eyebrow: "核心优势",
+      title: "面向真实场景，服务实际运营",
       items: [
         {
           icon: "BrainCircuit",
-          title: "自主巡航",
+          title: "AI 自主巡检能力",
           text:
-            "路径规划、感知避障与路线复用，稳定执行重复巡逻任务。"
+            "结合环境感知、异常识别、多传感器融合与任务决策，实现机器人自主完成巡逻与巡检任务。"
+        },
+        {
+          icon: "Bot",
+          title: "多机器人协同",
+          text:
+            "四足与轮式机器人可接入统一任务体系，支持任务分配、状态监控与现场协同执行。"
+        },
+        {
+          icon: "Route",
+          title: "自适应导航",
+          text:
+            "提供地图构建、导航、避障与路径规划能力，支持工厂、园区、能源设施及户外场地运行。"
         },
         {
           icon: "Radio",
-          title: "远程遥操",
+          title: "远程接管能力",
           text:
-            "实时控制与异常介入，支持跨区域远程执行任务。"
-        },
-        {
-          icon: "Activity",
-          title: "AI感知",
-          text:
-            "环境识别、风险判断与异常告警，形成可追溯的现场数据。"
-        },
-        {
-          icon: "PackageCheck",
-          title: "模块化载荷",
-          text:
-            "按需配置感知、通信、任务与边缘计算模块，适配不同安防任务。"
+            "通过低延迟远程操控，让操作人员持续掌握现场状态，并在异常情况下快速接管和精准介入。"
         }
       ]
     },
     technology: {
-      eyebrow: "机器人调度平台",
-      title: "RSP平台：让多台机器人统一管理、统一调度",
+      eyebrow: "机器人运营平台",
+      title: "自主巡检机器人队伍的\n统一运营平台",
       copy:
-        "从任务创建、机器人队列到远程指令与数据复盘，RSP让多台机器人具备可调度、可管理、可复盘的运营能力。",
-      imageTitle: "RSP Command View",
+        "操作人员可通过浏览器或平板分配任务、查看实时数据、接收告警，并统一监管多台机器人。平台连接边缘 AI、云端监控与人工接管，实现机器人队伍持续运营。",
+      imageTitle: "多机器人调度平台",
       imageText:
-        "任务调度、机器人队列、远程指令与数据复盘集中在同一个运营平台。",
+        "整合任务规划、机器人遥测、异常事件警报与操作人员监督。",
       capabilities: [
-        "任务调度",
-        "机器人队列管理",
-        "远程指令下发",
-        "数据复盘"
+        "AI感知与异常检测",
+        "自主导航与路径规划",
+        "多传感器融合",
+        "运动控制与地形适应",
+        "边缘计算与云端监控",
+        "远程接管与队伍管理"
       ]
     },
     solutions: {
       eyebrow: "产品与方案",
-      title: "构建从任务到执行的机器人能力闭环",
+      title: "面向真实安防环境的能力组合",
       labels: {
-        problem: "任务",
-        solution: "能力",
-        value: "结果"
+        problem: "问题",
+        solution: "方案",
+        value: "价值"
       },
       items: [
         {
           icon: "Route",
-          title: "自主巡航",
-          problem: "稳定执行重复巡检任务",
-          solution: "基于 LiDAR-Inertial SLAM，结合定位、路径规划、感知避障与本地运行能力，支持路线复用与定点巡检",
-          value: "减少夜间人工巡逻，降低人员暴露，在提升安全性的同时降低运营成本"
+          title: "自主巡航解决方案",
+          problem: "安防巡逻需要机器人在较少人工干预下持续自主运行",
+          solution: "AI驱动自主导航、巡逻路径规划、实时环境感知与边缘端部署能力，支持园区与周界持续巡逻",
+          value: "减少夜间与高风险区域的人工巡逻，降低人员暴露，兼顾安全与降本增效"
         },
         {
           icon: "Radio",
-          title: "远程遥操",
-          problem: "复杂或异常场景需要及时人工介入",
-          solution: "同步现场画面与控制，支持移动网络及 Wi-Fi 多链路通信，让操作人员跨区域远程处理任务",
-          value: "无需人员进入现场，也能完成异常处理与安全升级"
+          title: "远程遥操解决方案",
+          problem: "复杂场景下，机器人系统需要具备人机协同决策与紧急接管能力",
+          solution: "远程遥操提供低延迟实时远程控制，并以人工接管作为辅助操作与紧急干预方式",
+          value: "在需要人工判断、安全升级或精准远程遥操时，让操作人员始终保持可控"
         },
         {
           icon: "Activity",
-          title: "AI感知",
-          problem: "现场异常需要及早发现并留存证据",
-          solution: "通过视觉、热成像与多传感器数据分析识别环境与风险，输出异常告警及任务数据",
-          value: "支持烟火、入侵等异常提前预警，形成可复盘的现场数据"
+          title: "AI巡检解决方案",
+          problem: "安防巡逻任务重复、现场数据分散，异常情况需要及早识别",
+          solution: "机器人执行自动巡检，结合AI感知与背包传感器等设备的数据分析，对烟火、入侵等情况提前预警",
+          value: "提升防火、防盗等异常预警的及时性，减少夜间人工复核，形成可追溯的巡检数据"
         },
         {
           icon: "CloudCog",
-          title: "模块化载荷",
-          problem: "不同安防任务需要不同的感知、通信与任务接口",
-          solution: "按需配置感知、通信、任务与边缘计算载荷，并可接入现有设备或系统",
-          value: "同一套机器人系统适配消防应急、园区安防、仓储物流与社区安防"
+          title: "机器人调度平台（RSP）",
+          problem: "多机器人部署需要统一的任务调度、分发与协同运营中枢",
+          solution: "RSP平台支持多机器人任务调度、机器人集群管理、远程任务分发与工作流自动化",
+          value: "作为连接硬件、AI 与远程遥操的中枢平台，实现可扩展的机器人运营"
         }
       ]
     },
     applications: {
       eyebrow: "应用场景",
-      title: "四类可规模化部署的物理安全场景",
+      title: "服务于重视安全、覆盖与稳定运行的场景",
       items: [
-        { icon: "Flame", label: "消防应急", detail: "危险区域进入、现场态势回传与热成像排查" },
-        { icon: "Building2", label: "园区安防", detail: "周界巡逻与异常发现" },
-        { icon: "Map", label: "仓储物流", detail: "仓内巡查与堆场风险排查" },
-        { icon: "Siren", label: "社区安防", detail: "社区巡逻与住户巡护" }
+        { icon: "Map", label: "仓储物流" },
+        { icon: "Building2", label: "园区安防" },
+        { icon: "Flame", label: "消防应急" },
+        { icon: "Siren", label: "社区安防" }
       ]
     },
     caseStudy: {
@@ -742,45 +717,32 @@ const content = {
       imageText:
         "为高价值设施提供路线执行、异常识别与远程监看能力。",
       challenge:
-        "普洛斯需要在物流园区道路、仓库周边、周界区域及夜间例行巡查中，获得更稳定的消防与安防巡逻覆盖",
+        "普洛斯需要在工业园区道路、仓库周边、周界区域及夜间例行巡查中，获得更稳定的消防与安防巡逻覆盖",
       solution:
         "超流智能支持部署机器狗执行园区定时巡逻、远程监看、异常事件感知与现场证据采集，服务日常安防巡逻路线",
-      outcomes: ["扩大夜间物流园区巡逻覆盖", "提升消防与安防可视性", "减少夜间重复性周界巡逻工作"],
+      outcomes: ["扩大夜间工业园区巡逻覆盖", "提升消防与安防可视性", "减少夜间重复性周界巡逻工作"],
       cta: "开启部署沟通"
     },
     service: {
-      eyebrow: "合作与部署方式",
+      eyebrow: "支持与服务网络",
       title: "三种合作方式，匹配不同部署需求",
       copy:
-        "客户可根据自身运营阶段，选择 RaaS租赁、模块赋能或全栈式采购。超流智能提供从方案设计、部署交付到持续运营的支持。",
+        "根据项目阶段、现场需求与运营方式，可选择 RaaS租赁、模块赋能或全栈式购买。超流智能提供从方案设计、部署交付到持续运营的支持。",
       items: [
-        { icon: "PackageCheck", label: "RaaS租赁", description: "按月或按周期使用机器人与RSP，适合试点验证及持续巡逻。" },
-        { icon: "Cpu", label: "模块赋能", description: "按需配置 AI感知、通信、任务与边缘计算模块，可接入现有系统。" },
-        { icon: "Handshake", label: "全栈式采购", description: "一次性采购机器人、平台、部署与运维服务，长期自持运行。" }
+        { icon: "PackageCheck", label: "RaaS租赁" },
+        { icon: "Cpu", label: "模块赋能" },
+        { icon: "Handshake", label: "全栈式购买" }
       ]
     },
     about: {
-      eyebrow: "公司定位",
-      title: "不只提供机器人设备，而是重构安防运营模式",
+      eyebrow: "关于超流智能",
+      title: "让机器人真正进入安防与园区运营",
       copy:
-        "超流智能面向消防应急、园区安防、仓储物流与社区安防，提供由机器人、RSP平台与远程遥操组成的安防解决方案。不只交付机器人设备，也协助客户完成场景验证、部署运营与后续复制，让机器人逐步替代高风险、重复性及大范围巡逻中的人工值守。",
+        "超流智能聚焦 AI感知、自主巡航与远程遥操等机器人能力，并通过 RSP平台连接机器人、任务与现场数据。团队帮助客户将机器人部署到实际场景，包括安防巡逻、园区巡检与自动化运维等物理安全领域，逐步实现稳定运行与规模化应用。通过机器人承担夜间、重复和高风险巡逻任务，减少人员暴露，提升安全性与运营效率。",
       bullets: [
-        "机器人 + RSP平台 + 远程运营",
-        "从试点验证到规模化运营",
-        "RaaS租赁 / 模块赋能 / 全栈式采购"
-      ]
-    },
-    deployment: {
-      eyebrow: "合作与部署流程",
-      title: "从场景验证到规模化安防运营",
-      copy:
-        "通过分阶段部署，将第一条巡逻路线逐步沉淀为可复制的运营模式。",
-      steps: [
-        { title: "场景筛选与风险识别", description: "判断适合机器人巡检的区域，明确风险点与难点。" },
-        { title: "部署方案设计", description: "规划机器人数量、路线、RSP策略、通信与供电条件。" },
-        { title: "小规模试运行", description: "验证巡检稳定性、异常响应与可复制运行模板。" },
-        { title: "多机器人协同部署", description: "分配多机器人任务，支持夜间及多区域并行巡检。" },
-        { title: "规模化安防运营", description: "形成标准巡检任务体系，持续降低人工巡逻依赖。" }
+        "面向物理世界产业的具身智能",
+        "基于AI能力的软硬件一体化交付",
+        "创新的机器人租赁解决方案"
       ]
     },
     contact: {
@@ -800,7 +762,7 @@ const content = {
         interest: "感兴趣的产品 / 方案",
         message: "需求描述"
       },
-      options: ["自主巡航", "远程遥操", "AI感知", "模块化载荷", "RSP平台", "其他"],
+      options: ["自主巡航", "远程遥操", "AI巡检", "RSP平台", "其他"],
       countryCodes: [
         { value: "+852", label: "香港（+852）" },
         { value: "+86", label: "中国内地（+86）" },

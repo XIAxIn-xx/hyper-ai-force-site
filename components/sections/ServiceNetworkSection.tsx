@@ -1,3 +1,4 @@
+import { getIcon } from "@/data/hyper";
 import type { HyperContent } from "@/data/hyper";
 import { Reveal } from "@/components/sections/Reveal";
 import { SectionHeading } from "@/components/sections/SectionHeading";
@@ -9,7 +10,7 @@ type ServiceNetworkSectionProps = {
 
 export function ServiceNetworkSection({ content }: ServiceNetworkSectionProps) {
   return (
-    <section id="service" className="bg-[#F5F7FA] py-28 md:py-36">
+    <section id="service" className="bg-[#F5F7FA] py-24">
       <div className="section-shell">
         <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <Reveal>
@@ -20,13 +21,15 @@ export function ServiceNetworkSection({ content }: ServiceNetworkSectionProps) {
             />
           </Reveal>
           <Reveal delay={0.1}>
-            <div className="grid border-t border-slate-300 sm:grid-cols-3">
-              {content.service.items.map((item, index) => {
+            <div className={`grid gap-4 sm:grid-cols-2 ${content.lang === "en" ? "" : "lg:grid-cols-3"}`}>
+              {content.service.items.map((item) => {
+                const Icon = getIcon(item.icon);
                 return (
-                  <div key={item.label} className="border-b border-slate-300 py-6 sm:border-r sm:px-6 sm:first:pl-0 sm:last:border-r-0">
-                    <span className="text-xs font-semibold tracking-[0.2em] text-cyan-700">0{index + 1}</span>
-                    <p className="zh-title mt-4 text-xl font-bold text-slate-950"><ZhText>{item.label}</ZhText></p>
-                    <p className="zh-copy mt-3 text-sm leading-7 text-slate-600"><ZhText>{item.description}</ZhText></p>
+                  <div key={item.label} className="flex items-center gap-4 rounded-lg border border-[#E6EAF0] bg-white p-5 shadow-[0_12px_34px_rgba(15,23,42,0.05)]">
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-md bg-orange-100 text-orange-600">
+                      <Icon className="h-6 w-6" />
+                    </div>
+                    <p className="zh-copy font-bold text-slate-950"><ZhText>{item.label}</ZhText></p>
                   </div>
                 );
               })}

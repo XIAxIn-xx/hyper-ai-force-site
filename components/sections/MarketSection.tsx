@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { AlertTriangle, CheckCircle2 } from "lucide-react";
 
 import type { HyperContent } from "@/data/hyper";
 import { Reveal } from "@/components/sections/Reveal";
@@ -11,31 +11,35 @@ type MarketSectionProps = {
 
 export function MarketSection({ content }: MarketSectionProps) {
   return (
-    <section className="relative isolate min-h-[700px] overflow-hidden bg-[#050B14] py-28 text-white md:py-36">
-      <Image
-        src="/images/generated/glp-warehouse-patrol-1.png"
-        alt="Night-time robotic security patrol in a logistics park"
-        fill
-        className="object-cover object-center opacity-55"
-      />
-      <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(5,11,20,0.97)_0%,rgba(5,11,20,0.72)_52%,rgba(5,11,20,0.38)_100%)]" />
-      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(5,11,20,0.2)_0%,rgba(5,11,20,0.95)_100%)]" />
-      <div className="section-shell relative z-10">
+    <section className="bg-[#050B14] py-24 text-white">
+      <div
+        className={`section-shell grid gap-12 lg:items-center ${
+          content.lang === "en" ? "lg:grid-cols-[0.95fr_1.05fr]" : "lg:grid-cols-[560px_minmax(0,1fr)]"
+        }`}
+      >
         <Reveal>
           <SectionHeading
             eyebrow={content.market.eyebrow}
             title={content.market.title}
             copy={content.market.copy}
             light
-            className="max-w-4xl"
           />
         </Reveal>
         <Reveal delay={0.1}>
-          <div className="mt-20 grid border-t border-white/25 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-4">
             {content.market.points.map((point, index) => (
-              <div key={point} className="border-b border-white/15 py-6 sm:border-r sm:px-6 sm:first:pl-0 lg:border-b-0 lg:last:border-r-0">
-                <span className="text-xs font-semibold tracking-[0.2em] text-cyan-200">0{index + 1}</span>
-                <p className="zh-copy mt-3 text-base leading-7 text-slate-100"><ZhText>{point}</ZhText></p>
+              <div
+                key={point}
+                className="zh-market-point flex gap-5 rounded-lg border border-white/10 bg-white/[0.06] p-5"
+              >
+                <div className="zh-market-point-icon mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-cyan-300/12 text-cyan-200">
+                  {index === 0 ? (
+                    <AlertTriangle className="h-5 w-5" />
+                  ) : (
+                    <CheckCircle2 className="h-5 w-5" />
+                  )}
+                </div>
+                <p className="zh-copy text-lg leading-8 text-slate-300 [word-break:normal] [overflow-wrap:break-word]"><ZhText>{point}</ZhText></p>
               </div>
             ))}
           </div>
