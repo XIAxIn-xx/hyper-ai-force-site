@@ -349,7 +349,7 @@ const content = {
     hero: {
       eyebrow: "超流智能有限公司",
       slogan: "AI Force Be With You",
-      title: "機器人智能巡檢解決方案\n面向物理安全",
+      title: "面向物理安全的機器人\n智能巡檢解決方案",
       subtitle:
         "我們將 AI 感知、自主巡航、遠程遙操、運動控制與場景交付能力相結合，為安防巡邏等物理安全領域提供可部署的機器人解決方案。",
       primaryCta: "預約演示",
@@ -589,7 +589,7 @@ const content = {
     hero: {
       eyebrow: "超流智能有限公司",
       slogan: "AI Force Be With You",
-      title: "机器人智能巡检解决方案\n面向物理安全",
+      title: "面向物理安全的机器人\n智能巡检解决方案",
       subtitle:
         "我们将 AI 感知、自主巡航、远程遥操、运动控制与场景交付能力相结合，为安防巡逻等物理安全领域提供可部署的机器人解决方案。",
       primaryCta: "预约演示",
