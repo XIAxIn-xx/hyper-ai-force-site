@@ -2,7 +2,7 @@
 
 import { memo, useEffect, useRef } from "react";
 import Image from "next/image";
-import { ArrowRight, ShieldCheck } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 
 import { Button } from "@/components/ui/button";
@@ -25,15 +25,16 @@ export function HeroSection({ content }: HeroSectionProps) {
       />
       <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(5,11,20,0.98)_0%,rgba(5,11,20,0.82)_36%,rgba(5,11,20,0.28)_72%,rgba(5,11,20,0.55)_100%)]" />
       <div className="absolute inset-0 bg-grid-fade tech-grid opacity-45" />
-      <div className="pointer-events-none absolute inset-0 opacity-55">
+      <div className="pointer-events-none absolute inset-0 opacity-75">
         <DotField
-          dotRadius={1.4}
-          dotSpacing={16}
-          bulgeStrength={44}
-          glowRadius={180}
-          gradientFrom="rgba(103, 232, 249, 0.32)"
-          gradientTo="rgba(59, 130, 246, 0.18)"
-          glowColor="rgba(34, 211, 238, 0.32)"
+          dotRadius={1.8}
+          dotSpacing={14}
+          bulgeStrength={72}
+          glowRadius={220}
+          waveAmplitude={0.45}
+          gradientFrom="rgba(103, 232, 249, 0.5)"
+          gradientTo="rgba(59, 130, 246, 0.3)"
+          glowColor="rgba(34, 211, 238, 0.46)"
         />
       </div>
       <div className="absolute bottom-0 left-0 h-48 w-full bg-gradient-to-t from-[#050B14] to-transparent" />
@@ -87,22 +88,6 @@ export function HeroSection({ content }: HeroSectionProps) {
             <Button asChild variant="outline" size="lg">
               <a href="#technology">{content.hero.secondaryCta}</a>
             </Button>
-          </motion.div>
-          <motion.div
-            initial={false}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.75, delay: 0.32 }}
-            className="mx-auto mt-12 grid max-w-[680px] gap-4 sm:grid-cols-2"
-          >
-            {content.hero.stats.map((stat) => (
-              <div key={stat.label} className="min-h-[132px] rounded-lg border border-white/12 bg-white/[0.06] p-5 backdrop-blur">
-                <div className="zh-card-title flex items-center gap-2 text-2xl font-black text-cyan-200">
-                  <ShieldCheck className="h-5 w-5" />
-                  <ZhText>{stat.value}</ZhText>
-                </div>
-                <p className="zh-copy mt-2 text-sm leading-6 text-slate-400"><ZhText>{stat.label}</ZhText></p>
-              </div>
-            ))}
           </motion.div>
         </div>
       </div>
