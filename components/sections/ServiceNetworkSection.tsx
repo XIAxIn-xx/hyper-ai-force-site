@@ -21,7 +21,7 @@ export function ServiceNetworkSection({ content }: ServiceNetworkSectionProps) {
             />
           </Reveal>
           <Reveal delay={0.1}>
-            <div className="grid gap-4 sm:grid-cols-2">
+            <div className={`grid gap-4 sm:grid-cols-2 ${content.lang === "en" ? "" : "lg:grid-cols-3"}`}>
               {content.service.items.map((item) => {
                 const Icon = getIcon(item.icon);
                 return (
