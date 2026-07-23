@@ -85,7 +85,7 @@ const content = {
       slogan: "AI Force Be With You",
       title: "Robotic Inspection Solutions for Physical Security",
       subtitle:
-        "We combine AI perception, autonomous patrol, teleoperation, motion control and service delivery to provide deployable robotic solutions for physical security and security patrol.",
+        "We combine AI perception, autonomous patrol, teleoperation, motion control and service delivery to provide deployable robotic solutions for security patrol and other physical-security applications.",
       primaryCta: "Request a Demo",
       secondaryCta: "Explore Technology",
       stats: [
@@ -100,14 +100,14 @@ const content = {
     },
     market: {
       eyebrow: "WHY ROBOTIC SECURITY",
-      title: "Deploy robotic systems into high-risk, repetitive and blind-spot operational environments.",
+      title: "Night-time, wide-area patrols are difficult to sustain with traditional security.",
       copy:
-        "Physical security and security patrol still depend on high-cost patrol labor, manual observation and delayed response. Hyper AIForce combines autonomous patrol, AI perception and teleoperation into a deployable robotic operating platform.",
+        "Traditional security still depends on shift-based patrols, manual observation and fragmented incident handling. Hyper AIForce brings robots, an operating platform and remote operations into one deployable model.",
       points: [
-        "Labor-intensive patrols are costly and hard to scale.",
-        "Human attention drops during repetitive night and perimeter checks.",
-        "Hazardous, remote or weather-exposed sites increase personnel risk.",
-        "Critical incidents need real-time alerts, evidence and teleoperation."
+        "Night-time and wide-area patrols depend on continuous staffing, driving up labor cost.",
+        "Perimeters, warehouse blind spots and equipment areas are difficult to cover continuously.",
+        "Hazardous areas, night scenes and unexpected incidents increase personnel exposure.",
+        "Detection, reporting, recording and response are often disconnected."
       ]
     },
     strengths: {
