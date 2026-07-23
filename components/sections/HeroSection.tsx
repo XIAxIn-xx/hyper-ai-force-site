@@ -15,31 +15,32 @@ type HeroSectionProps = {
 
 export function HeroSection({ content }: HeroSectionProps) {
   return (
-    <section className="relative min-h-[760px] overflow-hidden bg-[#050B14] pt-20 text-white">
+    <section className="relative min-h-[860px] overflow-hidden bg-[#050B14] pt-20 text-white md:min-h-[900px]">
       <Image
         src="/images/generated/hyper-hero-robotics.png"
-        alt="Autonomous quadruped inspection robot in an industrial facility"
+        alt="Autonomous quadruped security patrol robot at a facility"
         fill
         priority
         className="object-cover object-center opacity-88"
       />
       <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(5,11,20,0.98)_0%,rgba(5,11,20,0.82)_36%,rgba(5,11,20,0.28)_72%,rgba(5,11,20,0.55)_100%)]" />
       <div className="absolute inset-0 bg-grid-fade tech-grid opacity-45" />
-      <div className="pointer-events-none absolute inset-0 opacity-75">
+      <div className="pointer-events-none absolute inset-0 opacity-85">
         <DotField
-          dotRadius={1.8}
-          dotSpacing={14}
-          bulgeStrength={72}
-          glowRadius={220}
-          waveAmplitude={0.45}
-          gradientFrom="rgba(103, 232, 249, 0.5)"
-          gradientTo="rgba(59, 130, 246, 0.3)"
-          glowColor="rgba(34, 211, 238, 0.46)"
+          dotRadius={2}
+          dotSpacing={13}
+          cursorRadius={620}
+          bulgeStrength={88}
+          glowRadius={260}
+          waveAmplitude={0.75}
+          gradientFrom="rgba(103, 232, 249, 0.62)"
+          gradientTo="rgba(59, 130, 246, 0.38)"
+          glowColor="rgba(34, 211, 238, 0.58)"
         />
       </div>
       <div className="absolute bottom-0 left-0 h-48 w-full bg-gradient-to-t from-[#050B14] to-transparent" />
 
-      <div className="section-shell relative z-10 flex min-h-[690px] items-center">
+      <div className="section-shell relative z-10 flex min-h-[790px] items-center md:min-h-[830px]">
         <div className="max-w-[840px] py-24">
           <motion.div
             initial={false}

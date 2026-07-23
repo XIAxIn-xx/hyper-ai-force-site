@@ -67,24 +67,25 @@ const content = {
     ],
     seo: {
       title:
-        "Hyper AIForce Limited | AI Robotics for Industrial Intelligence",
+        "Hyper AIForce Limited | Robotic Security Solutions",
       description:
-        "Hyper AIForce Limited develops embodied AI robotics, autonomous patrol and inspection systems for industrial security, facilities and critical infrastructure.",
+        "Hyper AIForce Limited develops robotic systems for physical security, autonomous patrol and facility operations.",
       keywords: [
         "Hyper AIForce",
         "AI Robotics",
         "Embodied Intelligence",
         "Autonomous Patrol Robot",
-        "Industrial Inspection",
+        "Physical Security",
+        "Security Patrol",
         "Robotic Intelligence Platform"
       ]
     },
     hero: {
       eyebrow: "Hyper AIForce Limited",
       slogan: "AI Force Be With You",
-      title: "AI-Powered Robotic Inspection Solutions for Physical Security",
+      title: "Robotic Inspection Solutions for Physical Security",
       subtitle:
-        "We develop autonomous robotic systems that combine AI perception, navigation, teleoperation, motion control and service delivery for physical security, inspection and facility operations.",
+        "We combine AI perception, autonomous patrol, teleoperation, motion control and service delivery to provide deployable robotic solutions for physical security and security patrol.",
       primaryCta: "Request a Demo",
       secondaryCta: "Explore Technology",
       stats: [
@@ -101,7 +102,7 @@ const content = {
       eyebrow: "WHY ROBOTIC SECURITY",
       title: "Deploy robotic systems into high-risk, repetitive and blind-spot operational environments.",
       copy:
-        "Physical security and industrial inspection still depend on high-cost patrol labor, manual observation and delayed response. Hyper AIForce turns autonomous naviagation, AI detection and teleoperation into a deployable operating platform.",
+        "Physical security and security patrol still depend on high-cost patrol labor, manual observation and delayed response. Hyper AIForce combines autonomous patrol, AI perception and teleoperation into a deployable robotic operating platform.",
       points: [
         "Labor-intensive patrols are costly and hard to scale.",
         "Human attention drops during repetitive night and perimeter checks.",
@@ -111,7 +112,7 @@ const content = {
     },
     strengths: {
       eyebrow: "Core Strengths",
-      title: "Built for field deployment, not lab demos",
+      title: "Designed for real-world operations",
       items: [
         {
           icon: "BrainCircuit",
@@ -129,7 +130,7 @@ const content = {
           icon: "Route",
           title: "Adaptive navigation",
           text:
-            "Navigation, obstacle avoidance and route planning help robots operate across factories, campuses, utilities and outdoor facilities."
+            "Navigation, obstacle avoidance and route planning help robots operate across campuses, perimeters, utilities and outdoor facilities."
         },
         {
           icon: "Radio",
@@ -140,10 +141,10 @@ const content = {
       ]
     },
     technology: {
-      eyebrow: "Robotic Intelligence Platform",
-      title: "A software-defined operating layer for autonomous robotic teams",
+      eyebrow: "Robotic Operations Platform",
+      title: "A unified operating platform for autonomous inspection robot fleets",
       copy:
-        "Operators can assign missions from a browser or tablet, monitor live data, review alerts and supervise multiple robots. The platform connects edge AI, cloud monitoring and human-in-the-loop intervention.",
+        "Operators can assign missions from a browser or tablet, monitor live data, review alerts and supervise multiple robots. The platform connects edge AI, cloud monitoring and human takeover to keep the robot fleet running.",
       imageTitle: "Multi-robot Mission Layer",
       imageText:
         "Mission planning, robot telemetry, abnormal-event alerts and operator supervision in one deployable workflow.",
@@ -158,7 +159,7 @@ const content = {
     },
     solutions: {
       eyebrow: "Products & Solutions",
-      title: "Capability packages for real industrial environments",
+      title: "Capability packages for real security environments",
       labels: {
         problem: "Problem",
         solution: "Solution",
@@ -168,11 +169,11 @@ const content = {
         {
           icon: "Route",
           title: "Autonomous Patrol",
-          problem: "Industrial sites need robots that can run patrol missions with minimal manual intervention.",
+          problem: "Security patrols need robots that can run continuously with minimal manual intervention.",
           solution:
-            "AI-driven autonomous navigation, patrol route planning, real-time environmental perception and edge deployment support continuous field operation.",
+            "AI-driven autonomous navigation, patrol route planning, real-time environmental perception and edge deployment support continuous campus and perimeter patrols.",
           value:
-            "Reduces manual patrol effort while improving coverage, consistency and response readiness across industrial environments."
+            "Reduces night-time and high-risk-area manual patrols, lowers personnel exposure, and improves safety and operating efficiency."
         },
         {
           icon: "Radio",
@@ -186,11 +187,11 @@ const content = {
         {
           icon: "Activity",
           title: "AI Inspection",
-          problem: "Industrial inspections are repetitive, data-heavy and often expose workers to high-risk environments.",
+          problem: "Security patrols are repetitive and generate dispersed field data; incidents need to be identified early.",
           solution:
-            "Robots perform automated industrial inspection with AI visual defect detection, safety monitoring, data analysis and anomaly recognition.",
+            "Robots perform automated patrol inspection, combining AI perception with data analysis from backpack sensors and other devices to flag fire, smoke and intrusion risks early.",
           value:
-            "Improves inspection reliability, safety visibility and evidence-based maintenance decisions."
+            "Improves the timeliness of fire and intrusion alerts, reduces night-time manual review and creates traceable inspection data."
         },
         {
           icon: "CloudCog",
@@ -199,7 +200,7 @@ const content = {
           solution:
             "The RSP platform manages multi-robot task scheduling, fleet management, remote task distribution and workflow automation.",
           value:
-            "Acts as the hub to connect hardware, AI and Teleoperation for scalable robotic operations."
+            "Connects hardware, AI and teleoperation as a central platform for scalable robot operations."
         }
       ]
     },
@@ -228,34 +229,31 @@ const content = {
       solution:
         "Hyper AIForce supported the deployment of robotic dogs for scheduled park patrols, teleoperation, abnormal-event awareness and on-site evidence capture across daily security routes.",
       outcomes: [
-        "Expanded patrol coverage across the industrial park",
+        "Expanded night-time patrol coverage across the industrial park",
         "Improved fire-safety and security visibility",
-        "Reduced repetitive perimeter patrol workload"
+        "Reduced night-time repetitive perimeter patrol workload"
       ],
       cta: "Start a deployment conversation"
     },
     service: {
       eyebrow: "Support & Service Network",
-      title: "From solution design to full-cycle support.",
+      title: "Three collaboration models for different deployment needs.",
       copy:
-        "Hyper AIForce positions robotics as an integrated service, instead of a standalone device. Deployment includes solution design, technical support, maintenance planning, operator training, robot leasing and teleoperation.",
+        "Choose between RaaS leasing, module enablement or full-stack purchase based on project stage, site requirements and operating model. Hyper AIForce supports the full path from solution design and deployment to ongoing operations.",
       items: [
-        { icon: "Handshake", label: "Solution Design" },
-        { icon: "Cpu", label: "Technical Support" },
-        { icon: "Wrench", label: "After-sales Care" },
-        { icon: "BadgeCheck", label: "Operator Training" },
-        { icon: "PackageCheck", label: "Robot Leasing" },
-        { icon: "Radio", label: "Teleoperation" }
+        { icon: "PackageCheck", label: "RaaS Leasing" },
+        { icon: "Cpu", label: "Module Enablement" },
+        { icon: "Handshake", label: "Full-Stack Purchase" }
       ]
     },
     about: {
       eyebrow: "About Hyper AIForce",
-      title: "An AI robotics company connecting autonomous navigation and teleoperation.",
+      title: "Putting robots to work in security and campus operations.",
       copy:
-        "Hyper AIForce focuses on core capabilities including AI perception, autonomous patrol, teleoperation, RSP platform and edge intelligence. The team helps customers deploy intelligent robotic systems into real-world application scenarios, including physical security, industrial inspection, facility patrol, and automated operations, enabling large-scale deployment and stable operation. By replacing manual operations with robotics, the system reduces labor costs, improves operational efficiency, and enhances safety, achieving significant cost reduction and productivity gains.",
+        "Hyper AIForce focuses on AI perception, autonomous patrol and teleoperation, with the RSP platform connecting robots, missions and field data. The team helps customers deploy robots in real-world applications, including security patrol, campus inspection and automated operations as part of physical security. Robots take on night-time, repetitive and high-risk patrol tasks, reducing personnel exposure and improving safety and operating efficiency.",
       bullets: [
         "Embodied intelligence for physical-world industries",
-        "Integrated hardware, software and AI delivery",
+        "AI-enabled integrated hardware and software delivery",
         "Innovative Robotics Leasing Solution"
       ]
     },
@@ -263,7 +261,7 @@ const content = {
       eyebrow: "Contact",
       title: "Plan a robotics deployment for your site.",
       copy:
-        "Tell us about your facility, patrol workload or inspection scenario. Our team will map the appropriate solutions.",
+        "Tell us about your facility, patrol workload or inspection scenario, and we will match the right solution.",
       button: "Contact Us / Request a Demo",
       navButton: "Contact us",
       address:
@@ -317,8 +315,7 @@ const content = {
       captcha: "Security verification"
     },
     footerCompany: "Hyper AIForce Limited",
-    footer:
-      "AI robotics, autonomous patrol and teleoperation solutions.",
+    footer: "",
     footerRights: "All rights reserved."
   },
   "zh-hk": {
