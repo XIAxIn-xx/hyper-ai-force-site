@@ -264,7 +264,7 @@ const content = {
       title: "Plan a robotics deployment for your site.",
       copy:
         "Tell us about your facility, patrol workload or inspection scenario. Our team will map the appropriate solutions.",
-      button: "Request a Demo / Contact Us",
+      button: "Contact Us / Request a Demo",
       navButton: "Contact us",
       address:
         "Building 19W, No.19 Science Park West Avenue, Hong Kong Science Park, Pak Shek Kok, New Territories, Hong Kong",
@@ -516,7 +516,7 @@ const content = {
       title: "為您的場地規劃機器人部署",
       copy:
         "告訴我們您的設施、巡邏工作量或巡檢場景。我們將協助匹配合適的解決方案",
-      button: "預約演示 / 聯絡我們",
+      button: "聯絡我們 / 預約演示",
       navButton: "聯絡我們",
       address: "香港新界白石角香港科學園科技大道西19號19W大樓",
       fields: {
@@ -759,7 +759,7 @@ const content = {
       title: "为您的场地规划机器人部署",
       copy:
         "告诉我们您的设施、巡逻工作量或巡检场景。我们将协助匹配合适的解决方案",
-      button: "预约演示 / 联系我们",
+      button: "联系我们 / 预约演示",
       navButton: "联系我们",
       address: "香港新界白石角香港科学园科技大道西19号19W大楼",
       fields: {

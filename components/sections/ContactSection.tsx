@@ -32,6 +32,7 @@ type Turnstile = {
     element: HTMLElement,
     options: {
       sitekey: string;
+      language: string;
       callback: (token: string) => void;
       "expired-callback": () => void;
       "error-callback": () => void;
@@ -58,6 +59,8 @@ export function ContactSection({ content }: ContactSectionProps) {
   const turnstileRef = useRef<HTMLDivElement>(null);
   const turnstileWidgetId = useRef<string | null>(null);
   const turnstileSiteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
+  const turnstileLanguage =
+    content.lang === "en" ? "en" : content.lang === "zh-HK" ? "zh-tw" : "zh-cn";
 
   const messages =
     content.lang === "en"
@@ -109,6 +112,7 @@ export function ContactSection({ content }: ContactSectionProps) {
 
       turnstileWidgetId.current = window.turnstile.render(turnstileRef.current, {
         sitekey: turnstileSiteKey,
+        language: turnstileLanguage,
         callback: setTurnstileToken,
         "expired-callback": () => setTurnstileToken(""),
         "error-callback": () => setTurnstileToken("")
@@ -125,6 +129,7 @@ export function ContactSection({ content }: ContactSectionProps) {
         window.clearTimeout(timeoutId);
         if (turnstileWidgetId.current) {
           window.turnstile?.remove?.(turnstileWidgetId.current);
+          turnstileWidgetId.current = null;
         }
       };
     }
@@ -132,9 +137,10 @@ export function ContactSection({ content }: ContactSectionProps) {
     return () => {
       if (turnstileWidgetId.current) {
         window.turnstile?.remove?.(turnstileWidgetId.current);
+        turnstileWidgetId.current = null;
       }
     };
-  }, [turnstileSiteKey]);
+  }, [turnstileLanguage, turnstileSiteKey]);
 
   function fieldError(key: ErrorKey) {
     const error = errors[key];
