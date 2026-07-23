@@ -25,7 +25,7 @@ export function Header({ content }: HeaderProps) {
   const homeHref =
     content.lang === "zh-HK" ? "/zh-hk" : content.lang === "zh-CN" ? "/zh-cn" : "/";
   const languageButtonLabel =
-    content.lang === "en" ? "Language" : content.lang === "zh-HK" ? "切換語言" : "切换语言";
+    content.lang === "en" ? "Language" : "語言";
 
   useEffect(() => {
     const updateScrolled = () => setScrolled(window.scrollY > 48);
