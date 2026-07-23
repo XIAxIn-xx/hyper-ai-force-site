@@ -24,6 +24,8 @@ export function Header({ content }: HeaderProps) {
   const [scrolled, setScrolled] = useState(false);
   const homeHref =
     content.lang === "zh-HK" ? "/zh-hk" : content.lang === "zh-CN" ? "/zh-cn" : "/";
+  const languageButtonLabel =
+    content.lang === "en" ? "Language" : content.lang === "zh-HK" ? "切換語言" : "切换语言";
 
   useEffect(() => {
     const updateScrolled = () => setScrolled(window.scrollY > 48);
@@ -57,17 +59,18 @@ export function Header({ content }: HeaderProps) {
   const languageTrigger = (
     <button
       type="button"
-      aria-label="切换语言"
+      aria-label={languageButtonLabel}
       aria-expanded={languageOpen}
       onClick={() => setLanguageOpen((value) => !value)}
       className={cn(
-        "inline-flex h-10 w-10 items-center justify-center rounded-md border transition-colors",
+        "inline-flex h-10 items-center gap-2 rounded-md border px-3 transition-colors",
         scrolled || open || languageOpen
           ? "border-slate-300 bg-white/70 text-slate-900 hover:bg-white"
           : "border-white/15 text-white hover:bg-white/10"
       )}
     >
       <Globe2 className="h-5 w-5" />
+      <span className="text-xs font-semibold">{languageButtonLabel}</span>
     </button>
   );
 
@@ -128,7 +131,7 @@ export function Header({ content }: HeaderProps) {
             {languageOpen ? languageMenu("absolute right-0 top-full z-10 mt-2 w-32") : null}
           </div>
           <Button asChild size="sm">
-            <a href="#contact">{content.contact.button}</a>
+            <a href="#contact">{content.contact.navButton}</a>
           </Button>
         </div>
 
@@ -173,7 +176,7 @@ export function Header({ content }: HeaderProps) {
             <div className="pt-2">
               <Button asChild size="sm">
                 <a href="#contact" onClick={() => setOpen(false)}>
-                  {content.contact.button}
+                  {content.contact.navButton}
                 </a>
               </Button>
             </div>

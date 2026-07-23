@@ -265,6 +265,7 @@ const content = {
       copy:
         "Tell us about your facility, patrol workload or inspection scenario. Our team will map the appropriate solutions.",
       button: "Request a Demo / Contact Us",
+      navButton: "Contact us",
       address:
         "Building 19W, No.19 Science Park West Avenue, Hong Kong Science Park, Pak Shek Kok, New Territories, Hong Kong",
       fields: {
@@ -516,6 +517,7 @@ const content = {
       copy:
         "告訴我們您的設施、巡邏工作量或巡檢場景。我們將協助匹配合適的解決方案",
       button: "預約演示 / 聯絡我們",
+      navButton: "聯絡我們",
       address: "香港新界白石角香港科學園科技大道西19號19W大樓",
       fields: {
         name: "姓名",
@@ -758,6 +760,7 @@ const content = {
       copy:
         "告诉我们您的设施、巡逻工作量或巡检场景。我们将协助匹配合适的解决方案",
       button: "预约演示 / 联系我们",
+      navButton: "联系我们",
       address: "香港新界白石角香港科学园科技大道西19号19W大楼",
       fields: {
         name: "姓名",

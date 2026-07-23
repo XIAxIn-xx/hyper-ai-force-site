@@ -2,7 +2,7 @@
 
 import { memo, useEffect, useRef } from "react";
 import Image from "next/image";
-import { ArrowRight, Cpu, ShieldCheck } from "lucide-react";
+import { ArrowRight, ShieldCheck } from "lucide-react";
 import { motion } from "framer-motion";
 
 import { Button } from "@/components/ui/button";
@@ -44,9 +44,8 @@ export function HeroSection({ content }: HeroSectionProps) {
             initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.65 }}
-            className="inline-flex items-center gap-3 rounded-full border border-cyan-300/25 bg-cyan-300/10 px-5 py-3 text-lg font-semibold text-cyan-100"
+            className="zh-eyebrow text-sm font-semibold uppercase tracking-[0.16em] text-cyan-200/90"
           >
-            <Cpu className="h-5 w-5" />
             <ZhText>{content.hero.eyebrow}</ZhText>
           </motion.div>
           <motion.h1
