@@ -1,5 +1,4 @@
 import type { HyperContent } from "@/data/hyper";
-import { getIcon } from "@/data/hyper";
 import { Reveal } from "@/components/sections/Reveal";
 import { SectionHeading } from "@/components/sections/SectionHeading";
 import { ZhText } from "@/components/ui/ZhText";
@@ -10,7 +9,7 @@ type SolutionsSectionProps = {
 
 export function SolutionsSection({ content }: SolutionsSectionProps) {
   return (
-    <section id="solutions" className="bg-[#F5F7FA] py-24">
+    <section id="solutions" className="bg-[#F5F7FA] py-28 md:py-36">
       <div className="section-shell">
         <Reveal>
           <SectionHeading
@@ -19,24 +18,19 @@ export function SolutionsSection({ content }: SolutionsSectionProps) {
             align="center"
           />
         </Reveal>
-        <div className="mt-14 grid gap-7 lg:grid-cols-2">
+        <div className="mt-16 border-t border-slate-300">
           {content.solutions.items.map((item, index) => {
-            const Icon = getIcon(item.icon);
             return (
-              <Reveal key={item.title} delay={index * 0.05}>
-                <article className="h-full rounded-lg border border-[#E6EAF0] bg-white p-7 shadow-[0_12px_34px_rgba(15,23,42,0.05)] transition hover:-translate-y-1 hover:border-cyan-300 hover:shadow-glow lg:p-8">
-                  <div className="flex flex-col gap-6 sm:flex-row">
-                    <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-md bg-[#050B14] text-cyan-200">
-                      <Icon className="h-7 w-7" />
-                    </div>
-                    <div className="min-w-0">
-                      <h3 className="zh-title zh-card-title text-2xl font-bold text-slate-950 [word-break:normal]"><ZhText>{item.title}</ZhText></h3>
-                      <div className="mt-5 grid gap-4 text-base leading-8 text-slate-600 [word-break:normal] [overflow-wrap:break-word]">
-                        <p className="zh-copy"><span className="font-bold text-slate-950"><ZhText>{`${content.solutions.labels.problem}: `}</ZhText></span><ZhText>{item.problem}</ZhText></p>
-                        <p className="zh-copy"><span className="font-bold text-slate-950"><ZhText>{`${content.solutions.labels.solution}: `}</ZhText></span><ZhText>{item.solution}</ZhText></p>
-                        <p className="zh-copy"><span className="font-bold text-slate-950"><ZhText>{`${content.solutions.labels.value}: `}</ZhText></span><ZhText>{item.value}</ZhText></p>
-                      </div>
-                    </div>
+              <Reveal key={item.title} delay={index * 0.04}>
+                <article className="grid gap-8 border-b border-slate-300 py-10 lg:grid-cols-[0.75fr_1.25fr] lg:gap-16">
+                  <div>
+                    <span className="text-xs font-semibold tracking-[0.2em] text-cyan-700">0{index + 1}</span>
+                    <h3 className="zh-title mt-4 text-2xl font-bold text-slate-950 md:text-3xl"><ZhText>{item.title}</ZhText></h3>
+                    <p className="zh-copy mt-4 max-w-md text-base leading-7 text-slate-500"><ZhText>{item.problem}</ZhText></p>
+                  </div>
+                  <div className="grid gap-4 md:grid-cols-2 md:gap-10">
+                    <p className="zh-copy text-base leading-8 text-slate-700"><span className="font-semibold text-slate-950"><ZhText>{`${content.solutions.labels.solution}: `}</ZhText></span><ZhText>{item.solution}</ZhText></p>
+                    <p className="zh-copy text-base leading-8 text-cyan-800"><span className="font-semibold"><ZhText>{`${content.solutions.labels.value}: `}</ZhText></span><ZhText>{item.value}</ZhText></p>
                   </div>
                 </article>
               </Reveal>
