@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { ArrowUpRight } from "lucide-react";
 import { useState } from "react";
 
 import type { HyperContent } from "@/data/hyper";
@@ -72,7 +71,7 @@ export function ApplicationsSection({ content }: ApplicationsSectionProps) {
                         <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg border border-white/15 bg-[#06131d]/70 text-cyan-200 backdrop-blur-sm">
                           <Icon className="h-5 w-5" />
                         </div>
-                        <h3 className={`zh-title text-white transition-[font-size] duration-500 ${isActive ? "text-2xl font-semibold md:text-3xl" : "text-xl font-semibold"}`}>
+                        <h3 className={`applications-card-title zh-title text-white transition-[font-size] duration-500 ${isActive ? "text-2xl font-semibold md:text-3xl" : "text-xl font-semibold"}`}>
                           <ZhText>{item.label}</ZhText>
                         </h3>
                         <div className={`grid transition-[grid-template-rows,opacity,margin] duration-500 ease-out ${isActive ? "mt-3 grid-rows-[1fr] opacity-100" : "mt-0 grid-rows-[0fr] opacity-0"}`}>
@@ -87,10 +86,6 @@ export function ApplicationsSection({ content }: ApplicationsSectionProps) {
                                 </span>
                               ))}
                             </div>
-                            <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-cyan-200">
-                              <ZhText>{content.applications.cta}</ZhText>
-                              <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" aria-hidden="true" />
-                            </span>
                           </div>
                         </div>
                       </div>

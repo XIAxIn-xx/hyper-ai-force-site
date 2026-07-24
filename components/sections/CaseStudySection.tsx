@@ -46,16 +46,16 @@ export function CaseStudySection({ content }: CaseStudySectionProps) {
         </Reveal>
 
         <Reveal delay={0.1} className="mt-8 w-full md:mt-4">
-          <div className="grid gap-3 sm:grid-cols-3 sm:gap-4 lg:gap-5">
+          <div className="mx-auto grid max-w-[840px] gap-3 sm:grid-cols-3 sm:gap-4">
             {caseStudy.metrics.map((metric) => (
               <div
                 key={metric.value + metric.label}
-                className="group rounded-2xl border border-white/15 bg-[#06131d]/70 p-4 backdrop-blur-sm transition duration-300 hover:-translate-y-0.5 hover:border-white/30"
+                className="group rounded-xl border border-cyan-100/80 bg-white/90 p-3.5 shadow-[0_12px_30px_rgba(6,19,29,0.12)] backdrop-blur-sm transition duration-300 hover:-translate-y-0.5 hover:border-cyan-300 hover:bg-white"
               >
-                <p className="text-4xl font-semibold tracking-[-0.03em] text-cyan-200 md:text-5xl">
+                <p className="text-3xl font-semibold tracking-[-0.03em] text-cyan-700 md:text-4xl">
                   <ZhText>{metric.value}</ZhText>
                 </p>
-                <p className="mt-2 text-sm leading-6 text-white/75">
+                <p className="mt-1.5 text-sm leading-6 text-slate-600">
                   <ZhText>{metric.label}</ZhText>
                 </p>
               </div>

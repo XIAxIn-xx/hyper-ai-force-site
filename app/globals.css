@@ -95,6 +95,12 @@ body {
   min-width: 0;
 }
 
+.pretty-copy:not(.zh-page) #applications .applications-card-title {
+  word-break: normal;
+  overflow-wrap: normal;
+  hyphens: none;
+}
+
 .zh-page .zh-title {
   line-break: strict;
   word-break: normal;

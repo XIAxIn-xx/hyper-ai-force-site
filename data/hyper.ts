@@ -231,7 +231,6 @@ const content = {
     applications: {
       eyebrow: "Applications",
       title: "Built for environments that prioritise safety, coverage and stable operation",
-      cta: "Explore application",
       items: [
         {
           icon: "Map",
@@ -430,25 +429,25 @@ const content = {
       ]
     },
     capabilityIntro: {
-      eyebrow: "核心產品與能力",
-      title: "支撐機器人持續運行的四項核心能力",
+      eyebrow: "核心能力與產品",
+      title: "兩項核心能力與兩款產品",
       copy:
-        "從自主任務執行、現場感知到遠程接管與統一營運，建立機器人規模化部署所需的完整能力體系。"
+        "以自主巡航與遠程遙操為核心能力，結合 RSP 軟件平台與硬件背包、傳感器集成，形成可部署的機器人作業體系。"
     },
     capabilities: [
       {
         number: "01",
         label: "自主巡航",
-        title: "讓機器人獨立完成日常巡檢任務",
+        title: "讓機器人自主完成日常巡檢任務",
         description:
-          "基於地圖構建、路徑規劃、動態避障與任務執行能力，支援機器人按照預設路線持續開展巡檢與巡邏。",
-        capabilities: ["地圖構建與定位", "路徑規劃與避障", "定時任務執行", "現場狀態持續回傳"],
+          "基於地圖構建、定位、路徑規劃與動態避障，支援機器人按照預設路線持續開展巡檢與巡邏。",
+        capabilities: ["地圖構建與定位", "路徑規劃與動態避障", "預設路線自主執行", "現場狀態持續回傳"],
         layout: "media-left",
         mediaType: "video",
-        mediaSrc: "/videos/glp-robot-inspection.mp4",
-        poster: "/images/generated/glp-robot-inspection-poster.jpg",
+        mediaSrc: "/videos/autonomous-patrol.mp4",
+        poster: "/images/capabilities/autonomous-patrol-poster.jpg",
         mediaAlt: "在物流設施進行巡檢的機器人",
-        mediaNote: "現有巡檢視頻",
+        mediaNote: "自主巡航實拍視頻",
         mediaSlots: [],
         resourceKey: "media.autonomousPatrol",
         mediaPlaceholderText: "可通過上方字段替換為已確認的真實素材。",
@@ -456,63 +455,69 @@ const content = {
       },
       {
         number: "02",
-        label: "模組化載荷與 AI 巡檢",
-        title: "按場景配置感知與數據採集能力",
+        label: "遠程遙操",
+        title: "複雜情況下，遠程介入並直接控制機器人",
         description:
-          "透過模組化硬件背包與不同類型載荷，為機器人配置視覺感知、環境採集、告警與現場互動能力。",
-        capabilities: ["模組化快速配置", "多類型感測器接入", "現場數據採集", "AI 異常識別"],
+          "透過遠程操作端接入現場機器人，在異常、複雜地形或需要人工判斷時，實現低延遲畫面回傳與遠程控制。",
+        capabilities: ["遠程設備接入", "低延遲畫面回傳", "自主與人工模式切換", "異常情況下快速介入"],
         layout: "media-right",
         mediaType: "image",
-        mediaSrc: "/images/generated/glp-warehouse-patrol-1.png",
+        mediaSrc: "/images/capabilities/teleoperation.png",
         poster: null,
-        mediaAlt: "現有機器人巡檢場景，模組化載荷特寫待補",
-        mediaNote: "現有場景圖片 · 載荷細節素材待補",
-        mediaSlots: ["傳感器特寫", "載荷接口", "數據採集模組"],
-        resourceKey: "media.modularPayloads",
+        mediaFit: "contain",
+        mediaAlt: "遠程遙操工作台",
+        mediaNote: "遠程遙操工作台",
+        mediaSlots: [],
+        resourceKey: "media.remoteTeleoperation",
         mediaPlaceholderText: "可通過上方字段替換為已確認的真實素材。",
         connection: null
       },
       {
         number: "03",
-        label: "ROBOX 遠程接入",
-        title: "複雜情況發生時，快速切換人工接管",
+        label: "RSP 軟件平台",
+        title: "統一調度機器人、任務與巡檢數據",
         description:
-          "透過 ROBOX 連接現場機器人與遠程操作端，在異常、複雜地形或需要人工判斷時進行低延遲遠程接管。",
-        capabilities: ["遠程設備接入", "低延遲畫面與控制", "自主與人工模式切換", "異常情況下快速介入"],
+          "RSP 是面向機器人運營的軟件平台，支援地圖管理、任務調度、設備監控、遠程控制與巡檢記錄管理。",
+        capabilities: ["地圖與任務管理", "多機器人統一調度", "設備狀態與告警監控", "巡檢記錄與數據管理"],
         layout: "media-left",
-        mediaType: "placeholder",
-        mediaSrc: null,
+        mediaType: "image",
+        mediaSrc: "/images/capabilities/rsp-platform.png",
         poster: null,
-        mediaAlt: "ROBOX 產品圖片佔位",
-        mediaNote: "ROBOX 產品圖 / 媒體素材待補",
+        mediaFit: "contain",
+        mediaAlt: "RSP 機器人調度平台界面",
+        mediaNote: "RSP 軟件平台",
         mediaSlots: [],
-        resourceKey: "media.robox",
-        mediaPlaceholderText: "保留真實素材替換入口，不使用虛構產品圖或平台界面。",
-        connection: { start: "現場機器人", center: "ROBOX", end: "遠程操作人員" }
+        resourceKey: "media.rspPlatform",
+        mediaPlaceholderText: "可通過上方字段替換為已確認的真實素材。",
+        connection: null
       },
       {
         number: "04",
-        label: "RSP 機器人營運平台",
-        title: "統一管理機器人、任務、告警與數據",
+        label: "硬件背包與傳感器集成",
+        title: "按場景集成背包與傳感器載荷",
         description:
-          "透過 RSP 對多台機器人進行任務編排、狀態監控、異常告警、遠程接管與巡檢記錄管理，支撐機器人隊伍持續營運。",
-        capabilities: ["多機器人統一管理", "任務調度與編排", "即時狀態與告警", "數據記錄與報告歸檔"],
+          "透過硬件背包、傳感器載荷與接口集成，為機器人配置環境感知、數據採集與任務執行所需的硬件能力。",
+        capabilities: ["模組化硬件組合", "多類型傳感器集成", "現場數據採集", "按場景擴展載荷"],
         layout: "media-right",
-        mediaType: "placeholder",
+        mediaType: "image",
         mediaSrc: null,
+        mediaImages: [
+          { src: "/images/capabilities/backpack.png", alt: "機器人硬件背包" },
+          { src: "/images/capabilities/sensor-payload.png", alt: "傳感器載荷" }
+        ],
         poster: null,
-        mediaAlt: "RSP 平台截圖佔位",
-        mediaNote: "RSP 平台截圖或錄屏待補",
-        mediaSlots: [],
-        resourceKey: "media.rsp",
-        mediaPlaceholderText: "保留真實素材替換入口，不使用虛構產品圖或平台界面。",
+        mediaFit: "contain",
+        mediaAlt: "硬件背包與傳感器載荷",
+        mediaNote: "背包與傳感器集成",
+        mediaSlots: ["硬件背包", "傳感器載荷"],
+        resourceKey: "media.hardwareIntegration",
+        mediaPlaceholderText: "可通過上方字段替換為已確認的真實素材。",
         connection: null
       }
     ],
     applications: {
       eyebrow: "應用場景",
       title: "服務於重視安全、覆蓋與穩定運行的場景",
-      cta: "了解更多",
       items: [
         {
           icon: "Map",
@@ -705,25 +710,25 @@ const content = {
       ]
     },
     capabilityIntro: {
-      eyebrow: "核心产品与能力",
-      title: "支撑机器人持续运行的四项核心能力",
+      eyebrow: "核心能力与产品",
+      title: "两项核心能力与两款产品",
       copy:
-        "从自主任务执行、现场感知到远程接管与统一运营，构建机器人规模化部署所需的完整能力体系。"
+        "以自主巡航与远程遥操为核心能力，结合 RSP 软件平台与硬件背包、传感器集成，形成可部署的机器人作业体系。"
     },
     capabilities: [
       {
         number: "01",
         label: "自主巡航",
-        title: "让机器人独立完成日常巡检任务",
+        title: "让机器人自主完成日常巡检任务",
         description:
-          "基于地图构建、路径规划、动态避障与任务执行能力，支持机器人按照预设路线持续开展巡检和巡逻。",
-        capabilities: ["地图构建与定位", "路径规划与避障", "定时任务执行", "现场状态持续回传"],
+          "基于地图构建、定位、路径规划与动态避障，支持机器人按照预设路线持续开展巡检和巡逻。",
+        capabilities: ["地图构建与定位", "路径规划与动态避障", "预设路线自主执行", "现场状态持续回传"],
         layout: "media-left",
         mediaType: "video",
-        mediaSrc: "/videos/glp-robot-inspection.mp4",
-        poster: "/images/generated/glp-robot-inspection-poster.jpg",
+        mediaSrc: "/videos/autonomous-patrol.mp4",
+        poster: "/images/capabilities/autonomous-patrol-poster.jpg",
         mediaAlt: "在物流设施内进行巡检的机器人",
-        mediaNote: "现有巡检视频",
+        mediaNote: "自主巡航实拍视频",
         mediaSlots: [],
         resourceKey: "media.autonomousPatrol",
         mediaPlaceholderText: "可通过上方字段替换为已确认的真实素材。",
@@ -731,63 +736,69 @@ const content = {
       },
       {
         number: "02",
-        label: "模块化载荷与 AI 巡检",
-        title: "按场景配置感知与数据采集能力",
+        label: "远程遥操",
+        title: "复杂情况下，远程介入并直接控制机器人",
         description:
-          "通过模块化硬件背包与不同类型载荷，为机器人配置视觉感知、环境采集、告警与现场交互能力。",
-        capabilities: ["模块化快速配置", "多类型传感器接入", "现场数据采集", "AI 异常识别"],
+          "通过远程操作端接入现场机器人，在异常、复杂地形或需要人工判断时，实现低延迟画面回传与远程控制。",
+        capabilities: ["远程设备接入", "低延迟画面回传", "自主与人工模式切换", "异常情况下快速介入"],
         layout: "media-right",
         mediaType: "image",
-        mediaSrc: "/images/generated/glp-warehouse-patrol-1.png",
+        mediaSrc: "/images/capabilities/teleoperation.png",
         poster: null,
-        mediaAlt: "现有机器人巡检场景，模块化载荷特写待补",
-        mediaNote: "现有场景图片 · 载荷细节素材待补",
-        mediaSlots: ["传感器特写", "载荷接口", "数据采集模块"],
-        resourceKey: "media.modularPayloads",
+        mediaFit: "contain",
+        mediaAlt: "远程遥操工作台",
+        mediaNote: "远程遥操工作台",
+        mediaSlots: [],
+        resourceKey: "media.remoteTeleoperation",
         mediaPlaceholderText: "可通过上方字段替换为已确认的真实素材。",
         connection: null
       },
       {
         number: "03",
-        label: "ROBOX 远程接入",
-        title: "复杂情况发生时，快速切换人工接管",
+        label: "RSP 软件平台",
+        title: "统一调度机器人、任务与巡检数据",
         description:
-          "通过 ROBOX 打通现场机器人与远程操作端，在异常、复杂地形或需要人工判断时进行低延迟远程接管。",
-        capabilities: ["远程设备接入", "低延迟画面与控制", "自主与人工模式切换", "异常情况下快速介入"],
+          "RSP 是面向机器人运营的软件平台，支持地图管理、任务调度、设备监控、远程控制与巡检记录管理。",
+        capabilities: ["地图与任务管理", "多机器人统一调度", "设备状态与告警监控", "巡检记录与数据管理"],
         layout: "media-left",
-        mediaType: "placeholder",
-        mediaSrc: null,
+        mediaType: "image",
+        mediaSrc: "/images/capabilities/rsp-platform.png",
         poster: null,
-        mediaAlt: "ROBOX 产品图占位",
-        mediaNote: "ROBOX 产品图 / 媒体素材待补",
+        mediaFit: "contain",
+        mediaAlt: "RSP 机器人调度平台界面",
+        mediaNote: "RSP 软件平台",
         mediaSlots: [],
-        resourceKey: "media.robox",
-        mediaPlaceholderText: "保留真实素材替换入口，不使用虚构产品图或平台界面。",
-        connection: { start: "现场机器人", center: "ROBOX", end: "远程操作人员" }
+        resourceKey: "media.rspPlatform",
+        mediaPlaceholderText: "可通过上方字段替换为已确认的真实素材。",
+        connection: null
       },
       {
         number: "04",
-        label: "RSP 机器人运营平台",
-        title: "统一管理机器人、任务、告警与数据",
+        label: "硬件背包与传感器集成",
+        title: "按场景集成背包与传感器载荷",
         description:
-          "通过 RSP 对多台机器人进行任务编排、状态监控、异常告警、远程接管和巡检记录管理，支撑机器人队伍持续运营。",
-        capabilities: ["多机器人统一管理", "任务调度与编排", "实时状态与告警", "数据记录与报告归档"],
+          "通过硬件背包、传感器载荷与接口集成，为机器人配置环境感知、数据采集与任务执行所需的硬件能力。",
+        capabilities: ["模块化硬件组合", "多类型传感器集成", "现场数据采集", "按场景扩展载荷"],
         layout: "media-right",
-        mediaType: "placeholder",
+        mediaType: "image",
         mediaSrc: null,
+        mediaImages: [
+          { src: "/images/capabilities/backpack.png", alt: "机器人硬件背包" },
+          { src: "/images/capabilities/sensor-payload.png", alt: "传感器载荷" }
+        ],
         poster: null,
-        mediaAlt: "RSP 平台截图占位",
-        mediaNote: "RSP 平台截图或录屏待补",
-        mediaSlots: [],
-        resourceKey: "media.rsp",
-        mediaPlaceholderText: "保留真实素材替换入口，不使用虚构产品图或平台界面。",
+        mediaFit: "contain",
+        mediaAlt: "硬件背包与传感器载荷",
+        mediaNote: "背包与传感器集成",
+        mediaSlots: ["硬件背包", "传感器载荷"],
+        resourceKey: "media.hardwareIntegration",
+        mediaPlaceholderText: "可通过上方字段替换为已确认的真实素材。",
         connection: null
       }
     ],
     applications: {
       eyebrow: "应用场景",
       title: "服务于重视安全、覆盖与稳定运行的场景",
-      cta: "了解更多",
       items: [
         {
           icon: "Map",
