@@ -15,17 +15,18 @@ type HeroSectionProps = {
 
 export function HeroSection({ content }: HeroSectionProps) {
   return (
-    <section className="relative min-h-[860px] overflow-hidden bg-[#050B14] pt-20 text-white md:min-h-[900px]">
+    <section className="relative min-h-[960px] overflow-hidden bg-[#050B14] pt-20 text-white md:min-h-[1040px]">
       <Image
         src="/images/generated/hyper-hero-robotics.png"
         alt="Autonomous quadruped security patrol robot at a facility"
         fill
         priority
-        className="object-cover object-center opacity-88"
+        className="translate-y-4 object-cover object-center opacity-88 md:translate-y-7"
       />
       <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(5,11,20,0.98)_0%,rgba(5,11,20,0.82)_36%,rgba(5,11,20,0.28)_72%,rgba(5,11,20,0.55)_100%)]" />
-      <div className="absolute inset-0 bg-grid-fade tech-grid opacity-45" />
-      <div className="pointer-events-none absolute inset-0 opacity-85">
+      <div className="absolute inset-y-0 left-0 w-[68%] bg-grid-fade tech-grid opacity-45 md:w-[60%]" />
+      <div className="pointer-events-none absolute right-[-8%] top-[24%] h-[520px] w-[520px] bg-[radial-gradient(circle,rgba(34,211,238,0.24)_0%,rgba(34,211,238,0.08)_35%,transparent_72%)] blur-2xl md:h-[680px] md:w-[680px]" />
+      <div className="pointer-events-none absolute inset-y-0 left-0 w-[68%] opacity-85 md:w-[60%]">
         <DotField
           dotRadius={2}
           dotSpacing={13}
@@ -40,7 +41,7 @@ export function HeroSection({ content }: HeroSectionProps) {
       </div>
       <div className="absolute bottom-0 left-0 h-48 w-full bg-gradient-to-t from-[#050B14] to-transparent" />
 
-      <div className="section-shell relative z-10 flex min-h-[790px] items-center md:min-h-[830px]">
+      <div className="section-shell relative z-10 flex min-h-[880px] items-center md:min-h-[960px]">
         <div className="max-w-[840px] py-24">
           <motion.div
             initial={false}
@@ -56,7 +57,7 @@ export function HeroSection({ content }: HeroSectionProps) {
             transition={{ duration: 0.6, delay: 0.1 }}
             className={
               content.lang === "en"
-                ? "zh-title mt-7 max-w-[840px] text-5xl font-black leading-[1.02] tracking-normal md:text-7xl"
+                ? "zh-title relative mt-7 max-w-[840px] text-5xl font-black leading-[1.02] tracking-normal md:-left-5 md:text-7xl"
                 : "zh-title zh-hero-title mt-7 max-w-[700px]"
             }
           >
