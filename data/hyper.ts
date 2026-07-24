@@ -329,7 +329,7 @@ const content = {
       { label: "技術能力", href: "#technology" },
       { label: "解決方案", href: "#solutions" },
       { label: "應用場景", href: "#applications" },
-      { label: "服務支持", href: "#service" },
+      { label: "合作模式", href: "#collaboration" },
       { label: "關於我們", href: "#about" }
     ],
     seo: {
@@ -487,10 +487,10 @@ const content = {
         { value: "80%", label: "異常應變時間縮短" },
         { value: "40%", label: "巡檢效率提升" }
       ],
-      cta: "開啟部署溝通"
+  
     },
     service: {
-      eyebrow: "支持與服務網絡",
+      
       title: "靈活合作，按需部署",
       copy:
         "根據項目階段、應用場景與營運方式，靈活選擇租賃、模組化賦能或全棧式交付，並獲得從部署交付到持續運維的支持。",
@@ -575,7 +575,7 @@ const content = {
       { label: "技术能力", href: "#technology" },
       { label: "解决方案", href: "#solutions" },
       { label: "应用场景", href: "#applications" },
-      { label: "服务支持", href: "#service" },
+      { label: "合作模式", href: "#Collaboration" },
       { label: "关于我们", href: "#about" }
     ],
     seo: {
@@ -733,10 +733,10 @@ const content = {
         { value: "80%", label: "异常响应时间缩短" },
         { value: "40%", label: "巡检效率提升" }
       ],
-      cta: "开启部署沟通"
+    
     },
     service: {
-      eyebrow: "支持与服务网络",
+
       title: "灵活合作，按需部署",
       copy:
         "根据项目阶段、应用场景与运营方式，灵活选择租赁、模块化赋能或全栈式交付，并获得从部署交付到持续运维的支持。",
