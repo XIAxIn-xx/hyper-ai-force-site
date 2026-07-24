@@ -212,3 +212,15 @@ body {
     padding-block: clamp(64px, 18vw, 80px);
   }
 }
+
+@media (min-width: 768px) {
+  .zh-page main > section#about {
+    padding-block: clamp(64px, 5.3vw, 84px);
+  }
+}
+
+@media (max-width: 767px) {
+  .zh-page main > section#about {
+    padding-block: 56px;
+  }
+}

@@ -248,9 +248,11 @@ const content = {
     },
     about: {
       eyebrow: "About Hyper AIForce",
-      title: "Putting robots to work in security and campus operations.",
-      copy:
-        "Hyper AIForce focuses on AI perception, autonomous patrol and teleoperation, with the RSP platform connecting robots, missions and field data. The team helps customers deploy robots in real-world applications, including security patrol, campus inspection and automated operations as part of physical security. Robots take on night-time, repetitive and high-risk patrol tasks, reducing personnel exposure and improving safety and operating efficiency.",
+      title: "Integrated Provider of Embodied Intelligence Robotic Security Solutions",
+      copy: [
+        "Hyper AIForce focuses on applying robots to security patrol, campus inspection and facility operations. Centered on autonomous patrol, remote takeover and multi-robot scheduling, we provide an integrated service covering scenario assessment, solution configuration, deployment and commissioning, and ongoing operations and maintenance.",
+        "We use robots to take on night-time, repetitive and high-risk tasks, while enabling remote human intervention in complex situations. This helps customers expand inspection coverage, reduce personnel exposure and keep projects operating reliably over the long term."
+      ],
       bullets: [
         "Embodied intelligence for physical-world industries",
         "AI-enabled integrated hardware and software delivery",
@@ -496,9 +498,11 @@ const content = {
     },
     about: {
       eyebrow: "關於超流智能",
-      title: "讓機器人真正進入安防與園區營運",
-      copy:
-        "超流智能聚焦 AI感知、自主巡航與遠程遙操等機器人能力，並通過 RSP平台連接機器人、任務與現場數據。團隊協助客戶將機器人部署到實際場景，包括安防巡邏、園區巡檢與自動化運維等物理安全領域，逐步實現穩定運行與規模化應用。通過機器人承擔夜間、重複和高風險巡邏任務，減少人員暴露，提升安全性與營運效率。",
+      title: "具身智能機器人安防\n解決方案集成商",
+      copy: [
+        "超流智能專注於機器人在安防巡邏、園區巡檢和設施運維等場景中的應用，圍繞自主巡航、遠程接管與多機調度，提供從場景評估、方案配置、部署調試到持續運維的一體化服務。",
+        "我們通過機器人承擔夜間、重複及高風險任務，並在複雜情況下由人工遠程介入，幫助客戶擴大巡檢覆蓋範圍、降低人員暴露風險，保障項目長期穩定運行。"
+      ],
       bullets: [
         "面向物理世界產業的具身智能",
         "基於AI能力的軟硬件一體化交付",
@@ -736,9 +740,11 @@ const content = {
     },
     about: {
       eyebrow: "关于超流智能",
-      title: "让机器人真正进入安防与园区运营",
-      copy:
-        "超流智能聚焦 AI感知、自主巡航与远程遥操等机器人能力，并通过 RSP平台连接机器人、任务与现场数据。团队帮助客户将机器人部署到实际场景，包括安防巡逻、园区巡检与自动化运维等物理安全领域，逐步实现稳定运行与规模化应用。通过机器人承担夜间、重复和高风险巡逻任务，减少人员暴露，提升安全性与运营效率。",
+      title: "具身智能机器人安防\n解决方案集成商",
+      copy: [
+        "超流智能专注于机器人在安防巡逻、园区巡检和设施运维等场景中的应用，围绕自主巡航、远程接管与多机调度，提供从场景评估、方案配置、部署调试到持续运维的一体化服务。",
+        "我们通过机器人承担夜间、重复及高风险任务，并在复杂情况下由人工远程介入，帮助客户扩大巡检覆盖范围、降低人员暴露风险，保障项目长期稳定运行。"
+      ],
       bullets: [
         "面向物理世界产业的具身智能",
         "基于AI能力的软硬件一体化交付",

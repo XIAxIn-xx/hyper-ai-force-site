@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { CheckCircle2 } from "lucide-react";
 
 import type { HyperContent } from "@/data/hyper";
 import { Reveal } from "@/components/sections/Reveal";
@@ -10,18 +9,19 @@ type AboutSectionProps = {
 };
 
 export function AboutSection({ content }: AboutSectionProps) {
+  const copyParagraphs = (Array.isArray(content.about.copy) ? content.about.copy : [content.about.copy]) as readonly string[];
+
   return (
-    <section id="about" className="bg-[#F5F7FA] py-24">
-      <div className="section-shell grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+    <section id="about" className="bg-[#F5F7FA] py-16 md:py-20">
+      <div className="section-shell grid gap-10 lg:grid-cols-[46fr_54fr] lg:items-start lg:gap-12">
         <Reveal>
-          <div className="relative min-h-[400px] overflow-hidden rounded-lg border border-[#E6EAF0] bg-[#050B14] shadow-[0_12px_34px_rgba(15,23,42,0.06)]">
+          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg border border-[#E6EAF0] bg-[#050B14] shadow-[0_12px_34px_rgba(15,23,42,0.06)]">
             <Image
-              src="/images/generated/building.png"
-              alt="Hyper AI Force company reference visual"
+              src="/images/hyper/19w-building.webp"
+              alt="Hyper AI Force headquarters at 19W"
               fill
-              className="object-cover object-[50%_82%] opacity-78"
+              className="object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-br from-[#050B14]/85 via-[#050B14]/35 to-cyan-950/50" />
           </div>
         </Reveal>
         <Reveal delay={0.1}>
@@ -35,13 +35,9 @@ export function AboutSection({ content }: AboutSectionProps) {
               </span>
             ))}
           </h2>
-          <p className="zh-copy mt-6 text-base leading-8 text-slate-600"><ZhText>{content.about.copy}</ZhText></p>
-          <div className="mt-8 grid gap-3">
-            {content.about.bullets.map((bullet) => (
-              <div key={bullet} className="flex items-center gap-3 text-sm font-semibold text-slate-800">
-                <CheckCircle2 className="h-5 w-5 text-cyan-600" />
-                <ZhText>{bullet}</ZhText>
-              </div>
+          <div className="zh-copy mt-6 max-w-[560px] space-y-4 text-base leading-8 text-slate-600">
+            {copyParagraphs.map((paragraph, index) => (
+              <p key={`${index}-${paragraph}`}><ZhText>{paragraph}</ZhText></p>
             ))}
           </div>
         </Reveal>
