@@ -62,7 +62,7 @@ const content = {
       { label: "Technology", href: "#technology" },
       { label: "Solutions", href: "#solutions" },
       { label: "Applications", href: "#applications" },
-      { label: "Service", href: "#service" },
+      { label: "Collaboration", href: "#collaboration" },
       { label: "About us", href: "#about" }
     ],
     seo: {
@@ -225,18 +225,16 @@ const content = {
         "An integrated deployment combining quadruped robots, the RSP cloud control platform and data acquisition infrastructure to support task scheduling, autonomous inspection, live monitoring and data-driven optimisation.",
       mediaAlt: "Quadruped robot conducting an inspection at a GLP logistics park",
       background:
-        "Inspection tasks across park roads, warehouse perimeters and boundary areas were labour-intensive and repetitive. Conventional manual operations made it difficult to maintain consistent coverage and respond quickly to anomalies.",
+        "Manual patrols across roads, warehouse edges and boundaries were repetitive, costly and hard to cover consistently.",
       solution:
-        "The deployment combines the RSP V1.0.0 cloud control platform, quadruped robots with modular hardware packs and a data acquisition platform, enabling unified task scheduling, real-time data transmission, anomaly logging and closed-loop inspection optimisation.",
+        "Quadruped robots, RSP and data acquisition unified scheduling, live data and anomaly tracking.",
       metrics: [
         { value: "60%", label: "Reduction in manual inspection costs" },
         { value: "80%", label: "Shorter anomaly response time" },
         { value: "40%", label: "Improvement in inspection efficiency" }
       ],
-      cta: "Start a deployment conversation"
     },
     service: {
-      eyebrow: "Support & Service Network",
       title: "Flexible Collaboration, Deployed to Fit Your Needs",
       copy:
         "Choose leasing, modular enablement or full-stack delivery based on your project stage, application scenario and operating model, with support from deployment delivery through ongoing operations and maintenance.",
@@ -479,9 +477,9 @@ const content = {
         "透過四足機器人、RSP 雲端控制平台與數據採集平台協同部署，建立涵蓋任務調度、自主巡檢、即時監控與數據優化的物流園區巡檢體系。",
       mediaAlt: "普洛斯物流園區內進行巡檢的四足機器人",
       background:
-        "物流園區道路、倉庫周邊及周界區域的巡檢任務密集。傳統人工巡檢成本高、重複工作量大，難以持續維持穩定的巡檢覆蓋與異常應變效率。",
+        "園區道路、倉庫周邊及周界巡檢重複且耗費人力，難以保持穩定覆蓋。",
       solution:
-        "部署 RSP V1.0.0 雲端控制平台、四足機器人及模組化硬件背包，並接入數據採集平台，實現巡檢任務統一調度、現場數據即時回傳、異常事件記錄與巡檢數據閉環優化。",
+        "以四足機器人、RSP 及數據採集平台統一調度、即時回傳數據及記錄異常。",
       metrics: [
         { value: "60%", label: "人工巡檢成本降低" },
         { value: "80%", label: "異常應變時間縮短" },
@@ -575,7 +573,7 @@ const content = {
       { label: "技术能力", href: "#technology" },
       { label: "解决方案", href: "#solutions" },
       { label: "应用场景", href: "#applications" },
-      { label: "合作模式", href: "#Collaboration" },
+      { label: "合作模式", href: "#collaboration" },
       { label: "关于我们", href: "#about" }
     ],
     seo: {
@@ -725,9 +723,9 @@ const content = {
         "通过四足机器人、RSP 云控平台与数采平台协同部署，构建覆盖任务调度、自主巡检、实时监控与数据优化的物流园区巡检体系。",
       mediaAlt: "普洛斯物流园区内进行巡检的四足机器人",
       background:
-        "物流园区道路、仓库周边及周界区域巡检任务密集。传统人工巡检成本高、重复工作量大，难以持续保持稳定的巡检覆盖与异常响应效率。",
+        "园区道路、仓库周边及周界巡检重复且耗费人力，难以保持稳定覆盖。",
       solution:
-        "部署 RSP V1.0.0 云控平台、四足机器人及模块化硬件背包，并接入数采平台，实现巡检任务统一调度、现场数据实时回传、异常事件记录与巡检数据闭环优化。",
+        "以四足机器人、RSP 及数采平台统一调度、实时回传数据并记录异常。",
       metrics: [
         { value: "60%", label: "人工巡检成本降低" },
         { value: "80%", label: "异常响应时间缩短" },

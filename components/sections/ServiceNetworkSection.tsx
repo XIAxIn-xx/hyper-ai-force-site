@@ -16,11 +16,10 @@ export function ServiceNetworkSection({ content }: ServiceNetworkSectionProps) {
   }>;
 
   return (
-    <section id="service" className="bg-[#F5F7FA] py-20 md:py-24">
+    <section id="collaboration" className="bg-[#F5F7FA] py-20 md:py-24">
       <div className="section-shell">
         <Reveal>
           <SectionHeading
-            eyebrow={content.service.eyebrow}
             title={content.service.title}
             copy={content.service.copy}
             align="center"
@@ -31,6 +30,10 @@ export function ServiceNetworkSection({ content }: ServiceNetworkSectionProps) {
           <div className="mx-auto mt-12 grid max-w-[1008px] gap-6 md:grid-cols-3">
             {serviceItems.map((item, index) => {
               const Icon = getIcon(item.icon);
+              const descriptionItems = item.description
+                .split(/[;；]/)
+                .map((part) => part.trim())
+                .filter(Boolean);
               return (
                 <article key={item.label} className="group relative min-h-[190px] overflow-hidden rounded-xl border border-[#DDE4EC] bg-white p-6 shadow-[0_12px_34px_rgba(15,23,42,0.05)] transition duration-500 hover:-translate-y-1 hover:border-cyan-300 hover:shadow-[0_18px_42px_rgba(34,211,238,0.14)]">
                   <div className="rail-scan pointer-events-none absolute left-0 top-0 h-px w-1/2 bg-gradient-to-r from-transparent via-cyan-400/80 to-transparent" />
@@ -43,9 +46,11 @@ export function ServiceNetworkSection({ content }: ServiceNetworkSectionProps) {
                   <h3 className="zh-title zh-card-title relative mt-7 text-xl font-bold text-slate-950">
                     <ZhText>{item.label}</ZhText>
                   </h3>
-                  <p className="zh-copy relative mt-3 text-sm leading-7 text-slate-600">
-                    <ZhText>{item.description}</ZhText>
-                  </p>
+                  <ul className="zh-copy relative mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-600 marker:text-cyan-500">
+                    {descriptionItems.map((part) => (
+                      <li key={part}><ZhText>{part}</ZhText></li>
+                    ))}
+                  </ul>
                 </article>
               );
             })}

@@ -39,7 +39,7 @@ export function CaseStudyMedia({ alt, className = "" }: CaseStudyMediaProps) {
         alt={alt}
         fill
         sizes="100vw"
-        className="object-cover object-[42%_center] md:object-center"
+        className="object-cover object-[42%_center] brightness-110 contrast-105 md:object-center"
         priority={false}
       />
       {reducedMotion === false && !videoFailed ? (
@@ -53,7 +53,7 @@ export function CaseStudyMedia({ alt, className = "" }: CaseStudyMediaProps) {
           poster={posterSrc}
           aria-hidden="true"
           onError={() => setVideoFailed(true)}
-          className="absolute inset-0 h-full w-full object-cover object-[42%_center] md:object-center"
+          className="absolute inset-0 h-full w-full object-cover object-[42%_center] brightness-110 contrast-105 md:object-center"
         >
           <source src="/videos/glp-robot-inspection.mp4" type="video/mp4" />
         </video>
