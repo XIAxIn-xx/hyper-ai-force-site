@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { ArrowLeftRight, Check, CloudCog, RadioTower } from "lucide-react";
+import { Check } from "lucide-react";
 import { useEffect, useState } from "react";
 
 import type { HyperContent } from "@/data/hyper";
@@ -93,26 +93,6 @@ function CapabilityMedia({ item }: { item: Capability }) {
         </video>
       ) : null}
 
-      {item.mediaType === "placeholder" ? (
-        <div className="absolute inset-0 flex items-center justify-center bg-[linear-gradient(135deg,#071019_0%,#102231_100%)] p-6">
-          <div className="w-full max-w-sm border border-dashed border-cyan-300/40 px-6 py-10 text-center">
-            {item.resourceKey === "media.robox" ? (
-              <RadioTower className="mx-auto h-9 w-9 text-cyan-200" aria-hidden="true" />
-            ) : (
-              <CloudCog className="mx-auto h-9 w-9 text-cyan-200" aria-hidden="true" />
-            )}
-            <p className="zh-title mt-5 text-lg font-semibold text-white">
-              <ZhText>{item.mediaNote}</ZhText>
-            </p>
-            <p className="mt-3 break-words text-xs leading-6 text-slate-400">
-              <span className="font-mono text-cyan-200/80">{item.resourceKey}</span>
-              <br />
-              <ZhText>{item.mediaPlaceholderText}</ZhText>
-            </p>
-          </div>
-        </div>
-      ) : null}
-
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#02070d]/85 via-transparent to-transparent" />
       <div className="absolute inset-x-0 bottom-0 flex flex-wrap items-end justify-between gap-3 p-5">
         <p className="text-xs font-medium tracking-[0.08em] text-white/75">
@@ -128,20 +108,6 @@ function CapabilityMedia({ item }: { item: Capability }) {
           </div>
         ) : null}
       </div>
-    </div>
-  );
-}
-
-function CapabilityConnection({ item }: { item: Capability }) {
-  if (!item.connection) return null;
-
-  return (
-    <div className="mt-9 flex flex-wrap items-center gap-3 border-y border-slate-200 py-4 text-sm font-medium text-slate-700">
-      <span><ZhText>{item.connection.start}</ZhText></span>
-      <ArrowLeftRight className="h-4 w-4 text-cyan-700" aria-hidden="true" />
-      <span className="border border-cyan-200 bg-cyan-50 px-3 py-1.5 text-slate-950"><ZhText>{item.connection.center}</ZhText></span>
-      <ArrowLeftRight className="h-4 w-4 text-cyan-700" aria-hidden="true" />
-      <span><ZhText>{item.connection.end}</ZhText></span>
     </div>
   );
 }
@@ -196,7 +162,6 @@ export function CapabilitySystemSection({ content }: CapabilitySystemSectionProp
                       </li>
                     ))}
                   </ul>
-                  <CapabilityConnection item={item} />
                 </div>
               </div>
             </article>
