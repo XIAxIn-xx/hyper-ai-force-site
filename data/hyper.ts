@@ -59,7 +59,10 @@ const content = {
     switchLabel: "繁中",
     switchHref: "/zh-hk",
     nav: [
-      { label: "Solutions", href: "#technology" }
+      { label: "Solutions", href: "#technology" },
+      { label: "Applications", href: "#applications" },
+      { label: "Collaboration", href: "#collaboration" },
+      { label: "About us", href: "#about" }
     ],
     seo: {
       title:
@@ -361,7 +364,10 @@ const content = {
     switchLabel: "EN",
     switchHref: "/",
     nav: [
-      { label: "解決方案", href: "#technology" }
+      { label: "解決方案", href: "#technology" },
+      { label: "應用場景", href: "#applications" },
+      { label: "合作模式", href: "#collaboration" },
+      { label: "關於我們", href: "#about" }
     ],
     seo: {
       title: "Hyper AIForce Limited | 超流智能有限公司",
@@ -632,7 +638,10 @@ const content = {
     switchLabel: "EN",
     switchHref: "/",
     nav: [
-      { label: "解决方案", href: "#technology" }
+      { label: "解决方案", href: "#technology" },
+      { label: "应用场景", href: "#applications" },
+      { label: "合作模式", href: "#collaboration" },
+      { label: "关于我们", href: "#about" }
     ],
     seo: {
       title: "Hyper AIForce Limited | 超流智能有限公司",
