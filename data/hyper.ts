@@ -111,7 +111,7 @@ const content = {
       ]
     },
     overview: {
-      eyebrow: "Full-Stack Capability",
+      eyebrow: "Solutions",
       title: "An operational loop combining autonomy, unified orchestration and remote intervention",
       copy:
         "Autonomous patrol and teleoperation form the core capabilities, while RSP and backpack-and-sensor integration provide the software and hardware foundation for deployment.",
@@ -123,12 +123,6 @@ const content = {
         { icon: "Radio", label: "Remote Intervention for Exceptions" },
         { icon: "BadgeCheck", label: "Inspection Records and Data Loop" }
       ]
-    },
-    capabilityIntro: {
-      eyebrow: "Core Capabilities and Products",
-      title: "From Core Capabilities to Robotic Products",
-      copy:
-        "Autonomous patrol and teleoperation are our core capabilities. RSP software and backpack-and-sensor integration turn them into deployable robotic systems."
     },
     capabilities: [
       {
@@ -225,7 +219,7 @@ const content = {
         mediaFit: "contain",
         mediaAlt: "Hardware backpack and sensor payloads",
         mediaNote: "Backpack and sensor integration",
-        mediaSlots: ["Hardware backpack", "Sensor payload"],
+        mediaSlots: [],
         resourceKey: "media.hardwareIntegration",
         mediaPlaceholderText: "Approved real media can replace this asset through the field above.",
         connection: null
@@ -418,7 +412,7 @@ const content = {
       ]
     },
     overview: {
-      eyebrow: "全棧能力",
+      eyebrow: "解決方案",
       title: "自主執行、統一調度與遠程接管的營運閉環",
       copy:
         "自主巡航與遠程遙操構成核心能力，RSP 與背包、傳感器集成提供軟硬件產品基礎，支援機器人部署與持續營運。",
@@ -430,12 +424,6 @@ const content = {
         { icon: "Radio", label: "異常觸發遠程接管" },
         { icon: "BadgeCheck", label: "巡檢記錄與數據閉環" }
       ]
-    },
-    capabilityIntro: {
-      eyebrow: "核心能力與產品",
-      title: "由核心能力落到軟硬件產品",
-      copy:
-        "自主巡航與遠程遙操是核心能力；RSP 軟件平台與背包、傳感器集成是支撐部署的軟硬件產品。"
     },
     capabilities: [
       {
@@ -512,7 +500,7 @@ const content = {
         mediaFit: "contain",
         mediaAlt: "硬件背包與傳感器載荷",
         mediaNote: "背包與傳感器集成",
-        mediaSlots: ["硬件背包", "傳感器載荷"],
+        mediaSlots: [],
         resourceKey: "media.hardwareIntegration",
         mediaPlaceholderText: "可通過上方字段替換為已確認的真實素材。",
         connection: null
@@ -699,7 +687,7 @@ const content = {
       ]
     },
     overview: {
-      eyebrow: "全栈能力",
+      eyebrow: "解决方案",
       title: "自主执行、统一调度与远程接管的运营闭环",
       copy:
         "自主巡航与远程遥操构成核心能力，RSP 与背包、传感器集成提供软硬件产品基础，支持机器人部署与持续运营。",
@@ -711,12 +699,6 @@ const content = {
         { icon: "Radio", label: "异常触发远程接管" },
         { icon: "BadgeCheck", label: "巡检记录与数据闭环" }
       ]
-    },
-    capabilityIntro: {
-      eyebrow: "核心能力与产品",
-      title: "从核心能力落到软硬件产品",
-      copy:
-        "自主巡航与远程遥操是核心能力；RSP 软件平台与背包、传感器集成是支撑部署的软硬件产品。"
     },
     capabilities: [
       {
@@ -793,7 +775,7 @@ const content = {
         mediaFit: "contain",
         mediaAlt: "硬件背包与传感器载荷",
         mediaNote: "背包与传感器集成",
-        mediaSlots: ["硬件背包", "传感器载荷"],
+        mediaSlots: [],
         resourceKey: "media.hardwareIntegration",
         mediaPlaceholderText: "可通过上方字段替换为已确认的真实素材。",
         connection: null

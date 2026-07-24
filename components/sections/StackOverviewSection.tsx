@@ -15,7 +15,7 @@ export function StackOverviewSection({ content }: StackOverviewSectionProps) {
 
   return (
     <section
-      id="technology"
+      id="solutions"
       className="overflow-hidden bg-[linear-gradient(180deg,#F5F7FA_0%,#EEF4F7_100%)] py-24"
     >
       <div className="section-shell">

@@ -6,7 +6,6 @@ import { useEffect, useState } from "react";
 
 import type { HyperContent } from "@/data/hyper";
 import { Reveal } from "@/components/sections/Reveal";
-import { SectionHeading } from "@/components/sections/SectionHeading";
 import { ZhText } from "@/components/ui/ZhText";
 
 type Capability = HyperContent["capabilities"][number];
@@ -113,21 +112,10 @@ function CapabilityMedia({ item }: { item: Capability }) {
 }
 
 export function CapabilitySystemSection({ content }: CapabilitySystemSectionProps) {
-  const { capabilityIntro, capabilities } = content;
+  const { capabilities } = content;
 
   return (
-    <section id="solutions" className="bg-white">
-      <div className="section-shell py-24">
-        <Reveal>
-          <SectionHeading
-            eyebrow={capabilityIntro.eyebrow}
-            title={capabilityIntro.title}
-            copy={capabilityIntro.copy}
-            className="max-w-4xl"
-          />
-        </Reveal>
-      </div>
-
+    <section id="technology" className="bg-white">
       <div>
         {capabilities.map((item, index) => {
           const mediaLeft = item.layout === "media-left";
