@@ -102,7 +102,7 @@ const content = {
       eyebrow: "WHY ROBOTIC SECURITY",
       title: "Deploy robotic systems into high-risk, repetitive and blind-spot operational environments.",
       copy:
-        "Physical security and security patrol still depend on high-cost patrol labor, manual observation and delayed response. Hyper AIForce combines autonomous patrol, AI perception and teleoperation into a deployable robotic operating platform.",
+        "Security patrol still depends on high-cost patrol labor, manual observation and delayed response. Hyper AIForce combines autonomous patrol, AI perception and teleoperation into a deployable robotic operating platform.",
       points: [
         "Labor-intensive patrols are costly and hard to scale.",
         "Repetitive night patrols and perimeter checks make it harder to maintain consistent attention.",
@@ -362,10 +362,10 @@ const content = {
       eyebrow: "為什麼需要機器人安防",
       title: "將機器人部署至高風險、重複性及有視野盲區的作業環境中",
       copy:
-        "物理安全與安防巡邏仍高度依賴人工巡邏、現場觀察和事後處置。超流智能將自主巡航、AI 異常識別與遠程接管結合，形成可持續運行的機器人巡邏能力。",
+        "安防巡邏仍高度依賴人工巡邏、現場觀察和事後處置。超流智能將自主巡航、AI 異常識別與遠程接管結合，形成可持續運行的機器人巡邏能力。",
       points: [
         "大範圍巡邏依賴人力，成本高且難以長期覆蓋",
-        "夜間、周界與重複檢查容易出現注意力下降",
+        "人在夜間、周界與重複檢查容易出現注意力下降",
         "高風險、偏遠或戶外環境增加人員暴露",
         "突發事件需要及時告警、證據留存與遠程處置"
       ]
@@ -602,10 +602,10 @@ const content = {
       eyebrow: "为什么需要机器人安防",
       title: "将机器人部署至高风险、重复性及有视野盲区的作业环境中",
       copy:
-        "物理安全与安防巡逻仍高度依赖人工巡逻、现场观察和事后处置。超流智能将自主巡航、AI 异常识别与远程接管结合，形成可持续运行的机器人巡逻能力。",
+        "安防巡逻仍高度依赖人工巡逻、现场观察和事后处置。超流智能将自主巡航、AI 异常识别与远程接管结合，形成可持续运行的机器人巡逻能力。",
       points: [
         "大范围巡逻依赖人力，成本高且难以长期覆盖",
-        "夜间、周界与重复检查容易出现注意力下降",
+        "人在夜间、周界与重复检查容易出现注意力下降",
         "高风险、偏远或户外环境增加人员暴露",
         "突发事件需要及时告警、证据留存与远程处置"
       ]
