@@ -42,25 +42,6 @@ export function CaseStudySection({ content }: CaseStudySectionProps) {
               <ZhText>{caseStudy.intro}</ZhText>
             </p>
 
-            <div className="mt-5 grid max-w-[600px] gap-5 border-t border-white/15 pt-5 sm:grid-cols-2 sm:gap-6 md:mt-4 md:pt-4">
-              <div>
-                <h3 className="text-[13px] font-semibold tracking-wide text-cyan-200">
-                  <ZhText>{caseStudy.labels.background}</ZhText>
-                </h3>
-                <p className="mt-2 text-[13px] leading-6 text-slate-200/80 md:text-sm md:leading-[1.55]">
-                  <ZhText>{caseStudy.background}</ZhText>
-                </p>
-              </div>
-              <div className="sm:border-l sm:border-white/15 sm:pl-7">
-                <h3 className="text-[13px] font-semibold tracking-wide text-cyan-200">
-                  <ZhText>{caseStudy.labels.solution}</ZhText>
-                </h3>
-                <p className="mt-2 text-[13px] leading-6 text-slate-200/80 md:text-sm md:leading-[1.55]">
-                  <ZhText>{caseStudy.solution}</ZhText>
-                </p>
-              </div>
-            </div>
-
           </div>
         </Reveal>
 

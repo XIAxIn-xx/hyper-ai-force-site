@@ -2,11 +2,10 @@ import { AboutSection } from "@/components/sections/AboutSection";
 import { ApplicationsSection } from "@/components/sections/ApplicationsSection";
 import { CaseStudySection } from "@/components/sections/CaseStudySection";
 import { ContactSection } from "@/components/sections/ContactSection";
+import { CapabilitySystemSection } from "@/components/sections/CapabilitySystemSection";
 import { HeroSection } from "@/components/sections/HeroSection";
-import { PlatformSection } from "@/components/sections/PlatformSection";
 import { ServiceNetworkSection } from "@/components/sections/ServiceNetworkSection";
-import { SolutionsSection } from "@/components/sections/SolutionsSection";
-import { StrengthsSection } from "@/components/sections/StrengthsSection";
+import { StackOverviewSection } from "@/components/sections/StackOverviewSection";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import type { Locale } from "@/data/hyper";
@@ -26,9 +25,8 @@ export function HyperPage({ locale }: HyperPageProps) {
       <Header content={content} />
       <main>
         <HeroSection content={content} />
-        <StrengthsSection content={content} />
-        <PlatformSection content={content} />
-        <SolutionsSection content={content} />
+        <StackOverviewSection content={content} />
+        <CapabilitySystemSection content={content} />
         <ApplicationsSection content={content} />
         <CaseStudySection content={content} />
         <ServiceNetworkSection content={content} />

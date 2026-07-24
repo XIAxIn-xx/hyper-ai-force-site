@@ -110,124 +110,169 @@ const content = {
         "Critical incidents need real-time alerts, evidence and teleoperation."
       ]
     },
-    strengths: {
-      eyebrow: "Core Strengths",
-      title: "Designed for real-world operations",
-      items: [
-        {
-          icon: "BrainCircuit",
-          title: "Full-stack AI autonomy",
-          text:
-            "AI perception, anomaly detection, sensor fusion and task-level decision logic support autonomous patrol."
-        },
-        {
-          icon: "Bot",
-          title: "Robot fleet coordination",
-          text:
-            "Quadruped and wheeled robots can operate as a coordinated fleet, with unified task assignment, status awareness and field execution."
-        },
-        {
-          icon: "Route",
-          title: "Adaptive navigation",
-          text:
-            "Navigation, obstacle avoidance and route planning help robots operate across campuses, perimeters, utilities and outdoor facilities."
-        },
-        {
-          icon: "Radio",
-          title: "Teleoperation",
-          text:
-            "Low-latency remote operation keeps operators in the loop for real-time supervision, emergency takeover and precise field intervention."
-        }
-      ]
-    },
-    technology: {
-      eyebrow: "Robotic Operations Platform",
-      title: "A unified operating platform for autonomous inspection robot fleets",
+    overview: {
+      eyebrow: "Full-Stack Capability",
+      title: "An operational loop combining autonomy, unified orchestration and remote intervention",
       copy:
-        "Operators can assign missions from a browser or tablet, monitor live data, review alerts and supervise multiple robots. The platform connects edge AI, cloud monitoring and human takeover to keep the robot fleet running.",
-      imageTitle: "Multi-robot Mission Layer",
-      imageText:
-        "Mission planning, robot telemetry, abnormal-event alerts and operator supervision in one deployable workflow.",
-      capabilities: [
-        "AI perception and threat detection",
-        "Autonomous navigation and path planning",
-        "Multi-sensor fusion",
-        "Motion control and terrain adaptation",
-        "Edge computing and cloud monitoring",
-        "Teleoperation and fleet management"
+        "Robots, modular payloads, ROBOX and RSP work together across task execution, on-site sensing, exception handling and operational data management.",
+      steps: [
+        { icon: "PackageCheck", label: "Task Assignment" },
+        { icon: "CloudCog", label: "RSP Orchestration" },
+        { icon: "Route", label: "Autonomous Patrol and Execution" },
+        { icon: "Activity", label: "Payload Sensing and AI Detection" },
+        { icon: "Radio", label: "Remote Intervention for Exceptions" },
+        { icon: "BadgeCheck", label: "Inspection Records and Data Loop" }
       ]
     },
-    solutions: {
-      eyebrow: "Products & Solutions",
-      title: "Capability packages for real security environments",
-      labels: {
-        problem: "Problem",
-        solution: "Solution",
-        value: "Value"
+    capabilityIntro: {
+      eyebrow: "Core Products and Capabilities",
+      title: "Four capabilities supporting continuous robotic operations",
+      copy:
+        "A complete operating foundation spanning autonomous task execution, on-site sensing, remote intervention and unified fleet management."
+    },
+    capabilities: [
+      {
+        number: "01",
+        label: "Autonomous Patrol",
+        title: "Enabling robots to complete routine inspection tasks independently",
+        description:
+          "Mapping, localisation, route planning, obstacle avoidance and task execution enable robots to conduct repeatable patrol and inspection routes.",
+        capabilities: [
+          "Mapping and Localisation",
+          "Route Planning and Obstacle Avoidance",
+          "Scheduled Task Execution",
+          "Continuous Status Transmission"
+        ],
+        layout: "media-left",
+        mediaType: "video",
+        mediaSrc: "/videos/glp-robot-inspection.mp4",
+        poster: "/images/generated/glp-robot-inspection-poster.jpg",
+        mediaAlt: "Robot conducting an inspection at a logistics facility",
+        mediaNote: "Existing inspection footage",
+        mediaSlots: [],
+        resourceKey: "media.autonomousPatrol",
+        mediaPlaceholderText: "Approved real media can replace this asset through the field above.",
+        connection: null
       },
-      items: [
-        {
-          icon: "Route",
-          title: "Autonomous Patrol",
-          problem: "Security patrols need robots that can run continuously with minimal manual intervention.",
-          solution:
-            "AI-driven autonomous navigation, patrol route planning, real-time environmental perception and edge deployment support continuous campus and perimeter patrols.",
-          value:
-            "Reduces night-time and high-risk-area manual patrols, lowers personnel exposure, and improves safety and operating efficiency."
-        },
-        {
-          icon: "Radio",
-          title: "Teleoperation",
-          problem: "Robots in complex sites still need human-in-the-loop decisions and emergency takeover.",
-          solution:
-            "Teleoperation enables low-latency real-time robot control, with Remote Control support for assisted operation and emergency intervention.",
-          value:
-            "Keeps operators in control when judgment, safety escalation or precise remote action is required."
-        },
-        {
-          icon: "Activity",
-          title: "AI Inspection",
-          problem: "Security patrols are repetitive and generate dispersed field data; incidents need to be identified early.",
-          solution:
-            "Robots perform automated patrol inspection, combining AI perception with data analysis from backpack sensors and other devices to flag fire, smoke and intrusion risks early.",
-          value:
-            "Improves the timeliness of fire and intrusion alerts, reduces night-time manual review and creates traceable inspection data."
-        },
-        {
-          icon: "CloudCog",
-          title: "Robot Scheduling Platform (RSP)",
-          problem: "Multi-robot deployments need a central platform for scheduling, dispatch and coordinated operation.",
-          solution:
-            "The RSP platform manages multi-robot task scheduling, fleet management, remote task distribution and workflow automation.",
-          value:
-            "Connects hardware, AI and teleoperation as a central platform for scalable robot operations."
+      {
+        number: "02",
+        label: "Modular Payloads and AI Inspection",
+        title: "Configurable sensing and data acquisition for different environments",
+        description:
+          "Modular hardware packs and payloads equip robots with visual sensing, environmental monitoring, alerting and on-site interaction capabilities.",
+        capabilities: [
+          "Rapid Modular Configuration",
+          "Multi-Sensor Integration",
+          "On-Site Data Acquisition",
+          "AI-Based Anomaly Detection"
+        ],
+        layout: "media-right",
+        mediaType: "image",
+        mediaSrc: "/images/generated/glp-warehouse-patrol-1.png",
+        poster: null,
+        mediaAlt: "Existing robot inspection scene; modular payload close-up pending",
+        mediaNote: "Existing scene image · payload detail asset pending",
+        mediaSlots: ["Sensor close-up", "Payload interface", "Data acquisition module"],
+        resourceKey: "media.modularPayloads",
+        mediaPlaceholderText: "Approved real media can replace this asset through the field above.",
+        connection: null
+      },
+      {
+        number: "03",
+        label: "ROBOX Remote Access",
+        title: "Rapid human intervention when complex situations arise",
+        description:
+          "ROBOX connects on-site robots with remote operators, enabling low-latency intervention during exceptions, difficult terrain or situations requiring human judgement.",
+        capabilities: [
+          "Remote Device Access",
+          "Low-Latency Video and Control",
+          "Autonomous-to-Manual Switching",
+          "Rapid Intervention for Exceptions"
+        ],
+        layout: "media-left",
+        mediaType: "placeholder",
+        mediaSrc: null,
+        poster: null,
+        mediaAlt: "ROBOX product image placeholder",
+        mediaNote: "ROBOX product image / media pending",
+        mediaSlots: [],
+        resourceKey: "media.robox",
+        mediaPlaceholderText: "Keep a clear replacement point for approved product media; do not use fictional product imagery.",
+        connection: {
+          start: "On-Site Robot",
+          center: "ROBOX",
+          end: "Remote Operator"
         }
-      ]
-    },
+      },
+      {
+        number: "04",
+        label: "RSP Robot Operations Platform",
+        title: "Unified management of robots, tasks, alerts and operational data",
+        description:
+          "RSP supports task orchestration, status monitoring, anomaly alerts, remote intervention and inspection-record management across multiple robots.",
+        capabilities: [
+          "Unified Multi-Robot Management",
+          "Task Scheduling and Orchestration",
+          "Real-Time Status and Alerts",
+          "Inspection Records and Report Archiving"
+        ],
+        layout: "media-right",
+        mediaType: "placeholder",
+        mediaSrc: null,
+        poster: null,
+        mediaAlt: "RSP platform screenshot placeholder",
+        mediaNote: "RSP platform screenshot or screen recording pending",
+        mediaSlots: [],
+        resourceKey: "media.rsp",
+        mediaPlaceholderText: "Keep a clear replacement point for approved platform media; do not use fictional interface imagery.",
+        connection: null
+      }
+    ],
     applications: {
       eyebrow: "Applications",
-      title: "Designed for facilities where uptime, safety and coverage matter.",
+      title: "Built for environments that prioritise safety, coverage and stable operation",
+      cta: "Explore application",
       items: [
-        { icon: "Map", label: "Warehouse & Logistics" },
-        { icon: "Building2", label: "Campus Security" },
-        { icon: "Flame", label: "Fire & Emergency" },
-        { icon: "Siren", label: "Community Security" }
+        {
+          icon: "Map",
+          label: "Warehousing & Logistics",
+          description: "Routine inspection across warehouse aisles, loading zones and park perimeters.",
+          keywords: ["Autonomous Patrol", "Anomaly Detection"],
+          image: "/images/applications/warehouse-logistics.png",
+          imageAlt: "Quadruped robot outside a logistics park"
+        },
+        {
+          icon: "Building2",
+          label: "Campus Security",
+          description: "Daily patrol and risk inspection for roads, perimeters and key areas.",
+          keywords: ["Wide Coverage", "Stable Operation"],
+          image: "/images/applications/campus-security.png",
+          imageAlt: "Quadruped robot patrolling an industrial campus entrance"
+        },
+        {
+          icon: "Flame",
+          label: "Fire & Emergency",
+          description: "Suitable for hazard inspection, equipment checks and emergency support.",
+          keywords: ["Environmental Sensing", "Rapid Response"],
+          image: "/images/applications/fire-emergency.png",
+          imageAlt: "Quadruped robot inspecting fire safety equipment"
+        },
+        {
+          icon: "Siren",
+          label: "Community Security",
+          description: "Daily patrol for public areas, garages and key points in residential communities.",
+          keywords: ["Reduced Repetitive Patrols", "Faster Response"],
+          image: "/images/applications/community-security.png",
+          imageAlt: "Quadruped robot patrolling a residential community"
+        }
       ]
     },
     caseStudy: {
       eyebrow: "Featured Case · Logistics & Warehousing",
       title: "GLP Logistics Park Robotic Inspection Project",
-      labels: {
-        background: "Project Background",
-        solution: "Solution"
-      },
       intro:
         "An integrated deployment combining quadruped robots, the RSP cloud control platform and data acquisition infrastructure to support task scheduling, autonomous inspection, live monitoring and data-driven optimisation.",
       mediaAlt: "Quadruped robot conducting an inspection at a GLP logistics park",
-      background:
-        "Manual patrols across roads, warehouse edges and boundaries were repetitive, costly and hard to cover consistently.",
-      solution:
-        "Quadruped robots, RSP and data acquisition unified scheduling, live data and anomaly tracking.",
       metrics: [
         { value: "60%", label: "Reduction in manual inspection costs" },
         { value: "80%", label: "Shorter anomaly response time" },
@@ -370,116 +415,145 @@ const content = {
         "突發事件需要及時告警、證據留存與遠程處置"
       ]
     },
-    strengths: {
-      eyebrow: "核心優勢",
-      title: "面向真實場景，服務實際營運",
-      items: [
-        {
-          icon: "BrainCircuit",
-          title: "AI 自主巡檢能力",
-          text:
-            "結合環境感知、異常識別、多傳感器融合與任務決策，實現機器人自主完成巡邏與巡檢任務。"
-        },
-        {
-          icon: "Bot",
-          title: "多機器人協同",
-          text:
-            "四足與輪式機器人可接入統一任務體系，支援任務分配、狀態監控與現場協同執行。"
-        },
-        {
-          icon: "Route",
-          title: "自適應導航",
-          text:
-            "提供地圖構建、導航、避障與路徑規劃能力，支援工廠、園區、能源設施及戶外場地運行。"
-        },
-        {
-          icon: "Radio",
-          title: "遠程接管能力",
-          text:
-            "通過低延遲遠程操控，讓操作人員持續掌握現場狀態，並在異常情況下快速接管和精準介入。"
-        }
-      ]
-    },
-    technology: {
-      eyebrow: "機器人運營平台",
-      title: "自主巡檢機器人隊伍的\n統一運營平台",
+    overview: {
+      eyebrow: "全棧能力",
+      title: "自主執行、統一調度與遠程接管的營運閉環",
       copy:
-        "操作人員可通過瀏覽器或平板分配任務、查看實時數據、接收告警，並統一監管多台機器人。平台連接邊緣 AI、雲端監控與人工接管，實現機器人隊伍持續運營。",
-      imageTitle: "多機器人調度平台",
-      imageText:
-        "整合任務規劃、機器人遙測、異常事件警報與操作人員監督。",
-      capabilities: [
-        "AI感知與異常檢測",
-        "自主導航與路徑規劃",
-        "多傳感器融合",
-        "運動控制與地形適應",
-        "邊緣計算與雲端監控",
-        "遠程接管與隊伍管理"
+        "機器人本體、模組化載荷、ROBOX 與 RSP 協同，涵蓋任務執行、現場感知、異常處置與數據沉澱。",
+      steps: [
+        { icon: "PackageCheck", label: "任務下發" },
+        { icon: "CloudCog", label: "RSP 統一調度" },
+        { icon: "Route", label: "自主巡航與任務執行" },
+        { icon: "Activity", label: "載荷採集與 AI 識別" },
+        { icon: "Radio", label: "異常觸發遠程接管" },
+        { icon: "BadgeCheck", label: "巡檢記錄與數據閉環" }
       ]
     },
-    solutions: {
-      eyebrow: "產品與方案",
-      title: "面向真實安防環境的能力組合",
-      labels: {
-        problem: "問題",
-        solution: "方案",
-        value: "價值"
+    capabilityIntro: {
+      eyebrow: "核心產品與能力",
+      title: "支撐機器人持續運行的四項核心能力",
+      copy:
+        "從自主任務執行、現場感知到遠程接管與統一營運，建立機器人規模化部署所需的完整能力體系。"
+    },
+    capabilities: [
+      {
+        number: "01",
+        label: "自主巡航",
+        title: "讓機器人獨立完成日常巡檢任務",
+        description:
+          "基於地圖構建、路徑規劃、動態避障與任務執行能力，支援機器人按照預設路線持續開展巡檢與巡邏。",
+        capabilities: ["地圖構建與定位", "路徑規劃與避障", "定時任務執行", "現場狀態持續回傳"],
+        layout: "media-left",
+        mediaType: "video",
+        mediaSrc: "/videos/glp-robot-inspection.mp4",
+        poster: "/images/generated/glp-robot-inspection-poster.jpg",
+        mediaAlt: "在物流設施進行巡檢的機器人",
+        mediaNote: "現有巡檢視頻",
+        mediaSlots: [],
+        resourceKey: "media.autonomousPatrol",
+        mediaPlaceholderText: "可通過上方字段替換為已確認的真實素材。",
+        connection: null
       },
-      items: [
-        {
-          icon: "Route",
-          title: "自主巡航解決方案",
-          problem: "安防巡邏需要機器人在較少人工干預下持續自主運行",
-          solution: "AI驅動自主導航、巡邏路徑規劃、實時環境感知與邊緣端部署能力，支援園區與周界持續巡邏",
-          value: "減少夜間與高風險區域的人工巡邏，降低人員暴露，兼顧安全與降本增效"
-        },
-        {
-          icon: "Radio",
-          title: "遠程遙操解決方案",
-          problem: "在複雜場景下，機器人系統需具備人機協同決策與即時緊急接管能力",
-          solution: "遠程遙操提供低延遲實時遠程控制，並以人工接管作為輔助操作與緊急干預方式",
-          value: "在需要人工判斷、安全升級或精準遠程遙操時，讓操作人員始終保持可控"
-        },
-        {
-          icon: "Activity",
-          title: "AI巡檢解決方案",
-          problem: "安防巡邏任務重複、現場數據分散，異常情況需要及早識別",
-          solution: "機器人執行自動巡檢，結合AI感知與背包傳感器等設備的數據分析，對煙火、入侵等情況提前預警",
-          value: "提升防火、防盜等異常預警的及時性，減少夜間人工復核，形成可追溯的巡檢數據"
-        },
-        {
-          icon: "CloudCog",
-          title: "機器人調度平台（RSP）",
-          problem: "多機器人部署需要統一的任務調度、分發與協同運營中樞",
-          solution: "RSP平台支援多機器人任務調度、機器人集群管理、遠程任務分發與工作流自動化",
-          value: "作為連接硬件、AI 與遠程遙操的中樞平台，實現可擴展的機器人運營"
-        }
-      ]
-    },
+      {
+        number: "02",
+        label: "模組化載荷與 AI 巡檢",
+        title: "按場景配置感知與數據採集能力",
+        description:
+          "透過模組化硬件背包與不同類型載荷，為機器人配置視覺感知、環境採集、告警與現場互動能力。",
+        capabilities: ["模組化快速配置", "多類型感測器接入", "現場數據採集", "AI 異常識別"],
+        layout: "media-right",
+        mediaType: "image",
+        mediaSrc: "/images/generated/glp-warehouse-patrol-1.png",
+        poster: null,
+        mediaAlt: "現有機器人巡檢場景，模組化載荷特寫待補",
+        mediaNote: "現有場景圖片 · 載荷細節素材待補",
+        mediaSlots: ["傳感器特寫", "載荷接口", "數據採集模組"],
+        resourceKey: "media.modularPayloads",
+        mediaPlaceholderText: "可通過上方字段替換為已確認的真實素材。",
+        connection: null
+      },
+      {
+        number: "03",
+        label: "ROBOX 遠程接入",
+        title: "複雜情況發生時，快速切換人工接管",
+        description:
+          "透過 ROBOX 連接現場機器人與遠程操作端，在異常、複雜地形或需要人工判斷時進行低延遲遠程接管。",
+        capabilities: ["遠程設備接入", "低延遲畫面與控制", "自主與人工模式切換", "異常情況下快速介入"],
+        layout: "media-left",
+        mediaType: "placeholder",
+        mediaSrc: null,
+        poster: null,
+        mediaAlt: "ROBOX 產品圖片佔位",
+        mediaNote: "ROBOX 產品圖 / 媒體素材待補",
+        mediaSlots: [],
+        resourceKey: "media.robox",
+        mediaPlaceholderText: "保留真實素材替換入口，不使用虛構產品圖或平台界面。",
+        connection: { start: "現場機器人", center: "ROBOX", end: "遠程操作人員" }
+      },
+      {
+        number: "04",
+        label: "RSP 機器人營運平台",
+        title: "統一管理機器人、任務、告警與數據",
+        description:
+          "透過 RSP 對多台機器人進行任務編排、狀態監控、異常告警、遠程接管與巡檢記錄管理，支撐機器人隊伍持續營運。",
+        capabilities: ["多機器人統一管理", "任務調度與編排", "即時狀態與告警", "數據記錄與報告歸檔"],
+        layout: "media-right",
+        mediaType: "placeholder",
+        mediaSrc: null,
+        poster: null,
+        mediaAlt: "RSP 平台截圖佔位",
+        mediaNote: "RSP 平台截圖或錄屏待補",
+        mediaSlots: [],
+        resourceKey: "media.rsp",
+        mediaPlaceholderText: "保留真實素材替換入口，不使用虛構產品圖或平台界面。",
+        connection: null
+      }
+    ],
     applications: {
       eyebrow: "應用場景",
       title: "服務於重視安全、覆蓋與穩定運行的場景",
+      cta: "了解更多",
       items: [
-        { icon: "Map", label: "倉儲物流" },
-        { icon: "Building2", label: "園區安防" },
-        { icon: "Flame", label: "消防應急" },
-        { icon: "Siren", label: "社區安防" }
+        {
+          icon: "Map",
+          label: "倉儲物流",
+          description: "面向倉庫通道、裝卸區域與園區周界的常態化巡檢。",
+          keywords: ["自主巡航", "異常識別"],
+          image: "/images/applications/warehouse-logistics.png",
+          imageAlt: "物流園區外進行巡檢的四足機器人"
+        },
+        {
+          icon: "Building2",
+          label: "園區安防",
+          description: "覆蓋道路、周界與重點區域的日常巡邏與風險排查。",
+          keywords: ["大範圍覆蓋", "穩定運行"],
+          image: "/images/applications/campus-security.png",
+          imageAlt: "在工業園區入口巡邏的四足機器人"
+        },
+        {
+          icon: "Flame",
+          label: "消防應急",
+          description: "適用於隱患排查、設備巡檢與應急響應輔助。",
+          keywords: ["環境感知", "快速響應"],
+          image: "/images/applications/fire-emergency.png",
+          imageAlt: "檢查消防設備的四足機器人"
+        },
+        {
+          icon: "Siren",
+          label: "社區安防",
+          description: "面向社區公共區域、地庫與重點點位的日常巡邏。",
+          keywords: ["減少重複巡邏", "提升響應效率"],
+          image: "/images/applications/community-security.png",
+          imageAlt: "在住宅社區巡邏的四足機器人"
+        }
       ]
     },
     caseStudy: {
       eyebrow: "標竿案例 · 物流倉儲",
       title: "普洛斯物流園區機器人巡檢項目",
-      labels: {
-        background: "項目背景",
-        solution: "解決方案"
-      },
       intro:
         "透過四足機器人、RSP 雲端控制平台與數據採集平台協同部署，建立涵蓋任務調度、自主巡檢、即時監控與數據優化的物流園區巡檢體系。",
       mediaAlt: "普洛斯物流園區內進行巡檢的四足機器人",
-      background:
-        "園區道路、倉庫周邊及周界巡檢重複且耗費人力，難以保持穩定覆蓋。",
-      solution:
-        "以四足機器人、RSP 及數據採集平台統一調度、即時回傳數據及記錄異常。",
       metrics: [
         { value: "60%", label: "人工巡檢成本降低" },
         { value: "80%", label: "異常應變時間縮短" },
@@ -616,116 +690,145 @@ const content = {
         "突发事件需要及时告警、证据留存与远程处置"
       ]
     },
-    strengths: {
-      eyebrow: "核心优势",
-      title: "面向真实场景，服务实际运营",
-      items: [
-        {
-          icon: "BrainCircuit",
-          title: "AI 自主巡检能力",
-          text:
-            "结合环境感知、异常识别、多传感器融合与任务决策，实现机器人自主完成巡逻与巡检任务。"
-        },
-        {
-          icon: "Bot",
-          title: "多机器人协同",
-          text:
-            "四足与轮式机器人可接入统一任务体系，支持任务分配、状态监控与现场协同执行。"
-        },
-        {
-          icon: "Route",
-          title: "自适应导航",
-          text:
-            "提供地图构建、导航、避障与路径规划能力，支持工厂、园区、能源设施及户外场地运行。"
-        },
-        {
-          icon: "Radio",
-          title: "远程接管能力",
-          text:
-            "通过低延迟远程操控，让操作人员持续掌握现场状态，并在异常情况下快速接管和精准介入。"
-        }
-      ]
-    },
-    technology: {
-      eyebrow: "机器人运营平台",
-      title: "自主巡检机器人队伍的\n统一运营平台",
+    overview: {
+      eyebrow: "全栈能力",
+      title: "自主执行、统一调度与远程接管的运营闭环",
       copy:
-        "操作人员可通过浏览器或平板分配任务、查看实时数据、接收告警，并统一监管多台机器人。平台连接边缘 AI、云端监控与人工接管，实现机器人队伍持续运营。",
-      imageTitle: "多机器人调度平台",
-      imageText:
-        "整合任务规划、机器人遥测、异常事件警报与操作人员监督。",
-      capabilities: [
-        "AI感知与异常检测",
-        "自主导航与路径规划",
-        "多传感器融合",
-        "运动控制与地形适应",
-        "边缘计算与云端监控",
-        "远程接管与队伍管理"
+        "机器人本体、模块化载荷、ROBOX 与 RSP 协同，覆盖任务执行、现场感知、异常处置与数据沉淀。",
+      steps: [
+        { icon: "PackageCheck", label: "任务下发" },
+        { icon: "CloudCog", label: "RSP 统一调度" },
+        { icon: "Route", label: "自主巡航与任务执行" },
+        { icon: "Activity", label: "载荷采集与 AI 识别" },
+        { icon: "Radio", label: "异常触发远程接管" },
+        { icon: "BadgeCheck", label: "巡检记录与数据闭环" }
       ]
     },
-    solutions: {
-      eyebrow: "产品与方案",
-      title: "面向真实安防环境的能力组合",
-      labels: {
-        problem: "问题",
-        solution: "方案",
-        value: "价值"
+    capabilityIntro: {
+      eyebrow: "核心产品与能力",
+      title: "支撑机器人持续运行的四项核心能力",
+      copy:
+        "从自主任务执行、现场感知到远程接管与统一运营，构建机器人规模化部署所需的完整能力体系。"
+    },
+    capabilities: [
+      {
+        number: "01",
+        label: "自主巡航",
+        title: "让机器人独立完成日常巡检任务",
+        description:
+          "基于地图构建、路径规划、动态避障与任务执行能力，支持机器人按照预设路线持续开展巡检和巡逻。",
+        capabilities: ["地图构建与定位", "路径规划与避障", "定时任务执行", "现场状态持续回传"],
+        layout: "media-left",
+        mediaType: "video",
+        mediaSrc: "/videos/glp-robot-inspection.mp4",
+        poster: "/images/generated/glp-robot-inspection-poster.jpg",
+        mediaAlt: "在物流设施内进行巡检的机器人",
+        mediaNote: "现有巡检视频",
+        mediaSlots: [],
+        resourceKey: "media.autonomousPatrol",
+        mediaPlaceholderText: "可通过上方字段替换为已确认的真实素材。",
+        connection: null
       },
-      items: [
-        {
-          icon: "Route",
-          title: "自主巡航解决方案",
-          problem: "安防巡逻需要机器人在较少人工干预下持续自主运行",
-          solution: "AI驱动自主导航、巡逻路径规划、实时环境感知与边缘端部署能力，支持园区与周界持续巡逻",
-          value: "减少夜间与高风险区域的人工巡逻，降低人员暴露，兼顾安全与降本增效"
-        },
-        {
-          icon: "Radio",
-          title: "远程遥操解决方案",
-          problem: "复杂场景下，机器人系统需要具备人机协同决策与紧急接管能力",
-          solution: "远程遥操提供低延迟实时远程控制，并以人工接管作为辅助操作与紧急干预方式",
-          value: "在需要人工判断、安全升级或精准远程遥操时，让操作人员始终保持可控"
-        },
-        {
-          icon: "Activity",
-          title: "AI巡检解决方案",
-          problem: "安防巡逻任务重复、现场数据分散，异常情况需要及早识别",
-          solution: "机器人执行自动巡检，结合AI感知与背包传感器等设备的数据分析，对烟火、入侵等情况提前预警",
-          value: "提升防火、防盗等异常预警的及时性，减少夜间人工复核，形成可追溯的巡检数据"
-        },
-        {
-          icon: "CloudCog",
-          title: "机器人调度平台（RSP）",
-          problem: "多机器人部署需要统一的任务调度、分发与协同运营中枢",
-          solution: "RSP平台支持多机器人任务调度、机器人集群管理、远程任务分发与工作流自动化",
-          value: "作为连接硬件、AI 与远程遥操的中枢平台，实现可扩展的机器人运营"
-        }
-      ]
-    },
+      {
+        number: "02",
+        label: "模块化载荷与 AI 巡检",
+        title: "按场景配置感知与数据采集能力",
+        description:
+          "通过模块化硬件背包与不同类型载荷，为机器人配置视觉感知、环境采集、告警与现场交互能力。",
+        capabilities: ["模块化快速配置", "多类型传感器接入", "现场数据采集", "AI 异常识别"],
+        layout: "media-right",
+        mediaType: "image",
+        mediaSrc: "/images/generated/glp-warehouse-patrol-1.png",
+        poster: null,
+        mediaAlt: "现有机器人巡检场景，模块化载荷特写待补",
+        mediaNote: "现有场景图片 · 载荷细节素材待补",
+        mediaSlots: ["传感器特写", "载荷接口", "数据采集模块"],
+        resourceKey: "media.modularPayloads",
+        mediaPlaceholderText: "可通过上方字段替换为已确认的真实素材。",
+        connection: null
+      },
+      {
+        number: "03",
+        label: "ROBOX 远程接入",
+        title: "复杂情况发生时，快速切换人工接管",
+        description:
+          "通过 ROBOX 打通现场机器人与远程操作端，在异常、复杂地形或需要人工判断时进行低延迟远程接管。",
+        capabilities: ["远程设备接入", "低延迟画面与控制", "自主与人工模式切换", "异常情况下快速介入"],
+        layout: "media-left",
+        mediaType: "placeholder",
+        mediaSrc: null,
+        poster: null,
+        mediaAlt: "ROBOX 产品图占位",
+        mediaNote: "ROBOX 产品图 / 媒体素材待补",
+        mediaSlots: [],
+        resourceKey: "media.robox",
+        mediaPlaceholderText: "保留真实素材替换入口，不使用虚构产品图或平台界面。",
+        connection: { start: "现场机器人", center: "ROBOX", end: "远程操作人员" }
+      },
+      {
+        number: "04",
+        label: "RSP 机器人运营平台",
+        title: "统一管理机器人、任务、告警与数据",
+        description:
+          "通过 RSP 对多台机器人进行任务编排、状态监控、异常告警、远程接管和巡检记录管理，支撑机器人队伍持续运营。",
+        capabilities: ["多机器人统一管理", "任务调度与编排", "实时状态与告警", "数据记录与报告归档"],
+        layout: "media-right",
+        mediaType: "placeholder",
+        mediaSrc: null,
+        poster: null,
+        mediaAlt: "RSP 平台截图占位",
+        mediaNote: "RSP 平台截图或录屏待补",
+        mediaSlots: [],
+        resourceKey: "media.rsp",
+        mediaPlaceholderText: "保留真实素材替换入口，不使用虚构产品图或平台界面。",
+        connection: null
+      }
+    ],
     applications: {
       eyebrow: "应用场景",
       title: "服务于重视安全、覆盖与稳定运行的场景",
+      cta: "了解更多",
       items: [
-        { icon: "Map", label: "仓储物流" },
-        { icon: "Building2", label: "园区安防" },
-        { icon: "Flame", label: "消防应急" },
-        { icon: "Siren", label: "社区安防" }
+        {
+          icon: "Map",
+          label: "仓储物流",
+          description: "面向仓库通道、装卸区域与园区周界的常态化巡检。",
+          keywords: ["自主巡航", "异常识别"],
+          image: "/images/applications/warehouse-logistics.png",
+          imageAlt: "物流园区外进行巡检的四足机器人"
+        },
+        {
+          icon: "Building2",
+          label: "园区安防",
+          description: "覆盖道路、周界与重点区域的日常巡逻与风险排查。",
+          keywords: ["大范围覆盖", "稳定运行"],
+          image: "/images/applications/campus-security.png",
+          imageAlt: "在工业园区入口巡逻的四足机器人"
+        },
+        {
+          icon: "Flame",
+          label: "消防应急",
+          description: "适用于隐患排查、设备巡检与应急响应辅助。",
+          keywords: ["环境感知", "快速响应"],
+          image: "/images/applications/fire-emergency.png",
+          imageAlt: "检查消防设备的四足机器人"
+        },
+        {
+          icon: "Siren",
+          label: "社区安防",
+          description: "面向社区公共区域、地库与重点点位的日常巡逻。",
+          keywords: ["减少重复巡逻", "提升响应效率"],
+          image: "/images/applications/community-security.png",
+          imageAlt: "在住宅社区巡逻的四足机器人"
+        }
       ]
     },
     caseStudy: {
       eyebrow: "标杆案例 · 物流仓储",
       title: "普洛斯物流园区机器人巡检项目",
-      labels: {
-        background: "项目背景",
-        solution: "解决方案"
-      },
       intro:
         "通过四足机器人、RSP 云控平台与数采平台协同部署，构建覆盖任务调度、自主巡检、实时监控与数据优化的物流园区巡检体系。",
       mediaAlt: "普洛斯物流园区内进行巡检的四足机器人",
-      background:
-        "园区道路、仓库周边及周界巡检重复且耗费人力，难以保持稳定覆盖。",
-      solution:
-        "以四足机器人、RSP 及数采平台统一调度、实时回传数据并记录异常。",
       metrics: [
         { value: "60%", label: "人工巡检成本降低" },
         { value: "80%", label: "异常响应时间缩短" },
