@@ -215,43 +215,43 @@ const content = {
       ]
     },
     caseStudy: {
-      eyebrow: "Case Study",
-      title: "Quadruped robot patrol deployment for a GLP industrial logistics park",
+      eyebrow: "Featured Case · Logistics & Warehousing",
+      title: "GLP Logistics Park Robotic Inspection Project",
       labels: {
-        challenge: "Challenge",
+        background: "Project Background",
         solution: "Solution"
       },
-      imageTitle: "Autonomous Inspection Workflow",
-      imageText:
-        "Route execution, anomaly detection and remote monitoring for high-value facilities.",
-      challenge:
-        "GLP needed reliable fire-safety and security patrol coverage across an industrial park, including roads, warehouse surroundings, perimeter areas and night-time routine checks.",
+      intro:
+        "An integrated deployment combining quadruped robots, the RSP cloud control platform and data acquisition infrastructure to support task scheduling, autonomous inspection, live monitoring and data-driven optimisation.",
+      mediaAlt: "Quadruped robot conducting an inspection at a GLP logistics park",
+      background:
+        "Inspection tasks across park roads, warehouse perimeters and boundary areas were labour-intensive and repetitive. Conventional manual operations made it difficult to maintain consistent coverage and respond quickly to anomalies.",
       solution:
-        "Hyper AIForce supported the deployment of robotic dogs for scheduled park patrols, teleoperation, abnormal-event awareness and on-site evidence capture across daily security routes.",
-      outcomes: [
-        "Expanded night-time patrol coverage across the industrial park",
-        "Improved fire-safety and security visibility",
-        "Reduced night-time repetitive perimeter patrol workload"
+        "The deployment combines the RSP V1.0.0 cloud control platform, quadruped robots with modular hardware packs and a data acquisition platform, enabling unified task scheduling, real-time data transmission, anomaly logging and closed-loop inspection optimisation.",
+      metrics: [
+        { value: "60%", label: "Reduction in manual inspection costs" },
+        { value: "80%", label: "Shorter anomaly response time" },
+        { value: "40%", label: "Improvement in inspection efficiency" }
       ],
       cta: "Start a deployment conversation"
     },
     service: {
       eyebrow: "Support & Service Network",
-      title: "Three collaboration models for different deployment needs.",
+      title: "Flexible Collaboration, Deployed to Fit Your Needs",
       copy:
-        "Choose between RaaS leasing, module enablement or full-stack purchase based on project stage, site requirements and operating model. Hyper AIForce supports the full path from solution design and deployment to ongoing operations.",
+        "Choose leasing, modular enablement or full-stack delivery based on your project stage, application scenario and operating model, with support from deployment delivery through ongoing operations and maintenance.",
       items: [
-        { icon: "PackageCheck", label: "RaaS Leasing" },
-        { icon: "Cpu", label: "Module Enablement" },
-        { icon: "Handshake", label: "Full-Stack Purchase" }
+        { icon: "PackageCheck", label: "RaaS Leasing", description: "Robots + RSP platform provided as one service; monthly or periodic billing; low-barrier rapid deployment" },
+        { icon: "Cpu", label: "Modular Enablement", description: "Procure AI perception, dispatch or communications payloads separately; connect to existing equipment or systems; enhance established operations" },
+        { icon: "Handshake", label: "Full-Stack Delivery", description: "Purchase a complete robotic security solution upfront; includes robots, platform and operations tools; retain the assets for long-term operation" }
       ]
     },
     about: {
       eyebrow: "About Hyper AIForce",
-      title: "Integrated Provider of Embodied Intelligence Robotic Security Solutions",
+      title: "Integrated Provider of Robotic Security Solutions",
       copy: [
-        "Hyper AIForce focuses on applying robots to security patrol, campus inspection and facility operations. Centered on autonomous patrol, remote takeover and multi-robot scheduling, we provide an integrated service covering scenario assessment, solution configuration, deployment and commissioning, and ongoing operations and maintenance.",
-        "We use robots to take on night-time, repetitive and high-risk tasks, while enabling remote human intervention in complex situations. This helps customers expand inspection coverage, reduce personnel exposure and keep projects operating reliably over the long term."
+        "Hyper AIForce focuses on applying robots to security patrol, campus inspection and facility operations. Centered on autonomous patrol, teleoperation and multi-robot scheduling, we provide an integrated service covering scenario assessment, solution configuration, deployment and commissioning, and ongoing operations and maintenance.",
+        "We use robots to take on night-time, repetitive and high-risk tasks, while enabling remote human intervention in complex situations. This helps customers expand inspection coverage, reduce personnel exposure, improve operational efficiency and achieve cost savings, while keeping projects operating reliably over the long term."
       ],
       bullets: [
         "Embodied intelligence for physical-world industries",
@@ -469,39 +469,43 @@ const content = {
       ]
     },
     caseStudy: {
-      eyebrow: "案例場景",
-      title: "普洛斯物流園區\n機器狗巡邏部署",
+      eyebrow: "標竿案例 · 物流倉儲",
+      title: "普洛斯物流園區機器人巡檢項目",
       labels: {
-        challenge: "挑戰",
-        solution: "方案"
+        background: "項目背景",
+        solution: "解決方案"
       },
-      imageTitle: "自主巡檢工作流程",
-      imageText:
-        "為高價值設施提供路線執行、異常識別與遠程監看能力。",
-      challenge:
-        "普洛斯需要在工業園區道路、倉庫周邊、周界區域及夜間例行巡查中，獲得更穩定的消防與安防巡邏覆蓋",
+      intro:
+        "透過四足機器人、RSP 雲端控制平台與數據採集平台協同部署，建立涵蓋任務調度、自主巡檢、即時監控與數據優化的物流園區巡檢體系。",
+      mediaAlt: "普洛斯物流園區內進行巡檢的四足機器人",
+      background:
+        "物流園區道路、倉庫周邊及周界區域的巡檢任務密集。傳統人工巡檢成本高、重複工作量大，難以持續維持穩定的巡檢覆蓋與異常應變效率。",
       solution:
-        "超流智能支持部署機器狗執行園區定時巡邏、遠程監看、異常事件感知與現場證據採集，服務日常安防巡邏路線",
-      outcomes: ["擴大夜間工業園區巡邏覆蓋", "提升消防與安防可視性", "減少夜間重複性周界巡邏工作"],
+        "部署 RSP V1.0.0 雲端控制平台、四足機器人及模組化硬件背包，並接入數據採集平台，實現巡檢任務統一調度、現場數據即時回傳、異常事件記錄與巡檢數據閉環優化。",
+      metrics: [
+        { value: "60%", label: "人工巡檢成本降低" },
+        { value: "80%", label: "異常應變時間縮短" },
+        { value: "40%", label: "巡檢效率提升" }
+      ],
       cta: "開啟部署溝通"
     },
     service: {
       eyebrow: "支持與服務網絡",
-      title: "三種合作方式，匹配不同部署需求",
+      title: "靈活合作，按需部署",
       copy:
-        "根據項目階段、現場需求與營運方式，可選擇 RaaS租賃、模組賦能或全棧式購買。超流智能提供從方案設計、部署交付到持續營運的支持。",
+        "根據項目階段、應用場景與營運方式，靈活選擇租賃、模組化賦能或全棧式交付，並獲得從部署交付到持續運維的支持。",
       items: [
-        { icon: "PackageCheck", label: "RaaS租賃" },
-        { icon: "Cpu", label: "模組賦能" },
-        { icon: "Handshake", label: "全棧式購買" }
+        { icon: "PackageCheck", label: "RaaS 租賃", description: "機器人 + RSP 平台統一提供；客戶按月／按週期付費；低門檻快速部署" },
+        { icon: "Cpu", label: "模組化賦能", description: "單獨採購 AI 感知／調度／通信等模組化載荷；可接入客戶現有設備或系統；用於既有體系能力增強" },
+        { icon: "Handshake", label: "全棧式交付", description: "一次性採購完整機器人安防解決方案；包含機器人 + 平台 + 運維平台；客戶自持資產並長期運行" }
       ]
     },
     about: {
       eyebrow: "關於超流智能",
       title: "具身智能機器人安防\n解決方案集成商",
       copy: [
-        "超流智能專注於機器人在安防巡邏、園區巡檢和設施運維等場景中的應用，圍繞自主巡航、遠程接管與多機調度，提供從場景評估、方案配置、部署調試到持續運維的一體化服務。",
-        "我們通過機器人承擔夜間、重複及高風險任務，並在複雜情況下由人工遠程介入，幫助客戶擴大巡檢覆蓋範圍、降低人員暴露風險，保障項目長期穩定運行。"
+        "超流智能專注於機器人在安防巡邏、園區巡檢和設施運維等場景中的應用，圍繞自主巡航、遠程遙操與多機調度，提供從場景評估、方案配置、部署調試到持續運維的一體化服務。",
+        "我們通過機器人承擔夜間、重複及高風險任務，並在複雜情況下由人工遠程介入，幫助客戶擴大巡檢覆蓋範圍、降低人員暴露風險，實現降本增效，保障項目長期穩定運行。"
       ],
       bullets: [
         "面向物理世界產業的具身智能",
@@ -711,39 +715,43 @@ const content = {
       ]
     },
     caseStudy: {
-      eyebrow: "案例场景",
-      title: "普洛斯物流园区\n机器狗巡逻部署",
+      eyebrow: "标杆案例 · 物流仓储",
+      title: "普洛斯物流园区机器人巡检项目",
       labels: {
-        challenge: "挑战",
-        solution: "方案"
+        background: "项目背景",
+        solution: "解决方案"
       },
-      imageTitle: "自主巡检工作流程",
-      imageText:
-        "为高价值设施提供路线执行、异常识别与远程监看能力。",
-      challenge:
-        "普洛斯需要在工业园区道路、仓库周边、周界区域及夜间例行巡查中，获得更稳定的消防与安防巡逻覆盖",
+      intro:
+        "通过四足机器人、RSP 云控平台与数采平台协同部署，构建覆盖任务调度、自主巡检、实时监控与数据优化的物流园区巡检体系。",
+      mediaAlt: "普洛斯物流园区内进行巡检的四足机器人",
+      background:
+        "物流园区道路、仓库周边及周界区域巡检任务密集。传统人工巡检成本高、重复工作量大，难以持续保持稳定的巡检覆盖与异常响应效率。",
       solution:
-        "超流智能支持部署机器狗执行园区定时巡逻、远程监看、异常事件感知与现场证据采集，服务日常安防巡逻路线",
-      outcomes: ["扩大夜间工业园区巡逻覆盖", "提升消防与安防可视性", "减少夜间重复性周界巡逻工作"],
+        "部署 RSP V1.0.0 云控平台、四足机器人及模块化硬件背包，并接入数采平台，实现巡检任务统一调度、现场数据实时回传、异常事件记录与巡检数据闭环优化。",
+      metrics: [
+        { value: "60%", label: "人工巡检成本降低" },
+        { value: "80%", label: "异常响应时间缩短" },
+        { value: "40%", label: "巡检效率提升" }
+      ],
       cta: "开启部署沟通"
     },
     service: {
       eyebrow: "支持与服务网络",
-      title: "三种合作方式，匹配不同部署需求",
+      title: "灵活合作，按需部署",
       copy:
-        "根据项目阶段、现场需求与运营方式，可选择 RaaS租赁、模块赋能或全栈式购买。超流智能提供从方案设计、部署交付到持续运营的支持。",
+        "根据项目阶段、应用场景与运营方式，灵活选择租赁、模块化赋能或全栈式交付，并获得从部署交付到持续运维的支持。",
       items: [
-        { icon: "PackageCheck", label: "RaaS租赁" },
-        { icon: "Cpu", label: "模块赋能" },
-        { icon: "Handshake", label: "全栈式购买" }
+        { icon: "PackageCheck", label: "RaaS 租赁", description: "机器人 + RSP 平台统一提供；客户按月／按周期付费；低门槛快速部署" },
+        { icon: "Cpu", label: "模块化赋能", description: "单独采购 AI 感知／调度／通信等模块化载荷；可接入客户现有设备或系统；用于已有体系能力增强" },
+        { icon: "Handshake", label: "全栈式交付", description: "一次性采购完整机器人安防解决方案；包含机器人 + 平台 + 运维平台；客户自持资产并长期运行" }
       ]
     },
     about: {
       eyebrow: "关于超流智能",
       title: "具身智能机器人安防\n解决方案集成商",
       copy: [
-        "超流智能专注于机器人在安防巡逻、园区巡检和设施运维等场景中的应用，围绕自主巡航、远程接管与多机调度，提供从场景评估、方案配置、部署调试到持续运维的一体化服务。",
-        "我们通过机器人承担夜间、重复及高风险任务，并在复杂情况下由人工远程介入，帮助客户扩大巡检覆盖范围、降低人员暴露风险，保障项目长期稳定运行。"
+        "超流智能专注于机器人在安防巡逻、园区巡检和设施运维等场景中的应用，围绕自主巡航、远程遥操与多机调度，提供从场景评估、方案配置、部署调试到持续运维的一体化服务。",
+        "我们通过机器人承担夜间、重复及高风险任务，并在复杂情况下由人工远程介入，帮助客户扩大巡检覆盖范围、降低人员暴露风险，实现降本增效，保障项目长期稳定运行。"
       ],
       bullets: [
         "面向物理世界产业的具身智能",

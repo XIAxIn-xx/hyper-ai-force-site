@@ -221,7 +221,7 @@ export function ContactSection({ content }: ContactSectionProps) {
   }
 
   return (
-    <section id="contact" className="bg-[#050B14] py-24 text-white">
+    <section id="contact" className="bg-[#050B14] !py-12 text-white md:!py-16">
       {turnstileSiteKey && (
         <Script
           src="https://challenges.cloudflare.com/turnstile/v0/api.js"
