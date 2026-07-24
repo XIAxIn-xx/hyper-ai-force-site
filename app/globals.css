@@ -3,23 +3,23 @@
 @tailwind utilities;
 
 :root {
-  --background: 210 33% 97%;
+  --background: 30 33% 97%;
   --foreground: 222.2 84% 4.9%;
   --card: 0 0% 100%;
   --card-foreground: 222.2 84% 4.9%;
-  --primary: 188 95% 48%;
-  --primary-foreground: 222.2 84% 4.9%;
-  --secondary: 210 40% 96.1%;
+  --primary: 25 95% 53%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 30 40% 96.1%;
   --secondary-foreground: 222.2 47.4% 11.2%;
-  --muted: 210 40% 96.1%;
+  --muted: 30 40% 96.1%;
   --muted-foreground: 215.4 16.3% 46.9%;
-  --accent: 210 40% 96.1%;
+  --accent: 30 40% 96.1%;
   --accent-foreground: 222.2 47.4% 11.2%;
   --destructive: 0 84.2% 60.2%;
   --destructive-foreground: 210 40% 98%;
-  --border: 214 31% 92%;
-  --input: 214 31% 92%;
-  --ring: 188 95% 48%;
+  --border: 30 31% 92%;
+  --input: 30 31% 92%;
+  --ring: 25 95% 53%;
 }
 
 * {
@@ -32,12 +32,12 @@ html {
 
 body {
   margin: 0;
-  background: #f5f7fa;
+  background: #faf9f7;
   color: #0f172a;
 }
 
 ::selection {
-  background: rgba(34, 211, 238, 0.32);
+  background: rgba(249, 115, 22, 0.24);
 }
 
 .section-shell {
@@ -85,6 +85,10 @@ body {
   line-break: strict;
   word-break: normal;
   overflow-wrap: break-word;
+}
+
+.zh-section-heading .zh-section-title {
+  text-wrap: balance;
 }
 
 .pretty-copy :where(h1, h2, h3, p, li, span) {

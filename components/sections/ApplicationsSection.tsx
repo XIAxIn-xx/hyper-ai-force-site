@@ -53,8 +53,8 @@ export function ApplicationsSection({ content }: ApplicationsSectionProps) {
                   onClick={() => setActiveIndex(index)}
                   className={`group relative flex h-full min-h-[128px] w-full overflow-hidden rounded-2xl border text-left outline-none transition-[border-color,box-shadow] duration-500 ${
                     isActive
-                      ? "border-cyan-200/55 shadow-[0_18px_50px_rgba(0,0,0,0.28)] focus-visible:ring-2 focus-visible:ring-cyan-300/80"
-                      : "border-white/12 focus-visible:border-cyan-300/60 focus-visible:ring-2 focus-visible:ring-cyan-300/80"
+                      ? "border-orange-200/55 shadow-[0_18px_50px_rgba(0,0,0,0.28)] focus-visible:ring-2 focus-visible:ring-orange-300/80"
+                      : "border-white/12 focus-visible:border-orange-300/60 focus-visible:ring-2 focus-visible:ring-orange-300/80"
                   }`}
                 >
                   <Image
@@ -68,7 +68,7 @@ export function ApplicationsSection({ content }: ApplicationsSectionProps) {
                   <div className="absolute inset-x-0 bottom-0 p-5 md:p-7">
                     <div className="flex items-end justify-between gap-4">
                       <div className="min-w-0">
-                        <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg border border-white/15 bg-[#06131d]/70 text-cyan-200 backdrop-blur-sm">
+                        <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg border border-white/15 bg-[#06131d]/70 text-orange-200 backdrop-blur-sm">
                           <Icon className="h-5 w-5" />
                         </div>
                         <h3 className={`applications-card-title zh-title text-white transition-[font-size] duration-500 ${isActive ? "text-2xl font-semibold md:text-3xl" : "text-xl font-semibold"}`}>

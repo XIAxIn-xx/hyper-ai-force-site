@@ -59,11 +59,7 @@ const content = {
     switchLabel: "繁中",
     switchHref: "/zh-hk",
     nav: [
-      { label: "Technology", href: "#technology" },
-      { label: "Solutions", href: "#solutions" },
-      { label: "Applications", href: "#applications" },
-      { label: "Collaboration", href: "#collaboration" },
-      { label: "About us", href: "#about" }
+      { label: "Solutions", href: "#technology" }
     ],
     seo: {
       title:
@@ -112,7 +108,7 @@ const content = {
     },
     overview: {
       eyebrow: "Solutions",
-      title: "An operational loop combining autonomy, unified orchestration and remote intervention",
+      title: "Building a robotic solution loop from execution to review",
       copy:
         "Autonomous patrol and teleoperation form the core capabilities, while RSP and backpack-and-sensor integration provide the software and hardware foundation for deployment.",
       steps: [
@@ -365,11 +361,7 @@ const content = {
     switchLabel: "EN",
     switchHref: "/",
     nav: [
-      { label: "技術能力", href: "#technology" },
-      { label: "解決方案", href: "#solutions" },
-      { label: "應用場景", href: "#applications" },
-      { label: "合作模式", href: "#collaboration" },
-      { label: "關於我們", href: "#about" }
+      { label: "解決方案", href: "#technology" }
     ],
     seo: {
       title: "Hyper AIForce Limited | 超流智能有限公司",
@@ -413,7 +405,7 @@ const content = {
     },
     overview: {
       eyebrow: "解決方案",
-      title: "自主執行、統一調度與遠程接管的營運閉環",
+      title: "構建從執行到復盤的機器人解決方案閉環",
       copy:
         "自主巡航與遠程遙操構成核心能力，RSP 與背包、傳感器集成提供軟硬件產品基礎，支援機器人部署與持續營運。",
       steps: [
@@ -640,11 +632,7 @@ const content = {
     switchLabel: "EN",
     switchHref: "/",
     nav: [
-      { label: "技术能力", href: "#technology" },
-      { label: "解决方案", href: "#solutions" },
-      { label: "应用场景", href: "#applications" },
-      { label: "合作模式", href: "#collaboration" },
-      { label: "关于我们", href: "#about" }
+      { label: "解决方案", href: "#technology" }
     ],
     seo: {
       title: "Hyper AIForce Limited | 超流智能有限公司",
@@ -688,7 +676,7 @@ const content = {
     },
     overview: {
       eyebrow: "解决方案",
-      title: "自主执行、统一调度与远程接管的运营闭环",
+      title: "构建从执行到复盘的机器人解决方案闭环",
       copy:
         "自主巡航与远程遥操构成核心能力，RSP 与背包、传感器集成提供软硬件产品基础，支持机器人部署与持续运营。",
       steps: [

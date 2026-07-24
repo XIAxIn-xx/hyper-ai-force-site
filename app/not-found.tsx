@@ -6,7 +6,7 @@ export default function NotFound() {
   return (
     <main className="flex min-h-screen items-center justify-center bg-[#050B14] px-6 text-center text-white">
       <div>
-        <p className="text-sm font-semibold uppercase tracking-[0.24em] text-cyan-300">
+        <p className="text-sm font-semibold uppercase tracking-[0.24em] text-orange-300">
           Hyper AI Force
         </p>
         <h1 className="mt-4 text-4xl font-black">Page not found</h1>

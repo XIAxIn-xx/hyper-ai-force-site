@@ -16,7 +16,7 @@ export function StackOverviewSection({ content }: StackOverviewSectionProps) {
   return (
     <section
       id="solutions"
-      className="overflow-hidden bg-[linear-gradient(180deg,#F5F7FA_0%,#EEF4F7_100%)] py-24"
+      className="overflow-hidden bg-[linear-gradient(180deg,#FAF9F7_0%,#FFF5ED_100%)] py-24"
     >
       <div className="section-shell">
         <Reveal>
@@ -43,7 +43,7 @@ export function StackOverviewSection({ content }: StackOverviewSectionProps) {
                     />
                   ) : null}
                   <div className="flex min-w-0 gap-4 md:block md:w-full md:text-center">
-                    <span className="relative z-10 flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-cyan-200 bg-white text-cyan-700 shadow-[0_10px_28px_rgba(15,23,42,0.08)] md:mx-auto">
+                    <span className="relative z-10 flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-orange-200 bg-white text-orange-600 shadow-[0_10px_28px_rgba(15,23,42,0.08)] md:mx-auto">
                       <Icon className="h-6 w-6" aria-hidden="true" />
                     </span>
                     <p className="zh-copy self-center pb-6 text-base font-semibold leading-7 text-slate-800 md:mt-5 md:pb-0 md:px-2">

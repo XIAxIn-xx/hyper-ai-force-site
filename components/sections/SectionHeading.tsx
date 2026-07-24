@@ -20,7 +20,7 @@ export function SectionHeading({
   return (
     <div className={`zh-section-heading ${align === "center" ? "zh-section-heading-center mx-auto max-w-3xl text-center" : "max-w-3xl"} ${className}`}>
       {eyebrow ? (
-        <p className={light ? "zh-eyebrow text-sm font-semibold uppercase tracking-[0.22em] text-cyan-300" : "zh-eyebrow text-sm font-semibold uppercase tracking-[0.22em] text-cyan-700"}>
+        <p className={light ? "zh-eyebrow text-sm font-semibold uppercase tracking-[0.22em] text-orange-300" : "zh-eyebrow text-sm font-semibold uppercase tracking-[0.22em] text-orange-600"}>
           {eyebrow}
         </p>
       ) : null}

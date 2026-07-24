@@ -37,7 +37,7 @@ export function Header({ content }: HeaderProps) {
   }, []);
 
   const languageMenu = (className: string) => (
-    <div className={cn("rounded-lg border border-[#E6EAF0] bg-[#F5F7FA] p-1.5 shadow-[0_16px_36px_rgba(15,23,42,0.16)]", className)}>
+    <div className={cn("rounded-lg border border-[#E6EAF0] bg-[#FAF9F7] p-1.5 shadow-[0_16px_36px_rgba(15,23,42,0.16)]", className)}>
       {languageLinks.map((item) => (
         <Link
           key={item.lang}
@@ -46,8 +46,8 @@ export function Header({ content }: HeaderProps) {
           className={cn(
             "flex h-9 items-center rounded-md px-3 text-sm font-medium transition-colors",
             content.lang === item.lang
-              ? "bg-cyan-400 text-slate-950"
-              : "text-slate-700 hover:bg-white hover:text-cyan-700"
+              ? "bg-orange-500 text-white"
+              : "text-slate-700 hover:bg-white hover:text-orange-600"
           )}
         >
           {item.label}
@@ -79,7 +79,7 @@ export function Header({ content }: HeaderProps) {
       className={cn(
         "fixed left-0 top-0 z-50 w-full border-b transition-all duration-300",
         scrolled || open
-          ? "border-[#E6EAF0]/80 bg-[#F5F7FA]/90 text-slate-950 shadow-[0_12px_36px_rgba(15,23,42,0.08)] backdrop-blur-xl"
+          ? "border-[#E6EAF0]/80 bg-[#FAF9F7]/90 text-slate-950 shadow-[0_12px_36px_rgba(15,23,42,0.08)] backdrop-blur-xl"
           : "border-white/10 bg-transparent text-white"
       )}
     >
@@ -97,7 +97,7 @@ export function Header({ content }: HeaderProps) {
           <span
             className={cn(
               "mt-0.5 whitespace-nowrap text-[10px] font-semibold leading-3 tracking-[0.12em]",
-              scrolled || open ? "text-slate-500" : "text-cyan-100/80"
+              scrolled || open ? "text-slate-500" : "text-orange-100/80"
             )}
           >
             {content.hero.slogan}
@@ -116,7 +116,7 @@ export function Header({ content }: HeaderProps) {
               className={cn(
                 "transition",
                 content.lang !== "en" ? "zh-nav text-sm font-medium tracking-normal" : "",
-                scrolled || open ? "hover:text-cyan-700" : "hover:text-cyan-200"
+                scrolled || open ? "hover:text-orange-600" : "hover:text-orange-200"
               )}
               href={item.href}
             >
@@ -158,7 +158,7 @@ export function Header({ content }: HeaderProps) {
       {languageOpen ? <div className="absolute right-4 top-20 lg:hidden">{languageMenu("w-32")}</div> : null}
 
       {open ? (
-        <div className="border-t border-[#E6EAF0] bg-[#F5F7FA]/95 shadow-[0_18px_36px_rgba(15,23,42,0.08)] backdrop-blur-xl lg:hidden">
+        <div className="border-t border-[#E6EAF0] bg-[#FAF9F7]/95 shadow-[0_18px_36px_rgba(15,23,42,0.08)] backdrop-blur-xl lg:hidden">
           <div className="section-shell flex flex-col gap-4 py-5 text-sm text-slate-700">
             {content.nav.map((item) => (
               <a

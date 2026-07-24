@@ -22,10 +22,10 @@ export function CaseStudySection({ content }: CaseStudySectionProps) {
       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[42%] bg-gradient-to-t from-[#050B14] via-[#050B14]/40 to-transparent" />
 
       <div className="relative z-10 section-shell flex min-h-0 flex-col justify-end pb-12 pt-[312px] md:min-h-[680px] md:pb-6 md:pt-20 lg:min-h-[720px]">
-        <Reveal className="w-full">
+        <Reveal className="w-full lg:-translate-x-4">
           <div className="max-w-[600px]">
-            <p className="zh-eyebrow flex items-center gap-3 !text-[13px] !font-semibold !tracking-normal text-cyan-200 sm:!text-sm">
-              <span aria-hidden="true" className="h-px w-8 bg-cyan-300/80" />
+            <p className="zh-eyebrow flex items-center gap-3 !text-[13px] !font-semibold !tracking-normal text-orange-200 sm:!text-sm">
+              <span aria-hidden="true" className="h-px w-8 bg-orange-300/80" />
               <ZhText>{caseStudy.eyebrow}</ZhText>
             </p>
             <h2
@@ -45,17 +45,17 @@ export function CaseStudySection({ content }: CaseStudySectionProps) {
           </div>
         </Reveal>
 
-        <Reveal delay={0.1} className="mt-8 w-full md:mt-4">
+        <Reveal delay={0.1} className="mt-8 w-full lg:-translate-x-4 md:mt-4">
           <div className="mx-0 grid max-w-[840px] gap-3 sm:grid-cols-3 sm:gap-4">
             {caseStudy.metrics.map((metric) => (
               <div
                 key={metric.value + metric.label}
-                className="group rounded-xl border border-white/15 bg-[#071019]/95 p-3.5 shadow-[0_12px_30px_rgba(6,19,29,0.3)] backdrop-blur-sm transition duration-300 hover:-translate-y-0.5 hover:border-cyan-300/70 hover:bg-[#0b1c29]"
+                className="group rounded-xl border border-orange-100/80 bg-white p-3.5 shadow-[0_12px_30px_rgba(6,19,29,0.3)] backdrop-blur-sm transition duration-300 hover:-translate-y-0.5 hover:border-orange-300 hover:bg-white"
               >
-                <p className="text-3xl font-semibold tracking-[-0.03em] text-cyan-700 md:text-4xl">
+                <p className="text-3xl font-semibold tracking-[-0.03em] text-orange-500 md:text-4xl">
                   <ZhText>{metric.value}</ZhText>
                 </p>
-                <p className="mt-1.5 text-sm leading-6 text-white/75">
+                <p className="mt-1.5 text-sm leading-6 text-orange-700">
                   <ZhText>{metric.label}</ZhText>
                 </p>
               </div>

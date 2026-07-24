@@ -14,9 +14,8 @@
         --ink: #0f172a;
         --muted: #64748b;
         --line: #dbe3ee;
-        --cyan: #22d3ee;
-        --cyan-dark: #0e7490;
         --orange: #f97316;
+        --orange-dark: #c2410c;
         --panel: #f8fafc;
       }
       * {
@@ -67,10 +66,10 @@
         width: 36px;
         height: 36px;
         place-items: center;
-        border: 1px solid rgba(103, 232, 249, 0.45);
+        border: 1px solid rgba(253, 186, 116, 0.45);
         border-radius: 8px;
-        background: rgba(34, 211, 238, 0.1);
-        color: #a5f3fc;
+        background: rgba(249, 115, 22, 0.1);
+        color: #fed7aa;
       }
       .nav-links {
         display: flex;
@@ -93,9 +92,9 @@
         font-size: 14px;
       }
       .btn-primary {
-        background: var(--cyan);
+        background: var(--orange);
         color: #04111f;
-        box-shadow: 0 0 34px rgba(34, 211, 238, 0.25);
+        box-shadow: 0 0 34px rgba(249, 115, 22, 0.25);
       }
       .btn-ghost {
         border: 1px solid rgba(255, 255, 255, 0.22);
@@ -121,8 +120,8 @@
         position: absolute;
         inset: 0;
         background-image:
-          linear-gradient(rgba(34, 211, 238, 0.1) 1px, transparent 1px),
-          linear-gradient(90deg, rgba(34, 211, 238, 0.1) 1px, transparent 1px);
+          linear-gradient(rgba(249, 115, 22, 0.1) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(249, 115, 22, 0.1) 1px, transparent 1px);
         background-size: 44px 44px;
         mask-image: linear-gradient(to bottom, #000, transparent 78%);
         opacity: 0.45;
@@ -137,9 +136,9 @@
       }
       .eyebrow {
         display: inline-flex;
-        border: 1px solid rgba(103, 232, 249, 0.35);
+        border: 1px solid rgba(253, 186, 116, 0.35);
         border-radius: 999px;
-        background: rgba(34, 211, 238, 0.1);
+        background: rgba(249, 115, 22, 0.1);
         padding: 9px 14px;
         color: #cffafe;
         font-size: 14px;
@@ -175,7 +174,7 @@
       }
       .stat strong {
         display: block;
-        color: #a5f3fc;
+        color: #fed7aa;
         font-size: 28px;
       }
       .stat span {
@@ -204,14 +203,14 @@
       }
       .kicker {
         margin: 0 0 14px;
-        color: var(--cyan-dark);
+        color: var(--orange-dark);
         font-size: 13px;
         font-weight: 900;
         letter-spacing: 0.22em;
         text-transform: uppercase;
       }
       .dark .kicker {
-        color: #67e8f9;
+        color: #fdba74;
       }
       h2 {
         margin: 0;
@@ -263,7 +262,7 @@
         place-items: center;
         border-radius: 8px;
         background: #020617;
-        color: #a5f3fc;
+        color: #fed7aa;
         font-weight: 900;
       }
       .card h3 {

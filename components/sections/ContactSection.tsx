@@ -238,11 +238,11 @@ export function ContactSection({ content }: ContactSectionProps) {
           />
           <div className="mt-10 grid gap-4 text-sm text-slate-300">
             <div className="flex items-center gap-3">
-              <Mail className="h-5 w-5 text-cyan-300" />
+              <Mail className="h-5 w-5 text-orange-300" />
               contact@haiforce.ai
             </div>
             <div className="flex items-center gap-3">
-              <MapPin className="h-5 w-5 text-cyan-300" />
+              <MapPin className="h-5 w-5 text-orange-300" />
               <ZhText>{content.contact.address}</ZhText>
             </div>
           </div>
@@ -304,7 +304,7 @@ export function ContactSection({ content }: ContactSectionProps) {
                 type="checkbox"
                 checked={privacyAccepted}
                 onChange={(event) => setPrivacyAccepted(event.target.checked)}
-                className="mt-1 h-4 w-4 shrink-0 accent-cyan-500"
+                className="mt-1 h-4 w-4 shrink-0 accent-orange-500"
               />
               <span>{content.contact.privacy}</span>
             </label>

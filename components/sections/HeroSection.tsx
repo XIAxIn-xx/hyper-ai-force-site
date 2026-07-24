@@ -25,7 +25,7 @@ export function HeroSection({ content }: HeroSectionProps) {
       />
       <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(5,11,20,0.98)_0%,rgba(5,11,20,0.82)_36%,rgba(5,11,20,0.28)_72%,rgba(5,11,20,0.55)_100%)]" />
       <div className="absolute inset-y-0 left-0 w-[68%] bg-grid-fade tech-grid opacity-45 md:w-[60%]" />
-      <div className="pointer-events-none absolute right-[-8%] top-[24%] h-[520px] w-[520px] bg-[radial-gradient(circle,rgba(34,211,238,0.24)_0%,rgba(34,211,238,0.08)_35%,transparent_72%)] blur-2xl md:h-[680px] md:w-[680px]" />
+      <div className="pointer-events-none absolute right-[-8%] top-[24%] h-[520px] w-[520px] bg-[radial-gradient(circle,rgba(249,115,22,0.24)_0%,rgba(249,115,22,0.08)_35%,transparent_72%)] blur-2xl md:h-[680px] md:w-[680px]" />
       <div className="pointer-events-none absolute inset-y-0 left-0 w-[68%] opacity-85 md:w-[60%]">
         <DotField
           dotRadius={2}
@@ -36,7 +36,7 @@ export function HeroSection({ content }: HeroSectionProps) {
           waveAmplitude={0.75}
           gradientFrom="rgba(103, 232, 249, 0.62)"
           gradientTo="rgba(59, 130, 246, 0.38)"
-          glowColor="rgba(34, 211, 238, 0.58)"
+          glowColor="rgba(249, 115, 22, 0.58)"
         />
       </div>
       <div className="absolute bottom-0 left-0 h-48 w-full bg-gradient-to-t from-[#050B14] to-transparent" />
@@ -47,7 +47,7 @@ export function HeroSection({ content }: HeroSectionProps) {
             initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.65 }}
-            className="zh-eyebrow text-lg font-semibold uppercase tracking-[0.16em] text-cyan-200/90 md:text-xl"
+            className="zh-eyebrow text-lg font-semibold uppercase tracking-[0.16em] text-orange-200/90 md:text-xl"
           >
             <ZhText>{content.hero.eyebrow}</ZhText>
           </motion.div>

@@ -12,7 +12,7 @@ export function AboutSection({ content }: AboutSectionProps) {
   const copyParagraphs = (Array.isArray(content.about.copy) ? content.about.copy : [content.about.copy]) as readonly string[];
 
   return (
-    <section id="about" className="bg-[#F5F7FA] py-16 md:py-20">
+    <section id="about" className="bg-[#FAF9F7] py-16 md:py-20">
       <div className="section-shell grid gap-10 lg:grid-cols-[46fr_54fr] lg:items-start lg:gap-12">
         <Reveal>
           <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg border border-[#E6EAF0] bg-[#050B14] shadow-[0_12px_34px_rgba(15,23,42,0.06)]">
@@ -25,7 +25,7 @@ export function AboutSection({ content }: AboutSectionProps) {
           </div>
         </Reveal>
         <Reveal delay={0.1}>
-          <p className="zh-eyebrow text-sm font-semibold uppercase tracking-[0.22em] text-cyan-700">
+          <p className="zh-eyebrow text-sm font-semibold uppercase tracking-[0.22em] text-orange-600">
             <ZhText>{content.about.eyebrow}</ZhText>
           </p>
           <h2 className="zh-title zh-section-title mt-4 text-3xl font-bold tracking-normal text-slate-950 md:text-5xl xl:w-[calc(100%+32px)] xl:max-w-none">

@@ -119,13 +119,13 @@ export function CapabilitySystemSection({ content }: CapabilitySystemSectionProp
       <div>
         {capabilities.map((item, index) => {
           const mediaLeft = item.layout === "media-left";
-          const sectionBackground = index % 2 === 0 ? "bg-white" : "bg-[#F5F7FA]";
+          const sectionBackground = index % 2 === 0 ? "bg-white" : "bg-[#FAF9F7]";
 
           return (
             <article key={item.number} className={`border-t border-slate-200 ${sectionBackground}`}>
               <div className="section-shell grid gap-x-14 py-16 lg:min-h-[600px] lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:items-center lg:py-24">
                 <header className={`order-1 lg:row-start-1 ${mediaLeft ? "lg:col-start-2" : "lg:col-start-1"}`}>
-                  <p className="text-sm font-semibold tracking-[0.24em] text-cyan-700">{item.number}</p>
+                  <p className="text-sm font-semibold tracking-[0.24em] text-orange-600">{item.number}</p>
                   <p className="zh-eyebrow mt-4 text-base font-semibold text-slate-600">
                     <ZhText>{item.label}</ZhText>
                   </p>
@@ -145,7 +145,7 @@ export function CapabilitySystemSection({ content }: CapabilitySystemSectionProp
                   <ul className="mt-8 grid gap-x-6 gap-y-3 sm:grid-cols-2">
                     {item.capabilities.map((capability) => (
                       <li key={capability} className="flex items-start gap-3 border-t border-slate-200 pt-3 text-sm font-medium leading-6 text-slate-700">
-                        <Check className="mt-1 h-4 w-4 shrink-0 text-cyan-700" aria-hidden="true" />
+                        <Check className="mt-1 h-4 w-4 shrink-0 text-orange-600" aria-hidden="true" />
                         <ZhText>{capability}</ZhText>
                       </li>
                     ))}
