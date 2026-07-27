@@ -3,22 +3,22 @@
 @tailwind utilities;
 
 :root {
-  --background: 30 33% 97%;
-  --foreground: 222.2 84% 4.9%;
-  --card: 0 0% 100%;
-  --card-foreground: 222.2 84% 4.9%;
+  --background: 220 38% 7%;
+  --foreground: 210 40% 98%;
+  --card: 215 30% 12%;
+  --card-foreground: 210 40% 98%;
   --primary: 25 95% 53%;
   --primary-foreground: 0 0% 100%;
-  --secondary: 30 40% 96.1%;
-  --secondary-foreground: 222.2 47.4% 11.2%;
-  --muted: 30 40% 96.1%;
-  --muted-foreground: 215.4 16.3% 46.9%;
-  --accent: 30 40% 96.1%;
-  --accent-foreground: 222.2 47.4% 11.2%;
+  --secondary: 217 33% 17%;
+  --secondary-foreground: 210 40% 98%;
+  --muted: 217 33% 17%;
+  --muted-foreground: 215 20% 68%;
+  --accent: 217 33% 17%;
+  --accent-foreground: 210 40% 98%;
   --destructive: 0 84.2% 60.2%;
   --destructive-foreground: 210 40% 98%;
-  --border: 30 31% 92%;
-  --input: 30 31% 92%;
+  --border: 215 28% 24%;
+  --input: 215 28% 24%;
   --ring: 25 95% 53%;
 }
 
@@ -32,8 +32,8 @@ html {
 
 body {
   margin: 0;
-  background: #faf9f7;
-  color: #0f172a;
+  background: #050b14;
+  color: #e2e8f0;
 }
 
 ::selection {

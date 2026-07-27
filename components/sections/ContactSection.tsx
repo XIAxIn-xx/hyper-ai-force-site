@@ -145,7 +145,7 @@ export function ContactSection({ content }: ContactSectionProps) {
   function fieldError(key: ErrorKey) {
     const error = errors[key];
     return error ? (
-      <p id={`${key}-error`} className="text-xs text-rose-600">
+      <p id={`${key}-error`} className="text-xs text-rose-300">
         {error}
       </p>
     ) : null;
@@ -248,7 +248,7 @@ export function ContactSection({ content }: ContactSectionProps) {
           </div>
         </Reveal>
         <Reveal delay={0.1}>
-          <form noValidate onSubmit={handleSubmit} className="grid gap-4 rounded-lg border border-[#E6EAF0] bg-white p-5 text-slate-950 shadow-[0_18px_50px_rgba(2,6,23,0.18)] md:p-7">
+          <form noValidate onSubmit={handleSubmit} className="grid gap-4 rounded-xl border border-white/10 bg-white/[0.06] p-5 text-white shadow-[0_18px_50px_rgba(0,0,0,0.3)] backdrop-blur-md md:p-7">
             <div className="grid gap-4 md:grid-cols-2">
               <div className="grid gap-1">
                 <Input name="name" required placeholder={content.contact.fields.name} aria-label={content.contact.fields.name} aria-invalid={Boolean(errors.name)} aria-describedby={errors.name ? "name-error" : undefined} />
@@ -298,7 +298,7 @@ export function ContactSection({ content }: ContactSectionProps) {
               <Textarea name="message" required placeholder={content.contact.fields.message} aria-label={content.contact.fields.message} aria-invalid={Boolean(errors.form)} />
               {fieldError("form")}
             </div>
-            <label className="flex items-start gap-3 text-sm leading-6 text-slate-600">
+            <label className="flex items-start gap-3 text-sm leading-6 text-slate-300">
               <input
                 name="privacyConsent"
                 type="checkbox"
@@ -310,12 +310,12 @@ export function ContactSection({ content }: ContactSectionProps) {
             </label>
             {fieldError("privacy")}
             <div className="grid gap-1">
-              <p className="text-sm text-slate-600">{content.contact.captcha}</p>
+              <p className="text-sm text-slate-300">{content.contact.captcha}</p>
               <div ref={turnstileRef} className="min-h-[65px]" />
               {fieldError("captcha")}
             </div>
             <Input name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" className="absolute -left-[9999px] h-px w-px overflow-hidden opacity-0" />
-            <Button type="submit" disabled={status === "submitting"} variant="dark" size="lg" className="mt-2 w-full md:w-fit">
+            <Button type="submit" disabled={status === "submitting"} variant="default" size="lg" className="mt-2 w-full md:w-fit">
               {status === "submitting" ? messages.sending : content.contact.button}
             </Button>
             <p aria-live="polite" className="text-sm" role="status">

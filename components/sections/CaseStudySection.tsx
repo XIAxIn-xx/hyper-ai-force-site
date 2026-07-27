@@ -50,12 +50,12 @@ export function CaseStudySection({ content }: CaseStudySectionProps) {
             {caseStudy.metrics.map((metric) => (
               <div
                 key={metric.value + metric.label}
-                className="group rounded-xl border border-orange-100/80 bg-white p-3.5 shadow-[0_12px_30px_rgba(6,19,29,0.3)] backdrop-blur-sm transition duration-300 hover:-translate-y-0.5 hover:border-orange-300 hover:bg-white"
+                className="group rounded-xl border border-orange-200/35 bg-[#0D1721]/80 p-3.5 text-white shadow-[0_0_28px_rgba(249,115,22,0.1)] backdrop-blur-md transition duration-300 hover:-translate-y-0.5 hover:border-orange-300/75 hover:bg-[#132231]"
               >
-                <p className="text-3xl font-semibold tracking-[-0.03em] text-orange-500 md:text-4xl">
+                <p className="text-3xl font-semibold tracking-[-0.03em] text-orange-300 md:text-4xl">
                   <ZhText>{metric.value}</ZhText>
                 </p>
-                <p className="mt-1.5 text-sm leading-6 text-orange-700">
+                <p className="mt-1.5 text-sm leading-6 text-orange-100/85">
                   <ZhText>{metric.label}</ZhText>
                 </p>
               </div>

@@ -16,7 +16,7 @@ export function StackOverviewSection({ content }: StackOverviewSectionProps) {
   return (
     <section
       id="solutions"
-      className="overflow-hidden bg-[linear-gradient(180deg,#FAF9F7_0%,#FFF5ED_100%)] py-24"
+      className="relative overflow-hidden bg-[radial-gradient(circle_at_86%_15%,rgba(249,115,22,0.12),transparent_28%),linear-gradient(180deg,#0B1520_0%,#071019_100%)] py-24 text-white"
     >
       <div className="section-shell">
         <Reveal>
@@ -24,6 +24,7 @@ export function StackOverviewSection({ content }: StackOverviewSectionProps) {
             eyebrow={overview.eyebrow}
             title={overview.title}
             copy={overview.copy}
+            light
             className="max-w-4xl"
           />
         </Reveal>
@@ -39,21 +40,21 @@ export function StackOverviewSection({ content }: StackOverviewSectionProps) {
                   {!isLast ? (
                     <span
                       aria-hidden="true"
-                      className="absolute bottom-[-22px] left-5 top-12 w-px bg-slate-300 md:bottom-auto md:left-auto md:right-[-16px] md:top-7 md:h-px md:w-8"
+                      className="absolute bottom-[-22px] left-5 top-12 w-px bg-white/15 md:bottom-auto md:left-auto md:right-[-16px] md:top-7 md:h-px md:w-8"
                     />
                   ) : null}
                   <div className="flex min-w-0 gap-4 md:block md:w-full md:text-center">
-                    <span className="relative z-10 flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-orange-200 bg-white text-orange-600 shadow-[0_10px_28px_rgba(15,23,42,0.08)] md:mx-auto">
+                    <span className="relative z-10 flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-orange-300/45 bg-white/[0.06] text-orange-200 shadow-[0_0_30px_rgba(249,115,22,0.14)] backdrop-blur-md md:mx-auto">
                       <Icon className="h-6 w-6" aria-hidden="true" />
                     </span>
-                    <p className="zh-copy self-center pb-6 text-base font-semibold leading-7 text-slate-800 md:mt-5 md:pb-0 md:px-2">
+                    <p className="zh-copy self-center pb-6 text-base font-semibold leading-7 text-slate-100 md:mt-5 md:pb-0 md:px-2">
                       <ZhText>{step.label}</ZhText>
                     </p>
                   </div>
                   {!isLast ? (
                     <ArrowRight
                       aria-hidden="true"
-                      className="absolute bottom-[-29px] left-[13px] h-4 w-4 text-slate-400 md:bottom-auto md:left-auto md:right-[-5px] md:top-[21px]"
+                      className="absolute bottom-[-29px] left-[13px] h-4 w-4 text-orange-300/70 md:bottom-auto md:left-auto md:right-[-5px] md:top-[21px]"
                     />
                   ) : null}
                 </li>

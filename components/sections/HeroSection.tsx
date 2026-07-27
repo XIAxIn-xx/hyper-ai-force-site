@@ -34,8 +34,8 @@ export function HeroSection({ content }: HeroSectionProps) {
           bulgeStrength={88}
           glowRadius={260}
           waveAmplitude={0.75}
-          gradientFrom="rgba(103, 232, 249, 0.62)"
-          gradientTo="rgba(59, 130, 246, 0.38)"
+          gradientFrom="rgba(255, 177, 86, 0.62)"
+          gradientTo="rgba(249, 115, 22, 0.24)"
           glowColor="rgba(249, 115, 22, 0.58)"
         />
       </div>

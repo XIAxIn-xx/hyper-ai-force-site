@@ -39,13 +39,13 @@ function CapabilityMedia({ item }: { item: Capability }) {
   return (
     <div
       data-media-key={item.resourceKey}
-      className="relative min-h-[320px] overflow-hidden rounded-2xl border border-slate-200 bg-[#071019] shadow-[0_18px_50px_rgba(15,23,42,0.1)] lg:min-h-[440px]"
+      className="relative min-h-[320px] overflow-hidden rounded-2xl border border-white/10 bg-[#071019] shadow-[0_18px_50px_rgba(0,0,0,0.36)] lg:min-h-[440px]"
     >
       {item.mediaType === "image" && mediaImages.length ? (
         hasCustomMediaLayout ? (
           <div className={`absolute inset-0 grid ${mediaImages.length > 1 ? "grid-cols-2 gap-3 p-3" : "grid-cols-1"}`}>
             {mediaImages.map((image) => (
-              <div key={image.src} className="relative min-h-0 overflow-hidden rounded-xl bg-white">
+              <div key={image.src} className="relative min-h-0 overflow-hidden rounded-xl bg-[#F8FAFC]">
                 <Image
                   src={image.src}
                   alt={image.alt}
@@ -115,20 +115,20 @@ export function CapabilitySystemSection({ content }: CapabilitySystemSectionProp
   const { capabilities } = content;
 
   return (
-    <section id="technology" className="bg-white">
+    <section id="technology" className="bg-[#071019] text-white">
       <div>
         {capabilities.map((item, index) => {
           const mediaLeft = item.layout === "media-left";
-          const sectionBackground = index % 2 === 0 ? "bg-white" : "bg-[#FAF9F7]";
+          const sectionBackground = index % 2 === 0 ? "bg-[#071019]" : "bg-[#0B1520]";
 
           return (
-            <article key={item.number} className={`border-t border-slate-200 ${sectionBackground}`}>
+            <article key={item.number} className={`border-t border-white/10 ${sectionBackground}`}>
               <div className="section-shell grid gap-x-14 py-16 lg:min-h-[600px] lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:items-center lg:py-24">
                 <header className={`order-1 lg:row-start-1 ${mediaLeft ? "lg:col-start-2" : "lg:col-start-1"}`}>
-                  <p className="zh-eyebrow mt-0 text-base font-semibold text-slate-600">
+                  <p className="zh-eyebrow mt-0 text-base font-semibold text-slate-300">
                     <ZhText>{item.label}</ZhText>
                   </p>
-                  <h3 className="zh-title mt-4 max-w-xl text-[clamp(1.9rem,3vw,3rem)] font-bold leading-[1.14] tracking-[-0.02em] text-slate-950">
+                  <h3 className="zh-title mt-4 max-w-xl text-[clamp(1.9rem,3vw,3rem)] font-bold leading-[1.14] tracking-[-0.02em] text-slate-50">
                     <ZhText>{item.title}</ZhText>
                   </h3>
                 </header>
@@ -138,13 +138,13 @@ export function CapabilitySystemSection({ content }: CapabilitySystemSectionProp
                 </div>
 
                 <div className={`order-3 mt-8 lg:row-start-2 lg:mt-8 ${mediaLeft ? "lg:col-start-2" : "lg:col-start-1"}`}>
-                  <p className="zh-copy max-w-xl text-base leading-8 text-slate-600">
+                  <p className="zh-copy max-w-xl text-base leading-8 text-slate-300">
                     <ZhText>{item.description}</ZhText>
                   </p>
                   <ul className="mt-8 grid gap-x-6 gap-y-3 sm:grid-cols-2">
                     {item.capabilities.map((capability) => (
-                      <li key={capability} className="flex items-start gap-3 border-t border-slate-200 pt-3 text-sm font-medium leading-6 text-slate-700">
-                        <Check className="mt-1 h-4 w-4 shrink-0 text-orange-600" aria-hidden="true" />
+                      <li key={capability} className="flex items-start gap-3 border-t border-white/10 pt-3 text-sm font-medium leading-6 text-slate-200">
+                        <Check className="mt-1 h-4 w-4 shrink-0 text-orange-300" aria-hidden="true" />
                         <ZhText>{capability}</ZhText>
                       </li>
                     ))}

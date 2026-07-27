@@ -37,7 +37,7 @@ export function Header({ content }: HeaderProps) {
   }, []);
 
   const languageMenu = (className: string) => (
-    <div className={cn("rounded-lg border border-[#E6EAF0] bg-[#FAF9F7] p-1.5 shadow-[0_16px_36px_rgba(15,23,42,0.16)]", className)}>
+    <div className={cn("rounded-lg border border-white/10 bg-[#0D1721]/95 p-1.5 shadow-[0_18px_42px_rgba(0,0,0,0.34)] backdrop-blur-xl", className)}>
       {languageLinks.map((item) => (
         <Link
           key={item.lang}
@@ -45,9 +45,9 @@ export function Header({ content }: HeaderProps) {
           onClick={() => setLanguageOpen(false)}
           className={cn(
             "flex h-9 items-center rounded-md px-3 text-sm font-medium transition-colors",
-            content.lang === item.lang
-              ? "bg-orange-500 text-white"
-              : "text-slate-700 hover:bg-white hover:text-orange-600"
+              content.lang === item.lang
+                ? "bg-orange-500 text-white"
+              : "text-slate-300 hover:bg-white/10 hover:text-orange-200"
           )}
         >
           {item.label}
@@ -65,7 +65,7 @@ export function Header({ content }: HeaderProps) {
       className={cn(
         "inline-flex h-10 items-center gap-2 rounded-md border px-3 transition-colors",
         scrolled || open || languageOpen
-          ? "border-slate-300 bg-white/70 text-slate-900 hover:bg-white"
+          ? "border-white/15 bg-[#0D1721]/80 text-white hover:bg-white/10"
           : "border-white/15 text-white hover:bg-white/10"
       )}
     >
@@ -79,25 +79,21 @@ export function Header({ content }: HeaderProps) {
       className={cn(
         "fixed left-0 top-0 z-50 w-full border-b transition-all duration-300",
         scrolled || open
-          ? "border-[#E6EAF0]/80 bg-[#FAF9F7]/90 text-slate-950 shadow-[0_12px_36px_rgba(15,23,42,0.08)] backdrop-blur-xl"
+          ? "border-white/10 bg-[#071019]/92 text-white shadow-[0_12px_36px_rgba(0,0,0,0.28)] backdrop-blur-xl"
           : "border-white/10 bg-transparent text-white"
       )}
     >
       <div className="section-shell flex h-20 items-center justify-between">
         <Link href={homeHref} className="group flex flex-col items-start justify-center">
           <img
-            src={
-              scrolled || open
-                ? "/images/logo/ai-force-logo-dark.png"
-                : "/images/logo/ai-force-logo-light.png"
-            }
+            src="/images/logo/ai-force-logo-light.png"
             alt="AIForce"
             className="h-11 w-auto object-contain"
           />
           <span
             className={cn(
               "mt-0.5 whitespace-nowrap text-[10px] font-semibold leading-3 tracking-[0.12em]",
-              scrolled || open ? "text-slate-500" : "text-orange-100/80"
+              "text-orange-100/80"
             )}
           >
             {content.hero.slogan}
@@ -107,7 +103,7 @@ export function Header({ content }: HeaderProps) {
         <nav
           className={cn(
             "hidden items-center gap-7 text-sm transition-colors lg:flex",
-            scrolled || open ? "text-slate-700" : "text-slate-300"
+            "text-slate-300"
           )}
         >
           {content.nav.map((item) => (
@@ -116,7 +112,7 @@ export function Header({ content }: HeaderProps) {
               className={cn(
                 "transition",
                 content.lang !== "en" ? "zh-nav text-sm font-medium tracking-normal" : "",
-                scrolled || open ? "hover:text-orange-600" : "hover:text-orange-200"
+                "hover:text-orange-200"
               )}
               href={item.href}
             >
@@ -140,9 +136,7 @@ export function Header({ content }: HeaderProps) {
           <button
             className={cn(
               "inline-flex h-10 w-10 items-center justify-center rounded-md border transition-colors",
-              scrolled || open
-                ? "border-slate-300 bg-white/70 text-slate-900"
-                : "border-white/15 text-white"
+              "border-white/15 text-white hover:bg-white/10"
             )}
             aria-label="Toggle navigation"
             onClick={() => {
@@ -158,8 +152,8 @@ export function Header({ content }: HeaderProps) {
       {languageOpen ? <div className="absolute right-4 top-20 lg:hidden">{languageMenu("w-32")}</div> : null}
 
       {open ? (
-        <div className="border-t border-[#E6EAF0] bg-[#FAF9F7]/95 shadow-[0_18px_36px_rgba(15,23,42,0.08)] backdrop-blur-xl lg:hidden">
-          <div className="section-shell flex flex-col gap-4 py-5 text-sm text-slate-700">
+        <div className="border-t border-white/10 bg-[#071019]/95 shadow-[0_18px_36px_rgba(0,0,0,0.3)] backdrop-blur-xl lg:hidden">
+          <div className="section-shell flex flex-col gap-4 py-5 text-sm text-slate-300">
             {content.nav.map((item) => (
               <a
                 key={item.href}
@@ -168,7 +162,7 @@ export function Header({ content }: HeaderProps) {
                   setOpen(false);
                   setLanguageOpen(false);
                 }}
-                className="rounded-md px-2 py-2 hover:bg-white"
+                className="rounded-md px-2 py-2 hover:bg-white/10 hover:text-orange-200"
               >
                 {item.label}
               </a>
