@@ -77,6 +77,33 @@ type PatrolMapProps = {
 
 export function PatrolMap({ locale, snapshot }: PatrolMapProps) {
   const isChinese = locale !== "en";
+  const mapLabels =
+    locale === "zh-hk"
+      ? {
+          warehouse: "倉儲區",
+          utility: "配套設施區",
+          equipment: "設備區域",
+          charging: "充電區",
+          storage: "儲存區",
+          home: "起點"
+        }
+      : locale === "zh-cn"
+        ? {
+            warehouse: "仓储区",
+            utility: "配套设施区",
+            equipment: "设备区域",
+            charging: "充电区",
+            storage: "存储区",
+            home: "起点"
+          }
+        : {
+            warehouse: "WAREHOUSE",
+            utility: "UTILITY",
+            equipment: "EQUIPMENT ZONE",
+            charging: "CHARGING BAY",
+            storage: "STORAGE",
+            home: "HOME"
+          };
   const dog = getRoutePoint(snapshot.routeProgress);
   const connectorDot = getConnectorPoint(snapshot.dataFlowProgress);
   const currentPoint = snapshot.activePoint >= 0 ? CHECKPOINTS[snapshot.activePoint] : null;
@@ -155,11 +182,11 @@ export function PatrolMap({ locale, snapshot }: PatrolMapProps) {
       </g>
 
       <g className="rsp-map-labels" fill="#8eaaba" fontFamily="Inter, Arial, sans-serif" fontSize="12" letterSpacing="1.2">
-        <text x="196" y="196">WAREHOUSE</text>
-        <text x="536" y="197">UTILITY</text>
-        <text x="816" y="210">EQUIPMENT ZONE</text>
-        <text x="190" y="468">CHARGING BAY</text>
-        <text x="728" y="466">STORAGE</text>
+        <text x="196" y="196">{mapLabels.warehouse}</text>
+        <text x="536" y="197">{mapLabels.utility}</text>
+        <text x="816" y="210">{mapLabels.equipment}</text>
+        <text x="190" y="468">{mapLabels.charging}</text>
+        <text x="728" y="466">{mapLabels.storage}</text>
       </g>
 
       <path d={ROUTE_PATH} fill="none" stroke="#1d3445" strokeWidth="12" strokeLinecap="round" strokeLinejoin="round" />
@@ -258,7 +285,7 @@ export function PatrolMap({ locale, snapshot }: PatrolMapProps) {
         <rect x="-18" y="-15" width="44" height="26" rx="5" fill="#0c2633" stroke="#6bb8c9" strokeOpacity="0.8" />
         <path d="M -8 -4 H 16 M -8 3 H 10" stroke="#75d5e5" strokeWidth="2" strokeLinecap="round" />
         <circle cx="16" cy="-4" r="3" fill="#7de0bd" />
-        <text x="34" y="3" fill="#a9c3ce" fontSize="10" fontFamily="Inter, Arial, sans-serif">HOME</text>
+        <text x="34" y="3" fill="#a9c3ce" fontSize="10" fontFamily="Inter, Arial, sans-serif">{mapLabels.home}</text>
       </g>
     </svg>
   );

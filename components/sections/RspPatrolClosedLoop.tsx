@@ -17,7 +17,7 @@ type RspPatrolClosedLoopProps = {
 };
 
 export function RspPatrolClosedLoop({ locale, steps }: RspPatrolClosedLoopProps) {
-  const { sectionRef, snapshot, reducedMotion, isRunning } = usePatrolTimeline();
+  const { sectionRef, snapshot, reducedMotion, isRunning, seekToStage } = usePatrolTimeline();
   const isChinese = locale !== "en";
   const phaseCopy = isChinese
     ? {
@@ -48,11 +48,27 @@ export function RspPatrolClosedLoop({ locale, steps }: RspPatrolClosedLoopProps)
           <div className="absolute inset-0 transition-opacity duration-500" style={{ opacity: snapshot.visualOpacity }}>
             <PatrolMap locale={locale} snapshot={snapshot} />
           </div>
-          <RspControlPanel locale={locale} snapshot={snapshot} />
+          <RspControlPanel locale={locale} snapshot={snapshot} stageLabel={steps[snapshot.activeStage]?.label ?? steps[0]?.label ?? ""} />
           <PatrolStatusCard locale={locale} snapshot={snapshot} />
           <div className="absolute bottom-3 left-3 z-10 flex items-center gap-2 rounded-full border border-white/10 bg-[#06111b]/80 px-2.5 py-1 text-[9px] tracking-[0.08em] text-slate-400 backdrop-blur-md sm:bottom-5 sm:left-5">
             <span className={`h-1.5 w-1.5 rounded-full ${snapshot.anomaly ? "bg-[#ef7654]" : snapshot.complete ? "bg-emerald-300" : "bg-[#72d6ff]"}`} />
-            {snapshot.anomaly ? (isChinese ? "异常事件" : "EXCEPTION EVENT") : snapshot.complete ? (isChinese ? "闭环完成" : "LOOP COMPLETE") : "RSP / LIVE DIGITAL TWIN"}
+            {snapshot.anomaly
+              ? isChinese
+                ? locale === "zh-hk"
+                  ? "異常事件"
+                  : "异常事件"
+                : "EXCEPTION EVENT"
+              : snapshot.complete
+                ? isChinese
+                  ? locale === "zh-hk"
+                    ? "閉環完成"
+                    : "闭环完成"
+                  : "LOOP COMPLETE"
+                : isChinese
+                  ? locale === "zh-hk"
+                    ? "RSP / 即時數字孿生"
+                    : "RSP / 实时数字孪生"
+                  : "RSP / LIVE DIGITAL TWIN"}
           </div>
         </div>
       </div>
@@ -75,12 +91,19 @@ export function RspPatrolClosedLoop({ locale, steps }: RspPatrolClosedLoopProps)
                   <span aria-hidden="true" className={`absolute bottom-[-22px] left-5 top-12 w-px md:bottom-auto md:left-auto md:right-[-16px] md:top-7 md:h-px md:w-8 ${isComplete ? "bg-orange-300/60" : "bg-white/15"}`} />
                 ) : null}
                 <div className="flex min-w-0 gap-4 md:block md:w-full md:text-center">
-                  <span className={`relative z-10 flex h-14 w-14 shrink-0 items-center justify-center rounded-full border bg-white/[0.06] backdrop-blur-md transition-all duration-500 md:mx-auto ${isCurrent ? "border-orange-200 bg-orange-300/15 text-orange-100 shadow-[0_0_34px_rgba(249,115,22,0.3)]" : isComplete ? "border-orange-300/55 text-orange-200 shadow-[0_0_26px_rgba(249,115,22,0.14)]" : "border-orange-300/25 text-orange-200/75"}`}>
-                    <Icon className={`h-6 w-6 transition-transform duration-500 ${isCurrent ? "scale-110" : ""}`} aria-hidden="true" />
-                  </span>
-                  <p className={`zh-copy self-center pb-6 text-base font-semibold leading-7 transition-colors duration-500 md:mt-5 md:px-2 md:pb-0 ${isCurrent ? "text-white" : isComplete ? "text-slate-200" : "text-slate-100"}`}>
-                    <ZhText>{step.label}</ZhText>
-                  </p>
+                  <button
+                    type="button"
+                    onClick={() => seekToStage(index)}
+                    aria-current={isCurrent ? "step" : undefined}
+                    className="group block w-full text-left outline-none focus-visible:ring-2 focus-visible:ring-orange-300/80 md:text-center"
+                  >
+                    <span className={`relative z-10 flex h-14 w-14 shrink-0 items-center justify-center rounded-full border bg-white/[0.06] backdrop-blur-md transition-all duration-500 group-hover:border-orange-200/80 md:mx-auto ${isCurrent ? "border-orange-200 bg-orange-300/15 text-orange-100 shadow-[0_0_34px_rgba(249,115,22,0.3)]" : isComplete ? "border-orange-300/55 text-orange-200 shadow-[0_0_26px_rgba(249,115,22,0.14)]" : "border-orange-300/25 text-orange-200/75"}`}>
+                      <Icon className={`h-6 w-6 transition-transform duration-500 ${isCurrent ? "scale-110" : "group-hover:scale-105"}`} aria-hidden="true" />
+                    </span>
+                    <p className={`zh-copy self-center pb-6 text-base font-semibold leading-7 transition-colors duration-500 md:mt-5 md:px-2 md:pb-0 ${isCurrent ? "text-white" : isComplete ? "text-slate-200" : "text-slate-100"}`}>
+                      <ZhText>{step.label}</ZhText>
+                    </p>
+                  </button>
                 </div>
                 {!isLast ? <ArrowRight aria-hidden="true" className={`absolute bottom-[-29px] left-[13px] h-4 w-4 transition-colors duration-500 md:bottom-auto md:left-auto md:right-[-5px] md:top-[21px] ${isComplete ? "text-orange-300/80" : "text-orange-300/45"}`} /> : null}
               </li>

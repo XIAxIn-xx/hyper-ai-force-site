@@ -3,14 +3,24 @@
 import { useEffect, useRef, useState } from "react";
 
 export const PATROL_TIMELINE = {
-  duration: 14,
-  taskReadyEnd: 1.2,
-  routeDispatchEnd: 2.4,
-  patrolEnd: 7,
-  exceptionEnd: 9,
-  recordEnd: 11.5,
-  fadeStart: 13
+  duration: 26,
+  taskReadyEnd: 5,
+  routeDispatchEnd: 8,
+  sensingStart: 14,
+  patrolEnd: 17,
+  exceptionEnd: 21,
+  recordEnd: 24,
+  fadeStart: 25
 } as const;
+
+export const PATROL_STAGE_TIMES = [
+  0,
+  PATROL_TIMELINE.taskReadyEnd,
+  PATROL_TIMELINE.routeDispatchEnd,
+  PATROL_TIMELINE.sensingStart,
+  PATROL_TIMELINE.patrolEnd,
+  PATROL_TIMELINE.exceptionEnd
+] as const;
 
 export type PatrolPhase = "ready" | "dispatch" | "patrol" | "exception" | "return" | "complete";
 
@@ -33,7 +43,7 @@ const easeOut = (value: number) => 1 - (1 - value) ** 3;
 
 export function getPatrolSnapshot(elapsed: number): PatrolSnapshot {
   const time = ((elapsed % PATROL_TIMELINE.duration) + PATROL_TIMELINE.duration) % PATROL_TIMELINE.duration;
-  const { taskReadyEnd, routeDispatchEnd, patrolEnd, exceptionEnd, recordEnd, fadeStart } = PATROL_TIMELINE;
+  const { taskReadyEnd, routeDispatchEnd, sensingStart, patrolEnd, exceptionEnd, recordEnd, fadeStart } = PATROL_TIMELINE;
 
   let phase: PatrolPhase = "ready";
   let activeStage = 0;
@@ -41,10 +51,10 @@ export function getPatrolSnapshot(elapsed: number): PatrolSnapshot {
   if (time >= taskReadyEnd && time < routeDispatchEnd) {
     phase = "dispatch";
     activeStage = 1;
-  } else if (time >= routeDispatchEnd && time < 4.6) {
+  } else if (time >= routeDispatchEnd && time < sensingStart) {
     phase = "patrol";
     activeStage = 2;
-  } else if (time >= 4.6 && time < patrolEnd) {
+  } else if (time >= sensingStart && time < patrolEnd) {
     phase = "patrol";
     activeStage = 3;
   } else if (time >= patrolEnd && time < exceptionEnd) {
@@ -59,20 +69,20 @@ export function getPatrolSnapshot(elapsed: number): PatrolSnapshot {
   }
 
   const routeReveal =
-    time < taskReadyEnd
-      ? 0
-      : time < routeDispatchEnd
-        ? easeOut((time - taskReadyEnd) / (routeDispatchEnd - taskReadyEnd))
-        : 1;
+    time < taskReadyEnd ? easeOut(time / taskReadyEnd) : 1;
 
   const routeProgress =
     time < routeDispatchEnd
       ? 0
-      : time < patrolEnd
-        ? easeOut((time - routeDispatchEnd) / (patrolEnd - routeDispatchEnd)) * 0.92
-        : time < exceptionEnd
-          ? 0.92 + ((time - patrolEnd) / (exceptionEnd - patrolEnd)) * 0.08
-          : 1;
+      : time < sensingStart
+        ? easeOut((time - routeDispatchEnd) / (sensingStart - routeDispatchEnd)) * 0.56
+        : time < patrolEnd
+          ? 0.56 + easeOut((time - sensingStart) / (patrolEnd - sensingStart)) * 0.2
+          : time < exceptionEnd
+            ? 0.76
+            : time < recordEnd
+              ? 0.76 + easeOut((time - exceptionEnd) / (recordEnd - exceptionEnd)) * 0.24
+              : 1;
 
   const activePoint =
     time < routeDispatchEnd
@@ -169,5 +179,18 @@ export function usePatrolTimeline() {
     };
   }, [isInView, pageVisible, reducedMotion]);
 
-  return { sectionRef, snapshot, reducedMotion, isRunning: isInView && pageVisible && !reducedMotion };
+  const seekToStage = (stage: number) => {
+    const stageIndex = Math.min(Math.max(Math.floor(stage), 0), PATROL_STAGE_TIMES.length - 1);
+    const targetTime = PATROL_STAGE_TIMES[stageIndex];
+    elapsedRef.current = targetTime;
+    setSnapshot(getPatrolSnapshot(targetTime));
+  };
+
+  return {
+    sectionRef,
+    snapshot,
+    reducedMotion,
+    isRunning: isInView && pageVisible && !reducedMotion,
+    seekToStage
+  };
 }

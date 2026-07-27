@@ -59,8 +59,8 @@ const content = {
     switchLabel: "繁中",
     switchHref: "/zh-hk",
     nav: [
-      { label: "Solutions", href: "#technology" },
       { label: "Technology", href: "#technology" },
+      { label: "Solutions", href: "#solutions" },
       { label: "Applications", href: "#applications" },
       { label: "Collaboration", href: "#collaboration" },
       { label: "About us", href: "#about" }
@@ -128,7 +128,7 @@ const content = {
       {
         number: "01",
         label: "Core Capability · Autonomous Patrol",
-        title: "Robots that carry out routine inspection autonomously",
+        title: "Autonomous Navigation, Localisation and Patrol Execution",
         description:
           "Mapping, localisation, route planning and dynamic obstacle avoidance let robots follow predefined routes for repeatable patrol and inspection.",
         capabilities: [
@@ -151,7 +151,7 @@ const content = {
       {
         number: "02",
         label: "Core Capability · Teleoperation",
-        title: "Remote intervention and direct control when human judgement is needed",
+        title: "Low-Latency Teleoperation and Exception Intervention",
         description:
           "A remote operator can connect to the on-site robot and take control during exceptions, difficult terrain or situations requiring human judgement, with low-latency video and control.",
         capabilities: [
@@ -174,7 +174,7 @@ const content = {
       {
         number: "03",
         label: "Software Solution · RSP",
-        title: "A software platform for robot, task and inspection-data orchestration",
+        title: "Robot Task Orchestration and Inspection Data Management",
         description:
           "RSP is our robot operations software platform, supporting map management, task dispatch, device monitoring, remote control and inspection-record management.",
         capabilities: [
@@ -197,7 +197,7 @@ const content = {
       {
         number: "04",
         label: "Hardware Solution · Backpack and Sensor Integration",
-        title: "Scenario-specific integration of backpacks and sensor payloads",
+        title: "Scenario-Specific Backpack and Multi-Sensor Payload Integration",
         description:
           "Hardware backpacks, sensor payloads and interface integration equip robots with the sensing, data-acquisition and task-specific hardware they need.",
         capabilities: [
@@ -358,8 +358,8 @@ const content = {
     switchLabel: "EN",
     switchHref: "/",
     nav: [
-      { label: "解決方案", href: "#technology" },
       { label: "技術能力", href: "#technology" },
+      { label: "解決方案", href: "#solutions" },
       { label: "應用場景", href: "#applications" },
       { label: "合作模式", href: "#collaboration" },
       { label: "關於我們", href: "#about" }
@@ -422,7 +422,7 @@ const content = {
       {
         number: "01",
         label: "核心能力 · 自主巡航",
-        title: "讓機器人自主完成日常巡檢任務",
+        title: "自主導航、定位與巡檢執行",
         description:
           "基於地圖構建、定位、路徑規劃與動態避障，支援機器人按照預設路線持續開展巡檢與巡邏。",
         capabilities: ["地圖構建與定位", "路徑規劃與動態避障", "預設路線自主執行", "現場狀態持續回傳"],
@@ -440,7 +440,7 @@ const content = {
       {
         number: "02",
         label: "核心能力 · 遠程遙操",
-        title: "複雜情況下，遠程介入並直接控制機器人",
+        title: "低延遲遠程遙操與異常干預",
         description:
           "透過遠程操作端接入現場機器人，在異常、複雜地形或需要人工判斷時，實現低延遲畫面回傳與遠程控制。",
         capabilities: ["遠程設備接入", "低延遲畫面回傳", "自主與人工模式切換", "異常情況下快速介入"],
@@ -458,7 +458,7 @@ const content = {
       {
         number: "03",
         label: "軟件方案 · RSP",
-        title: "統一調度機器人、任務與巡檢數據",
+        title: "機器人任務調度與巡檢數據管理",
         description:
           "RSP 是面向機器人運營的軟件平台，支援地圖管理、任務調度、設備監控、遠程控制與巡檢記錄管理。",
         capabilities: ["地圖與任務管理", "多機器人統一調度", "設備狀態與告警監控", "巡檢記錄與數據管理"],
@@ -476,7 +476,7 @@ const content = {
       {
         number: "04",
         label: "硬件方案 · 背包與傳感器集成",
-        title: "按場景集成背包與傳感器載荷",
+        title: "場景化背包與多傳感器載荷集成",
         description:
           "透過硬件背包、傳感器載荷與接口集成，為機器人配置環境感知、數據採集與任務執行所需的硬件能力。",
         capabilities: ["模組化硬件組合", "多類型傳感器集成", "現場數據採集", "按場景擴展載荷"],
@@ -626,8 +626,8 @@ const content = {
     switchLabel: "EN",
     switchHref: "/",
     nav: [
-      { label: "解决方案", href: "#technology" },
       { label: "技术能力", href: "#technology" },
+      { label: "解决方案", href: "#solutions" },
       { label: "应用场景", href: "#applications" },
       { label: "合作模式", href: "#collaboration" },
       { label: "关于我们", href: "#about" }
@@ -690,7 +690,7 @@ const content = {
       {
         number: "01",
         label: "核心能力 · 自主巡航",
-        title: "让机器人自主完成日常巡检任务",
+        title: "自主导航、定位与巡检执行",
         description:
           "基于地图构建、定位、路径规划与动态避障，支持机器人按照预设路线持续开展巡检和巡逻。",
         capabilities: ["地图构建与定位", "路径规划与动态避障", "预设路线自主执行", "现场状态持续回传"],
@@ -708,7 +708,7 @@ const content = {
       {
         number: "02",
         label: "核心能力 · 远程遥操",
-        title: "复杂情况下，远程介入并直接控制机器人",
+        title: "低延迟远程遥操与异常干预",
         description:
           "通过远程操作端接入现场机器人，在异常、复杂地形或需要人工判断时，实现低延迟画面回传与远程控制。",
         capabilities: ["远程设备接入", "低延迟画面回传", "自主与人工模式切换", "异常情况下快速介入"],
@@ -726,7 +726,7 @@ const content = {
       {
         number: "03",
         label: "软件方案 · RSP",
-        title: "统一调度机器人、任务与巡检数据",
+        title: "机器人任务调度与巡检数据管理",
         description:
           "RSP 是面向机器人运营的软件平台，支持地图管理、任务调度、设备监控、远程控制与巡检记录管理。",
         capabilities: ["地图与任务管理", "多机器人统一调度", "设备状态与告警监控", "巡检记录与数据管理"],
@@ -744,7 +744,7 @@ const content = {
       {
         number: "04",
         label: "硬件方案 · 背包与传感器集成",
-        title: "按场景集成背包与传感器载荷",
+        title: "场景化背包与多传感器载荷集成",
         description:
           "通过硬件背包、传感器载荷与接口集成，为机器人配置环境感知、数据采集与任务执行所需的硬件能力。",
         capabilities: ["模块化硬件组合", "多类型传感器集成", "现场数据采集", "按场景扩展载荷"],
