@@ -127,22 +127,22 @@ const content = {
     capabilities: [
       {
         number: "01",
-        label: "Core Capability · Autonomous Patrol",
+        label: "Core Capability · Autonomous Navigation",
         title: "Perceive Autonomously. Navigate Anywhere.",
         description:
-          "Mapping, localisation, route planning and dynamic obstacle avoidance let robots follow predefined routes for repeatable patrol and inspection.",
+          "Autonomous navigation combines multimodal perception, real-time localization, intelligent path planning, and dynamic obstacle avoidance to enable autonomous inspection and continuous operation in complex environments.",
         capabilities: [
-          "Mapping and Localisation",
-          "Route Planning and Dynamic Obstacle Avoidance",
-          "Predefined-Route Autonomous Execution",
-          "Continuous On-Site Status Reporting"
+          "Multimodal Perception",
+          "Real-Time Localization",
+          "Intelligent Path Planning",
+          "Dynamic Obstacle Avoidance"
         ],
         layout: "media-left",
         mediaType: "video",
         mediaSrc: "/videos/autonomous-patrol.mp4",
         poster: "/images/capabilities/autonomous-patrol-poster.jpg",
         mediaAlt: "Robot conducting an inspection at a logistics facility",
-        mediaNote: "Autonomous patrol footage",
+        mediaNote: "Autonomous Inspection in Complex Environments",
         mediaSlots: [],
         resourceKey: "media.autonomousPatrol",
         mediaPlaceholderText: "Approved real media can replace this asset through the field above.",
@@ -151,21 +151,21 @@ const content = {
       {
         number: "02",
         label: "Core Capability · Teleoperation",
-        title: "Low-Latency Teleoperation and Exception Intervention",
+        title: "Step In. Take Control.",
         description:
-          "When unexpected conditions, challenging terrain, or situations requiring human judgment arise, a remote operator can seamlessly connect to the on-site robot and take control.",
+          "When unexpected conditions, challenging terrain, or situations requiring human judgment arise, remote operators can seamlessly connect to on-site robots, access low-latency live video, and assume manual control.",
         capabilities: [
-          "Remote Device Access",
-          "Low-Latency Video Transmission",
-          "Autonomous/Manual Mode Switching",
-          "Rapid Intervention for Exceptions"
+          "Remote Robot Access",
+          "Low-Latency Video and Control",
+          "Seamless Manual Handover",
+          "Rapid Exception Response"
         ],
         layout: "media-right",
         mediaType: "image",
         mediaSrc: "/images/capabilities/teleoperation.png",
         poster: null,
         mediaAlt: "Remote teleoperation workstation",
-        mediaNote: "Remote teleoperation workstation",
+        mediaNote: "Teleoperation Workstation",
         mediaSlots: [],
         resourceKey: "media.remoteTeleoperation",
         mediaPlaceholderText: "Approved real media can replace this asset through the field above.",
@@ -173,22 +173,22 @@ const content = {
       },
       {
         number: "03",
-        label: "Software Solution · RSP",
-        title: "Robot Task Orchestration and Inspection Data Management",
+        label: "Software Platform · RSP",
+        title: "Unify Operations. Orchestrate at Scale.",
         description:
-          "RSP is our robot scheduling platform.",
+          "RSP(Robot Scheduling Platform) unifies robots, charging infrastructure, perception devices, and business systems in one platform, enabling centralized mission orchestration, fleet monitoring, and inspection data management across multi-robot operations.",
         capabilities: [
-          "Map and Task Management",
-          "Unified Multi-Robot Dispatch",
-          "Device Status and Alert Monitoring",
-          "Inspection Records and Data Management"
+          "Robot and System Integration",
+          "Map and Mission Management",
+          "Multi-Robot Scheduling and Dispatch",
+          "Fleet Monitoring and Data Management"
         ],
         layout: "media-left",
         mediaType: "image",
         mediaSrc: "/images/capabilities/rsp-platform.png",
         poster: null,
         mediaAlt: "RSP robot operations platform interface",
-        mediaNote: "RSP software platform",
+        mediaNote: "Robot Scheduling Platform",
         mediaSlots: [],
         resourceKey: "media.rspPlatform",
         mediaPlaceholderText: "Approved real media can replace this asset through the field above.",
@@ -196,22 +196,22 @@ const content = {
       },
       {
         number: "04",
-        label: "Hardware Solution · Backpack and Sensor Integration",
-        title: "Scenario-Specific Backpack and Multi-Sensor Payload Integration",
+        label: "Core Capability · Modular Payloads",
+        title: "Adaptable Payloads. Expanded Perception.",
         description:
-          "Hardware backpacks, sensor payloads and interface integration equip robots with the sensing, data-acquisition and task-specific hardware they need.",
+          "The modular backpack supports flexible integration of sensors and mission payloads for different inspection scenarios, enabling reliable data acquisition, real-time transmission, and seamless platform connectivity.",
         capabilities: [
-          "Modular Hardware Configuration",
-          "Multi-Sensor Integration",
-          "On-Site Data Acquisition",
-          "Scenario-Specific Payload Expansion"
+          "Modular Payload Integration",
+          "Multi-Sensor Compatibility",
+          "Scenario-Based Configuration",
+          "Data Collection and Platform Sync"
         ],
         layout: "media-right",
         mediaType: "image",
         mediaSrc: "/images/capabilities/backpack-sensors.png",
         poster: null,
         mediaAlt: "Hardware backpack and sensor payloads",
-        mediaNote: "Backpack and sensor integration",
+        mediaNote: "Modular Backpack and Sensor Payloads",
         mediaSlots: [],
         resourceKey: "media.hardwareIntegration",
         mediaPlaceholderText: "Approved real media can replace this asset through the field above.",
@@ -220,7 +220,7 @@ const content = {
     ],
     applications: {
       eyebrow: "Applications",
-      title: "Built for environments that prioritise safety, coverage and stable operation",
+      title: "Built for environments that prioritise safety, comprehensive coverage, and reliable operation.",
       items: [
         {
           icon: "Map",
@@ -269,7 +269,7 @@ const content = {
       ],
     },
     service: {
-      title: "Built for environments that prioritize safety, comprehensive coverage, and reliable operation.",
+      title: "Flexible Engagement, Tailored Deployment",
       copy:
         "Choose leasing, modular enablement or full-stack delivery based on your project stage, application scenario and operating model, with support from deployment delivery through ongoing operations and maintenance.",
       items: [
@@ -282,8 +282,8 @@ const content = {
       eyebrow: "About Hyper AIForce",
       title: "Integrated Provider of Robotic Security Solutions",
       copy: [
-        "Hyper AIForce deploys robots for physical-security applications, including security patrol, warehousing and logistics, and community security. We combine autonomous patrol, teleoperation and multi-robot scheduling with end-to-end deployment and operations support.",
-        "We use robots for night-time, repetitive and high-risk tasks, with remote operators intervening when needed. Customers gain wider inspection coverage, lower personnel exposure and more reliable operations."
+        "Hyper AIForce deploys robots for physical-security applications, including security patrol, warehousing and logistics, and community security. Its offering combines autonomous patrol, teleoperation and multi-robot scheduling with end-to-end deployment and operations support.",
+        "Robots handle night-time, repetitive and high-risk tasks, with remote operators intervening when needed. Customers gain wider inspection coverage, lower personnel exposure and more reliable operations."
       ],
       bullets: [
         "Embodied intelligence for physical-world industries",
@@ -424,14 +424,14 @@ const content = {
         label: "核心能力 · 自主巡航",
         title: "自主感知，全域巡航",
         description:
-          "基於地圖構建、定位、路徑規劃與動態避障，支援機器人按照預設路線持續開展巡檢與巡邏。",
-        capabilities: ["地圖構建與定位", "路徑規劃與動態避障", "預設路線自主執行", "現場狀態持續回傳"],
+          "自主巡航融合多模態環境感知、實時定位、智能路徑規劃與動態障礙物避讓，實現複雜場景下的自主巡檢與持續作業。",
+        capabilities: ["多模態環境感知", "實時定位", "智能路徑規劃", "動態障礙物避讓"],
         layout: "media-left",
         mediaType: "video",
         mediaSrc: "/videos/autonomous-patrol.mp4",
         poster: "/images/capabilities/autonomous-patrol-poster.jpg",
         mediaAlt: "在物流設施進行巡檢的機器人",
-        mediaNote: "自主巡航實拍視頻",
+        mediaNote: "複雜環境自主巡檢",
         mediaSlots: [],
         resourceKey: "media.autonomousPatrol",
         mediaPlaceholderText: "可通過上方字段替換為已確認的真實素材。",
@@ -439,17 +439,17 @@ const content = {
       },
       {
         number: "02",
-        label: "核心能力 · 遠程遙操",
-        title: "低延遲遠程遙操與異常干預",
+        label: "核心能力 · 遠程操控",
+        title: "即時介入，精準接管",
         description:
-          "當遇到突發狀況、複雜地形或需要人工判斷的情形時，遠程操作員可以無縫連接現場機器人並接管控制。",
-        capabilities: ["遠程設備接入", "低延遲畫面回傳", "自主與人工模式切換", "異常情況下快速介入"],
+          "當遇到突發狀況、複雜地形或需要人工判斷的情形時，遠程操作員可無縫連接現場機器人，通過低延遲即時視頻切換至人工操控。",
+        capabilities: ["遠程機器人接入", "低延遲視頻與控制", "自主與人工模式無縫切換", "異常情況快速響應"],
         layout: "media-right",
         mediaType: "image",
         mediaSrc: "/images/capabilities/teleoperation.png",
         poster: null,
         mediaAlt: "遠程遙操工作台",
-        mediaNote: "遠程遙操工作台",
+        mediaNote: "遠程操控工作站",
         mediaSlots: [],
         resourceKey: "media.remoteTeleoperation",
         mediaPlaceholderText: "可通過上方字段替換為已確認的真實素材。",
@@ -457,17 +457,17 @@ const content = {
       },
       {
         number: "03",
-        label: "軟件方案 · RSP",
-        title: "機器人任務調度與巡檢數據管理",
+        label: "軟件平台 · RSP",
+        title: "統一接入，協同調度",
         description:
-          "RSP 是我們的機器人調度平台。",
-        capabilities: ["地圖與任務管理", "多機器人統一調度", "設備狀態與告警監控", "巡檢記錄與數據管理"],
+          "RSP（機器人調度平台）將機器人、充電設施、感知設備與業務系統統一接入一個平台，實現集中任務編排、機器人集群監控與巡檢數據管理，為多機器人、多場景部署提供靈活且可擴展的平台基礎。",
+        capabilities: ["機器人與業務系統集成", "地圖與任務管理", "多機器人統一調度", "設備監控與巡檢數據管理"],
         layout: "media-left",
         mediaType: "image",
         mediaSrc: "/images/capabilities/rsp-platform.png",
         poster: null,
         mediaAlt: "RSP 機器人調度平台界面",
-        mediaNote: "RSP 軟件平台",
+        mediaNote: "機器人調度平台",
         mediaSlots: [],
         resourceKey: "media.rspPlatform",
         mediaPlaceholderText: "可通過上方字段替換為已確認的真實素材。",
@@ -475,17 +475,17 @@ const content = {
       },
       {
         number: "04",
-        label: "硬件方案 · 背包與傳感器集成",
-        title: "場景化背包與多傳感器載荷集成",
+        label: "核心能力 · 模塊化拓展",
+        title: "靈活搭載，按需感知",
         description:
-          "透過硬件背包、傳感器載荷與接口集成，為機器人配置環境感知、數據採集與任務執行所需的硬件能力。",
-        capabilities: ["模組化硬件組合", "多類型傳感器集成", "現場數據採集", "按場景擴展載荷"],
+          "模塊化背包支援多類型傳感器與任務載荷的靈活集成，可根據不同巡檢場景快速配置，實現環境數據採集、即時傳輸與平台協同，持續拓展機器人的感知與作業能力。",
+        capabilities: ["模塊化任務載荷集成", "多類型傳感器兼容", "場景化靈活配置", "數據採集與平台同步"],
         layout: "media-right",
         mediaType: "image",
         mediaSrc: "/images/capabilities/backpack-sensors.png",
         poster: null,
         mediaAlt: "硬件背包與傳感器載荷",
-        mediaNote: "背包與傳感器集成",
+        mediaNote: "模塊化背包與傳感器",
         mediaSlots: [],
         resourceKey: "media.hardwareIntegration",
         mediaPlaceholderText: "可通過上方字段替換為已確認的真實素材。",
@@ -494,7 +494,7 @@ const content = {
     ],
     applications: {
       eyebrow: "應用場景",
-      title: "服務於重視安全、覆蓋與穩定運行的場景",
+      title: "專為注重安全、全面覆蓋與穩定運行的場景而打造。",
       items: [
         {
           icon: "Map",
@@ -545,7 +545,7 @@ const content = {
     },
     service: {
       
-      title: "專為注重安全、全面覆蓋與穩定運行的場景而打造。",
+      title: "靈活合作，按需部署",
       copy:
         "根據項目階段、應用場景與營運方式，靈活選擇租賃、模組化賦能或全棧式交付，並獲得從部署交付到持續運維的支持。",
       items: [
@@ -692,14 +692,14 @@ const content = {
         label: "核心能力 · 自主巡航",
         title: "自主感知，全域巡航",
         description:
-          "基于地图构建、定位、路径规划与动态避障，支持机器人按照预设路线持续开展巡检和巡逻。",
-        capabilities: ["地图构建与定位", "路径规划与动态避障", "预设路线自主执行", "现场状态持续回传"],
+          "自主巡航融合多模态环境感知、实时定位、智能路径规划与动态避障，实现复杂场景下的自主巡检与持续作业。",
+        capabilities: ["多模态环境感知", "实时定位", "智能路径规划", "动态障碍物避让"],
         layout: "media-left",
         mediaType: "video",
         mediaSrc: "/videos/autonomous-patrol.mp4",
         poster: "/images/capabilities/autonomous-patrol-poster.jpg",
         mediaAlt: "在物流设施内进行巡检的机器人",
-        mediaNote: "自主巡航实拍视频",
+        mediaNote: "复杂环境自主巡检",
         mediaSlots: [],
         resourceKey: "media.autonomousPatrol",
         mediaPlaceholderText: "可通过上方字段替换为已确认的真实素材。",
@@ -707,17 +707,17 @@ const content = {
       },
       {
         number: "02",
-        label: "核心能力 · 远程遥操",
-        title: "低延迟远程遥操与异常干预",
+        label: "核心能力 · 远程操控",
+        title: "即时介入，精准接管",
         description:
-          "当遇到突发状况、复杂地形或需要人工判断的情形时，远程操作员可以无缝连接现场机器人并接管控制。",
-        capabilities: ["远程设备接入", "低延迟画面回传", "自主与人工模式切换", "异常情况下快速介入"],
+          "当遇到突发状况、复杂地形或需要人工判断的情形时，远程操作员可无缝连接现场机器人，通过低延迟实时视频切换至人工操控。",
+        capabilities: ["远程机器人接入", "低延迟视频与控制", "自主与人工模式无缝切换", "异常情况快速响应"],
         layout: "media-right",
         mediaType: "image",
         mediaSrc: "/images/capabilities/teleoperation.png",
         poster: null,
         mediaAlt: "远程遥操工作台",
-        mediaNote: "远程遥操工作台",
+        mediaNote: "远程操控工作站",
         mediaSlots: [],
         resourceKey: "media.remoteTeleoperation",
         mediaPlaceholderText: "可通过上方字段替换为已确认的真实素材。",
@@ -725,17 +725,17 @@ const content = {
       },
       {
         number: "03",
-        label: "软件方案 · RSP",
-        title: "机器人任务调度与巡检数据管理",
+        label: "软件平台 · RSP",
+        title: "统一接入，协同调度",
         description:
-          "RSP 是我们的机器人调度平台。",
-        capabilities: ["地图与任务管理", "多机器人统一调度", "设备状态与告警监控", "巡检记录与数据管理"],
+          "RSP(机器人调度平台) 将机器人、充电设施、感知设备与业务系统统一接入一个平台，实现集中任务编排、机器人集群监控与巡检数据管理，为多机器人、多场景部署提供灵活且可扩展的平台基础。",
+        capabilities: ["机器人与业务系统集成", "地图与任务管理", "多机器人统一调度", "设备监控与巡检数据管理"],
         layout: "media-left",
         mediaType: "image",
         mediaSrc: "/images/capabilities/rsp-platform.png",
         poster: null,
         mediaAlt: "RSP 机器人调度平台界面",
-        mediaNote: "RSP 软件平台",
+        mediaNote: "机器人调度平台",
         mediaSlots: [],
         resourceKey: "media.rspPlatform",
         mediaPlaceholderText: "可通过上方字段替换为已确认的真实素材。",
@@ -743,17 +743,17 @@ const content = {
       },
       {
         number: "04",
-        label: "硬件方案 · 背包与传感器集成",
-        title: "场景化背包与多传感器载荷集成",
+        label: "核心能力 · 模块化拓展",
+        title: "灵活搭载，按需感知",
         description:
-          "通过硬件背包、传感器载荷与接口集成，为机器人配置环境感知、数据采集与任务执行所需的硬件能力。",
-        capabilities: ["模块化硬件组合", "多类型传感器集成", "现场数据采集", "按场景扩展载荷"],
+          "模块化背包支持多类型传感器与任务载荷的灵活集成，可根据不同巡检场景快速配置，实现环境数据采集、实时传输与平台协同，持续拓展机器人的感知与作业能力。",
+        capabilities: ["模块化任务载荷集成", "多类型传感器兼容", "场景化灵活配置", "数据采集与平台同步"],
         layout: "media-right",
         mediaType: "image",
         mediaSrc: "/images/capabilities/backpack-sensors.png",
         poster: null,
         mediaAlt: "硬件背包与传感器载荷",
-        mediaNote: "背包与传感器集成",
+        mediaNote: "模块化背包与传感器",
         mediaSlots: [],
         resourceKey: "media.hardwareIntegration",
         mediaPlaceholderText: "可通过上方字段替换为已确认的真实素材。",
@@ -762,7 +762,7 @@ const content = {
     ],
     applications: {
       eyebrow: "应用场景",
-      title: "服务于重视安全、覆盖与稳定运行的场景",
+      title: "专为注重安全、全面覆盖与稳定运行的场景而打造。",
       items: [
         {
           icon: "Map",
@@ -813,7 +813,7 @@ const content = {
     },
     service: {
 
-      title: "专为注重安全、全面覆盖与稳定运行的场景而打造。",
+      title: "灵活合作，按需部署",
       copy:
         "根据项目阶段、应用场景与运营方式，灵活选择租赁、模块化赋能或全栈式交付，并获得从部署交付到持续运维的支持。",
       items: [
