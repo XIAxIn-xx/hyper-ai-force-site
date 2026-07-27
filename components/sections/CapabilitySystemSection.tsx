@@ -16,14 +16,7 @@ type CapabilitySystemSectionProps = {
 
 function CapabilityMedia({ item }: { item: Capability }) {
   const [reducedMotion, setReducedMotion] = useState<boolean | null>(null);
-  const mediaImages =
-    "mediaImages" in item
-      ? item.mediaImages
-      : item.mediaSrc
-        ? [{ src: item.mediaSrc, alt: item.mediaAlt }]
-        : [];
-  const hasCustomMediaLayout = "mediaImages" in item || "mediaFit" in item;
-  const mediaFit = "mediaFit" in item && item.mediaFit === "contain" ? "object-contain" : "object-cover";
+  const mediaImage = item.mediaSrc ? { src: item.mediaSrc, alt: item.mediaAlt } : null;
 
   useEffect(() => {
     const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -39,32 +32,18 @@ function CapabilityMedia({ item }: { item: Capability }) {
   return (
     <div
       data-media-key={item.resourceKey}
-      className="relative min-h-[320px] overflow-hidden rounded-2xl border border-white/10 bg-[#071019] shadow-[0_18px_50px_rgba(0,0,0,0.36)] lg:min-h-[440px]"
+      className={`relative overflow-hidden rounded-2xl border border-white/10 bg-[#071019] shadow-[0_18px_50px_rgba(0,0,0,0.36)] ${
+        item.mediaType === "image" ? "aspect-[16/9]" : "min-h-[320px] lg:min-h-[440px]"
+      }`}
     >
-      {item.mediaType === "image" && mediaImages.length ? (
-        hasCustomMediaLayout ? (
-          <div className={`absolute inset-0 grid ${mediaImages.length > 1 ? "grid-cols-2 gap-3 p-3" : "grid-cols-1"}`}>
-            {mediaImages.map((image) => (
-              <div key={image.src} className="relative min-h-0 overflow-hidden rounded-xl bg-[#F8FAFC]">
-                <Image
-                  src={image.src}
-                  alt={image.alt}
-                  fill
-                  sizes="(max-width: 1023px) 100vw, 50vw"
-                  className={mediaFit}
-                />
-              </div>
-            ))}
-          </div>
-        ) : (
-          <Image
-            src={mediaImages[0]!.src}
-            alt={mediaImages[0]!.alt}
-            fill
-            sizes="(max-width: 1023px) 100vw, 50vw"
-            className="object-cover"
-          />
-        )
+      {item.mediaType === "image" && mediaImage ? (
+        <Image
+          src={mediaImage.src}
+          alt={mediaImage.alt}
+          fill
+          sizes="(max-width: 1023px) 100vw, 50vw"
+          className="object-cover"
+        />
       ) : null}
 
       {item.mediaType === "video" && item.poster ? (
