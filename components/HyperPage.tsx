@@ -25,8 +25,8 @@ export function HyperPage({ locale }: HyperPageProps) {
       <Header content={content} />
       <main>
         <HeroSection content={content} />
-        <StackOverviewSection content={content} />
         <CapabilitySystemSection content={content} />
+        <StackOverviewSection content={content} />
         <ApplicationsSection content={content} />
         <CaseStudySection content={content} />
         <ServiceNetworkSection content={content} />

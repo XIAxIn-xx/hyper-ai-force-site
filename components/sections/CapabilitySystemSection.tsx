@@ -125,8 +125,7 @@ export function CapabilitySystemSection({ content }: CapabilitySystemSectionProp
             <article key={item.number} className={`border-t border-slate-200 ${sectionBackground}`}>
               <div className="section-shell grid gap-x-14 py-16 lg:min-h-[600px] lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:items-center lg:py-24">
                 <header className={`order-1 lg:row-start-1 ${mediaLeft ? "lg:col-start-2" : "lg:col-start-1"}`}>
-                  <p className="text-sm font-semibold tracking-[0.24em] text-orange-600">{item.number}</p>
-                  <p className="zh-eyebrow mt-4 text-base font-semibold text-slate-600">
+                  <p className="zh-eyebrow mt-0 text-base font-semibold text-slate-600">
                     <ZhText>{item.label}</ZhText>
                   </p>
                   <h3 className="zh-title mt-4 max-w-xl text-[clamp(1.9rem,3vw,3rem)] font-bold leading-[1.14] tracking-[-0.02em] text-slate-950">
