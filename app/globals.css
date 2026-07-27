@@ -75,6 +75,78 @@ body {
   .rail-scan {
     animation: none;
   }
+
+  .rsp-point-pulse,
+  .rsp-radar-ring,
+  .rsp-anomaly-pulse {
+    animation: none !important;
+  }
+}
+
+@keyframes rsp-point-pulse {
+  0%,
+  100% {
+    opacity: 0.38;
+    transform: scale(0.9);
+  }
+
+  50% {
+    opacity: 0.8;
+    transform: scale(1.08);
+  }
+}
+
+@keyframes rsp-radar-ring {
+  from {
+    opacity: 0.18;
+    transform: scale(0.82);
+  }
+
+  to {
+    opacity: 0.64;
+    transform: scale(1.1);
+  }
+}
+
+@keyframes rsp-anomaly-pulse {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: scale(0.85);
+  }
+
+  50% {
+    opacity: 0.8;
+    transform: scale(1.08);
+  }
+}
+
+.rsp-point-pulse {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: rsp-point-pulse 1.6s ease-in-out infinite;
+}
+
+.rsp-radar-ring {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: rsp-radar-ring 1.8s ease-out infinite alternate;
+}
+
+.rsp-anomaly-pulse {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: rsp-anomaly-pulse 1.2s ease-in-out infinite;
+}
+
+@media (max-width: 767px) {
+  .rsp-map-building-lines {
+    opacity: 0.52;
+  }
+
+  .rsp-map-labels {
+    opacity: 0.72;
+  }
 }
 
 .pretty-copy h1,

@@ -60,6 +60,7 @@ const content = {
     switchHref: "/zh-hk",
     nav: [
       { label: "Solutions", href: "#technology" },
+      { label: "Technology", href: "#technology" },
       { label: "Applications", href: "#applications" },
       { label: "Collaboration", href: "#collaboration" },
       { label: "About us", href: "#about" }
@@ -311,8 +312,8 @@ const content = {
       options: [
         "Autonomous Patrol",
         "Teleoperation",
-        "AI Inspection",
-        "RSP Platform",
+        "RSP",
+        "Backpack and Sensors",
         "Others"
       ],
       countryCodes: [
@@ -358,6 +359,7 @@ const content = {
     switchHref: "/",
     nav: [
       { label: "解決方案", href: "#technology" },
+      { label: "技術能力", href: "#technology" },
       { label: "應用場景", href: "#applications" },
       { label: "合作模式", href: "#collaboration" },
       { label: "關於我們", href: "#about" }
@@ -582,7 +584,7 @@ const content = {
         interest: "感興趣的產品 / 方案",
         message: "需求描述"
       },
-      options: ["自主巡航", "遠程遙操", "AI巡檢", "RSP平台", "其他"],
+      options: ["自主巡航", "遠程遙操", "RSP", "背包與傳感器", "其他"],
       countryCodes: [
         { value: "+852", label: "香港（+852）" },
         { value: "+86", label: "中國內地（+86）" },
@@ -625,6 +627,7 @@ const content = {
     switchHref: "/",
     nav: [
       { label: "解决方案", href: "#technology" },
+      { label: "技术能力", href: "#technology" },
       { label: "应用场景", href: "#applications" },
       { label: "合作模式", href: "#collaboration" },
       { label: "关于我们", href: "#about" }
@@ -849,7 +852,7 @@ const content = {
         interest: "感兴趣的产品 / 方案",
         message: "需求描述"
       },
-      options: ["自主巡航", "远程遥操", "AI巡检", "RSP平台", "其他"],
+      options: ["自主巡航", "远程遥操", "RSP", "背包与传感器", "其他"],
       countryCodes: [
         { value: "+852", label: "香港（+852）" },
         { value: "+86", label: "中国内地（+86）" },
