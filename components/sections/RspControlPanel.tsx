@@ -57,7 +57,7 @@ export function RspControlPanel({ locale, snapshot, stageLabel }: RspControlPane
   const progress = Math.round(snapshot.routeProgress * 100);
 
   return (
-    <aside className="rsp-control-panel absolute left-3 top-3 z-10 w-[clamp(164px,22vw,236px)] rounded-xl border border-[#4f91b1]/45 bg-[#081522]/90 p-3 text-white shadow-[0_16px_36px_rgba(0,0,0,0.28)] backdrop-blur-md sm:left-5 sm:top-5 sm:p-4">
+    <aside className="rsp-control-panel absolute left-3 top-24 z-10 w-[clamp(164px,22vw,236px)] rounded-xl border border-[#4f91b1]/45 bg-[#081522]/90 p-3 text-white shadow-[0_16px_36px_rgba(0,0,0,0.28)] backdrop-blur-md sm:left-5 sm:top-24 sm:p-4">
       <div className="flex items-start justify-between gap-2 border-b border-white/10 pb-2.5">
         <div>
           <p className="font-mono text-[11px] font-bold tracking-[0.28em] text-[#7fd8ff]">RSP</p>

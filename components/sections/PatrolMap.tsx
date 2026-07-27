@@ -9,14 +9,14 @@ export const ROUTE_POINTS: Point[] = [
   { x: 110, y: 430 },
   { x: 110, y: 350 },
   { x: 260, y: 350 },
-  { x: 260, y: 210 },
+  { x: 360, y: 210 },
   { x: 440, y: 210 },
   { x: 440, y: 330 },
   { x: 610, y: 330 },
   { x: 610, y: 155 },
   { x: 820, y: 155 },
-  { x: 820, y: 315 },
-  { x: 1030, y: 315 }
+  { x: 1030, y: 155 },
+  { x: 1040, y: 440 }
 ];
 
 export const CHECKPOINTS = [
@@ -60,13 +60,26 @@ function getRouteAngle(progress: number) {
   return (Math.atan2(next.y - point.y, next.x - point.x) * 180) / Math.PI;
 }
 
-function getConnectorPoint(progress: number) {
-  const start = { x: 160, y: 78 };
-  const end = getRoutePoint(0.76);
-  const eased = clamp(progress);
+const DATA_RETURN_START = { x: 820, y: 155 };
+const DATA_RETURN_END = { x: 300, y: 96 };
+const DATA_RETURN_CONTROL_1 = { x: 730, y: 88 };
+const DATA_RETURN_CONTROL_2 = { x: 450, y: 238 };
+const DATA_RETURN_PATH = `M ${DATA_RETURN_START.x} ${DATA_RETURN_START.y} C ${DATA_RETURN_CONTROL_1.x} ${DATA_RETURN_CONTROL_1.y} ${DATA_RETURN_CONTROL_2.x} ${DATA_RETURN_CONTROL_2.y} ${DATA_RETURN_END.x} ${DATA_RETURN_END.y}`;
+
+function getDataPacketPoint(progress: number) {
+  const t = clamp(progress);
+  const inverse = 1 - t;
   return {
-    x: start.x + (end.x - start.x) * eased,
-    y: start.y + (end.y - start.y) * eased + Math.sin(eased * Math.PI) * 30
+    x:
+      inverse ** 3 * DATA_RETURN_START.x +
+      3 * inverse ** 2 * t * DATA_RETURN_CONTROL_1.x +
+      3 * inverse * t ** 2 * DATA_RETURN_CONTROL_2.x +
+      t ** 3 * DATA_RETURN_END.x,
+    y:
+      inverse ** 3 * DATA_RETURN_START.y +
+      3 * inverse ** 2 * t * DATA_RETURN_CONTROL_1.y +
+      3 * inverse * t ** 2 * DATA_RETURN_CONTROL_2.y +
+      t ** 3 * DATA_RETURN_END.y
   };
 }
 
@@ -105,7 +118,7 @@ export function PatrolMap({ locale, snapshot }: PatrolMapProps) {
             home: "HOME"
           };
   const dog = getRoutePoint(snapshot.routeProgress);
-  const connectorDot = getConnectorPoint(snapshot.dataFlowProgress);
+  const dataPacket = getDataPacketPoint(snapshot.dataFlowProgress);
   const currentPoint = snapshot.activePoint >= 0 ? CHECKPOINTS[snapshot.activePoint] : null;
 
   return (
@@ -267,9 +280,26 @@ export function PatrolMap({ locale, snapshot }: PatrolMapProps) {
 
       {snapshot.dataFlowProgress > 0 ? (
         <>
-          <path d="M 160 78 C 248 110 276 184 335 242 C 380 286 430 300 530 302" fill="none" stroke="#8bdcff" strokeOpacity="0.45" strokeWidth="1.5" strokeDasharray="5 8" />
-          <circle cx={connectorDot.x} cy={connectorDot.y} r="3" fill="#d7f6ff" filter="url(#rsp-soft-glow)" />
-          <circle cx={connectorDot.x} cy={connectorDot.y} r="7" fill="none" stroke="#71d8ff" strokeOpacity="0.36" />
+          <path d={DATA_RETURN_PATH} fill="none" stroke="#8bdcff" strokeOpacity="0.22" strokeWidth="7" strokeLinecap="round" />
+          <path d={DATA_RETURN_PATH} fill="none" stroke="#8bdcff" strokeOpacity="0.76" strokeWidth="1.5" strokeDasharray="5 8" />
+          <path d="M 566 144 L 548 136 M 566 144 L 553 158" fill="none" stroke="#8bdcff" strokeOpacity="0.8" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+          <g transform="translate(520 232)">
+            <rect x="-54" y="-13" width="108" height="26" rx="7" fill="#0a2230" stroke="#75d8ff" strokeOpacity="0.55" />
+            <circle cx="-39" cy="0" r="3" fill="#75d8ff" />
+            <text x="-29" y="3.5" fill="#c4efff" fontSize="10" fontFamily="Inter, Arial, sans-serif" letterSpacing="0.6">
+              {locale === "en" ? "DATA RETURN" : "数据回传"}
+            </text>
+          </g>
+          <g transform={`translate(${dataPacket.x} ${dataPacket.y})`}>
+            <rect x="-21" y="-11" width="42" height="22" rx="5" fill="#0b2c3e" stroke="#8de3ff" strokeWidth="1.5" />
+            <path d="M -12 -2 H 3 M -12 4 H -2" stroke="#b8efff" strokeWidth="1.5" strokeLinecap="round" />
+            <path d="M 7 -5 L 13 0 L 7 5" fill="none" stroke="#f5ad69" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+            <text x="0" y="-17" textAnchor="middle" fill="#d3f4ff" fontSize="8" fontFamily="Inter, Arial, sans-serif" letterSpacing="0.8">DATA</text>
+          </g>
+          <g transform={`translate(${DATA_RETURN_END.x} ${DATA_RETURN_END.y})`}>
+            <circle r="10" fill="#0c2f3f" stroke="#82ddff" strokeWidth="1.5" />
+            <path d="M -4 0 H 4 M 0 -4 V 4" stroke="#c1f2ff" strokeWidth="1.5" strokeLinecap="round" />
+          </g>
         </>
       ) : null}
 

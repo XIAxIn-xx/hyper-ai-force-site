@@ -85,7 +85,7 @@ const content = {
       slogan: "AI Force Be With You",
       title: "Robotic Inspection Solutions for Physical Security",
       subtitle:
-        "We combine AI perception, autonomous patrol, teleoperation, motion control and service delivery to provide deployable robotic solutions for security patrol and other physical-security applications.",
+        "We combine AI perception, autonomous patrol, teleoperation, motion control and service delivery to provide low-barrier, rapidly deployable robotic solutions for security patrol and other physical-security scenarios.",
       primaryCta: "Request a Demo",
       secondaryCta: "Explore Technology",
       stats: [
@@ -128,7 +128,7 @@ const content = {
       {
         number: "01",
         label: "Core Capability · Autonomous Patrol",
-        title: "Autonomous Navigation, Localisation and Patrol Execution",
+        title: "Perceive Autonomously. Navigate Anywhere.",
         description:
           "Mapping, localisation, route planning and dynamic obstacle avoidance let robots follow predefined routes for repeatable patrol and inspection.",
         capabilities: [
@@ -153,7 +153,7 @@ const content = {
         label: "Core Capability · Teleoperation",
         title: "Low-Latency Teleoperation and Exception Intervention",
         description:
-          "A remote operator can connect to the on-site robot and take control during exceptions, difficult terrain or situations requiring human judgement, with low-latency video and control.",
+          "When unexpected conditions, challenging terrain, or situations requiring human judgment arise, a remote operator can seamlessly connect to the on-site robot and take control.",
         capabilities: [
           "Remote Device Access",
           "Low-Latency Video Transmission",
@@ -176,7 +176,7 @@ const content = {
         label: "Software Solution · RSP",
         title: "Robot Task Orchestration and Inspection Data Management",
         description:
-          "RSP is our robot operations software platform, supporting map management, task dispatch, device monitoring, remote control and inspection-record management.",
+          "RSP is our robot scheduling platform.",
         capabilities: [
           "Map and Task Management",
           "Unified Multi-Robot Dispatch",
@@ -260,7 +260,7 @@ const content = {
       eyebrow: "Featured Case · Logistics & Warehousing",
       title: "GLP Logistics Park Robotic Inspection Project",
       intro:
-        "An integrated deployment combining quadruped robots, the RSP cloud control platform and data acquisition infrastructure to support task scheduling, autonomous inspection, live monitoring and data-driven optimisation.",
+        "An integrated deployment combining quadruped robots, the RSP cloud control platform and data acquisition infrastructure to deliver an end-to-end logistics-park inspection solution covering task scheduling, autonomous inspection, real-time monitoring and data optimisation.",
       mediaAlt: "Quadruped robot conducting an inspection at a GLP logistics park",
       metrics: [
         { value: "↓ 60%", label: "Reducing manual inspection costs" },
@@ -269,12 +269,12 @@ const content = {
       ],
     },
     service: {
-      title: "Flexible Collaboration, Deployed to Fit Your Needs",
+      title: "Built for environments that prioritize safety, comprehensive coverage, and reliable operation.",
       copy:
         "Choose leasing, modular enablement or full-stack delivery based on your project stage, application scenario and operating model, with support from deployment delivery through ongoing operations and maintenance.",
       items: [
         { icon: "PackageCheck", label: "RaaS Leasing", description: "Robots + RSP provided as one service; monthly or periodic billing; low-barrier rapid deployment" },
-        { icon: "Cpu", label: "Modular Enablement", description: "Acquire AI perception, dispatch or communications modules separately; integrate with existing equipment or systems; extend established operations" },
+        { icon: "Cpu", label: "Modular Enablement", description: "Acquire AI perception, dispatch or communications modules separately; integrate with existing equipment or systems; improve existing system capabilities" },
         { icon: "Handshake", label: "Full-Stack Delivery", description: "Purchase a complete robotic security solution upfront; includes robots and RSP; retain the assets for long-term operation" }
       ]
     },
@@ -282,8 +282,8 @@ const content = {
       eyebrow: "About Hyper AIForce",
       title: "Integrated Provider of Robotic Security Solutions",
       copy: [
-        "Hyper AIForce focuses on deploying robots across physical-security applications, including security patrol, warehousing and logistics, and community security. With autonomous patrol, teleoperation and multi-robot scheduling as core capabilities, we provide an integrated service covering scenario assessment, solution configuration, deployment and commissioning, and ongoing operations and maintenance.",
-        "We use robots to take on night-time, repetitive and high-risk tasks, while enabling remote human intervention in complex situations. This helps customers expand inspection coverage, reduce personnel exposure, improve operational efficiency and achieve cost savings, while keeping projects operating reliably over the long term."
+        "Hyper AIForce deploys robots for physical-security applications, including security patrol, warehousing and logistics, and community security. We combine autonomous patrol, teleoperation and multi-robot scheduling with end-to-end deployment and operations support.",
+        "We use robots for night-time, repetitive and high-risk tasks, with remote operators intervening when needed. Customers gain wider inspection coverage, lower personnel exposure and more reliable operations."
       ],
       bullets: [
         "Embodied intelligence for physical-world industries",
@@ -293,7 +293,7 @@ const content = {
     },
     contact: {
       eyebrow: "Contact",
-      title: "Plan a robotics deployment for your site.",
+      title: "Plan a rapid robotics deployment for your site.",
       copy:
         "Tell us about your facility, patrol workload or inspection scenario, and we will match the right solution.",
       button: "Contact Us / Request a Demo",
@@ -382,7 +382,7 @@ const content = {
       slogan: "AI Force Be With You",
       title: "面向物理安全的機器人\n智能巡檢解決方案",
       subtitle:
-        "我們將 AI 感知、自主巡航、遠程遙操、運動控制與場景交付能力相結合，為安防巡邏等物理安全領域提供可部署的機器人解決方案。",
+        "我們將 AI 感知、自主巡航、遠程遙操、運動控制與場景交付能力相結合，為安防巡邏等物理安全場景提供低門檻快速部署的機器人解決方案。",
       primaryCta: "預約演示",
       secondaryCta: "了解技術",
       stats: [
@@ -422,7 +422,7 @@ const content = {
       {
         number: "01",
         label: "核心能力 · 自主巡航",
-        title: "自主導航、定位與巡檢執行",
+        title: "自主感知，全域巡航",
         description:
           "基於地圖構建、定位、路徑規劃與動態避障，支援機器人按照預設路線持續開展巡檢與巡邏。",
         capabilities: ["地圖構建與定位", "路徑規劃與動態避障", "預設路線自主執行", "現場狀態持續回傳"],
@@ -442,7 +442,7 @@ const content = {
         label: "核心能力 · 遠程遙操",
         title: "低延遲遠程遙操與異常干預",
         description:
-          "透過遠程操作端接入現場機器人，在異常、複雜地形或需要人工判斷時，實現低延遲畫面回傳與遠程控制。",
+          "當遇到突發狀況、複雜地形或需要人工判斷的情形時，遠程操作員可以無縫連接現場機器人並接管控制。",
         capabilities: ["遠程設備接入", "低延遲畫面回傳", "自主與人工模式切換", "異常情況下快速介入"],
         layout: "media-right",
         mediaType: "image",
@@ -460,7 +460,7 @@ const content = {
         label: "軟件方案 · RSP",
         title: "機器人任務調度與巡檢數據管理",
         description:
-          "RSP 是面向機器人運營的軟件平台，支援地圖管理、任務調度、設備監控、遠程控制與巡檢記錄管理。",
+          "RSP 是我們的機器人調度平台。",
         capabilities: ["地圖與任務管理", "多機器人統一調度", "設備狀態與告警監控", "巡檢記錄與數據管理"],
         layout: "media-left",
         mediaType: "image",
@@ -534,7 +534,7 @@ const content = {
       eyebrow: "標竿案例 · 物流倉儲",
       title: "普洛斯物流園區機器人巡檢項目",
       intro:
-        "透過四足機器人、RSP 雲端控制平台與數據採集平台協同部署，建立涵蓋任務調度、自主巡檢、即時監控與數據優化的物流園區巡檢體系。",
+        "透過四足機器人、RSP 雲端控制平台與數據採集平台協同部署，構建涵蓋任務調度、自主巡檢、即時監控與數據優化的一體化物流園區巡檢解決方案。",
       mediaAlt: "普洛斯物流園區內進行巡檢的四足機器人",
       metrics: [
         { value: "↓ 60%", label: "降低人工巡檢成本" },
@@ -545,12 +545,12 @@ const content = {
     },
     service: {
       
-      title: "靈活合作，按需部署",
+      title: "專為注重安全、全面覆蓋與穩定運行的場景而打造。",
       copy:
         "根據項目階段、應用場景與營運方式，靈活選擇租賃、模組化賦能或全棧式交付，並獲得從部署交付到持續運維的支持。",
       items: [
         { icon: "PackageCheck", label: "RaaS 租賃", description: "機器人 + RSP 統一提供；客戶按月／按週期付費；低門檻快速部署" },
-        { icon: "Cpu", label: "模組化賦能", description: "單獨採購 AI 感知／調度／通信等模組化載荷；可接入客戶現有設備或系統；用於既有體系能力增強" },
+        { icon: "Cpu", label: "模組化賦能", description: "單獨採購 AI 感知／調度／通信等模組化載荷；可接入客戶現有設備或系統；用於提高既有體系能力" },
         { icon: "Handshake", label: "全棧式交付", description: "一次性採購完整機器人安防解決方案；包含機器人 + 平台；客戶自持資產並長期運行" }
       ]
     },
@@ -558,8 +558,8 @@ const content = {
       eyebrow: "關於超流智能",
       title: "機器人安防\n解決方案集成商",
       copy: [
-        "超流智能專注於機器人在安防巡邏、物流倉儲及社區安防等物理安全場景中的應用，圍繞自主巡航、遠程遙操與多機調度，提供從場景評估、方案配置、部署調試到持續運維的一體化服務。",
-        "我們通過機器人承擔夜間、重複及高風險任務，並在複雜情況下由人工遠程介入，幫助客戶擴大巡檢覆蓋範圍、降低人員暴露風險，實現降本增效，保障項目長期穩定運行。"
+        "超流智能專注於機器人在安防巡邏、物流倉儲及社區安防等物理安全場景中的應用，圍繞自主巡航、遠程遙操與多機調度，提供從方案配置、部署調試到持續運維的服務。",
+        "超流智能通過機器人承擔夜間、重複及高風險任務，並在需要時由人工遠程介入，幫助客戶擴大巡檢覆蓋、降低人員暴露風險，實現更高效、更穩定的長期營運。"
       ],
       bullets: [
         "面向物理世界產業的具身智能",
@@ -569,7 +569,7 @@ const content = {
     },
     contact: {
       eyebrow: "聯絡我們",
-      title: "為您的場地規劃機器人部署",
+      title: "為您的場地規劃機器人快速部署",
       copy:
         "告訴我們您的設施、巡邏工作量或巡檢場景，我們將為您匹配合適的解決方案",
       button: "聯絡我們 / 預約演示",
@@ -650,7 +650,7 @@ const content = {
       slogan: "AI Force Be With You",
       title: "面向物理安全的机器人\n智能巡检解决方案",
       subtitle:
-        "我们将 AI 感知、自主巡航、远程遥操、运动控制与场景交付能力相结合，为安防巡逻等物理安全领域提供可部署的机器人解决方案。",
+        "我们将 AI 感知、自主巡航、远程遥操、运动控制与场景交付能力相结合，为安防巡逻等物理安全场景提供低门槛快速部署的机器人解决方案。",
       primaryCta: "预约演示",
       secondaryCta: "了解技术",
       stats: [
@@ -690,7 +690,7 @@ const content = {
       {
         number: "01",
         label: "核心能力 · 自主巡航",
-        title: "自主导航、定位与巡检执行",
+        title: "自主感知，全域巡航",
         description:
           "基于地图构建、定位、路径规划与动态避障，支持机器人按照预设路线持续开展巡检和巡逻。",
         capabilities: ["地图构建与定位", "路径规划与动态避障", "预设路线自主执行", "现场状态持续回传"],
@@ -710,7 +710,7 @@ const content = {
         label: "核心能力 · 远程遥操",
         title: "低延迟远程遥操与异常干预",
         description:
-          "通过远程操作端接入现场机器人，在异常、复杂地形或需要人工判断时，实现低延迟画面回传与远程控制。",
+          "当遇到突发状况、复杂地形或需要人工判断的情形时，远程操作员可以无缝连接现场机器人并接管控制。",
         capabilities: ["远程设备接入", "低延迟画面回传", "自主与人工模式切换", "异常情况下快速介入"],
         layout: "media-right",
         mediaType: "image",
@@ -728,7 +728,7 @@ const content = {
         label: "软件方案 · RSP",
         title: "机器人任务调度与巡检数据管理",
         description:
-          "RSP 是面向机器人运营的软件平台，支持地图管理、任务调度、设备监控、远程控制与巡检记录管理。",
+          "RSP 是我们的机器人调度平台。",
         capabilities: ["地图与任务管理", "多机器人统一调度", "设备状态与告警监控", "巡检记录与数据管理"],
         layout: "media-left",
         mediaType: "image",
@@ -802,7 +802,7 @@ const content = {
       eyebrow: "标杆案例 · 物流仓储",
       title: "普洛斯物流园区机器人巡检项目",
       intro:
-        "通过四足机器人、RSP 云控平台与数采平台协同部署，构建覆盖任务调度、自主巡检、实时监控与数据优化的物流园区巡检体系。",
+        "通过四足机器人、RSP 云控平台与数采平台协同部署，构建覆盖任务调度、自主巡检、实时监控与数据优化的一体化物流园区巡检解决方案。",
       mediaAlt: "普洛斯物流园区内进行巡检的四足机器人",
       metrics: [
         { value: "↓ 60%", label: "降低人工巡检成本" },
@@ -813,21 +813,21 @@ const content = {
     },
     service: {
 
-      title: "灵活合作，按需部署",
+      title: "专为注重安全、全面覆盖与稳定运行的场景而打造。",
       copy:
         "根据项目阶段、应用场景与运营方式，灵活选择租赁、模块化赋能或全栈式交付，并获得从部署交付到持续运维的支持。",
       items: [
         { icon: "PackageCheck", label: "RaaS 租赁", description: "机器人 + RSP 统一提供；客户按月／按周期付费；低门槛快速部署" },
-        { icon: "Cpu", label: "模块化赋能", description: "单独采购 AI 感知／调度／通信等模块化载荷；可接入客户现有设备或系统；用于已有体系能力增强" },
-        { icon: "Handshake", label: "全栈式交付", description: "一次性采购完整机器人安防解决方案；包含机器人 + 平台；客户自持资产并长期运行" }
+        { icon: "Cpu", label: "模块化赋能", description: "单独采购 AI 感知／调度／通信等模块化载荷；可接入客户现有设备或系统；用于提高已有体系能力" },
+        { icon: "Handshake", label: "全栈式交付", description: "一次性采购完整机器人安防解决方案；包含机器人 + 机器人调度平台；客户自持资产并长期运行" }
       ]
     },
     about: {
       eyebrow: "关于超流智能",
       title: "机器人安防\n解决方案集成商",
       copy: [
-        "超流智能专注于机器人在安防巡逻、物流仓储和社区安防等物理安全场景中的应用，围绕自主巡航、远程遥操与多机调度，提供从场景评估、方案配置、部署调试到持续运维的一体化服务。",
-        "我们通过机器人承担夜间、重复及高风险任务，并在复杂情况下由人工远程介入，帮助客户扩大巡检覆盖范围、降低人员暴露风险，实现降本增效，保障项目长期稳定运行。"
+        "超流智能专注于机器人在安防巡逻、物流仓储和社区安防等物理安全场景中的应用，围绕自主巡航、远程遥操与多机调度，提供从方案配置、部署调试到持续运维的服务。",
+        "超流智能通过机器人承担夜间、重复及高风险任务，并在需要时由人工远程介入，帮助客户扩大巡检覆盖、降低人员暴露风险，实现更高效、更稳定的长期运营。"
       ],
       bullets: [
         "面向物理世界产业的具身智能",
@@ -837,7 +837,7 @@ const content = {
     },
     contact: {
       eyebrow: "联系我们",
-      title: "为您的场地规划机器人部署",
+      title: "为您的场地规划机器人快速部署",
       copy:
         "告诉我们您的设施、巡逻工作量或巡检场景，我们将为您匹配合适的解决方案",
       button: "联系我们 / 预约演示",

@@ -30,7 +30,7 @@ export function PatrolStatusCard({ locale, snapshot }: PatrolStatusCardProps) {
 
   return (
     <aside
-      className={`rsp-status-card absolute right-3 top-3 z-10 w-[clamp(144px,20vw,218px)] rounded-xl border border-white/15 bg-[#0a1925]/90 p-3 text-white shadow-[0_16px_36px_rgba(0,0,0,0.28)] backdrop-blur-md transition-opacity duration-500 sm:right-5 sm:top-5 sm:p-4 ${snapshot.recordVisible ? "opacity-100" : "pointer-events-none opacity-0"}`}
+      className={`rsp-status-card absolute right-3 top-24 z-10 w-[clamp(144px,20vw,218px)] rounded-xl border border-white/15 bg-[#0a1925]/90 p-3 text-white shadow-[0_16px_36px_rgba(0,0,0,0.28)] backdrop-blur-md transition-opacity duration-500 sm:right-5 sm:top-24 sm:p-4 ${snapshot.recordVisible ? "opacity-100" : "pointer-events-none opacity-0"}`}
       aria-hidden={!snapshot.recordVisible}
     >
       <p className="font-mono text-[9px] tracking-[0.2em] text-[#8fdcff]">{copy.eyebrow}</p>
