@@ -128,7 +128,7 @@ const content = {
       {
         number: "01",
         label: "Core Capability · Autonomous Navigation",
-        title: "Perceive Autonomously. Navigate Anywhere.",
+        title: "Autonomous Perception and Navigation Across Complex Environments",
         description:
           "Autonomous navigation combines multimodal perception, real-time localization, intelligent path planning, and dynamic obstacle avoidance to enable autonomous inspection and continuous operation in complex environments.",
         capabilities: [
@@ -151,7 +151,7 @@ const content = {
       {
         number: "02",
         label: "Core Capability · Teleoperation",
-        title: "Step In. Take Control.",
+        title: "Seamless Remote Intervention and Real-Time Robot Control",
         description:
           "When unexpected conditions, challenging terrain, or situations requiring human judgment arise, remote operators can seamlessly connect to on-site robots, access low-latency live video, and assume manual control.",
         capabilities: [
@@ -174,7 +174,7 @@ const content = {
       {
         number: "03",
         label: "Software Platform · RSP",
-        title: "Unify Operations. Orchestrate at Scale.",
+        title: "Unified Robot Operations and Scalable Fleet Orchestration",
         description:
           "RSP(Robot Scheduling Platform) unifies robots, charging infrastructure, perception devices, and business systems in one platform, enabling centralized mission orchestration, fleet monitoring, and inspection data management across multi-robot operations.",
         capabilities: [
@@ -197,7 +197,7 @@ const content = {
       {
         number: "04",
         label: "Core Capability · Modular Payloads",
-        title: "Adaptable Payloads. Expanded Perception.",
+        title: "Flexible Payload Integration for Expanded Sensing Capabilities",
         description:
           "The modular backpack supports flexible integration of sensors and mission payloads for different inspection scenarios, enabling reliable data acquisition, real-time transmission, and seamless platform connectivity.",
         capabilities: [
