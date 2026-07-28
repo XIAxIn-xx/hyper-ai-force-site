@@ -116,7 +116,7 @@ export function CapabilitySystemSection({ content }: CapabilitySystemSectionProp
                   <CapabilityMedia item={item} />
                 </div>
 
-                <div className={`order-3 mt-8 lg:row-start-2 lg:mt-8 ${mediaLeft ? "lg:col-start-2" : "lg:col-start-1"}`}>
+                <div className={`order-3 mt-8 lg:row-start-2 lg:mt-8 lg:self-start ${mediaLeft ? "lg:col-start-2" : "lg:col-start-1"}`}>
                   <p className="zh-copy max-w-xl text-base leading-8 text-slate-300">
                     <ZhText>{item.description}</ZhText>
                   </p>

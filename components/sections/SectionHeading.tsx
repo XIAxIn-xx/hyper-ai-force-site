@@ -33,7 +33,11 @@ export function SectionHeading({
       </h2>
       {copy ? (
         <p className={light ? "zh-copy mt-5 text-base leading-8 text-slate-300 [word-break:normal] [overflow-wrap:break-word]" : "zh-copy mt-5 text-base leading-8 text-slate-600 [word-break:normal] [overflow-wrap:break-word]"}>
-          <ZhText>{copy}</ZhText>
+          {copy.split("\n").map((line, index) => (
+            <span key={`${index}-${line}`} className="block">
+              <ZhText>{line}</ZhText>
+            </span>
+          ))}
         </p>
       ) : null}
     </div>
