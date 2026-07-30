@@ -163,6 +163,10 @@ body {
   text-wrap: balance;
 }
 
+.pretty-copy #about .zh-section-title {
+  text-wrap: balance;
+}
+
 .pretty-copy :where(h1, h2, h3, p, li, span) {
   word-break: auto-phrase;
 }

@@ -10,12 +10,13 @@ type AboutSectionProps = {
 
 export function AboutSection({ content }: AboutSectionProps) {
   const copyParagraphs = (Array.isArray(content.about.copy) ? content.about.copy : [content.about.copy]) as readonly string[];
+  const isEnglish = content.lang === "en";
 
   return (
     <section id="about" className="bg-[#0B1520] py-16 text-white md:py-20">
       <div className="section-shell grid gap-10 lg:grid-cols-[46fr_54fr] lg:items-start lg:gap-12">
         <Reveal>
-          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg border border-white/10 bg-[#050B14] shadow-[0_18px_42px_rgba(0,0,0,0.28)]">
+          <div className={`relative aspect-[4/3] w-full overflow-hidden rounded-lg border border-white/10 bg-[#050B14] shadow-[0_18px_42px_rgba(0,0,0,0.28)] ${isEnglish ? "lg:mt-6" : ""}`}>
             <Image
               src="/images/hyper/19w-building.webp"
               alt="Hyper AI Force headquarters at 19W"
