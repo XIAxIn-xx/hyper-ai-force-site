@@ -7,6 +7,7 @@ import { HeroSection } from "@/components/sections/HeroSection";
 import { ServiceNetworkSection } from "@/components/sections/ServiceNetworkSection";
 import { StackOverviewSection } from "@/components/sections/StackOverviewSection";
 import { Footer } from "@/components/layout/Footer";
+import { ProductsSection } from "@/components/sections/ProductsSection";
 import { Header } from "@/components/layout/Header";
 import type { Locale } from "@/data/hyper";
 import { getHyperContent } from "@/data/hyper";
@@ -25,6 +26,7 @@ export function HyperPage({ locale }: HyperPageProps) {
       <Header content={content} />
       <main>
         <HeroSection content={content} />
+        <ProductsSection locale={locale} />
         <CapabilitySystemSection content={content} />
         <StackOverviewSection content={content} />
         <ApplicationsSection content={content} />

@@ -6,10 +6,12 @@ import { useEffect, useState } from "react";
 
 import { Button } from "@/components/ui/button";
 import type { HyperContent } from "@/data/hyper";
+import type { ProductSlug } from "@/data/products";
 import { cn } from "@/lib/utils";
 
 type HeaderProps = {
   content: HyperContent;
+  productSlug?: ProductSlug;
 };
 
 const languageLinks = [
@@ -18,12 +20,13 @@ const languageLinks = [
   { lang: "zh-CN", label: "简中", href: "/zh-cn" }
 ];
 
-export function Header({ content }: HeaderProps) {
+export function Header({ content, productSlug }: HeaderProps) {
   const [open, setOpen] = useState(false);
   const [languageOpen, setLanguageOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const homeHref =
     content.lang === "zh-HK" ? "/zh-hk" : content.lang === "zh-CN" ? "/zh-cn" : "/";
+  const LanguageLink = productSlug ? "a" : Link;
   const languageButtonLabel =
     content.lang === "en" ? "Language" : content.lang === "zh-HK" ? "語言" : "语言";
 
@@ -39,9 +42,9 @@ export function Header({ content }: HeaderProps) {
   const languageMenu = (className: string) => (
     <div className={cn("rounded-lg border border-white/10 bg-[#0D1721]/95 p-1.5 shadow-[0_18px_42px_rgba(0,0,0,0.34)] backdrop-blur-xl", className)}>
       {languageLinks.map((item) => (
-        <Link
+        <LanguageLink
           key={item.lang}
-          href={item.href}
+          href={productSlug ? `${item.href === "/" ? "" : item.href}/products/${productSlug}` : item.href}
           onClick={() => setLanguageOpen(false)}
           className={cn(
             "flex h-9 items-center rounded-md px-3 text-sm font-medium transition-colors",
@@ -51,7 +54,7 @@ export function Header({ content }: HeaderProps) {
           )}
         >
           {item.label}
-        </Link>
+        </LanguageLink>
       ))}
     </div>
   );
@@ -114,7 +117,7 @@ export function Header({ content }: HeaderProps) {
                 content.lang !== "en" ? "zh-nav text-sm font-medium tracking-normal" : "",
                 "hover:text-orange-200"
               )}
-              href={item.href}
+              href={productSlug ? `${homeHref}${item.href}` : item.href}
             >
               {item.label}
             </a>
@@ -157,7 +160,7 @@ export function Header({ content }: HeaderProps) {
             {content.nav.map((item) => (
               <a
                 key={item.href}
-                href={item.href}
+                href={productSlug ? `${homeHref}${item.href}` : item.href}
                 onClick={() => {
                   setOpen(false);
                   setLanguageOpen(false);

@@ -1,7 +1,8 @@
 "use client";
 
 import Script from "next/script";
-import { useEffect, useRef, useState, type FormEvent } from "react";
+import { Suspense, useEffect, useRef, useState, type FormEvent } from "react";
+import { useSearchParams } from "next/navigation";
 import { Mail, MapPin } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -15,6 +16,7 @@ import { ZhText } from "@/components/ui/ZhText";
 
 type ContactSectionProps = {
   content: HyperContent;
+  defaultProduct?: string;
 };
 
 type ErrorKey =
@@ -51,7 +53,17 @@ declare global {
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const phonePattern = /^[0-9\s().-]+$/;
 
-export function ContactSection({ content }: ContactSectionProps) {
+export function ContactSection(props: ContactSectionProps) {
+  return <Suspense><ContactForm {...props} /></Suspense>;
+}
+
+function ContactForm({ content, defaultProduct }: ContactSectionProps) {
+  const searchParams = useSearchParams();
+  const requestedProduct = defaultProduct ?? searchParams.get("product");
+  const requestedModel = requestedProduct === "force-01" ? "FORCE 01" : requestedProduct === "force-05" ? "FORCE 05" : "";
+  const initialInterest = requestedModel ? content.contact.options.find((option) => option.startsWith(requestedModel)) ?? "" : "";
+  const [interest, setInterest] = useState<string>(initialInterest);
+  useEffect(() => { setInterest(initialInterest); }, [initialInterest]);
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
   const [errors, setErrors] = useState<Partial<Record<ErrorKey, string>>>({});
   const [privacyAccepted, setPrivacyAccepted] = useState(false);
@@ -210,6 +222,7 @@ export function ContactSection({ content }: ContactSectionProps) {
       if (!response.ok) throw new Error("Contact submission failed");
 
       form.reset();
+      setInterest(initialInterest);
       setPrivacyAccepted(false);
       setTurnstileToken("");
       if (turnstileWidgetId.current) window.turnstile?.reset(turnstileWidgetId.current);
@@ -284,7 +297,7 @@ export function ContactSection({ content }: ContactSectionProps) {
                 </div>
               </div>
             </div>
-            <Select name="interest" aria-label={content.contact.fields.interest} defaultValue="">
+            <Select name="interest" aria-label={content.contact.fields.interest} value={interest} onChange={(event) => setInterest(event.target.value)}>
               <option value="" disabled>
                 {content.contact.fields.interest}
               </option>

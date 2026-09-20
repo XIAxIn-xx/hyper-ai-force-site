@@ -59,6 +59,7 @@ const content = {
     switchLabel: "繁中",
     switchHref: "/zh-hk",
     nav: [
+      { label: "Products", href: "#products" },
       { label: "Technology", href: "#technology" },
       { label: "Solutions", href: "#solutions" },
       { label: "Applications", href: "#applications" },
@@ -309,7 +310,7 @@ const content = {
         interest: "Interest / Product category",
         message: "Message"
       },
-      options: [
+      options: ["FORCE 01", "FORCE 05", 
         "Autonomous Patrol",
         "Teleoperation",
         "RSP",
@@ -358,6 +359,7 @@ const content = {
     switchLabel: "EN",
     switchHref: "/",
     nav: [
+      { label: "產品", href: "#products" },
       { label: "技術能力", href: "#technology" },
       { label: "解決方案", href: "#solutions" },
       { label: "應用場景", href: "#applications" },
@@ -584,7 +586,7 @@ const content = {
         interest: "感興趣的產品 / 方案",
         message: "需求描述"
       },
-      options: ["自主巡航", "遠程遙操", "RSP", "背包與傳感器", "其他"],
+      options: ["FORCE 01 原力一號", "FORCE 05 原力五號", "自主巡航", "遠程遙操", "RSP", "背包與傳感器", "其他"],
       countryCodes: [
         { value: "+852", label: "香港（+852）" },
         { value: "+86", label: "中國內地（+86）" },
@@ -626,6 +628,7 @@ const content = {
     switchLabel: "EN",
     switchHref: "/",
     nav: [
+      { label: "产品", href: "#products" },
       { label: "技术能力", href: "#technology" },
       { label: "解决方案", href: "#solutions" },
       { label: "应用场景", href: "#applications" },
@@ -852,7 +855,7 @@ const content = {
         interest: "感兴趣的产品 / 方案",
         message: "需求描述"
       },
-      options: ["自主巡航", "远程遥操", "RSP", "背包与传感器", "其他"],
+      options: ["FORCE 01 原力一号", "FORCE 05 原力五号", "自主巡航", "远程遥操", "RSP", "背包与传感器", "其他"],
       countryCodes: [
         { value: "+852", label: "香港（+852）" },
         { value: "+86", label: "中国内地（+86）" },
