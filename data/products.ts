@@ -17,11 +17,11 @@ export type Product = {
 };
 
 const assets = {
-  foot: "/images/products/force-01-foot.webp",
-  wheel: "/images/products/force-01-wheel.webp",
-  sphere: "/images/products/force-05-angle.webp",
-  side: "/images/products/force-05-side.webp",
-  rear: "/images/products/force-05-rear.webp"
+  foot: "/images/products/force-01-plaza.webp",
+  wheel: "/images/products/force-01-warehouse.webp",
+  sphere: "/images/products/force-05-workshop.webp",
+  side: "/images/products/force-05-rescue.webp",
+  rear: "/images/products/force-05-factory.webp"
 };
 
 type Catalogue = {
