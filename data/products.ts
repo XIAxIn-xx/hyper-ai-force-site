@@ -8,7 +8,7 @@ export type Product = {
   category: string;
   tagline: string;
   description: string;
-  views: { label: string; src: string; weight?: string }[];
+  views: { label: string; src: string; width: number; height: number; weight?: string }[];
   highlights: { value: string; label: string }[];
   benefits: { title: string; description: string }[];
   specs: { label: string; value: string }[];
@@ -16,13 +16,27 @@ export type Product = {
   payloads: string[];
 };
 
-const assets = {
-  foot: "/images/products/force-01-plaza.webp",
-  wheel: "/images/products/force-01-warehouse.webp",
-  sphere: "/images/products/force-05-workshop.webp",
-  side: "/images/products/force-05-rescue.webp",
-  rear: "/images/products/force-05-factory.webp"
-};
+function sceneViews(locale: Locale, slug: ProductSlug): Product["views"] {
+  const scenes = slug === "force-01" ? [
+    { file: "villa", labels: ["Villa patrol · Legged", "别墅巡逻 · 点足版", "別墅巡邏 · 點足版"], width: 1672, height: 941, weight: 15.5 },
+    { file: "warehouse", labels: ["Warehouse · Wheeled-leg", "仓库巡检 · 轮足版", "倉庫巡檢 · 輪足版"], width: 1672, height: 941, weight: 22.5 },
+    { file: "home", labels: ["Home · Wheeled-leg", "室内巡检 · 轮足版", "室內巡檢 · 輪足版"], width: 1846, height: 852, weight: 22.5 },
+    { file: "factory", labels: ["Factory · Legged", "工厂巡逻 · 点足版", "工廠巡邏 · 點足版"], width: 1843, height: 853, weight: 15.5 },
+    { file: "station", labels: ["Station · Wheeled-leg", "车站巡检 · 轮足版", "車站巡檢 · 輪足版"], width: 1846, height: 852, weight: 22.5 },
+  ] : [
+    { file: "office", labels: ["Office", "办公室", "辦公室"], width: 1823, height: 863, weight: undefined },
+    { file: "perimeter", labels: ["Perimeter patrol", "边界巡逻", "邊界巡邏"], width: 792, height: 446, weight: undefined },
+    { file: "desert", labels: ["Desert", "沙漠滚动", "沙漠滾動"], width: 792, height: 366, weight: undefined },
+    { file: "rescue", labels: ["Rescue", "废墟救援", "廢墟救援"], width: 1844, height: 853, weight: undefined },
+    { file: "factory", labels: ["Factory patrol", "工厂巡逻", "工廠巡邏"], width: 1846, height: 852, weight: undefined },
+    { file: "exhibition", labels: ["Exhibition", "会展巡逻", "會展巡邏"], width: 1846, height: 852, weight: undefined },
+  ];
+  const language = locale === "en" ? 0 : locale === "zh-cn" ? 1 : 2;
+  return scenes.map(({ file, labels, width, height, weight }) => ({
+    label: labels[language], src: `/images/products/scenes-v2/${slug}-${file}.webp`, width, height,
+    ...(weight ? { weight: `${locale === "en" ? "Approx. " : locale === "zh-cn" ? "约 " : "約 "}${weight} kg` } : {}),
+  }));
+}
 
 type Catalogue = {
   eyebrow: string; title: string; copy: string; learnMore: string; demo: string;
@@ -63,7 +77,7 @@ const catalogues: Record<Locale, Catalogue> = {
         slug: "force-01", model: "FORCE 01", name: "FORCE 01", category: "Panoramic Teleoperated Robot",
         tagline: "Reach the scene. See the whole picture.",
         description: "A legged or wheeled-leg robot with an integrated panoramic teleoperation backpack. See the surroundings, move through the site and investigate from a remote location.",
-        views: [{ label: "Legged", src: assets.foot, weight: "Approx. 15.5 kg" }, { label: "Wheeled-leg", src: assets.wheel, weight: "Approx. 22.5 kg" }],
+        views: sceneViews("en", "force-01"),
         highlights: [{ value: "360°", label: "Surrounding views" }, { value: "4 × 1080p", label: "Video encoding, up to 60 fps" }, { value: "4G / 5G", label: "Remote connectivity" }],
         benefits: [
           { title: "Understand the scene before entering", description: "Four low-light cameras provide views around the robot, helping operators check blind spots and confirm changing conditions." },
@@ -86,7 +100,7 @@ const catalogues: Record<Locale, Catalogue> = {
         slug: "force-05", model: "FORCE 05", name: "FORCE 05", category: "Spherical Mobile Inspection Robot",
         tagline: "Roll closer. Explore from a safe distance.",
         description: "A spherical robot for inspection and remote observation in demanding environments. Internal pendulum drive and active flywheel stabilization support controlled rolling and on-site sensing.",
-        views: [{ label: "Three-quarter view", src: assets.sphere }, { label: "Side view", src: assets.side }, { label: "Rear view", src: assets.rear }],
+        views: sceneViews("en", "force-05"),
         highlights: [{ value: "IP68", label: "Ingress protection" }, { value: "4 h", label: "Patrol operating time" }, { value: "20 kg", label: "Payload capacity" }],
         benefits: [
           { title: "Keep people further from exposure", description: "Send the robot ahead to observe public spaces, site perimeters and difficult-to-reach areas while operators assess the scene remotely." },
@@ -136,7 +150,7 @@ const catalogues: Record<Locale, Catalogue> = {
         slug: "force-01", model: "FORCE 01", name: "原力一号", category: "360°全景遥操机器人",
         tagline: "灵活抵达，全景掌握。",
         description: "点足或轮足本体，集成全景遥操背包。通过远程观察与移动控制，替你进入现场、靠近目标、核查异常。",
-        views: [{ label: "点足版", src: assets.foot, weight: "约 15.5 kg" }, { label: "轮足版", src: assets.wheel, weight: "约 22.5 kg" }],
+        views: sceneViews("zh-cn", "force-01"),
         highlights: [{ value: "360°", label: "全景观察" }, { value: "4 × 1080p", label: "最高 60 fps 视频编码" }, { value: "4G / 5G", label: "远程连接" }],
         benefits: [
           { title: "先看清，再决定是否到场", description: "四路低照度摄像头覆盖机器人周边视野，帮助远程操作人员查看盲区、确认现场变化。" },
@@ -159,7 +173,7 @@ const catalogues: Record<Locale, Catalogue> = {
         slug: "force-05", model: "FORCE 05", name: "原力五号", category: "球形移动巡检机器人",
         tagline: "滚动深入，替你探查。",
         description: "面向复杂环境的球形移动机器人，以内部重摆驱动与飞轮主动稳定，实现稳定滚动、现场感知和远程探查。",
-        views: [{ label: "斜侧视角", src: assets.sphere }, { label: "侧面视角", src: assets.side }, { label: "背面视角", src: assets.rear }],
+        views: sceneViews("zh-cn", "force-05"),
         highlights: [{ value: "IP68", label: "防护等级" }, { value: "4 h", label: "巡逻工况续航" }, { value: "20 kg", label: "有效载荷" }],
         benefits: [
           { title: "让机器人先行，减少人员暴露", description: "面向公共空间、场地周界与难达区域，先行抵近观察，让人员在远端判断现场情况。" },
@@ -209,7 +223,7 @@ const catalogues: Record<Locale, Catalogue> = {
         slug: "force-01", model: "FORCE 01", name: "原力一號", category: "360°全景遙操機器人",
         tagline: "靈活抵達，全景掌握。",
         description: "點足或輪足本體，集成全景遙操背包。透過遠程觀察與移動控制，替你進入現場、靠近目標、核查異常。",
-        views: [{ label: "點足版", src: assets.foot, weight: "約 15.5 kg" }, { label: "輪足版", src: assets.wheel, weight: "約 22.5 kg" }],
+        views: sceneViews("zh-hk", "force-01"),
         highlights: [{ value: "360°", label: "全景觀察" }, { value: "4 × 1080p", label: "最高 60 fps 影片編碼" }, { value: "4G / 5G", label: "遠程連接" }],
         benefits: [
           { title: "先看清，再決定是否到場", description: "四路低照度攝像頭覆蓋機器人周邊視野，幫助遠程操作人員查看盲區、確認現場變化。" },
@@ -232,7 +246,7 @@ const catalogues: Record<Locale, Catalogue> = {
         slug: "force-05", model: "FORCE 05", name: "原力五號", category: "球形移動巡檢機器人",
         tagline: "滾動深入，替你探查。",
         description: "面向複雜環境的球形移動機器人，以內部重擺驅動與飛輪主動穩定，實現穩定滾動、現場感知和遠程探查。",
-        views: [{ label: "斜側視角", src: assets.sphere }, { label: "側面視角", src: assets.side }, { label: "背面視角", src: assets.rear }],
+        views: sceneViews("zh-hk", "force-05"),
         highlights: [{ value: "IP68", label: "防護等級" }, { value: "4 h", label: "巡邏工況續航" }, { value: "20 kg", label: "有效載荷" }],
         benefits: [
           { title: "讓機器人先行，減少人員暴露", description: "面向公共空間、場地周界與難達區域，先行抵近觀察，讓人員在遠端判斷現場情況。" },

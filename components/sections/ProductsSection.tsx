@@ -50,7 +50,7 @@ export function ProductsSection({ locale }: { locale: Locale }) {
         </LayoutGroup>
         <div id={id + "-panel"} role="tabpanel" aria-labelledby={id + "-tab-" + active} tabIndex={0} className="mt-6 rounded-[28px] border border-white/10 bg-gradient-to-br from-[#101E2B] to-[#08111B] p-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-300 md:p-8 lg:p-10">
           <AnimatePresence mode="wait" initial={false}>
-            <motion.article key={product.slug} initial={{ opacity: 0, y: reduced ? 0 : 12 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: reduced ? 0 : -8 }} transition={{ duration: duration * 0.6 }} className="grid items-start gap-8 lg:grid-cols-[1.08fr_1fr] lg:gap-12">
+            <motion.article key={product.slug} initial={false} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: reduced ? 0 : -8 }} transition={{ duration: duration * 0.6 }} className="grid items-start gap-8 lg:grid-cols-[1.08fr_1fr] lg:gap-12">
               <ProductVisual product={product} selected={views[active]} onSelect={(index) => setViews((previous) => previous.map((value, i) => i === active ? index : value))} label={active === 0 ? copy.variants : copy.views} />
               <div className="min-w-0 lg:pt-3">
                 <div className="flex items-center gap-4 text-xs font-medium tracking-[0.2em] text-orange-300"><span>{product.model}</span><span aria-hidden="true" className="h-px flex-1 bg-gradient-to-r from-orange-400/40 to-transparent" /><span aria-hidden="true">0{active + 1} / 02</span></div>
