@@ -1,3 +1,6 @@
+import Link from "next/link";
+import { labels, legalSections, localizedPath } from "@/lib/site";
+import { PreferencesButton } from "@/components/site/CookiePreferences";
 import type { HyperContent } from "@/data/hyper";
 import { ZhText } from "@/components/ui/ZhText";
 
@@ -6,6 +9,8 @@ type FooterProps = {
 };
 
 export function Footer({ content }: FooterProps) {
+  const locale = content.lang === "en" ? "en" : content.lang === "zh-CN" ? "zh-cn" : "zh-hk";
+  const copy = labels[locale];
   const isChinese = content.lang !== "en";
 
   return (
@@ -18,6 +23,12 @@ export function Footer({ content }: FooterProps) {
         <div className={isChinese ? "text-base font-bold text-slate-400" : "text-sm text-slate-500"}>
           © {new Date().getFullYear()} <ZhText>{content.footerCompany}</ZhText>. <ZhText>{content.footerRights}</ZhText>
         </div>
+      </div>
+      <div className="section-shell mt-7 border-t border-white/10 pt-5">
+        <nav aria-label={content.lang === "en" ? "Footer navigation" : content.lang === "zh-CN" ? "页脚导航" : "頁尾導覽"} className="flex flex-wrap items-center gap-x-6 gap-y-1">
+          {(["resources", "contact", ...legalSections] as const).map(section => <Link key={section} href={localizedPath(locale, section)} className="inline-flex min-h-11 items-center text-sm text-slate-400 hover:text-orange-200">{copy[section]}</Link>)}
+          <PreferencesButton>{copy.preferences}</PreferencesButton>
+        </nav>
       </div>
     </footer>
   );

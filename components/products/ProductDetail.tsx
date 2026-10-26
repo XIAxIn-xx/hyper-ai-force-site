@@ -1,10 +1,11 @@
 "use client";
 
 import Link from "next/link";
+import { localizedPath } from "@/lib/site";
 import { ArrowLeft, ArrowRight, Check } from "lucide-react";
 import { useState } from "react";
 import { getHyperContent, type Locale } from "@/data/hyper";
-import { getProducts, homePath, productPath, type ProductSlug } from "@/data/products";
+import { getProducts, productPath, type ProductSlug } from "@/data/products";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
@@ -22,10 +23,10 @@ export function ProductDetail({ locale, slug }: { locale: Locale; slug: ProductS
   return (
     <div className={`pretty-copy ${locale === "en" ? "" : `zh-page ${locale}-page`}`}>
       <Header content={content} productSlug={slug} />
-      <main>
+      <main id="main-content">
         <section className="bg-[#071019] pb-16 pt-28 text-white md:pb-24 md:pt-36">
           <div className="section-shell">
-            <Link href={`${homePath(locale)}#products`} className="mb-8 inline-flex min-h-11 items-center gap-2 text-sm text-slate-300 hover:text-orange-200"><ArrowLeft className="h-4 w-4" aria-hidden="true" />{copy.back}</Link>
+            <Link href={localizedPath(locale, "products")} className="mb-8 inline-flex min-h-11 items-center gap-2 text-sm text-slate-300 hover:text-orange-200"><ArrowLeft className="h-4 w-4" aria-hidden="true" />{copy.back}</Link>
             <div className="grid items-center gap-10 md:grid-cols-2 lg:gap-14">
               <div className="order-2 md:order-1">
                 <ProductVisual product={product} selected={selected} onSelect={setSelected} label={slug === "force-01" ? copy.variants : copy.views} priority />
@@ -40,7 +41,7 @@ export function ProductDetail({ locale, slug }: { locale: Locale; slug: ProductS
                   {product.highlights.map((item) => <div key={item.label}><dt className="text-xs leading-5 text-slate-400">{item.label}</dt><dd className="mt-2 text-xl font-bold">{item.value}</dd></div>)}
                 </dl>
                 <div className="flex flex-wrap gap-3">
-                  <Button asChild size="lg"><a href="#contact">{copy.demo}<ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" /></a></Button>
+                  <Button asChild size="lg"><a href="#contact" data-analytics-event="inquiry_click" data-product={slug}>{copy.demo}<ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" /></a></Button>
                   <Button asChild size="lg" variant="outline"><a href="#specifications">{copy.specs}</a></Button>
                 </div>
               </div>

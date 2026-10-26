@@ -1,6 +1,9 @@
 "use client";
 
 import Script from "next/script";
+import Link from "next/link";
+import { labels, localizedPath } from "@/lib/site";
+import { trackEvent } from "@/lib/analytics";
 import { Suspense, useEffect, useRef, useState, type FormEvent } from "react";
 import { useSearchParams } from "next/navigation";
 import { Mail, MapPin } from "lucide-react";
@@ -58,6 +61,7 @@ export function ContactSection(props: ContactSectionProps) {
 }
 
 function ContactForm({ content, defaultProduct }: ContactSectionProps) {
+  const locale = content.lang === "en" ? "en" : content.lang === "zh-CN" ? "zh-cn" : "zh-hk";
   const searchParams = useSearchParams();
   const requestedProduct = defaultProduct ?? searchParams.get("product");
   const requestedModel = requestedProduct === "force-01" ? "FORCE 01" : requestedProduct === "force-05" ? "FORCE 05" : "";
@@ -227,6 +231,7 @@ function ContactForm({ content, defaultProduct }: ContactSectionProps) {
       setTurnstileToken("");
       if (turnstileWidgetId.current) window.turnstile?.reset(turnstileWidgetId.current);
       setStatus("success");
+      trackEvent("contact_submit_success", requestedProduct ?? undefined);
     } catch {
       setErrors({ form: messages.failed });
       setStatus("error");
@@ -252,7 +257,7 @@ function ContactForm({ content, defaultProduct }: ContactSectionProps) {
           <div className="mt-10 grid gap-4 text-sm text-slate-300">
             <div className="flex items-center gap-3">
               <Mail className="h-5 w-5 text-orange-300" />
-              contact@haiforce.ai
+              <a href="mailto:contact@haiforce.ai" className="hover:text-orange-200">contact@haiforce.ai</a>
             </div>
             <div className="flex items-center gap-3">
               <MapPin className="h-5 w-5 text-orange-300" />
@@ -319,7 +324,7 @@ function ContactForm({ content, defaultProduct }: ContactSectionProps) {
                 onChange={(event) => setPrivacyAccepted(event.target.checked)}
                 className="mt-1 h-4 w-4 shrink-0 accent-orange-500"
               />
-              <span>{content.contact.privacy}</span>
+              <span>{content.contact.privacy} <Link href={localizedPath(locale, "privacy")} className="text-orange-300 underline">{labels[locale].privacy}</Link></span>
             </label>
             {fieldError("privacy")}
             <div className="grid gap-1">

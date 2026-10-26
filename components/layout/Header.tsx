@@ -1,6 +1,8 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { labels, localeFromPath, localizedPath } from "@/lib/site";
 import { Globe2, Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 
@@ -20,13 +22,19 @@ const languageLinks = [
   { lang: "zh-CN", label: "简中", href: "/zh-cn" }
 ];
 
-export function Header({ content, productSlug }: HeaderProps) {
+export function Header({ content }: HeaderProps) {
   const [open, setOpen] = useState(false);
   const [languageOpen, setLanguageOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const homeHref =
     content.lang === "zh-HK" ? "/zh-hk" : content.lang === "zh-CN" ? "/zh-cn" : "/";
-  const LanguageLink = productSlug ? "a" : Link;
+  const pathname = usePathname();
+  const locale = localeFromPath(pathname);
+  const currentPage = pathname.replace(/^\/zh-(cn|hk)(?=\/|$)/, "").replace(/^\//, "");
+  const nav = ["home", "products", "technology", "solutions", "applications", "collaboration", "about"].map(key => ({
+    href: localizedPath(locale, key === "home" ? "" : key),
+    label: labels[locale][key as keyof typeof labels.en]
+  }));
   const languageButtonLabel =
     content.lang === "en" ? "Language" : content.lang === "zh-HK" ? "語言" : "语言";
 
@@ -42,9 +50,9 @@ export function Header({ content, productSlug }: HeaderProps) {
   const languageMenu = (className: string) => (
     <div className={cn("rounded-lg border border-white/10 bg-[#0D1721]/95 p-1.5 shadow-[0_18px_42px_rgba(0,0,0,0.34)] backdrop-blur-xl", className)}>
       {languageLinks.map((item) => (
-        <LanguageLink
+        <a
           key={item.lang}
-          href={productSlug ? `${item.href === "/" ? "" : item.href}/products/${productSlug}` : item.href}
+          href={localizedPath(item.lang === "en" ? "en" : item.lang === "zh-CN" ? "zh-cn" : "zh-hk", currentPage)}
           onClick={() => setLanguageOpen(false)}
           className={cn(
             "flex h-9 items-center rounded-md px-3 text-sm font-medium transition-colors",
@@ -54,7 +62,7 @@ export function Header({ content, productSlug }: HeaderProps) {
           )}
         >
           {item.label}
-        </LanguageLink>
+        </a>
       ))}
     </div>
   );
@@ -76,6 +84,15 @@ export function Header({ content, productSlug }: HeaderProps) {
       <span className="text-xs font-semibold">{languageButtonLabel}</span>
     </button>
   );
+
+  useEffect(() => {
+    setOpen(false); setLanguageOpen(false);
+  }, [pathname]);
+  useEffect(() => {
+    const close = (event: KeyboardEvent) => { if (event.key === "Escape") { setOpen(false); setLanguageOpen(false); } };
+    window.addEventListener("keydown", close);
+    return () => window.removeEventListener("keydown", close);
+  }, []);
 
   return (
     <header
@@ -105,43 +122,48 @@ export function Header({ content, productSlug }: HeaderProps) {
 
         <nav
           className={cn(
-            "hidden items-center gap-7 text-sm transition-colors lg:flex",
+            "hidden items-center gap-4 text-sm transition-colors xl:flex",
             "text-slate-300"
           )}
         >
-          {content.nav.map((item) => (
-            <a
+          {nav.map((item) => (
+            <Link
               key={item.href}
               className={cn(
                 "transition",
                 content.lang !== "en" ? "zh-nav text-sm font-medium tracking-normal" : "",
-                "hover:text-orange-200"
+                "hover:text-orange-200",
+                pathname === item.href ? "text-orange-200" : ""
               )}
-              href={productSlug ? `${homeHref}${item.href}` : item.href}
+              href={item.href}
+              aria-current={pathname === item.href ? "page" : undefined}
             >
               {item.label}
-            </a>
+            </Link>
           ))}
         </nav>
 
-        <div className="hidden items-center gap-3 lg:flex">
+        <div className="hidden items-center gap-3 xl:flex">
           <div className="relative">
+            <Link href={localizedPath(locale, "resources")} className="mr-3 text-sm text-slate-300 hover:text-orange-200">{labels[locale].resources}</Link>
             {languageTrigger}
             {languageOpen ? languageMenu("absolute right-0 top-full z-10 mt-2 w-32") : null}
           </div>
           <Button asChild size="sm">
-            <a href="#contact">{content.contact.navButton}</a>
+            <Link href={localizedPath(locale, "contact")} data-analytics-event="inquiry_click">{content.contact.navButton}</Link>
           </Button>
         </div>
 
-        <div className="flex items-center gap-2 lg:hidden">
+        <div className="flex items-center gap-2 xl:hidden">
           {languageTrigger}
           <button
             className={cn(
               "inline-flex h-10 w-10 items-center justify-center rounded-md border transition-colors",
               "border-white/15 text-white hover:bg-white/10"
             )}
-            aria-label="Toggle navigation"
+            aria-label={locale === "en" ? "Toggle navigation" : locale === "zh-cn" ? "展开导航" : "展開導覽"}
+            aria-expanded={open}
+            aria-controls="mobile-navigation"
             onClick={() => {
               setOpen((value) => !value);
               setLanguageOpen(false);
@@ -152,15 +174,16 @@ export function Header({ content, productSlug }: HeaderProps) {
         </div>
       </div>
 
-      {languageOpen ? <div className="absolute right-4 top-20 lg:hidden">{languageMenu("w-32")}</div> : null}
+      {languageOpen ? <div className="absolute right-4 top-20 xl:hidden">{languageMenu("w-32")}</div> : null}
 
       {open ? (
-        <div className="border-t border-white/10 bg-[#071019]/95 shadow-[0_18px_36px_rgba(0,0,0,0.3)] backdrop-blur-xl lg:hidden">
+        <div id="mobile-navigation" className="max-h-[calc(100dvh-5rem)] overflow-y-auto border-t border-white/10 bg-[#071019]/95 shadow-[0_18px_36px_rgba(0,0,0,0.3)] backdrop-blur-xl xl:hidden">
           <div className="section-shell flex flex-col gap-4 py-5 text-sm text-slate-300">
-            {content.nav.map((item) => (
-              <a
+            {nav.map((item) => (
+              <Link
                 key={item.href}
-                href={productSlug ? `${homeHref}${item.href}` : item.href}
+                href={item.href}
+              aria-current={pathname === item.href ? "page" : undefined}
                 onClick={() => {
                   setOpen(false);
                   setLanguageOpen(false);
@@ -168,11 +191,12 @@ export function Header({ content, productSlug }: HeaderProps) {
                 className="rounded-md px-2 py-2 hover:bg-white/10 hover:text-orange-200"
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
+            <Link href={localizedPath(locale, "resources")} className="px-2 py-2">{labels[locale].resources}</Link>
             <div className="pt-2">
               <Button asChild size="sm">
-                <a href="#contact" onClick={() => setOpen(false)}>
+                <a href={localizedPath(locale, "contact")} data-analytics-event="inquiry_click" onClick={() => setOpen(false)}>
                   {content.contact.navButton}
                 </a>
               </Button>

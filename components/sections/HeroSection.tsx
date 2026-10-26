@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 
 import { Button } from "@/components/ui/button";
 import { ZhText } from "@/components/ui/ZhText";
+import { localizedPath } from "@/lib/site";
 import type { HyperContent } from "@/data/hyper";
 
 type HeroSectionProps = {
@@ -82,13 +83,13 @@ export function HeroSection({ content }: HeroSectionProps) {
             className="mt-9 flex flex-col gap-3 sm:flex-row"
           >
             <Button asChild size="lg">
-              <a href="#contact">
+              <a href={localizedPath(content.lang === "en" ? "en" : content.lang === "zh-CN" ? "zh-cn" : "zh-hk", "contact")} data-analytics-event="inquiry_click">
                 {content.hero.primaryCta}
                 <ArrowRight className="ml-2 h-4 w-4" />
               </a>
             </Button>
             <Button asChild variant="outline" size="lg">
-              <a href="#technology">{content.hero.secondaryCta}</a>
+              <a href={localizedPath(content.lang === "en" ? "en" : content.lang === "zh-CN" ? "zh-cn" : "zh-hk", "technology")}>{content.hero.secondaryCta}</a>
             </Button>
           </motion.div>
         </div>

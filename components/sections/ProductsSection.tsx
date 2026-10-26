@@ -4,8 +4,9 @@ import Link from "next/link";
 import { ArrowRight, Plus } from "lucide-react";
 import { useId, useState } from "react";
 import { AnimatePresence, LayoutGroup, motion, useReducedMotion } from "framer-motion";
+import { localizedPath } from "@/lib/site";
 import type { Locale } from "@/data/hyper";
-import { getProducts, homePath, productPath } from "@/data/products";
+import { getProducts, productPath } from "@/data/products";
 import { ProductVisual } from "@/components/products/ProductVisual";
 import { Button } from "@/components/ui/button";
 import { SectionHeading } from "@/components/sections/SectionHeading";
@@ -62,7 +63,7 @@ export function ProductsSection({ locale }: { locale: Locale }) {
                 </dl>
                 <div className="flex flex-wrap gap-3">
                   <Button asChild className="group"><Link href={productPath(locale, product.slug)}>{copy.learnMore}<ArrowRight className="ml-3 h-4 w-4 motion-safe:transition-transform motion-safe:group-hover:translate-x-1" aria-hidden="true" /></Link></Button>
-                  <Button asChild variant="outline"><Link href={homePath(locale) + "?product=" + product.slug + "#contact"}>{copy.demo}</Link></Button>
+                  <Button asChild variant="outline"><Link href={localizedPath(locale, "contact") + "?product=" + product.slug} data-analytics-event="inquiry_click" data-product={product.slug}>{copy.demo}</Link></Button>
                 </div>
                 <div className="mt-8 border-t border-white/10">
                   {product.benefits.map((benefit, index) => (
