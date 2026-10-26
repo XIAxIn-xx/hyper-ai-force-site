@@ -4,7 +4,7 @@ English uses `/`, Simplified Chinese `/zh-cn`, Traditional Chinese `/zh-hk`.
 Each locale has products, technology, solutions, applications, collaboration,
 resources, about, contact, privacy, terms, cookies, disclaimer and accessibility.
 Existing FORCE 01 / FORCE 05 URLs remain unchanged. Language switching retains
-its current page. Home retains its existing modules with new detail-page links.
+its current page. Home has its own brand narrative: hero, the reason for remote presence, selected product imagery, a concise observation-to-action story, a project glimpse, brand belief and a conversation CTA. It does not reuse the full product explorer, capability sections, RSP workflow, case metrics, company introduction or inquiry form. Homepage copy is in `data/home.ts`; presentation is in `components/sections/HomeStory.tsx`. Detailed content and the inquiry form live on their dedicated pages.
 
 ## Content ownership
 
