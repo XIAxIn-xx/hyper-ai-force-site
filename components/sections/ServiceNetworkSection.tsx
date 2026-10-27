@@ -16,14 +16,13 @@ export function ServiceNetworkSection({ content }: ServiceNetworkSectionProps) {
   }>;
 
   return (
-    <section id="collaboration" className="relative overflow-hidden bg-[var(--bg-dark)] py-20 text-white md:py-24">
+    <section id="collaboration" className="relative overflow-hidden titanium-section py-20 md:py-24">
       <div className="section-shell">
         <Reveal>
           <SectionHeading
             title={content.service.title}
             copy={content.service.copy}
             align="center"
-            light
             className="max-w-4xl"
           />
         </Reveal>
@@ -36,15 +35,15 @@ export function ServiceNetworkSection({ content }: ServiceNetworkSectionProps) {
                 .map((part) => part.trim())
                 .filter(Boolean);
               return (
-                <article key={item.label} className="group relative min-h-[190px] overflow-hidden rounded-xl border border-white/10 bg-white/[0.045] p-6 text-white transition-colors duration-300 hover:border-[var(--border-metal)] hover:bg-white/[0.075]">
+                <article key={item.label} className="titanium-card group relative min-h-[190px] overflow-hidden rounded-xl p-6 transition-colors duration-300">
                   <div className="relative flex items-start justify-between gap-4">
-                    <Icon className="h-10 w-10 text-slate-300" />
-                    <span className="font-mono text-xs tracking-[0.2em] text-white/35">0{index + 1}</span>
+                    <Icon className="h-10 w-10 text-slate-600" />
+                    <span className="font-mono text-xs tracking-[0.2em] text-slate-600">0{index + 1}</span>
                   </div>
-                  <h3 className="zh-title zh-card-title relative mt-7 text-xl font-bold text-slate-50">
+                  <h3 className="zh-title zh-card-title relative mt-7 text-xl font-bold text-slate-950">
                     <ZhText>{item.label}</ZhText>
                   </h3>
-                  <ul className="zh-copy relative mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-300 marker:text-orange-300">
+                  <ul className="zh-copy relative mt-3 list-disc space-y-1 pl-5 text-sm leading-7 text-slate-600 marker:text-[var(--brand-link-light)]">
                     {descriptionItems.map((part) => (
                       <li key={part}><ZhText>{part}</ZhText></li>
                     ))}

@@ -13,7 +13,7 @@ export function StackOverviewSection({ content }: StackOverviewSectionProps) {
   return (
     <section
       id="solutions"
-      className="relative overflow-hidden bg-[var(--surface-steel)] py-24 text-white"
+      className="relative overflow-hidden titanium-section py-24"
     >
       <div className="section-shell">
         <Reveal>
@@ -21,7 +21,6 @@ export function StackOverviewSection({ content }: StackOverviewSectionProps) {
             eyebrow={overview.eyebrow}
             title={overview.title}
             copy={overview.copy}
-            light
             className="max-w-4xl"
           />
         </Reveal>

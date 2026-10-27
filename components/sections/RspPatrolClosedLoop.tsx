@@ -40,7 +40,7 @@ export function RspPatrolClosedLoop({ locale, steps }: RspPatrolClosedLoopProps)
   return (
     <div ref={sectionRef} className="mt-14" data-patrol-running={isRunning}>
       <div
-        className="metallic-surface metallic-edge relative overflow-hidden rounded-[1.75rem]"
+        className="metallic-surface metallic-brushed metallic-edge text-white relative overflow-hidden rounded-[1.75rem]"
         aria-label={isChinese ? "RSP 平台控制机器狗自主巡检闭环动画" : "RSP platform robot dog autonomous inspection closed-loop animation"}
       >
         <div className="relative aspect-[1.56] min-h-[340px] w-full sm:aspect-[1.95] sm:min-h-[390px] lg:aspect-[2.28] lg:min-h-[470px]">
@@ -76,7 +76,7 @@ export function RspPatrolClosedLoop({ locale, steps }: RspPatrolClosedLoopProps)
         {phaseCopy[snapshot.phase]}
       </p>
 
-      <Reveal delay={0.08}>
+      <Reveal delay={0.08} className="patrol-light-sequence">
         <ol className="mt-12 flex flex-col md:flex-row md:items-start">
           {steps.map((step, index) => {
             const Icon = getIcon(step.icon);
@@ -111,7 +111,7 @@ export function RspPatrolClosedLoop({ locale, steps }: RspPatrolClosedLoopProps)
         </ol>
       </Reveal>
 
-      {reducedMotion ? <p className="mt-4 text-center text-xs text-slate-400">{isChinese ? "已启用减少动态效果，展示完整闭环状态。" : "Reduced motion enabled; complete loop state shown."}</p> : null}
+      {reducedMotion ? <p className="mt-4 text-center text-xs text-slate-600">{isChinese ? "已启用减少动态效果，展示完整闭环状态。" : "Reduced motion enabled; complete loop state shown."}</p> : null}
     </div>
   );
 }

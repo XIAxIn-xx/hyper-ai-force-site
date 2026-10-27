@@ -239,7 +239,7 @@ function ContactForm({ content, defaultProduct }: ContactSectionProps) {
   }
 
   return (
-    <section id="contact" className="bg-[var(--bg-dark)] !py-12 text-white md:!py-16">
+    <section id="contact" className="titanium-section !py-12 md:!py-16">
       {turnstileSiteKey && (
         <Script
           src="https://challenges.cloudflare.com/turnstile/v0/api.js"
@@ -252,21 +252,20 @@ function ContactForm({ content, defaultProduct }: ContactSectionProps) {
             eyebrow={content.contact.eyebrow}
             title={content.contact.title}
             copy={content.contact.copy}
-            light
           />
-          <div className="mt-10 grid gap-4 text-sm text-slate-300">
+          <div className="mt-10 grid gap-4 text-sm text-slate-600">
             <div className="flex items-center gap-3">
-              <Mail className="h-5 w-5 text-orange-300" />
-              <a href="mailto:contact@haiforce.ai" className="hover:text-orange-200">contact@haiforce.ai</a>
+              <Mail className="h-5 w-5 text-[var(--brand-link-light)]" />
+              <a href="mailto:contact@haiforce.ai" className="hover:text-[var(--brand-link-light)]">contact@haiforce.ai</a>
             </div>
             <div className="flex items-center gap-3">
-              <MapPin className="h-5 w-5 text-orange-300" />
+              <MapPin className="h-5 w-5 text-[var(--brand-link-light)]" />
               <ZhText>{content.contact.address}</ZhText>
             </div>
           </div>
         </Reveal>
         <Reveal delay={0.1}>
-          <form noValidate onSubmit={handleSubmit} className="grid gap-4 rounded-xl border border-white/10 bg-white/[0.06] p-5 text-white shadow-[0_18px_50px_rgba(0,0,0,0.3)] backdrop-blur-md md:p-7">
+          <form noValidate onSubmit={handleSubmit} className="metallic-surface metallic-brushed metallic-edge grid gap-4 rounded-xl p-5 text-white md:p-7">
             <div className="grid gap-4 md:grid-cols-2">
               <div className="grid gap-1">
                 <Input name="name" required placeholder={content.contact.fields.name} aria-label={content.contact.fields.name} aria-invalid={Boolean(errors.name)} aria-describedby={errors.name ? "name-error" : undefined} />

@@ -12,7 +12,7 @@
 .support { max-width: 480px; font-size: 16px; line-height: 1.85; color: var(--home-muted); }
 .productGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
 .product { min-width: 0; }
-.productImage { display: flex; align-items: center; aspect-ratio: 16 / 10; overflow: hidden; padding: 12px; border-radius: var(--card-radius); background: var(--surface-titanium); background-image: var(--metal-reflection); }
+.productImage { display: flex; align-items: center; aspect-ratio: 16 / 10; overflow: hidden; padding: 12px; border-radius: var(--card-radius); background: var(--surface-titanium); background-image: var(--metal-silver-reflection), var(--metal-silver-grain); }
 .contain { display: block; width: 100%; height: auto; object-fit: contain; }
 
 .productDetails { padding-top: 26px; }

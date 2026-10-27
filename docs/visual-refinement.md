@@ -140,3 +140,19 @@ Tailwind 既有 orange 工具类统一映射品牌橙（透明度保留），sla
 - 本轮无需补充素材。
 - 完整宽窄屏页面巡检、真机及 Reduced Motion 模拟仍需补充；目前为代表页面抽查。
 - 未改动发布配置，未发布 haiforce.ai。既有 SEO 默认地址为 https://haif.ai；正式发布时需确认生产 NEXT_PUBLIC_SITE_URL 指向用户指定域名。
+
+
+## 第二轮：增强金属感、改善内页明暗（2026-10-27）
+
+本节为最新状态，覆盖上文相应页面的第一轮配色说明。
+
+- 新增 `--metal-silver-base`、`--metal-silver-grain`、`--metal-silver-reflection`；新增 `interior-hero`、`titanium-section`、`titanium-card` 与局部浅色文字规则。
+- 内页标题区域由纯黑改为钢灰金属，增加静态定向反射；技术内容按浅灰 / 钢灰交替。
+- 产品目录外层、产品详情的优势 / 参数 / 应用、应用场景、关于、联系及法律正文改为浅色阅读区；产品展示面板与联系表单保持深色仪器质感。
+- 合作卡片、资料卡片、参数载荷面板、关联导航带采用银色拉丝表面与明暗倒角；首页只增强产品底座及已有材质，不改结构。
+- TypeScript 最终检查通过。1440px 桌面检查技术页明暗与正文颜色、合作卡片材质正常；390px 手机抽查产品目录、FORCE 01 详情、解决方案、关于、联系、简体技术及隐私页均无横向溢出，浏览器无 console error。
+- 未提交表单；未执行 build、diff check、安装依赖或发布线上。
+
+![技术页第二轮](/Users/edy/Desktop/hyper-ai-force-site/.artifacts/visual-refinement/technology-silver.png)
+
+![合作页第二轮](/Users/edy/Desktop/hyper-ai-force-site/.artifacts/visual-refinement/collaboration-silver.png)

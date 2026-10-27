@@ -98,12 +98,12 @@ export function CapabilitySystemSection({ content }: CapabilitySystemSectionProp
       <div>
         {capabilities.map((item, index) => {
           const mediaLeft = item.layout === "media-left";
-          const sectionBackground = index % 2 === 0 ? "bg-[var(--bg-dark)]" : "bg-[var(--surface-dark)]";
+          const sectionBackground = index % 2 === 0 ? "titanium-section" : "interior-hero";
 
           return (
             <article key={item.number} className={`border-t border-white/10 ${sectionBackground}`}>
               <div className="section-shell grid gap-x-14 py-16 lg:min-h-[600px] lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:items-center lg:py-24">
-                <header className={`order-1 lg:row-start-1 ${mediaLeft ? "lg:col-start-2" : "lg:col-start-1"}`}>
+                <header className={`${index % 2 === 0 ? "light-copy" : ""} order-1 lg:row-start-1 ${mediaLeft ? "lg:col-start-2" : "lg:col-start-1"}`}>
                   <p className="zh-eyebrow mt-0 text-base font-semibold text-slate-300">
                     <ZhText>{item.label}</ZhText>
                   </p>
@@ -116,7 +116,7 @@ export function CapabilitySystemSection({ content }: CapabilitySystemSectionProp
                   <CapabilityMedia item={item} />
                 </div>
 
-                <div className={`order-3 mt-8 lg:row-start-2 lg:mt-8 lg:self-start ${mediaLeft ? "lg:col-start-2" : "lg:col-start-1"}`}>
+                <div className={`${index % 2 === 0 ? "light-copy" : ""} order-3 mt-8 lg:row-start-2 lg:mt-8 lg:self-start ${mediaLeft ? "lg:col-start-2" : "lg:col-start-1"}`}>
                   <p className="zh-copy max-w-xl text-base leading-8 text-slate-300">
                     <ZhText>{item.description}</ZhText>
                   </p>

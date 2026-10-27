@@ -23,13 +23,13 @@ export function ProductsSection({ locale }: { locale: Locale }) {
   const select = (index: number) => { setActive(index); setExpanded(0); };
 
   return (
-    <section id="products" className="relative isolate scroll-mt-20 overflow-hidden bg-[var(--bg-dark)] py-24 text-white">
+    <section id="products" className="relative isolate scroll-mt-20 overflow-hidden titanium-section py-24">
       <div className="section-shell">
         <motion.div initial={reduced ? false : { opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration }}>
-          <SectionHeading eyebrow={copy.eyebrow} title={copy.title} copy={copy.copy} light className="max-w-4xl" />
+          <SectionHeading eyebrow={copy.eyebrow} title={copy.title} copy={copy.copy} className="max-w-4xl" />
         </motion.div>
         <LayoutGroup id={id}>
-          <div role="tablist" aria-label={copy.eyebrow} className="mt-10 grid grid-cols-2 gap-2 rounded-2xl border border-white/10 bg-white/[0.025] p-2 md:max-w-2xl">
+          <div role="tablist" aria-label={copy.eyebrow} className="mt-10 grid grid-cols-2 gap-2 rounded-2xl border border-white/10 bg-[var(--surface-steel)] p-2 md:max-w-2xl">
             {copy.items.map((item, index) => (
               <button key={item.slug} id={id + "-tab-" + index} role="tab" type="button" aria-selected={active === index} aria-controls={id + "-panel"} tabIndex={active === index ? 0 : -1}
                 onClick={() => select(index)}
@@ -48,7 +48,7 @@ export function ProductsSection({ locale }: { locale: Locale }) {
             ))}
           </div>
         </LayoutGroup>
-        <div id={id + "-panel"} role="tabpanel" aria-labelledby={id + "-tab-" + active} tabIndex={0} className="metallic-surface metallic-brushed metallic-edge metallic-hover mt-6 rounded-[28px] p-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-300 md:p-8 lg:p-10">
+        <div id={id + "-panel"} role="tabpanel" aria-labelledby={id + "-tab-" + active} tabIndex={0} className="metallic-surface metallic-brushed metallic-edge metallic-hover text-white mt-6 rounded-[28px] p-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-300 md:p-8 lg:p-10">
           <AnimatePresence mode="wait" initial={false}>
             <motion.article key={product.slug} initial={false} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: reduced ? 0 : -8 }} transition={{ duration: duration * 0.6 }} className="grid items-start gap-8 lg:grid-cols-[1.08fr_1fr] lg:gap-12">
               <ProductVisual product={product} selected={views[active]} onSelect={(index) => setViews((previous) => previous.map((value, i) => i === active ? index : value))} label={active === 0 ? copy.variants : copy.views} />

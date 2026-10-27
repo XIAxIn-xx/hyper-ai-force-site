@@ -14,6 +14,9 @@
   --bg-light: #F5F6F7;
   --surface-light: #FFFFFF;
   --surface-titanium: #E6E9EC;
+  --metal-silver-base: #D9DDE1;
+  --metal-silver-grain: repeating-linear-gradient(0deg, transparent 0 2px, rgb(83 91 101 / .025) 2px 3px);
+  --metal-silver-reflection: linear-gradient(116deg, transparent 40%, rgb(255 255 255 / .16) 46%, rgb(255 255 255 / .48) 48%, transparent 54%);
   --metal-highlight: #C9CDD2;
   --steel-muted: #727A84;
   --text-primary-dark: #FFFFFF;
@@ -371,3 +374,41 @@ body {
     transition-duration: .01ms !important;
   }
 }
+
+/* Titanium content surfaces break up the interior pages' dark sections. */
+@layer components {
+  .interior-page { background: var(--bg-light); color: var(--text-primary-light); }
+  .interior-hero {
+    position: relative;
+    background-color: var(--surface-steel);
+    background-image: linear-gradient(116deg, transparent 60%, rgb(201 205 210 / .07) 65%, rgb(201 205 210 / .16) 66%, transparent 72%), var(--metal-silver-grain);
+    border-bottom: 1px solid var(--border-metal);
+    box-shadow: inset 0 -1px 0 rgb(201 205 210 / .15);
+  }
+  .titanium-section {
+    color: var(--text-primary-light);
+    background-color: var(--bg-light);
+    background-image: linear-gradient(180deg, var(--surface-titanium), transparent 160px);
+    border-top: 1px solid var(--border-light);
+  }
+  .titanium-card {
+    position: relative;
+    color: var(--text-primary-light);
+    background-color: var(--metal-silver-base);
+    background-image: var(--metal-silver-reflection), var(--metal-silver-grain);
+    border: 1px solid rgb(114 122 132 / .3);
+    border-top-color: rgb(255 255 255 / .95);
+    box-shadow: inset 0 1px 0 white, inset 0 -1px 0 rgb(83 91 101 / .13), 0 12px 32px -24px rgb(15 17 19 / .36);
+  }
+  .titanium-card:hover { border-color: rgb(114 122 132 / .55); }
+  .light-copy :is(.text-slate-50, .text-slate-100, .text-slate-200) { color: var(--text-primary-light); }
+  .light-copy :is(.text-slate-300, .text-slate-400) { color: var(--text-secondary-light); }
+  .light-copy :is(.text-orange-300, .text-orange-600) { color: var(--brand-link-light); }
+  .light-copy .border-white\/10 { border-color: var(--border-light); }
+  .metallic-surface { background-image: linear-gradient(116deg, transparent 57%, rgb(201 205 210 / .055) 63%, rgb(201 205 210 / .12) 64%, transparent 70%); }
+  .metallic-brushed { background-image: linear-gradient(116deg, transparent 57%, rgb(201 205 210 / .055) 63%, rgb(201 205 210 / .12) 64%, transparent 70%), var(--metal-silver-grain); }
+}
+
+.patrol-light-sequence :is(.text-white, .text-slate-100, .text-slate-200) { color: var(--text-primary-light); }
+.patrol-light-sequence [data-patrol-step] > span { background: var(--border-light); }
+.patrol-light-sequence button > span { background: var(--surface-steel); color: var(--brand-orange); border-color: var(--steel-muted); }

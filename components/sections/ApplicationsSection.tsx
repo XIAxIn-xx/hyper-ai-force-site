@@ -17,14 +17,13 @@ export function ApplicationsSection({ content }: ApplicationsSectionProps) {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <section id="applications" className="bg-[var(--bg-dark)] py-24 text-white">
+    <section id="applications" className="titanium-section py-24">
       <div className="section-shell">
         <Reveal>
           <SectionHeading
             eyebrow={content.applications.eyebrow}
             title={content.applications.title}
             align="center"
-            light
             className="max-w-5xl"
           />
         </Reveal>
