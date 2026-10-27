@@ -32,7 +32,7 @@ function CapabilityMedia({ item }: { item: Capability }) {
   return (
     <div
       data-media-key={item.resourceKey}
-      className={`relative overflow-hidden rounded-2xl border border-white/10 bg-[#071019] shadow-[0_18px_50px_rgba(0,0,0,0.36)] ${
+      className={`metallic-surface metallic-edge metallic-hover relative overflow-hidden rounded-2xl ${
         item.mediaType === "image" ? "aspect-[16/9]" : "min-h-[320px] lg:min-h-[440px]"
       }`}
     >
@@ -71,7 +71,7 @@ function CapabilityMedia({ item }: { item: Capability }) {
         </video>
       ) : null}
 
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#02070d]/85 via-transparent to-transparent" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[var(--bg-dark)]/85 via-transparent to-transparent" />
       <div className="absolute inset-x-0 bottom-0 flex flex-wrap items-end justify-between gap-3 p-5">
         <p className="text-xs font-medium tracking-[0.08em] text-white/75">
           <ZhText>{item.mediaNote}</ZhText>
@@ -79,7 +79,7 @@ function CapabilityMedia({ item }: { item: Capability }) {
         {item.mediaSlots.length ? (
           <div className="flex flex-wrap justify-end gap-2">
             {item.mediaSlots.map((slot) => (
-              <span key={slot} className="border border-white/20 bg-[#06131d]/75 px-2.5 py-1 text-[11px] text-white/75 backdrop-blur-sm">
+              <span key={slot} className="border border-white/20 bg-[color-mix(in_srgb,var(--surface-dark)_75%,transparent)] px-2.5 py-1 text-[11px] text-white/75 backdrop-blur-sm">
                 <ZhText>{slot}</ZhText>
               </span>
             ))}
@@ -94,11 +94,11 @@ export function CapabilitySystemSection({ content }: CapabilitySystemSectionProp
   const { capabilities } = content;
 
   return (
-    <section id="technology" className="bg-[#071019] text-white">
+    <section id="technology" className="bg-[var(--bg-dark)] text-white">
       <div>
         {capabilities.map((item, index) => {
           const mediaLeft = item.layout === "media-left";
-          const sectionBackground = index % 2 === 0 ? "bg-[#071019]" : "bg-[#0B1520]";
+          const sectionBackground = index % 2 === 0 ? "bg-[var(--bg-dark)]" : "bg-[var(--surface-dark)]";
 
           return (
             <article key={item.number} className={`border-t border-white/10 ${sectionBackground}`}>

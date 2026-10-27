@@ -16,7 +16,7 @@ export function ServiceNetworkSection({ content }: ServiceNetworkSectionProps) {
   }>;
 
   return (
-    <section id="collaboration" className="relative overflow-hidden bg-[radial-gradient(circle_at_12%_20%,rgba(249,115,22,0.1),transparent_25%),#071019] py-20 text-white md:py-24">
+    <section id="collaboration" className="relative overflow-hidden bg-[var(--bg-dark)] py-20 text-white md:py-24">
       <div className="section-shell">
         <Reveal>
           <SectionHeading
@@ -36,12 +36,9 @@ export function ServiceNetworkSection({ content }: ServiceNetworkSectionProps) {
                 .map((part) => part.trim())
                 .filter(Boolean);
               return (
-                <article key={item.label} className="group relative min-h-[190px] overflow-hidden rounded-xl border border-white/10 bg-white/[0.045] p-6 text-white shadow-[0_18px_42px_rgba(0,0,0,0.22)] backdrop-blur-md transition duration-500 hover:-translate-y-1 hover:border-orange-300/70 hover:bg-white/[0.075] hover:shadow-[0_0_34px_rgba(249,115,22,0.14)]">
-                  <div className="rail-scan pointer-events-none absolute left-0 top-0 h-px w-1/2 bg-gradient-to-r from-transparent via-orange-400/80 to-transparent" />
-                  <div className="pointer-events-none absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-orange-400 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-                  <div className="pointer-events-none absolute -right-12 -top-12 h-28 w-28 rounded-full bg-orange-300/10 blur-2xl transition-transform duration-700 group-hover:scale-150" />
+                <article key={item.label} className="group relative min-h-[190px] overflow-hidden rounded-xl border border-white/10 bg-white/[0.045] p-6 text-white transition-colors duration-300 hover:border-[var(--border-metal)] hover:bg-white/[0.075]">
                   <div className="relative flex items-start justify-between gap-4">
-                    <Icon className="h-10 w-10 text-orange-300 transition duration-500 group-hover:-translate-y-1 group-hover:scale-110" />
+                    <Icon className="h-10 w-10 text-slate-300" />
                     <span className="font-mono text-xs tracking-[0.2em] text-white/35">0{index + 1}</span>
                   </div>
                   <h3 className="zh-title zh-card-title relative mt-7 text-xl font-bold text-slate-50">

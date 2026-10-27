@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { ArrowRight, Pause, Play } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 
 import { Button } from "@/components/ui/button";
 import { ZhText } from "@/components/ui/ZhText";
@@ -14,6 +14,7 @@ type HeroSectionProps = {
 };
 
 export function HeroSection({ content }: HeroSectionProps) {
+  const reduced = useReducedMotion();
   const videoRef = useRef<HTMLVideoElement>(null);
   const [playback, setPlayback] = useState<"auto" | "play" | "pause">("auto");
   const [playing, setPlaying] = useState(false);
@@ -51,7 +52,7 @@ export function HeroSection({ content }: HeroSectionProps) {
   }, [playback]);
 
   return (
-    <section className="relative min-h-[960px] overflow-hidden bg-[#050B14] pt-20 text-white md:min-h-[1040px]">
+    <section className="hero-material relative min-h-[960px] overflow-hidden bg-[var(--bg-dark)] pt-20 text-white md:min-h-[1040px]">
       <video
         ref={videoRef}
         src="/videos/haiforce-hero.mp4"
@@ -66,8 +67,8 @@ export function HeroSection({ content }: HeroSectionProps) {
         onPause={() => setPlaying(false)}
         className="absolute inset-0 h-full w-full object-cover object-center"
       />
-      <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(5,11,20,0.98)_0%,rgba(5,11,20,0.82)_36%,rgba(5,11,20,0.28)_72%,rgba(5,11,20,0.55)_100%)]" />
-      <div className="absolute bottom-0 left-0 h-48 w-full bg-gradient-to-t from-[#050B14] to-transparent" />
+      <div className="hero-shade absolute inset-0" />
+      <div className="absolute bottom-0 left-0 h-48 w-full bg-gradient-to-t from-[var(--bg-dark)] to-transparent" />
 
       <div className="section-shell relative z-10 flex min-h-[880px] items-center md:min-h-[960px]">
         <div className="max-w-[840px] py-24">
@@ -75,14 +76,14 @@ export function HeroSection({ content }: HeroSectionProps) {
             initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.65 }}
-            className="zh-eyebrow text-lg font-semibold uppercase tracking-[0.16em] text-orange-200/90 md:text-xl"
+            className="zh-eyebrow text-lg font-semibold uppercase tracking-[0.16em] text-slate-300 md:text-xl"
           >
             <ZhText>{content.hero.eyebrow}</ZhText>
           </motion.div>
           <motion.h1
-            initial={{ opacity: 0, y: 20 }}
+            initial={reduced ? false : { opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
+            transition={{ duration: reduced ? 0 : 0.6, delay: reduced ? 0 : 0.1 }}
             className={
               content.lang === "en"
                 ? "zh-title relative mt-7 max-w-[840px] text-5xl font-black leading-[1.02] tracking-normal md:-left-5 md:text-7xl"
@@ -125,7 +126,7 @@ export function HeroSection({ content }: HeroSectionProps) {
         type="button"
         aria-label={playbackLabel}
         onClick={() => setPlayback(videoRef.current?.paused ? "play" : "pause")}
-        className="absolute bottom-6 right-4 z-20 inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/25 bg-[#050B14]/70 text-white hover:border-orange-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-orange-300 md:right-8"
+        className="absolute bottom-6 right-4 z-20 inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/25 bg-[color-mix(in_srgb,var(--bg-dark)_70%,transparent)] text-white hover:border-orange-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-orange-300 md:right-8"
       >
         {playing ? <Pause className="h-4 w-4" aria-hidden="true" /> : <Play className="h-4 w-4" aria-hidden="true" />}
       </button>

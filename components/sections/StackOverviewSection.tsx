@@ -13,7 +13,7 @@ export function StackOverviewSection({ content }: StackOverviewSectionProps) {
   return (
     <section
       id="solutions"
-      className="relative overflow-hidden bg-[radial-gradient(circle_at_86%_15%,rgba(249,115,22,0.12),transparent_28%),linear-gradient(180deg,#0B1520_0%,#071019_100%)] py-24 text-white"
+      className="relative overflow-hidden bg-[var(--surface-steel)] py-24 text-white"
     >
       <div className="section-shell">
         <Reveal>

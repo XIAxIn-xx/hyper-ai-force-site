@@ -17,7 +17,7 @@ export function ApplicationsSection({ content }: ApplicationsSectionProps) {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <section id="applications" className="bg-[#050B14] py-24 text-white">
+    <section id="applications" className="bg-[var(--bg-dark)] py-24 text-white">
       <div className="section-shell">
         <Reveal>
           <SectionHeading
@@ -64,11 +64,11 @@ export function ApplicationsSection({ content }: ApplicationsSectionProps) {
                     sizes="(max-width: 767px) 100vw, 60vw"
                     className={`object-cover transition duration-700 ease-out ${isActive ? "scale-105 brightness-[0.72]" : "brightness-[0.42] group-hover:scale-105 group-hover:brightness-[0.56]"}`}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#02070d] via-[#02070d]/35 to-[#02070d]/5" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg-dark)] via-[var(--bg-dark)]/35 to-[var(--bg-dark)]/5" />
                   <div className="absolute inset-x-0 bottom-0 p-5 md:p-7">
                     <div className="flex items-end justify-between gap-4">
                       <div className="min-w-0">
-                        <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg border border-white/15 bg-[#06131d]/70 text-orange-200 backdrop-blur-sm">
+                        <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg border border-white/15 bg-[color-mix(in_srgb,var(--surface-dark)_70%,transparent)] text-orange-200 backdrop-blur-sm">
                           <Icon className="h-5 w-5" />
                         </div>
                         <h3 className={`applications-card-title zh-title text-white transition-[font-size] duration-500 ${isActive ? "text-2xl font-semibold md:text-3xl" : "text-xl font-semibold"}`}>

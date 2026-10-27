@@ -40,7 +40,7 @@ export function HomeStory({ locale }: { locale: Locale }) {
             const item = copy.products.items[index];
             const view = product.views[0];
             return <article key={product.slug} className={styles.product}>
-              <Link href={productPath(locale, product.slug)} className={styles.productImage} aria-label={item.cta}>
+              <Link href={productPath(locale, product.slug)} className={`${styles.productImage} metallic-edge metallic-hover`} aria-label={item.cta}>
                 <Image src={view.src} alt={`${product.model} · ${view.label}`} width={view.width} height={view.height} sizes="(max-width: 767px) calc(100vw - 32px), 570px" unoptimized className={styles.contain} />
               </Link>
               <div className={styles.productDetails}>
@@ -72,7 +72,7 @@ export function HomeStory({ locale }: { locale: Locale }) {
       <div className="section-shell">
         <SectionIntro {...copy.technology} />
         <div className={styles.technologyGrid}>
-          <figure className={styles.systemFigure}>
+          <figure className={`${styles.systemFigure} metallic-surface metallic-brushed metallic-edge metallic-hover`}>
             <Image src="/images/capabilities/rsp-platform.png" alt={copy.technology.imageAlt} width={2560} height={1440} sizes="(max-width: 1023px) calc(100vw - 32px), 660px" className={styles.systemImage} />
             <figcaption>RSP <span aria-hidden="true">/</span> Hyper AIForce</figcaption>
             <div className={styles.systemConnection} aria-hidden="true"><span>FORCE 01 / FORCE 05</span><span>↔</span><span>RSP</span><span>↔</span><span>{locale === "en" ? "Operator" : locale === "zh-cn" ? "操作人员" : "操作人員"}</span></div>
@@ -120,7 +120,7 @@ export function HomeStory({ locale }: { locale: Locale }) {
     </section>
 
     <section id="home-cooperation" className={`${styles.section} ${styles.cooperation}`}>
-      <div className="section-shell">
+      <div className={`section-shell metallic-surface metallic-edge metallic-hover ${styles.cooperationPanel}`}>
         <SectionIntro {...copy.cooperation} />
         <div className={styles.cooperationGrid}>{copy.cooperation.items.map((item, index) => <article key={item.title}><span className={styles.index}>0{index + 1}</span><h3>{item.title}</h3><p>{item.body}</p></article>)}</div>
         <div className={styles.linkRow}><Link href={contactPath} data-analytics-event="inquiry_click" className={styles.primaryButton}>{copy.cooperation.cta}<ArrowRight size={18} aria-hidden="true" /></Link><Link href={contactPath} data-analytics-event="inquiry_click" className={styles.textLink}>{copy.cooperation.secondary}<ArrowUpRight size={18} aria-hidden="true" /></Link></div>

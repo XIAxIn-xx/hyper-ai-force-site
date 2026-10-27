@@ -23,8 +23,7 @@ export function ProductsSection({ locale }: { locale: Locale }) {
   const select = (index: number) => { setActive(index); setExpanded(0); };
 
   return (
-    <section id="products" className="relative isolate scroll-mt-20 overflow-hidden bg-[#071019] py-24 text-white">
-      <div aria-hidden="true" className="pointer-events-none absolute -right-56 top-52 -z-10 h-[650px] w-[650px] rounded-full bg-orange-500/[0.06] blur-[120px]" />
+    <section id="products" className="relative isolate scroll-mt-20 overflow-hidden bg-[var(--bg-dark)] py-24 text-white">
       <div className="section-shell">
         <motion.div initial={reduced ? false : { opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration }}>
           <SectionHeading eyebrow={copy.eyebrow} title={copy.title} copy={copy.copy} light className="max-w-4xl" />
@@ -42,14 +41,14 @@ export function ProductsSection({ locale }: { locale: Locale }) {
                   document.getElementById(id + "-tab-" + next)?.focus();
                 }}
                 className="relative rounded-xl px-4 py-4 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-300 md:px-6">
-                {active === index && <motion.span layoutId="product-selection" transition={{ duration }} className="absolute inset-0 rounded-xl border border-orange-300/25 bg-gradient-to-br from-orange-400/15 to-white/[0.04]" />}
+                {active === index && <motion.span layoutId="product-selection" transition={{ duration }} className="absolute inset-0 rounded-xl border border-orange-300/25 bg-[var(--surface-steel)]" />}
                 <span className={"relative block text-lg font-semibold tracking-wider " + (active === index ? "text-white" : "text-slate-400")}>{item.model}</span>
                 <span className="relative mt-1 block text-xs leading-5 text-slate-400">{item.category}</span>
               </button>
             ))}
           </div>
         </LayoutGroup>
-        <div id={id + "-panel"} role="tabpanel" aria-labelledby={id + "-tab-" + active} tabIndex={0} className="mt-6 rounded-[28px] border border-white/10 bg-gradient-to-br from-[#101E2B] to-[#08111B] p-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-300 md:p-8 lg:p-10">
+        <div id={id + "-panel"} role="tabpanel" aria-labelledby={id + "-tab-" + active} tabIndex={0} className="metallic-surface metallic-brushed metallic-edge metallic-hover mt-6 rounded-[28px] p-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-300 md:p-8 lg:p-10">
           <AnimatePresence mode="wait" initial={false}>
             <motion.article key={product.slug} initial={false} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: reduced ? 0 : -8 }} transition={{ duration: duration * 0.6 }} className="grid items-start gap-8 lg:grid-cols-[1.08fr_1fr] lg:gap-12">
               <ProductVisual product={product} selected={views[active]} onSelect={(index) => setViews((previous) => previous.map((value, i) => i === active ? index : value))} label={active === 0 ? copy.variants : copy.views} />
@@ -59,7 +58,7 @@ export function ProductsSection({ locale }: { locale: Locale }) {
                 <p className="mt-4 text-lg font-medium leading-relaxed text-white/90">{product.tagline}</p>
                 <p className="zh-copy mt-3 text-sm leading-7 text-slate-400">{product.description}</p>
                 <dl className="my-7 grid grid-cols-3 gap-3 border-y border-white/10 py-6">
-                  {product.highlights.map((item, index) => <motion.div key={item.label} initial={reduced ? false : { opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration, delay: reduced ? 0 : index * 0.07 }} className="flex flex-col-reverse justify-end gap-2"><dt className="text-xs leading-5 text-slate-400">{item.label}</dt><dd className="text-lg font-semibold tracking-tight text-orange-200 sm:text-2xl">{item.value}</dd></motion.div>)}
+                  {product.highlights.map((item, index) => <motion.div key={item.label} initial={reduced ? false : { opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration, delay: reduced ? 0 : index * 0.07 }} className="flex flex-col-reverse justify-end gap-2"><dt className="text-xs leading-5 text-slate-400">{item.label}</dt><dd className="text-lg font-semibold tracking-tight text-white sm:text-2xl">{item.value}</dd></motion.div>)}
                 </dl>
                 <div className="flex flex-wrap gap-3">
                   <Button asChild className="group"><Link href={productPath(locale, product.slug)}>{copy.learnMore}<ArrowRight className="ml-3 h-4 w-4 motion-safe:transition-transform motion-safe:group-hover:translate-x-1" aria-hidden="true" /></Link></Button>

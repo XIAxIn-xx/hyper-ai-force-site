@@ -131,11 +131,11 @@ export function PatrolMap({ locale, snapshot }: PatrolMapProps) {
     >
       <defs>
         <pattern id="rsp-map-grid" width="42" height="42" patternUnits="userSpaceOnUse">
-          <path d="M 42 0 L 0 0 0 42" fill="none" stroke="rgba(87,132,164,0.13)" strokeWidth="1" />
+          <path d="M 42 0 L 0 0 0 42" fill="none" stroke="rgb(201 205 210 / 0.07)" strokeWidth="1" />
         </pattern>
         <linearGradient id="rsp-map-glow" x1="0" x2="1" y1="0" y2="1">
-          <stop offset="0" stopColor="#183246" stopOpacity="0.9" />
-          <stop offset="1" stopColor="#0d1d2c" stopOpacity="0.45" />
+          <stop offset="0" stopColor="var(--surface-steel)" stopOpacity="0.9" />
+          <stop offset="1" stopColor="var(--surface-dark)" stopOpacity="0.45" />
         </linearGradient>
         <filter id="rsp-soft-glow" x="-80%" y="-80%" width="260%" height="260%">
           <feGaussianBlur stdDeviation="5" result="blur" />
@@ -146,10 +146,10 @@ export function PatrolMap({ locale, snapshot }: PatrolMapProps) {
         </filter>
       </defs>
 
-      <rect width="1200" height="520" fill="#07131e" />
+      <rect width="1200" height="520" fill="var(--bg-dark)" />
       <rect width="1200" height="520" fill="url(#rsp-map-grid)" />
 
-      <g fill="none" stroke="#43667b" strokeOpacity="0.28" strokeWidth="2">
+      <g fill="none" stroke="var(--steel-muted)" strokeOpacity="0.28" strokeWidth="2">
         <path d="M 36 78 H 1140" />
         <path d="M 36 470 H 1140" />
         <path d="M 74 34 V 488" />
@@ -158,7 +158,7 @@ export function PatrolMap({ locale, snapshot }: PatrolMapProps) {
         <path d="M 950 64 V 462" strokeDasharray="7 10" />
       </g>
 
-      <g className="rsp-map-buildings" fill="url(#rsp-map-glow)" stroke="#3b6680" strokeOpacity="0.64" strokeWidth="2">
+      <g className="rsp-map-buildings" fill="url(#rsp-map-glow)" stroke="var(--steel-muted)" strokeOpacity="0.64" strokeWidth="2">
         <path d="M 180 104 H 445 L 470 130 V 178 H 180 Z" />
         <path d="M 500 90 H 742 V 178 H 500 Z" />
         <path d="M 780 94 H 1015 V 190 H 780 Z" />
@@ -167,7 +167,7 @@ export function PatrolMap({ locale, snapshot }: PatrolMapProps) {
         <path d="M 675 250 H 1000 V 445 H 675 Z" />
       </g>
 
-      <g className="rsp-map-building-lines" fill="none" stroke="#6d9bb4" strokeOpacity="0.34" strokeWidth="1.5">
+      <g className="rsp-map-building-lines" fill="none" stroke="var(--steel-muted)" strokeOpacity="0.34" strokeWidth="1.5">
         <path d="M 206 122 H 420 M 206 144 H 420 M 206 166 H 420" />
         <path d="M 530 110 H 712 M 530 135 H 712 M 530 160 H 712" />
         <path d="M 812 116 H 984 M 812 143 H 984 M 812 170 H 984" />
@@ -176,7 +176,7 @@ export function PatrolMap({ locale, snapshot }: PatrolMapProps) {
         <path d="M 710 278 H 966 M 710 306 H 966 M 710 334 H 966 M 710 362 H 966 M 710 390 H 966 M 710 418 H 966" />
       </g>
 
-      <g className="rsp-map-equipment" fill="#7db0c1" fillOpacity="0.28" stroke="#8bc8d8" strokeOpacity="0.6" strokeWidth="1.5">
+      <g className="rsp-map-equipment" fill="var(--steel-muted)" fillOpacity="0.28" stroke="var(--metal-highlight)" strokeOpacity="0.6" strokeWidth="1.5">
         <rect x="218" y="278" width="38" height="18" rx="3" />
         <rect x="278" y="278" width="38" height="18" rx="3" />
         <rect x="446" y="414" width="30" height="18" rx="3" />
@@ -188,13 +188,13 @@ export function PatrolMap({ locale, snapshot }: PatrolMapProps) {
         <rect x="902" y="280" width="42" height="22" rx="3" />
       </g>
 
-      <g fill="none" stroke="#7bb3c7" strokeOpacity="0.42" strokeWidth="2">
+      <g fill="none" stroke="var(--steel-muted)" strokeOpacity="0.42" strokeWidth="2">
         <path d="M 132 116 C 154 138 154 196 132 222" />
         <path d="M 1040 200 C 1082 216 1082 260 1040 278" />
         <path d="M 352 208 C 378 228 378 360 352 382" />
       </g>
 
-      <g className="rsp-map-labels" fill="#8eaaba" fontFamily="Inter, Arial, sans-serif" fontSize="12" letterSpacing="1.2">
+      <g className="rsp-map-labels" fill="var(--text-secondary-dark)" fontFamily="Inter, Arial, sans-serif" fontSize="12" letterSpacing="1.2">
         <text x="196" y="196">{mapLabels.warehouse}</text>
         <text x="536" y="197">{mapLabels.utility}</text>
         <text x="816" y="210">{mapLabels.equipment}</text>
@@ -202,12 +202,12 @@ export function PatrolMap({ locale, snapshot }: PatrolMapProps) {
         <text x="728" y="466">{mapLabels.storage}</text>
       </g>
 
-      <path d={ROUTE_PATH} fill="none" stroke="#1d3445" strokeWidth="12" strokeLinecap="round" strokeLinejoin="round" />
+      <path d={ROUTE_PATH} fill="none" stroke="var(--surface-steel)" strokeWidth="12" strokeLinecap="round" strokeLinejoin="round" />
       <path
         d={ROUTE_PATH}
         pathLength="1"
         fill="none"
-        stroke="#e37b2c"
+        stroke="var(--brand-orange)"
         strokeOpacity="0.88"
         strokeWidth="3"
         strokeLinecap="round"
@@ -219,7 +219,7 @@ export function PatrolMap({ locale, snapshot }: PatrolMapProps) {
         d={ROUTE_PATH}
         pathLength="1"
         fill="none"
-        stroke="#7bd6ff"
+        stroke="var(--metal-highlight)"
         strokeOpacity="0.96"
         strokeWidth="3"
         strokeLinecap="round"
@@ -233,16 +233,16 @@ export function PatrolMap({ locale, snapshot }: PatrolMapProps) {
           const isCurrent = snapshot.activePoint === index;
           const isComplete = snapshot.routeProgress > (index + 0.5) / CHECKPOINTS.length;
           const isAnomaly = snapshot.anomaly && index === 4;
-          const color = isAnomaly ? "#f06c4f" : isCurrent ? "#f6a15c" : isComplete ? "#63c9f4" : "#7090a3";
+          const color = isAnomaly ? "#f06c4f" : isCurrent ? "var(--brand-orange)" : isComplete ? "var(--metal-highlight)" : "var(--steel-muted)";
 
           return (
             <g key={point.label} transform={`translate(${point.x} ${point.y})`}>
               <circle r={isCurrent || isAnomaly ? 14 : 9} fill={color} fillOpacity={isCurrent || isAnomaly ? 0.16 : 0.1} />
               {isCurrent || isAnomaly ? <circle r="17" fill="none" stroke={color} strokeOpacity="0.55" strokeWidth="1.5" className="rsp-point-pulse" /> : null}
-              <circle r="5" fill="#08141f" stroke={color} strokeWidth="2" />
+              <circle r="5" fill="var(--bg-dark)" stroke={color} strokeWidth="2" />
               <circle r="2" fill={color} />
-              <rect x="-18" y="-31" width="36" height="16" rx="4" fill="#081722" stroke={color} strokeOpacity="0.75" />
-              <text x="0" y="-20" textAnchor="middle" fill="#d7e8ef" fontSize="9" fontFamily="Inter, Arial, sans-serif">
+              <rect x="-18" y="-31" width="36" height="16" rx="4" fill="var(--surface-dark)" stroke={color} strokeOpacity="0.75" />
+              <text x="0" y="-20" textAnchor="middle" fill="var(--metal-highlight)" fontSize="9" fontFamily="Inter, Arial, sans-serif">
                 {point.label}
               </text>
             </g>
@@ -253,18 +253,18 @@ export function PatrolMap({ locale, snapshot }: PatrolMapProps) {
       {currentPoint && snapshot.phase === "patrol" ? (
         <g transform={`translate(${currentPoint.x} ${currentPoint.y})`} className="rsp-scan-layer">
           {snapshot.activePoint % 3 === 0 ? (
-            <path d="M 0 0 L 56 -28 A 63 63 0 0 1 56 28 Z" fill="#62d2fa" fillOpacity="0.12" stroke="#62d2fa" strokeOpacity="0.72" strokeWidth="1.5" />
+            <path d="M 0 0 L 56 -28 A 63 63 0 0 1 56 28 Z" fill="var(--metal-highlight)" fillOpacity="0.12" stroke="var(--metal-highlight)" strokeOpacity="0.72" strokeWidth="1.5" />
           ) : null}
           {snapshot.activePoint % 3 === 1 ? (
             <>
-              <circle r="28" fill="none" stroke="#84d8ff" strokeOpacity="0.45" strokeDasharray="4 5" />
-              <circle r="42" fill="none" stroke="#84d8ff" strokeOpacity="0.24" strokeDasharray="2 8" className="rsp-radar-ring" />
+              <circle r="28" fill="none" stroke="var(--metal-highlight)" strokeOpacity="0.45" strokeDasharray="4 5" />
+              <circle r="42" fill="none" stroke="var(--metal-highlight)" strokeOpacity="0.24" strokeDasharray="2 8" className="rsp-radar-ring" />
             </>
           ) : null}
           {snapshot.activePoint % 3 === 2 ? (
             <>
-              <rect x="-31" y="-24" width="62" height="48" fill="none" stroke="#f4b36d" strokeOpacity="0.7" strokeWidth="1.5" strokeDasharray="5 4" />
-              <path d="M -31 -15 H -24 M -31 -15 V -8 M 31 15 H 24 M 31 15 V 8" fill="none" stroke="#f4b36d" strokeWidth="2" />
+              <rect x="-31" y="-24" width="62" height="48" fill="none" stroke="var(--brand-orange)" strokeOpacity="0.7" strokeWidth="1.5" strokeDasharray="5 4" />
+              <path d="M -31 -15 H -24 M -31 -15 V -8 M 31 15 H 24 M 31 15 V 8" fill="none" stroke="var(--brand-orange)" strokeWidth="2" />
             </>
           ) : null}
         </g>
@@ -280,25 +280,25 @@ export function PatrolMap({ locale, snapshot }: PatrolMapProps) {
 
       {snapshot.dataFlowProgress > 0 ? (
         <>
-          <path d={DATA_RETURN_PATH} fill="none" stroke="#8bdcff" strokeOpacity="0.22" strokeWidth="7" strokeLinecap="round" />
-          <path d={DATA_RETURN_PATH} fill="none" stroke="#8bdcff" strokeOpacity="0.76" strokeWidth="1.5" strokeDasharray="5 8" />
-          <path d="M 566 144 L 548 136 M 566 144 L 553 158" fill="none" stroke="#8bdcff" strokeOpacity="0.8" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+          <path d={DATA_RETURN_PATH} fill="none" stroke="var(--metal-highlight)" strokeOpacity="0.22" strokeWidth="7" strokeLinecap="round" />
+          <path d={DATA_RETURN_PATH} fill="none" stroke="var(--metal-highlight)" strokeOpacity="0.76" strokeWidth="1.5" strokeDasharray="5 8" />
+          <path d="M 566 144 L 548 136 M 566 144 L 553 158" fill="none" stroke="var(--metal-highlight)" strokeOpacity="0.8" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
           <g transform="translate(520 232)">
-            <rect x="-54" y="-13" width="108" height="26" rx="7" fill="#0a2230" stroke="#75d8ff" strokeOpacity="0.55" />
-            <circle cx="-39" cy="0" r="3" fill="#75d8ff" />
-            <text x="-29" y="3.5" fill="#c4efff" fontSize="10" fontFamily="Inter, Arial, sans-serif" letterSpacing="0.6">
+            <rect x="-54" y="-13" width="108" height="26" rx="7" fill="var(--surface-dark)" stroke="var(--metal-highlight)" strokeOpacity="0.55" />
+            <circle cx="-39" cy="0" r="3" fill="var(--metal-highlight)" />
+            <text x="-29" y="3.5" fill="var(--text-secondary-dark)" fontSize="10" fontFamily="Inter, Arial, sans-serif" letterSpacing="0.6">
               {locale === "en" ? "DATA RETURN" : "数据回传"}
             </text>
           </g>
           <g transform={`translate(${dataPacket.x} ${dataPacket.y})`}>
-            <rect x="-21" y="-11" width="42" height="22" rx="5" fill="#0b2c3e" stroke="#8de3ff" strokeWidth="1.5" />
-            <path d="M -12 -2 H 3 M -12 4 H -2" stroke="#b8efff" strokeWidth="1.5" strokeLinecap="round" />
-            <path d="M 7 -5 L 13 0 L 7 5" fill="none" stroke="#f5ad69" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-            <text x="0" y="-17" textAnchor="middle" fill="#d3f4ff" fontSize="8" fontFamily="Inter, Arial, sans-serif" letterSpacing="0.8">DATA</text>
+            <rect x="-21" y="-11" width="42" height="22" rx="5" fill="var(--surface-steel)" stroke="var(--metal-highlight)" strokeWidth="1.5" />
+            <path d="M -12 -2 H 3 M -12 4 H -2" stroke="var(--text-secondary-dark)" strokeWidth="1.5" strokeLinecap="round" />
+            <path d="M 7 -5 L 13 0 L 7 5" fill="none" stroke="var(--brand-orange)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+            <text x="0" y="-17" textAnchor="middle" fill="var(--text-secondary-dark)" fontSize="8" fontFamily="Inter, Arial, sans-serif" letterSpacing="0.8">DATA</text>
           </g>
           <g transform={`translate(${DATA_RETURN_END.x} ${DATA_RETURN_END.y})`}>
-            <circle r="10" fill="#0c2f3f" stroke="#82ddff" strokeWidth="1.5" />
-            <path d="M -4 0 H 4 M 0 -4 V 4" stroke="#c1f2ff" strokeWidth="1.5" strokeLinecap="round" />
+            <circle r="10" fill="var(--surface-steel)" stroke="var(--metal-highlight)" strokeWidth="1.5" />
+            <path d="M -4 0 H 4 M 0 -4 V 4" stroke="var(--text-secondary-dark)" strokeWidth="1.5" strokeLinecap="round" />
           </g>
         </>
       ) : null}
@@ -307,15 +307,15 @@ export function PatrolMap({ locale, snapshot }: PatrolMapProps) {
         <ellipse cx="0" cy="16" rx="24" ry="6" fill="#000" fillOpacity="0.36" />
         <g transform={`translate(0 ${Math.sin(snapshot.time * 8) * 1.4})`}>
           <image href="/images/generated/robot-dog.svg" x="-24" y="-24" width="48" height="48" preserveAspectRatio="xMidYMid meet" />
-          <circle cx="15" cy="-6" r="2" fill="#f6a15c" />
+          <circle cx="15" cy="-6" r="2" fill="var(--brand-orange)" />
         </g>
       </g>
 
       <g transform="translate(88 452)">
-        <rect x="-18" y="-15" width="44" height="26" rx="5" fill="#0c2633" stroke="#6bb8c9" strokeOpacity="0.8" />
-        <path d="M -8 -4 H 16 M -8 3 H 10" stroke="#75d5e5" strokeWidth="2" strokeLinecap="round" />
+        <rect x="-18" y="-15" width="44" height="26" rx="5" fill="var(--surface-steel)" stroke="var(--steel-muted)" strokeOpacity="0.8" />
+        <path d="M -8 -4 H 16 M -8 3 H 10" stroke="var(--metal-highlight)" strokeWidth="2" strokeLinecap="round" />
         <circle cx="16" cy="-4" r="3" fill="#7de0bd" />
-        <text x="34" y="3" fill="#a9c3ce" fontSize="10" fontFamily="Inter, Arial, sans-serif">{mapLabels.home}</text>
+        <text x="34" y="3" fill="var(--text-secondary-dark)" fontSize="10" fontFamily="Inter, Arial, sans-serif">{mapLabels.home}</text>
       </g>
     </svg>
   );

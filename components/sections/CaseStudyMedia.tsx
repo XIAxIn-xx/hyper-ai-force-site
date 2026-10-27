@@ -33,7 +33,7 @@ export function CaseStudyMedia({ alt, className = "" }: CaseStudyMediaProps) {
   }, [reducedMotion, videoFailed]);
 
   return (
-    <div className={`absolute overflow-hidden bg-[#071019] ${className}`}>
+    <div className={`absolute overflow-hidden bg-[var(--bg-dark)] ${className}`}>
       <Image
         src={posterSrc}
         alt={alt}

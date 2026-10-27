@@ -24,7 +24,7 @@ export function ProductDetail({ locale, slug }: { locale: Locale; slug: ProductS
     <div className={`pretty-copy ${locale === "en" ? "" : `zh-page ${locale}-page`}`}>
       <Header content={content} productSlug={slug} />
       <main id="main-content">
-        <section className="bg-[#071019] pb-16 pt-28 text-white md:pb-24 md:pt-36">
+        <section className="bg-[var(--bg-dark)] pb-16 pt-28 text-white md:pb-24 md:pt-36">
           <div className="section-shell">
             <Link href={localizedPath(locale, "products")} className="mb-8 inline-flex min-h-11 items-center gap-2 text-sm text-slate-300 hover:text-orange-200"><ArrowLeft className="h-4 w-4" aria-hidden="true" />{copy.back}</Link>
             <div className="grid items-center gap-10 md:grid-cols-2 lg:gap-14">
@@ -48,7 +48,7 @@ export function ProductDetail({ locale, slug }: { locale: Locale; slug: ProductS
             </div>
           </div>
         </section>
-        <section className="bg-[#050B14] py-20 text-white">
+        <section className="bg-[var(--bg-dark)] py-20 text-white">
           <div className="section-shell">
             <h2 className="text-3xl font-bold md:text-4xl">{copy.benefits}</h2>
             <div className="mt-10 grid gap-8 md:grid-cols-3">
@@ -56,7 +56,7 @@ export function ProductDetail({ locale, slug }: { locale: Locale; slug: ProductS
             </div>
           </div>
         </section>
-        <section id="specifications" className="scroll-mt-20 bg-[#0B1520] py-20 text-white">
+        <section id="specifications" className="scroll-mt-20 bg-[var(--surface-dark)] py-20 text-white">
           <div className="section-shell grid gap-10 lg:grid-cols-[1.4fr_1fr]">
             <div>
               <h2 className="text-3xl font-bold">{copy.specs}</h2>
@@ -65,13 +65,13 @@ export function ProductDetail({ locale, slug }: { locale: Locale; slug: ProductS
               </dl>
               <p className="mt-5 text-xs leading-6 text-slate-400">{product.note}</p>
             </div>
-            <div className="self-start rounded-xl border border-white/10 bg-[#071019] p-7">
+            <div className="self-start rounded-xl border border-white/10 bg-[var(--bg-dark)] p-7">
               <h2 className="text-2xl font-semibold">{copy.payloads}</h2>
               <ul className="mt-6 space-y-5">{product.payloads.map((payload) => <li key={payload} className="flex gap-3 text-sm leading-6 text-slate-300"><Check className="mt-1 h-4 w-4 shrink-0 text-orange-300" aria-hidden="true" />{payload}</li>)}</ul>
             </div>
           </div>
         </section>
-        <section className="bg-[#071019] py-20 text-white">
+        <section className="bg-[var(--bg-dark)] py-20 text-white">
           <div className="section-shell">
             <h2 className="text-3xl font-bold">{copy.applications}</h2>
             <div className="mt-10 grid gap-6 sm:grid-cols-2">{copy.scenarios.map((item) => <article key={item.label} className="rounded-xl border border-white/10 p-6"><h3 className="text-xl font-semibold">{item.label}</h3><p className="zh-copy mt-3 text-sm leading-7 text-slate-300">{item.description}</p></article>)}</div>

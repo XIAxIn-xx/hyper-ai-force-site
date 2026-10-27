@@ -14,12 +14,12 @@ export function CaseStudySection({ content }: CaseStudySectionProps) {
     <section
       id="case-study"
       aria-labelledby="case-study-title"
-      className="relative isolate scroll-mt-20 overflow-hidden bg-[#071019] text-white"
+      className="relative isolate scroll-mt-20 overflow-hidden bg-[var(--bg-dark)] text-white"
     >
       <CaseStudyMedia alt={caseStudy.mediaAlt} className="inset-x-0 top-0 h-[360px] md:inset-0 md:h-full" />
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-[360px] bg-[#020910]/18 md:inset-0 md:h-full md:bg-[#020910]/12" />
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-[360px] bg-[color-mix(in_srgb,var(--bg-dark)_18%,transparent)] md:inset-0 md:h-full md:bg-[color-mix(in_srgb,var(--bg-dark)_12%,transparent)]" />
       <div className="pointer-events-none absolute inset-x-0 top-0 h-[360px] bg-[linear-gradient(180deg,rgba(3,10,16,0.08)_0%,rgba(3,10,16,0.2)_68%,rgba(3,10,16,0.55)_100%)] md:inset-0 md:h-full md:bg-[linear-gradient(90deg,rgba(3,10,16,0.72)_0%,rgba(3,10,16,0.48)_34%,rgba(3,10,16,0.15)_66%,rgba(3,10,16,0.05)_100%)]" />
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[42%] bg-gradient-to-t from-[#050B14] via-[#050B14]/40 to-transparent" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[42%] bg-gradient-to-t from-[var(--bg-dark)] via-[var(--bg-dark)]/40 to-transparent" />
 
       <div className="relative z-10 section-shell flex min-h-0 flex-col justify-end pb-12 pt-[312px] md:min-h-[680px] md:pb-6 md:pt-20 lg:min-h-[720px]">
         <Reveal className="w-full lg:-translate-x-4">
@@ -50,12 +50,12 @@ export function CaseStudySection({ content }: CaseStudySectionProps) {
             {caseStudy.metrics.map((metric) => (
               <div
                 key={metric.value + metric.label}
-                className="group rounded-xl border border-orange-200/35 bg-[#0D1721]/80 p-3.5 text-white shadow-[0_0_28px_rgba(249,115,22,0.1)] backdrop-blur-md transition duration-300 hover:-translate-y-0.5 hover:border-orange-300/75 hover:bg-[#132231]"
+                className="group rounded-xl border border-white/15 bg-[color-mix(in_srgb,var(--surface-dark)_80%,transparent)] p-3.5 text-white  transition-colors duration-300 hover:border-[var(--border-metal)] hover:bg-[var(--surface-steel)]"
               >
                 <p className="text-3xl font-semibold tracking-[-0.03em] text-orange-300 md:text-4xl">
                   <ZhText>{metric.value}</ZhText>
                 </p>
-                <p className="mt-1.5 text-sm leading-6 text-orange-100/85">
+                <p className="mt-1.5 text-sm leading-6 text-slate-300">
                   <ZhText>{metric.label}</ZhText>
                 </p>
               </div>

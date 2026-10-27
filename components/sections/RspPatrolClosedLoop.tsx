@@ -40,18 +40,17 @@ export function RspPatrolClosedLoop({ locale, steps }: RspPatrolClosedLoopProps)
   return (
     <div ref={sectionRef} className="mt-14" data-patrol-running={isRunning}>
       <div
-        className="relative overflow-hidden rounded-[1.75rem] border border-white/10 bg-[#06111b] shadow-[0_24px_70px_rgba(0,0,0,0.28)]"
+        className="metallic-surface metallic-edge relative overflow-hidden rounded-[1.75rem]"
         aria-label={isChinese ? "RSP 平台控制机器狗自主巡检闭环动画" : "RSP platform robot dog autonomous inspection closed-loop animation"}
       >
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_45%,rgba(33,94,119,0.16),transparent_55%)]" />
         <div className="relative aspect-[1.56] min-h-[340px] w-full sm:aspect-[1.95] sm:min-h-[390px] lg:aspect-[2.28] lg:min-h-[470px]">
           <div className="absolute inset-0 transition-opacity duration-500" style={{ opacity: snapshot.visualOpacity }}>
             <PatrolMap locale={locale} snapshot={snapshot} />
           </div>
           <RspControlPanel locale={locale} snapshot={snapshot} stageLabel={steps[snapshot.activeStage]?.label ?? steps[0]?.label ?? ""} />
           <PatrolStatusCard locale={locale} snapshot={snapshot} />
-          <div className="absolute bottom-3 left-3 z-10 flex items-center gap-2 rounded-full border border-white/10 bg-[#06111b]/80 px-2.5 py-1 text-[9px] tracking-[0.08em] text-slate-400 backdrop-blur-md sm:bottom-5 sm:left-5">
-            <span className={`h-1.5 w-1.5 rounded-full ${snapshot.anomaly ? "bg-[#ef7654]" : snapshot.complete ? "bg-emerald-300" : "bg-[#72d6ff]"}`} />
+          <div className="absolute bottom-3 left-3 z-10 flex items-center gap-2 rounded-full border border-white/10 bg-[color-mix(in_srgb,var(--surface-dark)_80%,transparent)] px-2.5 py-1 text-[9px] tracking-[0.08em] text-slate-400 backdrop-blur-md sm:bottom-5 sm:left-5">
+            <span className={`h-1.5 w-1.5 rounded-full ${snapshot.anomaly ? "bg-[#ef7654]" : snapshot.complete ? "bg-emerald-300" : "bg-[var(--metal-highlight)]"}`} />
             {snapshot.anomaly
               ? isChinese
                 ? locale === "zh-hk"
@@ -97,7 +96,7 @@ export function RspPatrolClosedLoop({ locale, steps }: RspPatrolClosedLoopProps)
                     aria-current={isCurrent ? "step" : undefined}
                     className="group block w-full text-left outline-none focus-visible:ring-2 focus-visible:ring-orange-300/80 md:text-center"
                   >
-                    <span className={`relative z-10 flex h-14 w-14 shrink-0 items-center justify-center rounded-full border bg-white/[0.06] backdrop-blur-md transition-all duration-500 group-hover:border-orange-200/80 md:mx-auto ${isCurrent ? "border-orange-200 bg-orange-300/15 text-orange-100 shadow-[0_0_34px_rgba(249,115,22,0.3)]" : isComplete ? "border-orange-300/55 text-orange-200 shadow-[0_0_26px_rgba(249,115,22,0.14)]" : "border-orange-300/25 text-orange-200/75"}`}>
+                    <span className={`relative z-10 flex h-14 w-14 shrink-0 items-center justify-center rounded-full border bg-white/[0.06] backdrop-blur-md transition-all duration-500 group-hover:border-orange-200/80 md:mx-auto ${isCurrent ? "border-orange-200 bg-orange-300/15 text-orange-100 " : isComplete ? "border-orange-300/55 text-orange-200 " : "border-orange-300/25 text-orange-200/75"}`}>
                       <Icon className={`h-6 w-6 transition-transform duration-500 ${isCurrent ? "scale-110" : "group-hover:scale-105"}`} aria-hidden="true" />
                     </span>
                     <p className={`zh-copy self-center pb-6 text-base font-semibold leading-7 transition-colors duration-500 md:mt-5 md:px-2 md:pb-0 ${isCurrent ? "text-white" : isComplete ? "text-slate-200" : "text-slate-100"}`}>

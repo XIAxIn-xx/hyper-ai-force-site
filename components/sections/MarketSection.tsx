@@ -11,7 +11,7 @@ type MarketSectionProps = {
 
 export function MarketSection({ content }: MarketSectionProps) {
   return (
-    <section className="relative isolate min-h-[700px] overflow-hidden bg-[#050B14] py-28 text-white md:py-36">
+    <section className="relative isolate min-h-[700px] overflow-hidden bg-[var(--bg-dark)] py-28 text-white md:py-36">
       <Image
         src="/images/generated/glp-warehouse-patrol-1.png"
         alt="Night-time robotic security patrol in a logistics park"

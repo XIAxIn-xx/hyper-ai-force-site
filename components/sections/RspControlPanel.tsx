@@ -57,10 +57,10 @@ export function RspControlPanel({ locale, snapshot, stageLabel }: RspControlPane
   const progress = Math.round(snapshot.routeProgress * 100);
 
   return (
-    <aside className="rsp-control-panel absolute left-3 top-24 z-10 w-[clamp(164px,22vw,236px)] rounded-xl border border-[#4f91b1]/45 bg-[#081522]/90 p-3 text-white shadow-[0_16px_36px_rgba(0,0,0,0.28)] backdrop-blur-md sm:left-5 sm:top-24 sm:p-4">
+    <aside className="rsp-control-panel absolute left-3 top-24 z-10 w-[clamp(164px,22vw,236px)] rounded-xl border border-[color-mix(in_srgb,var(--metal-highlight)_45%,transparent)] bg-[color-mix(in_srgb,var(--surface-steel)_90%,transparent)] p-3 text-white shadow-[0_16px_36px_rgba(0,0,0,0.28)] backdrop-blur-md sm:left-5 sm:top-24 sm:p-4">
       <div className="flex items-start justify-between gap-2 border-b border-white/10 pb-2.5">
         <div>
-          <p className="font-mono text-[11px] font-bold tracking-[0.28em] text-[#7fd8ff]">RSP</p>
+          <p className="font-mono text-[11px] font-bold tracking-[0.28em] text-[var(--metal-highlight)]">RSP</p>
           <p className="mt-1 text-[9px] uppercase tracking-[0.14em] text-slate-400">{copy.platform}</p>
         </div>
         <span className="flex items-center gap-1 text-[9px] font-semibold tracking-[0.08em] text-emerald-300">
@@ -70,9 +70,9 @@ export function RspControlPanel({ locale, snapshot, stageLabel }: RspControlPane
       </div>
 
       <p className="mt-3 text-[11px] font-semibold leading-4 text-slate-100">{copy.task}</p>
-      <div className="mt-2 border-l border-[#65d4ff]/60 pl-2">
+      <div className="mt-2 border-l border-[color-mix(in_srgb,var(--metal-highlight)_60%,transparent)] pl-2">
         <p className="text-[8px] uppercase tracking-[0.12em] text-slate-500">{copy.stage}</p>
-        <p className="mt-0.5 text-[10px] font-semibold leading-4 text-[#bdefff]"><ZhText>{stageLabel}</ZhText></p>
+        <p className="mt-0.5 text-[10px] font-semibold leading-4 text-[var(--metal-highlight)]"><ZhText>{stageLabel}</ZhText></p>
       </div>
       <div className="mt-2 grid grid-cols-2 gap-2 text-[9px] text-slate-400">
         <span>{copy.battery}</span>
@@ -84,10 +84,10 @@ export function RspControlPanel({ locale, snapshot, stageLabel }: RspControlPane
       <div className="mt-3">
         <div className="flex justify-between text-[9px] uppercase tracking-[0.08em] text-slate-400">
           <span>{copy.progress}</span>
-          <span className="text-[#bdefff]">{progress}%</span>
+          <span className="text-[var(--metal-highlight)]">{progress}%</span>
         </div>
         <div className="mt-1.5 h-1 overflow-hidden rounded-full bg-white/10">
-          <span className="block h-full rounded-full bg-[#65d4ff] transition-[width] duration-150" style={{ width: `${progress}%` }} />
+          <span className="block h-full rounded-full bg-[var(--metal-highlight)] transition-[width] duration-150" style={{ width: `${progress}%` }} />
         </div>
       </div>
 

@@ -34,7 +34,7 @@ export function ProductVisual({ product, selected, onSelect, label, priority = f
         x.set(((event.clientX - rect.left) / rect.width - 0.5) * 5);
         y.set(-((event.clientY - rect.top) / rect.height - 0.5) * 5);
       }} onPointerLeave={() => { x.set(0); y.set(0); }}>
-      <motion.div style={{ aspectRatio: `${view.width} / ${view.height}`, rotateX: reduced ? 0 : rotateX, rotateY: reduced ? 0 : rotateY }} className="relative overflow-hidden rounded-2xl border border-white/15 bg-[#071019] shadow-[0_24px_60px_-24px_rgba(0,0,0,0.65)]">
+      <motion.div style={{ aspectRatio: `${view.width} / ${view.height}`, rotateX: reduced ? 0 : rotateX, rotateY: reduced ? 0 : rotateY }} className="metallic-edge metallic-hover relative overflow-hidden rounded-2xl bg-[var(--surface-dark)]">
         {product.views.map((item) => (
           <Image
           key={item.src}
@@ -65,7 +65,7 @@ export function ProductVisual({ product, selected, onSelect, label, priority = f
             onClick={() => onSelect(index)}
             className={`flex min-h-12 items-center gap-3 rounded-xl border p-1.5 pr-4 text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-300 ${selected === index ? "border-orange-400/70 bg-orange-500/15 text-orange-200" : "border-white/15 text-slate-300 hover:bg-white/10"}`}
           >
-            <span className="relative h-9 w-10 shrink-0 overflow-hidden rounded-md bg-[#071019]"><Image src={item.src} alt="" fill unoptimized sizes="40px" className="object-contain" /></span>
+            <span className="relative h-9 w-10 shrink-0 overflow-hidden rounded-md bg-[var(--bg-dark)]"><Image src={item.src} alt="" fill unoptimized sizes="40px" className="object-contain" /></span>
             {item.label}
           </button>
         ))}

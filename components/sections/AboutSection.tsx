@@ -13,10 +13,10 @@ export function AboutSection({ content }: AboutSectionProps) {
   const isEnglish = content.lang === "en";
 
   return (
-    <section id="about" className="bg-[#0B1520] py-16 text-white md:py-20">
+    <section id="about" className="bg-[var(--surface-dark)] py-16 text-white md:py-20">
       <div className="section-shell grid gap-10 lg:grid-cols-[46fr_54fr] lg:items-stretch lg:gap-12">
         <Reveal>
-          <div className={`relative aspect-[4/3] w-full overflow-hidden rounded-lg border border-white/10 bg-[#050B14] shadow-[0_18px_42px_rgba(0,0,0,0.28)] lg:aspect-auto lg:h-full ${isEnglish ? "lg:mt-9" : ""}`}>
+          <div className={`relative aspect-[4/3] w-full overflow-hidden rounded-lg border border-white/10 bg-[var(--bg-dark)] shadow-[0_18px_42px_rgba(0,0,0,0.28)] lg:aspect-auto lg:h-full ${isEnglish ? "lg:mt-9" : ""}`}>
             <Image
               src="/images/hyper/cyberport.png"
               alt="Cyberport Entrepreneurship Centre"

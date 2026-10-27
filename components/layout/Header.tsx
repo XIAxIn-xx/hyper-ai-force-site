@@ -49,7 +49,7 @@ export function Header({ content, home = false }: HeaderProps) {
   }, []);
 
   const languageMenu = (className: string) => (
-    <div className={cn("rounded-lg border border-white/10 bg-[#0D1721]/95 p-1.5 shadow-[0_18px_42px_rgba(0,0,0,0.34)] backdrop-blur-xl", className)}>
+    <div className={cn("rounded-lg border border-white/10 bg-[color-mix(in_srgb,var(--surface-dark)_95%,transparent)] p-1.5 shadow-[0_18px_42px_rgba(0,0,0,0.34)] backdrop-blur-xl", className)}>
       {languageLinks.map((item) => (
         <a
           key={item.lang}
@@ -58,8 +58,8 @@ export function Header({ content, home = false }: HeaderProps) {
           className={cn(
             "flex h-9 items-center rounded-md px-3 text-sm font-medium transition-colors",
               content.lang === item.lang
-                ? "bg-orange-500 text-white"
-              : "text-slate-300 hover:bg-white/10 hover:text-orange-200"
+                ? "bg-orange-500 text-[var(--text-primary-light)]"
+              : "text-slate-300 hover:bg-white/10 hover:text-brand"
           )}
         >
           {item.label}
@@ -77,7 +77,7 @@ export function Header({ content, home = false }: HeaderProps) {
       className={cn(
         "inline-flex h-10 items-center gap-2 rounded-md border px-3 transition-colors",
         scrolled || open || languageOpen
-          ? "border-white/15 bg-[#0D1721]/80 text-white hover:bg-white/10"
+          ? "border-white/15 bg-[color-mix(in_srgb,var(--surface-dark)_80%,transparent)] text-white hover:bg-white/10"
           : "border-white/15 text-white hover:bg-white/10"
       )}
     >
@@ -98,10 +98,10 @@ export function Header({ content, home = false }: HeaderProps) {
   return (
     <header
       className={cn(
-        "fixed left-0 top-0 z-50 w-full border-b transition-all duration-300",
+        "site-header fixed left-0 top-0 z-50 w-full border-b transition-all duration-300",
         scrolled || open
-          ? "border-white/10 bg-[#071019]/[0.96] text-white shadow-[0_12px_36px_rgba(0,0,0,0.28)] backdrop-blur-xl"
-          : "border-white/10 bg-transparent text-white"
+          ? "site-header-scrolled text-white shadow-[0_8px_24px_rgb(0_0_0/0.16)]"
+          : "text-white"
       )}
     >
       <div className="section-shell flex h-20 items-center justify-between">
@@ -114,7 +114,7 @@ export function Header({ content, home = false }: HeaderProps) {
           <span
             className={cn(
               "mt-0.5 whitespace-nowrap text-[10px] font-semibold leading-3 tracking-[0.12em]",
-              "text-orange-100/80"
+              "text-slate-300"
             )}
           >
             {home ? "AI Force Be With You." : content.hero.slogan}
@@ -133,8 +133,8 @@ export function Header({ content, home = false }: HeaderProps) {
               className={cn(
                 "transition",
                 content.lang !== "en" ? "zh-nav text-sm font-medium tracking-normal" : "",
-                "hover:text-orange-200",
-                pathname === item.href ? "text-orange-200" : ""
+                "hover:text-brand",
+                pathname === item.href ? "text-brand" : ""
               )}
               href={item.href}
               aria-current={pathname === item.href ? "page" : undefined}
@@ -146,17 +146,17 @@ export function Header({ content, home = false }: HeaderProps) {
 
         <div className="hidden items-center gap-3 xl:flex">
           <div className="relative">
-            <Link href={localizedPath(locale, "resources")} className="mr-3 text-sm text-slate-300 hover:text-orange-200">{labels[locale].resources}</Link>
+            <Link href={localizedPath(locale, "resources")} className="mr-3 text-sm text-slate-300 hover:text-brand">{labels[locale].resources}</Link>
             {languageTrigger}
             {languageOpen ? languageMenu("absolute right-0 top-full z-10 mt-2 w-32") : null}
           </div>
-          <Button asChild size="sm" className={home ? "bg-[#b34510] shadow-none hover:bg-[#95390d]" : undefined}>
+          <Button asChild size="sm" className="shadow-none">
             <Link href={localizedPath(locale, "contact")} data-analytics-event="inquiry_click">{content.contact.navButton}</Link>
           </Button>
         </div>
 
         <div className="flex items-center gap-2 xl:hidden">
-          {home && <Link href={localizedPath(locale, "contact")} data-analytics-event="inquiry_click" className="inline-flex min-h-11 items-center rounded-md bg-[#b34510] px-3 text-xs font-semibold text-white hover:bg-[#95390d]">{content.contact.navButton}</Link>}
+          {home && <Link href={localizedPath(locale, "contact")} data-analytics-event="inquiry_click" className="inline-flex min-h-11 items-center rounded-md brand-button px-3 text-xs font-semibold">{content.contact.navButton}</Link>}
           {languageTrigger}
           <button
             className={cn(
@@ -179,7 +179,7 @@ export function Header({ content, home = false }: HeaderProps) {
       {languageOpen ? <div className="absolute right-4 top-20 xl:hidden">{languageMenu("w-32")}</div> : null}
 
       {open ? (
-        <div id="mobile-navigation" className="max-h-[calc(100dvh-5rem)] overflow-y-auto border-t border-white/10 bg-[#071019]/95 shadow-[0_18px_36px_rgba(0,0,0,0.3)] backdrop-blur-xl xl:hidden">
+        <div id="mobile-navigation" className="max-h-[calc(100dvh-5rem)] overflow-y-auto border-t border-white/10 bg-[color-mix(in_srgb,var(--bg-dark)_95%,transparent)] shadow-[0_18px_36px_rgba(0,0,0,0.3)] backdrop-blur-xl xl:hidden">
           <div className="section-shell flex flex-col gap-4 py-5 text-sm text-slate-300">
             {nav.map((item) => (
               <Link
@@ -190,14 +190,14 @@ export function Header({ content, home = false }: HeaderProps) {
                   setOpen(false);
                   setLanguageOpen(false);
                 }}
-                className="rounded-md px-2 py-2 hover:bg-white/10 hover:text-orange-200"
+                className="rounded-md px-2 py-2 hover:bg-white/10 hover:text-brand"
               >
                 {item.label}
               </Link>
             ))}
             <Link href={localizedPath(locale, "resources")} className="px-2 py-2">{labels[locale].resources}</Link>
             <div className="pt-2">
-              <Button asChild size="sm" className={home ? "bg-[#b34510] shadow-none hover:bg-[#95390d]" : undefined}>
+              <Button asChild size="sm" className="shadow-none">
                 <a href={localizedPath(locale, "contact")} data-analytics-event="inquiry_click" onClick={() => setOpen(false)}>
                   {content.contact.navButton}
                 </a>
