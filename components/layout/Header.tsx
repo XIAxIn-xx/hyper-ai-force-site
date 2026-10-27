@@ -3,12 +3,12 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { labels, localeFromPath, localizedPath } from "@/lib/site";
-import { Globe2, Menu, X } from "lucide-react";
+import { ChevronDown, Globe2, Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 
 import { Button } from "@/components/ui/button";
 import type { HyperContent } from "@/data/hyper";
-import type { ProductSlug } from "@/data/products";
+import { productPath, type ProductSlug } from "@/data/products";
 import { cn } from "@/lib/utils";
 
 type HeaderProps = {
@@ -27,12 +27,14 @@ export function Header({ content, home = false }: HeaderProps) {
   const [open, setOpen] = useState(false);
   const [languageOpen, setLanguageOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [productsOpen, setProductsOpen] = useState(false);
   const homeHref =
     content.lang === "zh-HK" ? "/zh-hk" : content.lang === "zh-CN" ? "/zh-cn" : "/";
   const pathname = usePathname();
   const locale = localeFromPath(pathname);
   const currentPage = pathname.replace(/^\/zh-(cn|hk)(?=\/|$)/, "").replace(/^\//, "");
   const nav = ["home", "products", "technology", "solutions", "applications", "collaboration", "about"].map(key => ({
+    key,
     href: localizedPath(locale, key === "home" ? "" : key),
     label: labels[locale][key as keyof typeof labels.en]
   }));
@@ -73,7 +75,7 @@ export function Header({ content, home = false }: HeaderProps) {
       type="button"
       aria-label={languageButtonLabel}
       aria-expanded={languageOpen}
-      onClick={() => setLanguageOpen((value) => !value)}
+      onClick={() => { setLanguageOpen((value) => !value); setProductsOpen(false); }}
       className={cn(
         "inline-flex h-10 items-center gap-2 rounded-md border px-3 transition-colors",
         scrolled || open || languageOpen
@@ -87,13 +89,63 @@ export function Header({ content, home = false }: HeaderProps) {
   );
 
   useEffect(() => {
-    setOpen(false); setLanguageOpen(false);
+    setOpen(false); setLanguageOpen(false); setProductsOpen(false);
   }, [pathname]);
   useEffect(() => {
-    const close = (event: KeyboardEvent) => { if (event.key === "Escape") { setOpen(false); setLanguageOpen(false); } };
+    const close = (event: KeyboardEvent) => { if (event.key === "Escape") { setOpen(false); setLanguageOpen(false); setProductsOpen(false); } };
     window.addEventListener("keydown", close);
     return () => window.removeEventListener("keydown", close);
   }, []);
+
+  useEffect(() => {
+    const closeProducts = (event: PointerEvent) => {
+      if (event.target instanceof Element && !event.target.closest("[data-products-nav]")) setProductsOpen(false);
+    };
+    document.addEventListener("pointerdown", closeProducts);
+    return () => document.removeEventListener("pointerdown", closeProducts);
+  }, []);
+
+  const productNav = (item: (typeof nav)[number], mobile = false) => {
+    const active = pathname === item.href || pathname.startsWith(`${item.href}/`);
+    const submenuId = mobile ? "mobile-products-submenu" : "desktop-products-submenu";
+    return <div key={item.href} data-products-nav className={mobile ? "" : "relative"}
+      onMouseLeave={mobile ? undefined : () => setProductsOpen(false)}
+      onBlur={event => { if (!event.currentTarget.contains(event.relatedTarget)) setProductsOpen(false); }}
+      onKeyDown={event => {
+        if (event.key === "Escape") {
+          event.stopPropagation();
+          setProductsOpen(false);
+          event.currentTarget.querySelector("button")?.focus();
+        }
+      }}>
+      <div className={cn("flex items-center", mobile ? "justify-between" : "gap-1", active && "text-brand")}>
+        <Link href={item.href} aria-current={pathname === item.href ? "page" : undefined}
+          onMouseEnter={mobile ? undefined : () => { setProductsOpen(true); setLanguageOpen(false); }}
+          onClick={() => { setOpen(false); setProductsOpen(false); }}
+          className={cn("hover:text-brand", mobile ? "flex-1 rounded-md px-2 py-2" : "py-3", content.lang !== "en" && "zh-nav font-medium tracking-normal")}>
+          {item.label}
+        </Link>
+        <button type="button" aria-expanded={productsOpen} aria-controls={submenuId}
+          aria-label={locale === "en" ? "Products submenu" : locale === "zh-cn" ? "产品子菜单" : "產品子選單"}
+          onClick={() => { setProductsOpen(value => !value); setLanguageOpen(false); }}
+          className="inline-flex h-11 w-8 items-center justify-center rounded-md hover:bg-white/10 hover:text-brand">
+          <ChevronDown aria-hidden="true" className={cn("h-4 w-4 transition-transform motion-reduce:transition-none", productsOpen && "rotate-180")} />
+        </button>
+      </div>
+      {productsOpen && <div id={submenuId} className={cn(
+        mobile ? "ml-2 mt-1 border-l border-white/15 pl-3" : "metallic-surface metallic-edge absolute left-0 top-full w-44 whitespace-nowrap rounded-lg p-1.5 shadow-xl"
+      )}>
+        {(["force-01", "force-05"] as const).map(slug => {
+          const href = productPath(locale, slug);
+          return <Link key={slug} href={href} aria-current={pathname === href ? "page" : undefined}
+            onClick={() => { setOpen(false); setProductsOpen(false); }}
+            className={cn("flex min-h-11 items-center rounded-md px-3 text-sm font-medium hover:bg-white/10 hover:text-brand", pathname === href ? "text-brand" : "text-slate-300")}>
+            {slug === "force-01" ? "FORCE 01" : "FORCE 05"}
+          </Link>;
+        })}
+      </div>}
+    </div>;
+  };
 
   return (
     <header
@@ -127,7 +179,7 @@ export function Header({ content, home = false }: HeaderProps) {
             "text-slate-300"
           )}
         >
-          {nav.map((item) => (
+          {nav.map((item) => item.key === "products" ? productNav(item) : (
             <Link
               key={item.href}
               className={cn(
@@ -146,7 +198,6 @@ export function Header({ content, home = false }: HeaderProps) {
 
         <div className="hidden items-center gap-3 xl:flex">
           <div className="relative">
-            <Link href={localizedPath(locale, "resources")} className="mr-3 text-sm text-slate-300 hover:text-brand">{labels[locale].resources}</Link>
             {languageTrigger}
             {languageOpen ? languageMenu("absolute right-0 top-full z-10 mt-2 w-32") : null}
           </div>
@@ -168,6 +219,7 @@ export function Header({ content, home = false }: HeaderProps) {
             aria-controls="mobile-navigation"
             onClick={() => {
               setOpen((value) => !value);
+              setProductsOpen(!open && currentPage.startsWith("products/"));
               setLanguageOpen(false);
             }}
           >
@@ -181,7 +233,7 @@ export function Header({ content, home = false }: HeaderProps) {
       {open ? (
         <div id="mobile-navigation" className="max-h-[calc(100dvh-5rem)] overflow-y-auto border-t border-white/10 bg-[color-mix(in_srgb,var(--bg-dark)_95%,transparent)] shadow-[0_18px_36px_rgba(0,0,0,0.3)] backdrop-blur-xl xl:hidden">
           <div className="section-shell flex flex-col gap-4 py-5 text-sm text-slate-300">
-            {nav.map((item) => (
+            {nav.map((item) => item.key === "products" ? productNav(item, true) : (
               <Link
                 key={item.href}
                 href={item.href}
@@ -195,7 +247,6 @@ export function Header({ content, home = false }: HeaderProps) {
                 {item.label}
               </Link>
             ))}
-            <Link href={localizedPath(locale, "resources")} className="px-2 py-2">{labels[locale].resources}</Link>
             <div className="pt-2">
               <Button asChild size="sm" className="shadow-none">
                 <a href={localizedPath(locale, "contact")} data-analytics-event="inquiry_click" onClick={() => setOpen(false)}>
