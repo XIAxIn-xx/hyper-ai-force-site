@@ -1,0 +1,115 @@
+.home { --home-ink: #101b25; --home-muted: #52606b; --home-line: #d2d8db; --home-accent: #a9400b; }
+.home section { scroll-margin-top: 80px; }
+.home a { text-decoration: none; }
+.home a:focus-visible { outline: 2px solid #d96521; outline-offset: 5px; }
+.section { padding: 92px 0; }
+.light { background: #f5f5f1; color: var(--home-ink); }
+.paper { background: #e9edea; color: var(--home-ink); }
+.dark { --home-muted: #aab5c1; --home-line: #2c3843; --home-accent: #fdad78; background: #08121c; color: #f7f8fa; }
+.intro { display: grid; grid-template-columns: 1.15fr 1fr; align-items: end; gap: 48px; margin-bottom: 48px; }
+.eyebrow { font-size: 12px; line-height: 1.5; font-weight: 650; letter-spacing: .12em; color: var(--home-accent); }
+.heading { margin-top: 16px; font-size: clamp(32px, 3.6vw, 52px); font-weight: 600; letter-spacing: -.025em; line-height: 1.13; white-space: pre-line; }
+.support { max-width: 480px; font-size: 16px; line-height: 1.85; color: var(--home-muted); }
+.productGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+.product { min-width: 0; }
+.productImage { display: flex; align-items: center; aspect-ratio: 16 / 10; overflow: hidden; background: #dde2df; }
+.contain { display: block; width: 100%; height: auto; object-fit: contain; transition: opacity .25s; }
+.productImage:hover .contain, .application:hover .contain { opacity: .9; }
+.productDetails { padding-top: 26px; }
+.category { font-size: 12px; color: var(--home-muted); letter-spacing: .06em; }
+.productName { font-size: clamp(30px, 3vw, 42px); font-weight: 600; margin: 10px 0 14px; letter-spacing: -.03em; }
+.body { color: var(--home-muted); font-size: 15px; line-height: 1.85; max-width: 500px; }
+.textLink { display: inline-flex; align-items: center; gap: 16px; min-height: 44px; margin-top: 18px; font-size: 14px; font-weight: 650; color: var(--home-accent); }
+.textLink svg { flex-shrink: 0; transition: transform .2s; }
+.textLink:hover svg { transform: translate(2px, -2px); }
+.applicationGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px 32px; }
+.application { color: inherit; }
+.applicationImage { aspect-ratio: 16 / 9; display: flex; align-items: center; overflow: hidden; background: #d4dbd7; }
+.applicationImage .contain { max-height: 100%; }
+.applicationCopy { display: grid; grid-template-columns: auto 1fr auto; align-items: start; gap: 16px; padding-top: 22px; }
+.index { font: 12px/1.8 ui-monospace, monospace; color: var(--home-accent); }
+.applicationCopy h3 { font-size: 20px; line-height: 1.4; font-weight: 600; }
+.applicationCopy p { color: var(--home-muted); font-size: 14px; line-height: 1.8; margin-top: 8px; max-width: 440px; }
+.applicationArrow { color: var(--home-accent); margin-top: 4px; }
+.sectionLink { margin-top: 36px; }
+.technologyGrid { display: grid; grid-template-columns: 1.25fr .85fr; align-items: center; gap: 64px; }
+.systemFigure { margin: 0; padding: 20px; background: #111f2b; border: 1px solid var(--home-line); }
+.systemImage { width: 100%; height: auto; }
+.systemFigure figcaption { display: flex; gap: 12px; color: #aab5c1; margin-top: 18px; font-size: 12px; }
+.systemConnection { margin-top: 24px; padding-top: 18px; border-top: 1px solid var(--home-line); display: flex; flex-wrap: wrap; gap: 12px; font-size: 11px; color: #e2e8f0; }
+.capabilities article { position: relative; padding: 20px 0 20px 34px; border-top: 1px solid var(--home-line); }
+.capabilities article:first-child { padding-top: 0; border: 0; }
+.capabilities .index { position: absolute; left: 0; }
+.capabilities h3 { font-size: 21px; line-height: 1.4; font-weight: 600; }
+.capabilities p { margin-top: 10px; color: var(--home-muted); font-size: 14px; line-height: 1.8; }
+.technologyFooter { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: end; margin-top: 34px; }
+.technologyFooter > p { font-size: 12px; line-height: 1.8; color: var(--home-muted); }
+.linkRow { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 28px; }
+.linkRow .textLink { margin-top: 0; }
+.valueGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+.value { border-top: 1px solid var(--home-line); padding-top: 24px; }
+.valueLabel { display: flex; justify-content: space-between; align-items: center; gap: 12px; color: var(--home-accent); font-size: 13px; font-weight: 600; }
+.value h3 { margin: 32px 0 18px; font-size: 25px; line-height: 1.4; font-weight: 600; }
+.value p { color: var(--home-muted); font-size: 14px; line-height: 1.85; }
+.caseGrid { display: grid; grid-template-columns: 1.35fr .8fr; align-items: center; gap: 56px; }
+.caseImage { display: block; }
+.caseCopy h3 { margin-top: 16px; font-size: 30px; line-height: 1.25; font-weight: 600; }
+.caseCopy > p:not(.eyebrow) { margin-top: 20px; font-size: 14px; line-height: 1.85; color: var(--home-muted); }
+.caseCopy .outcome { padding-top: 20px; border-top: 1px solid #c7d0cb; }
+.philosophy { padding: 72px 0; }
+.philosophyTop { display: flex; justify-content: space-between; gap: 20px; align-items: baseline; }
+.philosophyTop h2 { font-size: 16px; font-weight: 500; color: #aab5c1; }
+.philosophyTop > p { font-size: 24px; letter-spacing: -.02em; font-weight: 600; }
+.pillars { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 44px; gap: 32px; }
+.pillars article { padding-bottom: 32px; border-bottom: 1px solid var(--home-line); }
+.pillars h3 { font-size: clamp(54px, 7vw, 96px); white-space: nowrap; line-height: 1.05; font-weight: 550; letter-spacing: -.055em; }
+.pillars article:nth-child(2) h3 { color: #f98b43; }
+.pillars p { font-size: 13px; line-height: 1.6; color: #aab5c1; }
+.pillars .pillarLabel { margin: 18px 0 5px; font-size: 18px; font-weight: 500; color: #f7f8fa; }
+.philosophyStatement { display: grid; grid-template-columns: 1.2fr 1fr; align-items: center; gap: 60px; margin-top: 36px; }
+.brandLines { font-size: clamp(22px, 2.4vw, 32px); font-weight: 500; line-height: 1.5; letter-spacing: -.015em; }
+.brandLines span { display: block; }
+.brandBody { color: #aab5c1; font-size: 14px; line-height: 1.85; max-width: 440px; }
+.missionGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; border-top: 1px solid var(--home-line); margin-top: 36px; padding-top: 28px; }
+.missionGrid h3 { margin: 12px 0 10px; font-size: 21px; line-height: 1.4; font-weight: 500; }
+.missionGrid article > p:last-child { max-width: 470px; color: #aab5c1; font-size: 13px; line-height: 1.8; }
+.cooperation { --home-muted: #aab5c1; --home-line: #2c3843; --home-accent: #fdad78; background: #101d29; color: white; }
+.cooperationGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 36px; margin-bottom: 40px; }
+.cooperationGrid article { border-top: 1px solid var(--home-line); padding-top: 22px; }
+.cooperationGrid h3 { font-size: 19px; line-height: 1.5; font-weight: 550; margin-top: 18px; }
+.cooperationGrid p { color: var(--home-muted); font-size: 14px; line-height: 1.8; margin-top: 12px; }
+.primaryButton { display: inline-flex; align-items: center; justify-content: center; gap: 20px; min-height: 48px; padding: 12px 24px; color: white; background: #b34510; font-size: 14px; font-weight: 600; border-radius: 4px; transition: background .2s; }
+.primaryButton:hover { background: #95390d; }
+@media (max-width: 1023px) {
+  .technologyGrid, .caseGrid { gap: 36px; grid-template-columns: 1fr; }
+  .caseCopy { max-width: 660px; }
+  .technologyFooter { grid-template-columns: 1fr; gap: 24px; }
+}
+@media (max-width: 767px) {
+  .section { padding: 60px 0; }
+  .intro { grid-template-columns: 1fr; gap: 22px; margin-bottom: 32px; }
+  .heading { font-size: 34px; }
+  .support { font-size: 15px; }
+  .productGrid, .applicationGrid, .valueGrid, .cooperationGrid { grid-template-columns: 1fr; gap: 36px; }
+  .productImage { aspect-ratio: 16 / 10; }
+  .applicationCopy { gap: 12px; }
+  .applicationCopy h3 { font-size: 19px; }
+  .value h3 { margin-top: 22px; font-size: 23px; }
+  .systemFigure { padding: 12px; }
+  .caseCopy h3 { font-size: 28px; }
+  .philosophy { padding: 54px 0; }
+  .philosophyTop { flex-direction: column; gap: 12px; }
+  .philosophyTop > p { font-size: 23px; }
+  .pillars { gap: 12px; margin-top: 32px; }
+  .pillars h3 { font-size: clamp(26px, 8.4vw, 48px); }
+  .pillars article { padding-bottom: 22px; }
+  .pillars p { font-size: 11px; }
+  .pillars .pillarLabel { font-size: 14px; }
+  .philosophyStatement { grid-template-columns: 1fr; gap: 20px; margin-top: 28px; }
+  .brandLines { font-size: 24px; }
+  .missionGrid { grid-template-columns: 1fr; gap: 26px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .home a, .home img, .home svg { transition: none; }
+  .textLink:hover svg { transform: none; }
+}

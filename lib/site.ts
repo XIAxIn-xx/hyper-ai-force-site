@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import type { Locale } from "@/data/hyper";
 
 export const locales: Locale[] = ["en", "zh-cn", "zh-hk"];
-export const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || "https://hyperaiforce.com").replace(/\/$/, "");
+export const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || "https://haif.ai").replace(/\/$/, "");
 export const sections = ["products", "technology", "solutions", "applications", "collaboration", "resources", "about", "contact", "privacy", "terms", "cookies", "disclaimer", "accessibility"] as const;
 export type Section = typeof sections[number];
 export const legalSections: Section[] = ["privacy", "terms", "cookies", "disclaimer", "accessibility"];

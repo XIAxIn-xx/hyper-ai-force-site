@@ -4,7 +4,13 @@ English uses `/`, Simplified Chinese `/zh-cn`, Traditional Chinese `/zh-hk`.
 Each locale has products, technology, solutions, applications, collaboration,
 resources, about, contact, privacy, terms, cookies, disclaimer and accessibility.
 Existing FORCE 01 / FORCE 05 URLs remain unchanged. Language switching retains
-its current page. Home has its own brand narrative: hero, the reason for remote presence, selected product imagery, a concise observation-to-action story, a project glimpse, brand belief and a conversation CTA. It does not reuse the full product explorer, capability sections, RSP workflow, case metrics, company introduction or inquiry form. Homepage copy is in `data/home.ts`; presentation is in `components/sections/HomeStory.tsx`. Detailed content and the inquiry form live on their dedicated pages.
+its current page. Home uses eight sections in this order: Hero, Product Matrix, Applications,
+Technology, Why Hyper AIForce, Proven in the Field, Our Philosophy, Work With Us.
+It presents overviews and static imagery, while specifications, full technology
+explanations and the contact form remain on their dedicated pages. Homepage copy
+is in `data/home.ts`; presentation is in `components/sections/HomeStory.tsx` and
+its scoped CSS module. See `docs/homepage-redesign.md` for assets and acceptance.
+
 
 ## Content ownership
 
@@ -23,8 +29,8 @@ its current page. Home has its own brand narrative: hero, the reason for remote 
 ## Environment
 
 Existing Resend and Turnstile configuration is preserved. See `.env.example`.
-`NEXT_PUBLIC_SITE_URL` is the canonical public origin; it defaults to the prior
-site's configured `https://hyperaiforce.com`. Confirm domain before publication.
+`NEXT_PUBLIC_SITE_URL` is the canonical public origin; it defaults to the requested
+`https://haif.ai`. An explicit environment value overrides this default.
 `NEXT_PUBLIC_GA4_ID` must be HAIFORCE's own `G-...` web-stream ID. Empty means
 no GA4 script loads. Public environment changes require restarting development
 or redeploying production. No Matter Poise analytics ID is reused.

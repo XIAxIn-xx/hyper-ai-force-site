@@ -14,6 +14,7 @@ import { cn } from "@/lib/utils";
 type HeaderProps = {
   content: HyperContent;
   productSlug?: ProductSlug;
+  home?: boolean;
 };
 
 const languageLinks = [
@@ -22,7 +23,7 @@ const languageLinks = [
   { lang: "zh-CN", label: "简中", href: "/zh-cn" }
 ];
 
-export function Header({ content }: HeaderProps) {
+export function Header({ content, home = false }: HeaderProps) {
   const [open, setOpen] = useState(false);
   const [languageOpen, setLanguageOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -81,7 +82,7 @@ export function Header({ content }: HeaderProps) {
       )}
     >
       <Globe2 className="h-5 w-5" />
-      <span className="text-xs font-semibold">{languageButtonLabel}</span>
+      <span className={home ? "hidden text-xs font-semibold sm:inline" : "text-xs font-semibold"}>{languageButtonLabel}</span>
     </button>
   );
 
@@ -99,7 +100,7 @@ export function Header({ content }: HeaderProps) {
       className={cn(
         "fixed left-0 top-0 z-50 w-full border-b transition-all duration-300",
         scrolled || open
-          ? "border-white/10 bg-[#071019]/92 text-white shadow-[0_12px_36px_rgba(0,0,0,0.28)] backdrop-blur-xl"
+          ? "border-white/10 bg-[#071019]/[0.96] text-white shadow-[0_12px_36px_rgba(0,0,0,0.28)] backdrop-blur-xl"
           : "border-white/10 bg-transparent text-white"
       )}
     >
@@ -116,7 +117,7 @@ export function Header({ content }: HeaderProps) {
               "text-orange-100/80"
             )}
           >
-            {content.hero.slogan}
+            {home ? "AI Force Be With You." : content.hero.slogan}
           </span>
         </Link>
 
@@ -149,12 +150,13 @@ export function Header({ content }: HeaderProps) {
             {languageTrigger}
             {languageOpen ? languageMenu("absolute right-0 top-full z-10 mt-2 w-32") : null}
           </div>
-          <Button asChild size="sm">
+          <Button asChild size="sm" className={home ? "bg-[#b34510] shadow-none hover:bg-[#95390d]" : undefined}>
             <Link href={localizedPath(locale, "contact")} data-analytics-event="inquiry_click">{content.contact.navButton}</Link>
           </Button>
         </div>
 
         <div className="flex items-center gap-2 xl:hidden">
+          {home && <Link href={localizedPath(locale, "contact")} data-analytics-event="inquiry_click" className="inline-flex min-h-11 items-center rounded-md bg-[#b34510] px-3 text-xs font-semibold text-white hover:bg-[#95390d]">{content.contact.navButton}</Link>}
           {languageTrigger}
           <button
             className={cn(
@@ -195,7 +197,7 @@ export function Header({ content }: HeaderProps) {
             ))}
             <Link href={localizedPath(locale, "resources")} className="px-2 py-2">{labels[locale].resources}</Link>
             <div className="pt-2">
-              <Button asChild size="sm">
+              <Button asChild size="sm" className={home ? "bg-[#b34510] shadow-none hover:bg-[#95390d]" : undefined}>
                 <a href={localizedPath(locale, "contact")} data-analytics-event="inquiry_click" onClick={() => setOpen(false)}>
                   {content.contact.navButton}
                 </a>

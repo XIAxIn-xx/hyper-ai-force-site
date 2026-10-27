@@ -15,7 +15,8 @@ export function HyperPage({ locale }: HyperPageProps) {
 
   return (
     <div className={`${content.lang === "en" ? "pretty-copy" : "pretty-copy zh-page"} ${localeClass}`}>
-      <Header content={content} />
+      <link rel="preload" as="image" href="/videos/haiforce-hero-poster.jpg" />
+      <Header content={content} home />
       <main id="main-content">
         <HeroSection content={content} />
         <HomeStory locale={locale} />

@@ -310,3 +310,7 @@ body {
     padding-block: 56px;
   }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
