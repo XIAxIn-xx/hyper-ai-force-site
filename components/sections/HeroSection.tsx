@@ -1,8 +1,7 @@
 "use client";
 
-import { memo, useEffect, useRef } from "react";
-import Image from "next/image";
-import { ArrowRight } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+import { ArrowRight, Pause, Play } from "lucide-react";
 import { motion } from "framer-motion";
 
 import { Button } from "@/components/ui/button";
@@ -15,31 +14,59 @@ type HeroSectionProps = {
 };
 
 export function HeroSection({ content }: HeroSectionProps) {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [playback, setPlayback] = useState<"auto" | "play" | "pause">("auto");
+  const [playing, setPlaying] = useState(false);
+  const playbackLabel = content.lang === "en"
+    ? playing ? "Pause background video" : "Play background video"
+    : content.lang === "zh-CN"
+      ? playing ? "暂停背景视频" : "播放背景视频"
+      : playing ? "暫停背景影片" : "播放背景影片";
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    let inView = false;
+    const sync = () => {
+      if (!inView || document.hidden || playback === "pause" || (playback === "auto" && reducedMotion.matches)) {
+        video.pause();
+      } else {
+        video.play().catch(() => {});
+      }
+    };
+    const observer = new IntersectionObserver(([entry]) => {
+      inView = entry.isIntersecting;
+      sync();
+    }, { threshold: 0.05 });
+    observer.observe(video);
+    document.addEventListener("visibilitychange", sync);
+    reducedMotion.addEventListener("change", sync);
+    return () => {
+      observer.disconnect();
+      document.removeEventListener("visibilitychange", sync);
+      reducedMotion.removeEventListener("change", sync);
+      video.pause();
+    };
+  }, [playback]);
+
   return (
     <section className="relative min-h-[960px] overflow-hidden bg-[#050B14] pt-20 text-white md:min-h-[1040px]">
-      <Image
-        src="/images/generated/hyper-hero-robotics.png"
-        alt="Autonomous quadruped security patrol robot at a facility"
-        fill
-        priority
-        className="translate-y-4 object-cover object-center opacity-88 md:translate-y-7"
+      <video
+        ref={videoRef}
+        src="/videos/haiforce-hero.mp4"
+        poster="/videos/haiforce-hero-poster.jpg"
+        muted
+        loop
+        playsInline
+        preload="metadata"
+        aria-hidden="true"
+        tabIndex={-1}
+        onPlay={() => setPlaying(true)}
+        onPause={() => setPlaying(false)}
+        className="absolute inset-0 h-full w-full object-cover object-center"
       />
       <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(5,11,20,0.98)_0%,rgba(5,11,20,0.82)_36%,rgba(5,11,20,0.28)_72%,rgba(5,11,20,0.55)_100%)]" />
-      <div className="absolute inset-y-0 left-0 w-[68%] bg-grid-fade tech-grid opacity-45 md:w-[60%]" />
-      <div className="pointer-events-none absolute right-[-8%] top-[24%] h-[520px] w-[520px] bg-[radial-gradient(circle,rgba(249,115,22,0.24)_0%,rgba(249,115,22,0.08)_35%,transparent_72%)] blur-2xl md:h-[680px] md:w-[680px]" />
-      <div className="pointer-events-none absolute inset-y-0 left-0 w-[68%] opacity-85 md:w-[60%]">
-        <DotField
-          dotRadius={2}
-          dotSpacing={13}
-          cursorRadius={620}
-          bulgeStrength={88}
-          glowRadius={260}
-          waveAmplitude={0.75}
-          gradientFrom="rgba(255, 177, 86, 0.62)"
-          gradientTo="rgba(249, 115, 22, 0.24)"
-          glowColor="rgba(249, 115, 22, 0.58)"
-        />
-      </div>
       <div className="absolute bottom-0 left-0 h-48 w-full bg-gradient-to-t from-[#050B14] to-transparent" />
 
       <div className="section-shell relative z-10 flex min-h-[880px] items-center md:min-h-[960px]">
@@ -94,269 +121,14 @@ export function HeroSection({ content }: HeroSectionProps) {
           </motion.div>
         </div>
       </div>
+      <button
+        type="button"
+        aria-label={playbackLabel}
+        onClick={() => setPlayback(videoRef.current?.paused ? "play" : "pause")}
+        className="absolute bottom-6 right-4 z-20 inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/25 bg-[#050B14]/70 text-white hover:border-orange-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-orange-300 md:right-8"
+      >
+        {playing ? <Pause className="h-4 w-4" aria-hidden="true" /> : <Play className="h-4 w-4" aria-hidden="true" />}
+      </button>
     </section>
   );
 }
-
-type DotFieldProps = {
-  dotRadius?: number;
-  dotSpacing?: number;
-  cursorRadius?: number;
-  cursorForce?: number;
-  bulgeOnly?: boolean;
-  bulgeStrength?: number;
-  glowRadius?: number;
-  sparkle?: boolean;
-  waveAmplitude?: number;
-  gradientFrom?: string;
-  gradientTo?: string;
-  glowColor?: string;
-};
-
-const TWO_PI = Math.PI * 2;
-
-const DotField = memo(function DotField({
-  dotRadius = 1.5,
-  dotSpacing = 14,
-  cursorRadius = 500,
-  cursorForce = 0.1,
-  bulgeOnly = true,
-  bulgeStrength = 67,
-  glowRadius = 160,
-  sparkle = false,
-  waveAmplitude = 0,
-  gradientFrom = "rgba(168, 85, 247, 0.35)",
-  gradientTo = "rgba(180, 151, 207, 0.25)",
-  glowColor = "#120F17"
-}: DotFieldProps) {
-  const canvasRef = useRef<HTMLCanvasElement | null>(null);
-  const glowRef = useRef<SVGCircleElement | null>(null);
-  const dotsRef = useRef<
-    Array<{ ax: number; ay: number; sx: number; sy: number; vx: number; vy: number; x: number; y: number }>
-  >([]);
-  const mouseRef = useRef({ x: -9999, y: -9999, prevX: -9999, prevY: -9999, speed: 0 });
-  const rafRef = useRef<number | null>(null);
-  const sizeRef = useRef({ w: 0, h: 0, offsetX: 0, offsetY: 0 });
-  const glowOpacity = useRef(0);
-  const engagement = useRef(0);
-  const propsRef = useRef({
-    dotRadius,
-    dotSpacing,
-    cursorRadius,
-    cursorForce,
-    bulgeOnly,
-    bulgeStrength,
-    sparkle,
-    waveAmplitude,
-    gradientFrom,
-    gradientTo
-  });
-  const rebuildRef = useRef<(() => void) | null>(null);
-  const glowIdRef = useRef(`dot-field-glow-${Math.random().toString(36).slice(2, 9)}`);
-
-  propsRef.current = {
-    dotRadius,
-    dotSpacing,
-    cursorRadius,
-    cursorForce,
-    bulgeOnly,
-    bulgeStrength,
-    sparkle,
-    waveAmplitude,
-    gradientFrom,
-    gradientTo
-  };
-
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    const glowEl = glowRef.current;
-    if (!canvas) return;
-
-    const ctx = canvas.getContext("2d", { alpha: true });
-    if (!ctx) return;
-
-    const activeCanvas = canvas;
-    const activeCtx = ctx;
-    const dpr = Math.min(window.devicePixelRatio || 1, 2);
-    let resizeTimer: ReturnType<typeof setTimeout>;
-
-    function buildDots(w: number, h: number) {
-      const p = propsRef.current;
-      const step = p.dotRadius + p.dotSpacing;
-      const cols = Math.floor(w / step);
-      const rows = Math.floor(h / step);
-      const padX = (w % step) / 2;
-      const padY = (h % step) / 2;
-      const dots = new Array(rows * cols);
-      let idx = 0;
-
-      for (let row = 0; row < rows; row++) {
-        for (let col = 0; col < cols; col++) {
-          const ax = padX + col * step + step / 2;
-          const ay = padY + row * step + step / 2;
-          dots[idx++] = { ax, ay, sx: ax, sy: ay, vx: 0, vy: 0, x: ax, y: ay };
-        }
-      }
-
-      dotsRef.current = dots;
-    }
-
-    function doResize() {
-      const rect = activeCanvas.parentElement?.getBoundingClientRect();
-      if (!rect) return;
-
-      const w = rect.width;
-      const h = rect.height;
-
-      activeCanvas.width = w * dpr;
-      activeCanvas.height = h * dpr;
-      activeCanvas.style.width = `${w}px`;
-      activeCanvas.style.height = `${h}px`;
-      activeCtx.setTransform(dpr, 0, 0, dpr, 0, 0);
-
-      sizeRef.current = {
-        w,
-        h,
-        offsetX: rect.left + window.scrollX,
-        offsetY: rect.top + window.scrollY
-      };
-
-      buildDots(w, h);
-    }
-
-    function resize() {
-      clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(doResize, 100);
-    }
-
-    function onMouseMove(e: MouseEvent) {
-      const s = sizeRef.current;
-      mouseRef.current.x = e.pageX - s.offsetX;
-      mouseRef.current.y = e.pageY - s.offsetY;
-    }
-
-    function updateMouseSpeed() {
-      const m = mouseRef.current;
-      const dx = m.prevX - m.x;
-      const dy = m.prevY - m.y;
-      const dist = Math.sqrt(dx * dx + dy * dy);
-      m.speed += (dist - m.speed) * 0.5;
-      if (m.speed < 0.001) m.speed = 0;
-      m.prevX = m.x;
-      m.prevY = m.y;
-    }
-
-    const speedInterval = setInterval(updateMouseSpeed, 20);
-    let frameCount = 0;
-
-    function tick() {
-      frameCount++;
-      const dots = dotsRef.current;
-      const m = mouseRef.current;
-      const { w, h } = sizeRef.current;
-      const p = propsRef.current;
-      const t = frameCount * 0.02;
-      const targetEngagement = Math.min(m.speed / 5, 1);
-
-      engagement.current += (targetEngagement - engagement.current) * 0.06;
-      if (engagement.current < 0.001) engagement.current = 0;
-
-      glowOpacity.current += (engagement.current - glowOpacity.current) * 0.08;
-
-      if (glowEl) {
-        glowEl.setAttribute("cx", String(m.x));
-        glowEl.setAttribute("cy", String(m.y));
-        glowEl.style.opacity = String(glowOpacity.current);
-      }
-
-      activeCtx.clearRect(0, 0, w, h);
-
-      const grad = activeCtx.createLinearGradient(0, 0, w, h);
-      grad.addColorStop(0, p.gradientFrom);
-      grad.addColorStop(1, p.gradientTo);
-      activeCtx.fillStyle = grad;
-      activeCtx.beginPath();
-
-      for (let i = 0; i < dots.length; i++) {
-        const d = dots[i];
-        const dx = m.x - d.ax;
-        const dy = m.y - d.ay;
-        const distSq = dx * dx + dy * dy;
-
-        if (distSq < p.cursorRadius * p.cursorRadius && engagement.current > 0.01) {
-          const dist = Math.sqrt(distSq);
-          if (p.bulgeOnly) {
-            const pull = (1 - dist / p.cursorRadius) ** 2 * p.bulgeStrength * engagement.current;
-            const angle = Math.atan2(dy, dx);
-            d.sx += (d.ax - Math.cos(angle) * pull - d.sx) * 0.15;
-            d.sy += (d.ay - Math.sin(angle) * pull - d.sy) * 0.15;
-          } else {
-            const angle = Math.atan2(dy, dx);
-            const move = (500 / Math.max(dist, 1)) * (m.speed * p.cursorForce);
-            d.vx += Math.cos(angle) * -move;
-            d.vy += Math.sin(angle) * -move;
-          }
-        } else if (p.bulgeOnly) {
-          d.sx += (d.ax - d.sx) * 0.1;
-          d.sy += (d.ay - d.sy) * 0.1;
-        }
-
-        if (!p.bulgeOnly) {
-          d.vx *= 0.9;
-          d.vy *= 0.9;
-          d.x = d.ax + d.vx;
-          d.y = d.ay + d.vy;
-          d.sx += (d.x - d.sx) * 0.1;
-          d.sy += (d.y - d.sy) * 0.1;
-        }
-
-        const drawX = d.sx + (p.waveAmplitude > 0 ? Math.cos(d.ay * 0.03 + t * 0.7) * p.waveAmplitude * 0.5 : 0);
-        const drawY = d.sy + (p.waveAmplitude > 0 ? Math.sin(d.ax * 0.03 + t) * p.waveAmplitude : 0);
-        const rad = p.sparkle && ((((i * 2654435761) ^ (frameCount >> 3)) >>> 0) % 100) < 3 ? p.dotRadius * 0.9 : p.dotRadius / 2;
-
-        activeCtx.moveTo(drawX + rad, drawY);
-        activeCtx.arc(drawX, drawY, rad, 0, TWO_PI);
-      }
-
-      activeCtx.fill();
-      rafRef.current = requestAnimationFrame(tick);
-    }
-
-    doResize();
-    window.addEventListener("resize", resize);
-    window.addEventListener("mousemove", onMouseMove, { passive: true });
-    rafRef.current = requestAnimationFrame(tick);
-
-    rebuildRef.current = () => {
-      const { w, h } = sizeRef.current;
-      if (w > 0 && h > 0) buildDots(w, h);
-    };
-
-    return () => {
-      if (rafRef.current) cancelAnimationFrame(rafRef.current);
-      clearInterval(speedInterval);
-      clearTimeout(resizeTimer);
-      window.removeEventListener("resize", resize);
-      window.removeEventListener("mousemove", onMouseMove);
-    };
-  }, []);
-
-  useEffect(() => {
-    rebuildRef.current?.();
-  }, [dotRadius, dotSpacing]);
-
-  return (
-    <div className="relative h-full w-full">
-      <canvas ref={canvasRef} className="absolute inset-0 h-full w-full" />
-      <svg className="pointer-events-none absolute inset-0 h-full w-full">
-        <defs>
-          <radialGradient id={glowIdRef.current}>
-            <stop offset="0%" stopColor={glowColor} />
-            <stop offset="100%" stopColor="transparent" />
-          </radialGradient>
-        </defs>
-        <circle ref={glowRef} cx="-9999" cy="-9999" r={glowRadius} fill={`url(#${glowIdRef.current})`} style={{ opacity: 0 }} />
-      </svg>
-    </div>
-  );
-});
