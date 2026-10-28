@@ -44,7 +44,7 @@ export const editorial: Record<Locale, Editorial> = {
         { title: "Scope and responsibilities", body: "Define hardware, software, integration and service requirements. Agree responsibilities for site preparation, operator training and ongoing operation." },
         { title: "Evaluation and deployment", body: "Set assessment criteria, review the proposed configuration and agree a deployment plan. Commercial terms and service scope are confirmed for each project." },
       ] },
-      about: { title: "Engineering capability. Operational focus.", intro: "Hyper AIForce connects robotic platforms with perception, remote control and deployment services for physical-security and facility operations.", image: images.about, target: "collaboration", chapters: [
+      about: { title: "Engineering capability. Operational focus.", intro: "Hyper AIForce connects robotic platforms with perception, remote control and deployment services for physical-security and facility operations.", image: "/images/hyper/cyberport-3-entrance.png", target: "collaboration", chapters: [
         { title: "Application-led engineering", body: "Start with the task and its operating conditions. Match platform capabilities, payloads and control methods to the requirements of the site." },
         { title: "Hardware and software coordination", body: "Consider the robot, sensing equipment and operational software as parts of one system. Integration decisions should support a clear operator workflow." },
         { title: "Deployment and operations", body: "Connect technical configuration with site procedures, operator responsibilities and maintenance requirements throughout the deployment lifecycle." },
@@ -90,7 +90,7 @@ export const editorial: Record<Locale, Editorial> = {
         { title: "范围与职责确认", body: "界定硬件、软件、集成与服务范围，明确场地准备、操作培训及持续运营的责任分工。" },
         { title: "评估与部署", body: "制定评估条件，复核拟选配置并形成部署计划，商务条款与服务范围按项目确认。" },
       ] },
-      about: { title: "以工程能力，服务现场运营。", intro: "超流智能结合机器人平台、感知、远程控制与部署服务，面向物理安全及设施运营构建应用方案。", image: images.about, target: "collaboration", chapters: [
+      about: { title: "以工程能力，服务现场运营。", intro: "超流智能结合机器人平台、感知、远程控制与部署服务，面向物理安全及设施运营构建应用方案。", image: "/images/hyper/cyberport-3-entrance.png", target: "collaboration", chapters: [
         { title: "应用驱动的技术配置", body: "从任务与作业条件出发，将平台能力、载荷与控制方式匹配到具体场地需求。" },
         { title: "软硬件协同", body: "统筹机器人、感知设备与作业软件，通过系统集成支持清晰、可执行的操作流程。" },
         { title: "部署与持续运行", body: "将技术配置与现场流程、人员职责及维护需求连接，覆盖部署全周期的关键环节。" },
@@ -136,7 +136,7 @@ export const editorial: Record<Locale, Editorial> = {
         { title: "範圍與職責確認", body: "界定硬件、軟件、整合與服務範圍，明確場地準備、操作培訓及持續營運的責任分工。" },
         { title: "評估與部署", body: "制定評估條件，覆核擬選配置並形成部署計劃，商務條款與服務範圍按項目確認。" },
       ] },
-      about: { title: "以工程能力，服務現場營運。", intro: "超流智能結合機器人平台、感知、遠程控制與部署服務，面向物理安全及設施營運構建應用方案。", image: images.about, target: "collaboration", chapters: [
+      about: { title: "以工程能力，服務現場營運。", intro: "超流智能結合機器人平台、感知、遠程控制與部署服務，面向物理安全及設施營運構建應用方案。", image: "/images/hyper/cyberport-3-entrance.png", target: "collaboration", chapters: [
         { title: "應用驅動的技術配置", body: "從任務與作業條件出發，將平台能力、載荷與控制方式配合具體場地需求。" },
         { title: "軟硬件協同", body: "統籌機器人、感知設備與作業軟件，透過系統整合支持清晰、可執行的操作流程。" },
         { title: "部署與持續運行", body: "將技術配置與現場流程、人員職責及維護需求連接，涵蓋部署全週期的關鍵環節。" },

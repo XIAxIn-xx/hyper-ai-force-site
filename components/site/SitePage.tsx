@@ -25,7 +25,7 @@ export function SitePage({ locale, section }: { locale: Locale; section: Section
   const copy = labels[locale];
   const legal = legalSections.includes(section);
   const resource = resourceCopy[locale];
-  const heroImage = section === "products" ? "/images/products/scenes-v2/force-05-office.webp" : editorial[locale].pages[section]?.image;
+  const heroImage = section === "products" ? "/images/products/scenes-v2/force-05-office.webp" : section === "about" ? "/images/hyper/cyberport-3-exterior.png" : editorial[locale].pages[section]?.image;
   const related: Section[] = section === "products" ? ["technology", "resources"] : section === "technology" ? ["products", "solutions"] : section === "solutions" ? ["products", "applications"] : section === "applications" ? ["solutions", "collaboration"] : section === "collaboration" ? ["solutions", "about"] : section === "resources" ? ["products", "technology"] : ["products", "solutions"];
   return <div className={`interior-page upgraded-interior route-${section} pretty-copy ${locale === "en" ? "" : `zh-page ${locale}-page`}`}>
     <Header content={content} />
