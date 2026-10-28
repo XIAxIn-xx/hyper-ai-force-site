@@ -1,27 +1,25 @@
-"use client";
-
 import Link from "next/link";
 import { localizedPath } from "@/lib/site";
 import { ArrowLeft, ArrowRight, Check } from "lucide-react";
-import { useState } from "react";
 import { getHyperContent, type Locale } from "@/data/hyper";
 import { getProducts, productPath, type ProductSlug } from "@/data/products";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
-import { ProductVisual } from "@/components/products/ProductVisual";
+import { ProductFigure } from "@/components/products/ProductFigure";
+import { ProductAssessment } from "@/components/site/EditorialSections";
+import { Reveal } from "@/components/sections/Reveal";
+import { editorial } from "@/data/editorial";
 import { ContactSection } from "@/components/sections/ContactSection";
 
 export function ProductDetail({ locale, slug }: { locale: Locale; slug: ProductSlug }) {
-  const [selected, setSelected] = useState(0);
   const content = getHyperContent(locale);
   const copy = getProducts(locale);
   const product = copy.items.find((item) => item.slug === slug)!;
   const other = copy.items.find((item) => item.slug !== slug)!;
-  const view = product.views[selected];
-  const specs = view.weight ? [{ label: `${copy.weight} · ${view.label}`, value: view.weight }, ...product.specs] : product.specs;
+  const specs = [...product.views.filter(view => view.weight).map(view => ({ label: `${copy.weight} · ${view.label}`, value: view.weight! })), ...product.specs];
   return (
-    <div className={`pretty-copy ${locale === "en" ? "" : `zh-page ${locale}-page`}`}>
+    <div className={`product-detail-editorial pretty-copy ${locale === "en" ? "" : `zh-page ${locale}-page`}`}>
       <Header content={content} productSlug={slug} />
       <main id="main-content">
         <section className="interior-hero pb-16 pt-28 text-white md:pb-24 md:pt-36">
@@ -29,7 +27,7 @@ export function ProductDetail({ locale, slug }: { locale: Locale; slug: ProductS
             <Link href={localizedPath(locale, "products")} className="mb-8 inline-flex min-h-11 items-center gap-2 text-sm text-slate-300 hover:text-orange-200"><ArrowLeft className="h-4 w-4" aria-hidden="true" />{copy.back}</Link>
             <div className="grid items-center gap-10 md:grid-cols-2 lg:gap-14">
               <div className="order-2 md:order-1">
-                <ProductVisual product={product} selected={selected} onSelect={setSelected} label={slug === "force-01" ? copy.variants : copy.views} priority />
+                <ProductFigure product={product} index={0} priority />
               </div>
               <div className="order-1 md:order-2">
                 <p className="text-sm font-semibold tracking-[0.16em] text-orange-300">{product.category}</p>
@@ -48,11 +46,12 @@ export function ProductDetail({ locale, slug }: { locale: Locale; slug: ProductS
             </div>
           </div>
         </section>
-        <section className="titanium-section light-copy py-20">
+        <nav className="product-detail-nav" aria-label={editorial[locale].index}><div className="section-shell"><a href="#product-benefits">{copy.benefits}</a><a href="#specifications">{copy.specs}</a><a href="#product-applications">{copy.applications}</a><a href="#contact">{copy.demo}</a></div></nav>
+        <section id="product-benefits" className="titanium-section light-copy py-20">
           <div className="section-shell">
             <h2 className="text-3xl font-bold md:text-4xl">{copy.benefits}</h2>
-            <div className="mt-10 grid gap-8 md:grid-cols-3">
-              {product.benefits.map((benefit, index) => <article key={benefit.title} className="border-t border-[var(--border-light)] pt-6"><p className="text-sm font-semibold text-orange-300">0{index + 1}</p><h3 className="mt-4 text-xl font-semibold">{benefit.title}</h3><p className="zh-copy mt-3 text-sm leading-7 text-slate-300">{benefit.description}</p></article>)}
+            <div className="product-benefit-sequence mt-10">
+              {product.benefits.map((benefit, index) => <Reveal key={benefit.title}><article className={`product-benefit-row ${index % 2 ? "product-benefit-reverse" : ""}`}><ProductFigure product={product} index={index + 1} /><div><p className="editorial-kicker">0{index + 1} / {product.model}</p><h3>{benefit.title}</h3><p>{benefit.description}</p></div></article></Reveal>)}
             </div>
           </div>
         </section>
@@ -71,13 +70,16 @@ export function ProductDetail({ locale, slug }: { locale: Locale; slug: ProductS
             </div>
           </div>
         </section>
-        <section className="titanium-section light-copy py-20">
+        <section id="product-applications" className="titanium-section light-copy py-20">
           <div className="section-shell">
             <h2 className="text-3xl font-bold">{copy.applications}</h2>
+            <div className="product-scene-posters">{product.views.slice(4).map((view, index) => <Reveal key={view.src}><ProductFigure product={product} index={index + 4} /></Reveal>)}</div>
+            <p className="editorial-scene-note">{editorial[locale].sceneNote}</p>
             <div className="mt-10 grid gap-6 sm:grid-cols-2">{copy.scenarios.map((item) => <article key={item.label} className="rounded-xl border border-[var(--border-light)] bg-white p-6"><h3 className="text-xl font-semibold">{item.label}</h3><p className="zh-copy mt-3 text-sm leading-7 text-slate-300">{item.description}</p></article>)}</div>
             <div className="mt-12 flex flex-wrap items-center justify-between gap-4 border-t border-white/10 pt-8"><p className="text-slate-400">{copy.related}</p><Link href={productPath(locale, other.slug)} className="inline-flex min-h-11 items-center gap-3 font-semibold text-orange-300 hover:text-orange-200">{other.model}{locale !== "en" ? ` · ${other.name}` : ""}<ArrowRight className="h-4 w-4" aria-hidden="true" /></Link></div>
           </div>
         </section>
+        <ProductAssessment locale={locale} />
         <ContactSection content={content} defaultProduct={slug} />
       </main>
       <Footer content={content} />

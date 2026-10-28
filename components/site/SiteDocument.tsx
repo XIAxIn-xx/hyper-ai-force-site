@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import "@/app/globals.css";
+import "@/app/editorial.css";
 import PageLoading from "@/components/site/PageLoading";
 import { CookiePreferences } from "@/components/site/CookiePreferences";
 import { siteUrl } from "@/lib/site";

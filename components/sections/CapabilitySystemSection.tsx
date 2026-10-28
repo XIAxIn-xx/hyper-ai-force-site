@@ -33,7 +33,7 @@ function CapabilityMedia({ item }: { item: Capability }) {
           alt={mediaImage.alt}
           fill
           sizes="(max-width: 1023px) 100vw, 50vw"
-          className="object-cover"
+          className="object-contain"
         />
       ) : null}
 
@@ -82,15 +82,15 @@ export function CapabilitySystemSection({ content }: CapabilitySystemSectionProp
           const sectionBackground = index % 2 === 0 ? "titanium-section" : "interior-hero";
 
           return (
-            <article key={item.number} className={`border-t border-white/10 ${sectionBackground}`}>
+            <article id={`capability-${item.number}`} key={item.number} className={`scroll-mt-28 border-t border-white/10 ${sectionBackground}`}>
               <div className="section-shell grid gap-x-14 py-16 lg:min-h-[600px] lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:items-center lg:py-24">
                 <header className={`${index % 2 === 0 ? "light-copy" : ""} order-1 lg:row-start-1 ${mediaLeft ? "lg:col-start-2" : "lg:col-start-1"}`}>
                   <p className="zh-eyebrow mt-0 text-base font-semibold text-slate-300">
                     <ZhText>{item.label}</ZhText>
                   </p>
-                  <h3 className="zh-title mt-4 max-w-xl text-[clamp(1.9rem,3vw,3rem)] font-bold leading-[1.14] tracking-[-0.02em] text-slate-50">
+                  <h2 className="zh-title mt-4 max-w-xl text-[clamp(1.9rem,3vw,3rem)] font-bold leading-[1.14] tracking-[-0.02em] text-slate-50">
                     <ZhText>{item.title}</ZhText>
-                  </h3>
+                  </h2>
                 </header>
 
                 <div className={`order-2 mt-9 lg:row-start-1 lg:row-span-2 lg:mt-0 ${mediaLeft ? "lg:col-start-1" : "lg:col-start-2"}`}>
