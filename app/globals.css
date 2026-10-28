@@ -412,3 +412,8 @@ body {
 .patrol-light-sequence :is(.text-white, .text-slate-100, .text-slate-200) { color: var(--text-primary-light); }
 .patrol-light-sequence [data-patrol-step] > span { background: var(--border-light); }
 .patrol-light-sequence button > span { background: var(--surface-steel); color: var(--brand-orange); border-color: var(--steel-muted); }
+
+/* Fast transitions keep their current screen; show feedback only for a real wait. */
+.route-pending { position: fixed; z-index: 60; top: 79px; inset-inline: 0; height: 2px; background: var(--brand-orange); opacity: 0; pointer-events: none; animation: show-route-pending .01s .35s forwards; }
+@keyframes show-route-pending { to { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .route-pending { animation: none !important; opacity: 1; } }

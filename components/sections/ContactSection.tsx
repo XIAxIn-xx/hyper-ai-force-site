@@ -57,13 +57,19 @@ const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const phonePattern = /^[0-9\s().-]+$/;
 
 export function ContactSection(props: ContactSectionProps) {
-  return <Suspense><ContactForm {...props} /></Suspense>;
+  return <ContactForm {...props} />;
+}
+
+function ContactProductSync({ defaultProduct, onProduct }: { defaultProduct?: string; onProduct: (product: string | null) => void }) {
+  const searchParams = useSearchParams();
+  const product = defaultProduct ?? searchParams.get("product");
+  useEffect(() => { onProduct(product); }, [product, onProduct]);
+  return null;
 }
 
 function ContactForm({ content, defaultProduct }: ContactSectionProps) {
   const locale = content.lang === "en" ? "en" : content.lang === "zh-CN" ? "zh-cn" : "zh-hk";
-  const searchParams = useSearchParams();
-  const requestedProduct = defaultProduct ?? searchParams.get("product");
+  const [requestedProduct, setRequestedProduct] = useState<string | null>(defaultProduct ?? null);
   const requestedModel = requestedProduct === "force-01" ? "FORCE 01" : requestedProduct === "force-05" ? "FORCE 05" : "";
   const initialInterest = requestedModel ? content.contact.options.find((option) => option.startsWith(requestedModel)) ?? "" : "";
   const [interest, setInterest] = useState<string>(initialInterest);
@@ -240,6 +246,7 @@ function ContactForm({ content, defaultProduct }: ContactSectionProps) {
 
   return (
     <section id="contact" className="titanium-section !py-12 md:!py-16">
+      <Suspense fallback={null}><ContactProductSync defaultProduct={defaultProduct} onProduct={setRequestedProduct} /></Suspense>
       {turnstileSiteKey && (
         <Script
           src="https://challenges.cloudflare.com/turnstile/v0/api.js"

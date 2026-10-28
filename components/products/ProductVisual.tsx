@@ -1,5 +1,7 @@
 "use client";
 
+import { imageSrc } from "@/lib/media";
+
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { motion, useMotionValue, useReducedMotion, useSpring } from "framer-motion";
@@ -35,16 +37,15 @@ export function ProductVisual({ product, selected, onSelect, label, priority = f
         y.set(-((event.clientY - rect.top) / rect.height - 0.5) * 5);
       }} onPointerLeave={() => { x.set(0); y.set(0); }}>
       <motion.div style={{ aspectRatio: `${view.width} / ${view.height}`, rotateX: reduced ? 0 : rotateX, rotateY: reduced ? 0 : rotateY }} className="metallic-edge metallic-hover relative overflow-hidden rounded-2xl bg-[var(--surface-dark)]">
-        {product.views.map((item) => (
-          <Image
+        {product.views.filter(item => item.src === view.src || item.src === visibleSrc).map((item) => (
+          <Image unoptimized
           key={item.src}
-          src={item.src}
+          src={imageSrc(item.src)}
           alt={item.src === visibleSrc ? `${product.name} · ${item.label}` : ""}
           aria-hidden={item.src !== visibleSrc}
           fill
-          unoptimized
           priority={priority && item.src === view.src}
-          loading={priority && item.src === view.src ? undefined : "eager"}
+          loading={priority && item.src === view.src ? undefined : "lazy"}
           onLoad={() => setLoaded((previous) => previous[item.src] ? previous : { ...previous, [item.src]: true })}
           sizes="(max-width: 767px) calc(100vw - 64px), (max-width: 1279px) 45vw, 560px"
           className="object-contain"
@@ -65,7 +66,7 @@ export function ProductVisual({ product, selected, onSelect, label, priority = f
             onClick={() => onSelect(index)}
             className={`flex min-h-12 items-center gap-3 rounded-xl border p-1.5 pr-4 text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-300 ${selected === index ? "border-orange-400/70 bg-orange-500/15 text-orange-200" : "border-white/15 text-slate-300 hover:bg-white/10"}`}
           >
-            <span className="relative h-9 w-10 shrink-0 overflow-hidden rounded-md bg-[var(--bg-dark)]"><Image src={item.src} alt="" fill unoptimized sizes="40px" className="object-contain" /></span>
+            <span className="relative h-9 w-10 shrink-0 overflow-hidden rounded-md bg-[var(--bg-dark)]"><Image unoptimized src={imageSrc(item.src, true)} alt="" fill sizes="40px" className="object-contain" /></span>
             {item.label}
           </button>
         ))}

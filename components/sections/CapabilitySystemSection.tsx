@@ -1,8 +1,11 @@
 "use client";
 
+import { BackgroundVideo } from "@/components/site/BackgroundVideo";
+import { videos } from "@/lib/media";
+import { imageSrc } from "@/lib/media";
+
 import Image from "next/image";
 import { Check } from "lucide-react";
-import { useEffect, useState } from "react";
 
 import type { HyperContent } from "@/data/hyper";
 import { Reveal } from "@/components/sections/Reveal";
@@ -15,19 +18,7 @@ type CapabilitySystemSectionProps = {
 };
 
 function CapabilityMedia({ item }: { item: Capability }) {
-  const [reducedMotion, setReducedMotion] = useState<boolean | null>(null);
   const mediaImage = item.mediaSrc ? { src: item.mediaSrc, alt: item.mediaAlt } : null;
-
-  useEffect(() => {
-    const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const updatePreference = () => setReducedMotion(mediaQuery.matches);
-
-    updatePreference();
-    mediaQuery.addEventListener("change", updatePreference);
-    return () => mediaQuery.removeEventListener("change", updatePreference);
-  }, []);
-
-  const showVideo = item.mediaType === "video" && reducedMotion === false;
 
   return (
     <div
@@ -37,8 +28,8 @@ function CapabilityMedia({ item }: { item: Capability }) {
       }`}
     >
       {item.mediaType === "image" && mediaImage ? (
-        <Image
-          src={mediaImage.src}
+        <Image unoptimized
+          src={imageSrc(mediaImage.src)}
           alt={mediaImage.alt}
           fill
           sizes="(max-width: 1023px) 100vw, 50vw"
@@ -47,8 +38,8 @@ function CapabilityMedia({ item }: { item: Capability }) {
       ) : null}
 
       {item.mediaType === "video" && item.poster ? (
-        <Image
-          src={item.poster}
+        <Image unoptimized
+          src={imageSrc(item.poster)}
           alt={item.mediaAlt}
           fill
           sizes="(max-width: 1023px) 100vw, 50vw"
@@ -56,19 +47,9 @@ function CapabilityMedia({ item }: { item: Capability }) {
         />
       ) : null}
 
-      {showVideo && item.mediaSrc ? (
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="metadata"
-          poster={item.poster ?? undefined}
-          aria-label={item.mediaAlt}
-          className="absolute inset-0 h-full w-full object-cover"
-        >
-          <source src={item.mediaSrc} type="video/mp4" />
-        </video>
+      {item.mediaType === "video" && item.mediaSrc ? (
+        <BackgroundVideo src={videos.patrol} poster={item.poster ? imageSrc(item.poster) : undefined}
+          label={item.mediaAlt} className="absolute inset-0 h-full w-full object-cover" />
       ) : null}
 
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[var(--bg-dark)]/85 via-transparent to-transparent" />

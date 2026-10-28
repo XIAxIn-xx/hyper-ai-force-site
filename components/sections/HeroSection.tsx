@@ -1,5 +1,7 @@
 "use client";
 
+import { imageSrc, videos } from "@/lib/media";
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { ArrowRight, Pause, Play } from "lucide-react";
 import { motion, useReducedMotion } from "framer-motion";
@@ -55,8 +57,7 @@ export function HeroSection({ content }: HeroSectionProps) {
     <section className="hero-material relative min-h-[960px] overflow-hidden bg-[var(--bg-dark)] pt-20 text-white md:min-h-[1040px]">
       <video
         ref={videoRef}
-        src="/videos/haiforce-hero.mp4"
-        poster="/videos/haiforce-hero-poster.jpg"
+        poster={imageSrc("/videos/haiforce-hero-poster.jpg")}
         muted
         loop
         playsInline
@@ -66,7 +67,10 @@ export function HeroSection({ content }: HeroSectionProps) {
         onPlay={() => setPlaying(true)}
         onPause={() => setPlaying(false)}
         className="absolute inset-0 h-full w-full object-cover object-center"
-      />
+      >
+        <source media="(max-width: 767px)" src={videos.heroMobile} type="video/mp4" />
+        <source src={videos.heroDesktop} type="video/mp4" />
+      </video>
       <div className="hero-shade absolute inset-0" />
       <div className="absolute bottom-0 left-0 h-48 w-full bg-gradient-to-t from-[var(--bg-dark)] to-transparent" />
 
@@ -81,7 +85,7 @@ export function HeroSection({ content }: HeroSectionProps) {
             <ZhText>{content.hero.eyebrow}</ZhText>
           </motion.div>
           <motion.h1
-            initial={reduced ? false : { opacity: 0, y: 20 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: reduced ? 0 : 0.6, delay: reduced ? 0 : 0.1 }}
             className={
@@ -111,13 +115,13 @@ export function HeroSection({ content }: HeroSectionProps) {
             className="mt-9 flex flex-col gap-3 sm:flex-row"
           >
             <Button asChild size="lg">
-              <a href={localizedPath(content.lang === "en" ? "en" : content.lang === "zh-CN" ? "zh-cn" : "zh-hk", "contact")} data-analytics-event="inquiry_click">
+              <Link prefetch href={localizedPath(content.lang === "en" ? "en" : content.lang === "zh-CN" ? "zh-cn" : "zh-hk", "contact")} data-analytics-event="inquiry_click">
                 {content.hero.primaryCta}
                 <ArrowRight className="ml-2 h-4 w-4" />
-              </a>
+              </Link>
             </Button>
             <Button asChild variant="outline" size="lg">
-              <a href={localizedPath(content.lang === "en" ? "en" : content.lang === "zh-CN" ? "zh-cn" : "zh-hk", "technology")}>{content.hero.secondaryCta}</a>
+              <Link prefetch href={localizedPath(content.lang === "en" ? "en" : content.lang === "zh-CN" ? "zh-cn" : "zh-hk", "technology")}>{content.hero.secondaryCta}</Link>
             </Button>
           </motion.div>
         </div>

@@ -119,7 +119,7 @@ export function Header({ content, home = false }: HeaderProps) {
         }
       }}>
       <div className={cn("flex items-center", mobile ? "justify-between" : "gap-1", active && "text-brand")}>
-        <Link href={item.href} aria-current={pathname === item.href ? "page" : undefined}
+        <Link prefetch href={item.href} aria-current={pathname === item.href ? "page" : undefined}
           onMouseEnter={mobile ? undefined : () => { setProductsOpen(true); setLanguageOpen(false); }}
           onClick={() => { setOpen(false); setProductsOpen(false); }}
           className={cn("hover:text-brand", mobile ? "flex-1 rounded-md px-2 py-2" : "py-3", content.lang !== "en" && "zh-nav font-medium tracking-normal")}>
@@ -137,7 +137,7 @@ export function Header({ content, home = false }: HeaderProps) {
       )}>
         {(["force-01", "force-05"] as const).map(slug => {
           const href = productPath(locale, slug);
-          return <Link key={slug} href={href} aria-current={pathname === href ? "page" : undefined}
+          return <Link prefetch key={slug} href={href} aria-current={pathname === href ? "page" : undefined}
             onClick={() => { setOpen(false); setProductsOpen(false); }}
             className={cn("flex min-h-11 items-center rounded-md px-3 text-sm font-medium hover:bg-white/10 hover:text-brand", pathname === href ? "text-brand" : "text-slate-300")}>
             {slug === "force-01" ? "FORCE 01" : "FORCE 05"}
@@ -181,6 +181,7 @@ export function Header({ content, home = false }: HeaderProps) {
         >
           {nav.map((item) => item.key === "products" ? productNav(item) : (
             <Link
+              prefetch
               key={item.href}
               className={cn(
                 "transition",
@@ -235,9 +236,10 @@ export function Header({ content, home = false }: HeaderProps) {
           <div className="section-shell flex flex-col gap-4 py-5 text-sm text-slate-300">
             {nav.map((item) => item.key === "products" ? productNav(item, true) : (
               <Link
+                prefetch
                 key={item.href}
                 href={item.href}
-              aria-current={pathname === item.href ? "page" : undefined}
+                aria-current={pathname === item.href ? "page" : undefined}
                 onClick={() => {
                   setOpen(false);
                   setLanguageOpen(false);
@@ -249,9 +251,9 @@ export function Header({ content, home = false }: HeaderProps) {
             ))}
             <div className="pt-2">
               <Button asChild size="sm" className="shadow-none">
-                <a href={localizedPath(locale, "contact")} data-analytics-event="inquiry_click" onClick={() => setOpen(false)}>
+                <Link prefetch href={localizedPath(locale, "contact")} data-analytics-event="inquiry_click" onClick={() => setOpen(false)}>
                   {content.contact.navButton}
-                </a>
+                </Link>
               </Button>
             </div>
           </div>

@@ -1,3 +1,4 @@
+import { imageSrc } from "@/lib/media";
 import Image from "next/image";
 
 import type { HyperContent } from "@/data/hyper";
@@ -17,8 +18,8 @@ export function AboutSection({ content }: AboutSectionProps) {
       <div className="section-shell grid gap-10 lg:grid-cols-[46fr_54fr] lg:items-stretch lg:gap-12">
         <Reveal>
           <div className={`metallic-edge relative aspect-[4/3] w-full overflow-hidden rounded-lg border border-white/10 bg-[var(--bg-dark)] shadow-[0_18px_42px_rgba(0,0,0,0.28)] lg:aspect-auto lg:h-full ${isEnglish ? "lg:mt-9" : ""}`}>
-            <Image
-              src="/images/hyper/cyberport.png"
+            <Image unoptimized
+              src={imageSrc("/images/hyper/cyberport.png")}
               alt="Cyberport Entrepreneurship Centre"
               fill
               className="object-cover"

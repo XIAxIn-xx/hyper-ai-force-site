@@ -1,5 +1,7 @@
 "use client";
 
+import { imageSrc } from "@/lib/media";
+
 import Image from "next/image";
 import { useState } from "react";
 
@@ -56,8 +58,8 @@ export function ApplicationsSection({ content }: ApplicationsSectionProps) {
                       : "border-white/12 focus-visible:border-orange-300/60 focus-visible:ring-2 focus-visible:ring-orange-300/80"
                   }`}
                 >
-                  <Image
-                    src={item.image}
+                  <Image unoptimized
+                    src={imageSrc(item.image)}
                     alt={item.imageAlt}
                     fill
                     sizes="(max-width: 767px) 100vw, 60vw"

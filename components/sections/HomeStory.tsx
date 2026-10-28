@@ -1,3 +1,4 @@
+import { imageSrc } from "@/lib/media";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, ArrowRight, ShieldCheck, RadioTower, Timer } from "lucide-react";
@@ -41,7 +42,7 @@ export function HomeStory({ locale }: { locale: Locale }) {
             const view = product.views[0];
             return <article key={product.slug} className={styles.product}>
               <Link href={productPath(locale, product.slug)} className={`${styles.productImage} metallic-edge metallic-hover`} aria-label={item.cta}>
-                <Image src={view.src} alt={`${product.model} · ${view.label}`} width={view.width} height={view.height} sizes="(max-width: 767px) calc(100vw - 32px), 570px" unoptimized className={styles.contain} />
+                <Image unoptimized src={imageSrc(view.src)} alt={`${product.model} · ${view.label}`} width={view.width} height={view.height} sizes="(max-width: 767px) calc(100vw - 32px), 570px" className={styles.contain} />
               </Link>
               <div className={styles.productDetails}>
                 <p className={styles.category}>{item.category}</p>
@@ -60,7 +61,7 @@ export function HomeStory({ locale }: { locale: Locale }) {
         <SectionIntro {...copy.applications} />
         <div className={styles.applicationGrid}>
           {copy.applications.items.map((item, index) => <Link href={localizedPath(locale, "applications")} key={item.title} className={styles.application}>
-            <div className={styles.applicationImage}><Image {...applicationImages[index]} alt={item.title} sizes="(max-width: 767px) calc(100vw - 32px), 570px" unoptimized className={styles.contain} /></div>
+            <div className={styles.applicationImage}><Image unoptimized {...applicationImages[index]} src={imageSrc(applicationImages[index].src)} alt={item.title} sizes="(max-width: 767px) calc(100vw - 32px), 570px" className={styles.contain} /></div>
             <div className={styles.applicationCopy}><span className={styles.index}>0{index + 1}</span><div><h3>{item.title}</h3><p>{item.body}</p></div><ArrowUpRight className={styles.applicationArrow} size={20} aria-hidden="true" /></div>
           </Link>)}
         </div>
@@ -73,7 +74,7 @@ export function HomeStory({ locale }: { locale: Locale }) {
         <SectionIntro {...copy.technology} />
         <div className={styles.technologyGrid}>
           <figure className={`${styles.systemFigure} metallic-surface metallic-brushed metallic-edge metallic-hover`}>
-            <Image src="/images/capabilities/rsp-platform.png" alt={copy.technology.imageAlt} width={2560} height={1440} sizes="(max-width: 1023px) calc(100vw - 32px), 660px" className={styles.systemImage} />
+            <Image unoptimized src={imageSrc("/images/capabilities/rsp-platform.png")} alt={copy.technology.imageAlt} width={2560} height={1440} sizes="(max-width: 1023px) calc(100vw - 32px), 660px" className={styles.systemImage} />
             <figcaption>RSP <span aria-hidden="true">/</span> Hyper AIForce</figcaption>
             <div className={styles.systemConnection} aria-hidden="true"><span>FORCE 01 / FORCE 05</span><span>↔</span><span>RSP</span><span>↔</span><span>{locale === "en" ? "Operator" : locale === "zh-cn" ? "操作人员" : "操作人員"}</span></div>
           </figure>
@@ -104,7 +105,7 @@ export function HomeStory({ locale }: { locale: Locale }) {
       <div className="section-shell">
         <SectionIntro {...copy.field} />
         <div className={styles.caseGrid}>
-          <Link href={casePath} aria-label={copy.field.cta} className={styles.caseImage}><Image src="/images/home/glp-field.jpg" alt={copy.field.imageAlt} width={1280} height={720} sizes="(max-width: 1023px) calc(100vw - 32px), 730px" className={styles.contain} /></Link>
+          <Link href={casePath} aria-label={copy.field.cta} className={styles.caseImage}><Image unoptimized src={imageSrc("/images/home/glp-field.jpg")} alt={copy.field.imageAlt} width={1280} height={720} sizes="(max-width: 1023px) calc(100vw - 32px), 730px" className={styles.contain} /></Link>
           <article className={styles.caseCopy}><p className={styles.eyebrow}>GLP</p><h3>{copy.field.name}</h3><p>{copy.field.description}</p><p className={styles.outcome}>{copy.field.outcome}</p><Link href={casePath} className={styles.textLink}>{copy.field.cta}<ArrowUpRight size={18} aria-hidden="true" /></Link></article>
         </div>
       </div>

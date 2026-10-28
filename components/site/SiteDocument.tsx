@@ -1,7 +1,7 @@
-import { headers } from "next/headers";
 import type { Metadata } from "next";
 
-import "./globals.css";
+import "@/app/globals.css";
+import PageLoading from "@/components/site/PageLoading";
 import { CookiePreferences } from "@/components/site/CookiePreferences";
 import { siteUrl } from "@/lib/site";
 
@@ -32,23 +32,12 @@ export const metadata: Metadata = {
   }
 };
 
-export default function RootLayout({
-  children
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  const pathname = headers().get("x-hyper-pathname") ?? "/";
-  const lang = pathname.startsWith("/zh-hk")
-    ? "zh-HK"
-    : pathname.startsWith("/zh-cn")
-      ? "zh-CN"
-      : "en";
-
+export function SiteDocument({ children, lang }: { children: React.ReactNode; lang: "en" | "zh-CN" | "zh-HK" }) {
   return (
     <html lang={lang}>
       <body className="font-sans antialiased">
         <a href="#main-content" className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-md focus:bg-orange-600 focus:p-3 focus:text-white">{lang === "en" ? "Skip to content" : lang === "zh-CN" ? "跳到正文" : "跳至內容"}</a>
-        {children}<CookiePreferences />
+        <PageLoading />{children}<CookiePreferences />
       </body>
     </html>
   );

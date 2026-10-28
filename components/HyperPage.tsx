@@ -1,3 +1,4 @@
+import { imageSrc } from "@/lib/media";
 import { HomeStory } from "@/components/sections/HomeStory";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { Footer } from "@/components/layout/Footer";
@@ -15,7 +16,7 @@ export function HyperPage({ locale }: HyperPageProps) {
 
   return (
     <div className={`${content.lang === "en" ? "pretty-copy" : "pretty-copy zh-page"} ${localeClass}`}>
-      <link rel="preload" as="image" href="/videos/haiforce-hero-poster.jpg" />
+      <link rel="preload" as="image" href={imageSrc("/videos/haiforce-hero-poster.jpg")} />
       <Header content={content} home />
       <main id="main-content">
         <HeroSection content={content} />
