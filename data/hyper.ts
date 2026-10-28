@@ -84,7 +84,7 @@ const content = {
     hero: {
       eyebrow: "Hyper AIForce Limited",
       slogan: "AI Force Be With You",
-      title: "Robotic Inspection Solutions for Physical Security",
+      title: "Intelligent Robotic Solutions for Physical Security",
       subtitle:
         "We combine AI perception, autonomous patrol, teleoperation, motion control and service delivery to provide rapidly deployable robotic solutions for security patrol and other physical-security scenarios.",
       primaryCta: "Request a Demo",
@@ -382,7 +382,7 @@ const content = {
     hero: {
       eyebrow: "超流智能有限公司",
       slogan: "AI Force Be With You",
-      title: "面向物理安全的機器人\n智能巡檢解決方案",
+      title: "面向物理安全的智能機器人解決方案",
       subtitle:
         "我們將 AI 感知、自主巡航、遠程遙操、運動控制與場景交付能力相結合，為安防巡邏等物理安全場景提供快速部署的機器人解決方案。",
       primaryCta: "預約演示",
@@ -651,7 +651,7 @@ const content = {
     hero: {
       eyebrow: "超流智能有限公司",
       slogan: "AI Force Be With You",
-      title: "面向物理安全的机器人\n智能巡检解决方案",
+      title: "面向物理安全的智能机器人解决方案",
       subtitle:
         "我们将 AI 感知、自主巡航、远程遥操、运动控制与场景交付能力相结合，为安防巡逻等物理安全场景提供快速部署的机器人解决方案。",
       primaryCta: "预约演示",
