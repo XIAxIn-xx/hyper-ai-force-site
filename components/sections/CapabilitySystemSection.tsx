@@ -39,7 +39,7 @@ function CapabilityMedia({ item }: { item: Capability }) {
 
       {item.mediaType === "video" && item.poster ? (
         <Image unoptimized
-          src={imageSrc(item.poster)}
+          src="/videos/field/obstacles.jpg"
           alt={item.mediaAlt}
           fill
           sizes="(max-width: 1023px) 100vw, 50vw"
@@ -48,7 +48,7 @@ function CapabilityMedia({ item }: { item: Capability }) {
       ) : null}
 
       {item.mediaType === "video" && item.mediaSrc ? (
-        <BackgroundVideo src={videos.patrol} poster={item.poster ? imageSrc(item.poster) : undefined}
+        <BackgroundVideo src={videos.patrol} poster={item.poster ? "/videos/field/obstacles.jpg" : undefined}
           label={item.mediaAlt} className="absolute inset-0 h-full w-full object-cover" />
       ) : null}
 

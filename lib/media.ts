@@ -43,6 +43,6 @@ export function imageSrc(src: string, thumbnail = false) { return (thumbnail ? t
 export const videos = {
   "heroDesktop": "/videos/optimized/heroDesktop-149af0196981.mp4",
   "heroMobile": "/videos/optimized/heroMobile-5fe238c26956.mp4",
-  "patrol": "/videos/optimized/patrol-5edb5e8feb3e.mp4",
+  "patrol": "/videos/field/obstacles.mp4",
   "caseStudy": "/videos/optimized/caseStudy-d41bb63f7569.mp4"
 } as const;

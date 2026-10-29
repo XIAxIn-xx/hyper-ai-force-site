@@ -5,13 +5,13 @@ type PageStory = { title: string; intro: string; chapters: Chapter[]; image: str
 type Editorial = { index: string; scope: string; process: string; next: string; sceneNote: string; productTitle: string; productIntro: string; productSteps: Chapter[]; pages: Record<string, PageStory> };
 
 const images = {
-  technology: "/images/capabilities/rsp-platform.png",
-  solutions: "/images/capabilities/teleoperation.png",
-  applications: "/images/home/glp-field.jpg",
-  collaboration: "/images/products/scenes-v2/force-01-warehouse.webp",
+  technology: "/images/capabilities/backpack.png",
+  solutions: "/images/generated/glp-warehouse-patrol-1.png",
+  applications: "/images/field/jump.webp",
+  collaboration: "/images/field/rocks.webp",
   about: "/images/hyper/19w-building.webp",
-  contact: "/images/hyper/19w-building.webp",
-  resources: "/images/capabilities/backpack-sensors.png",
+  contact: "/images/hyper/cyberport.webp",
+  resources: "/images/capabilities/autonomous-patrol-poster.jpg",
 };
 
 export const editorial: Record<Locale, Editorial> = {

@@ -25,7 +25,18 @@ export function SitePage({ locale, section }: { locale: Locale; section: Section
   const copy = labels[locale];
   const legal = legalSections.includes(section);
   const resource = resourceCopy[locale];
-  const heroImage = section === "products" ? "/images/products/scenes-v2/force-05-office.webp" : section === "about" ? "/images/hyper/cyberport-3-exterior.png" : editorial[locale].pages[section]?.image;
+  // Give each route a dedicated lead image; never reuse its editorial image.
+  const heroImages: Partial<Record<Section, string>> = {
+    products: "/images/generated/hyper-hero-robotics.png",
+    technology: "/images/field/stairs.webp",
+    solutions: "/images/generated/hyper-dog.png",
+    applications: "/images/generated/glp-warehouse-patrol-2.png",
+    collaboration: "/images/field/grass.webp",
+    about: "/images/hyper/cyberport-3-exterior.png",
+    resources: "/images/field/gravel.webp",
+    contact: "/images/hyper/19w-building.webp",
+  };
+  const heroImage = heroImages[section];
   const related: Section[] = section === "products" ? ["technology", "resources"] : section === "technology" ? ["products", "solutions"] : section === "solutions" ? ["products", "applications"] : section === "applications" ? ["solutions", "collaboration"] : section === "collaboration" ? ["solutions", "about"] : section === "resources" ? ["products", "technology"] : ["products", "solutions"];
   return <div className={`interior-page upgraded-interior route-${section} pretty-copy ${locale === "en" ? "" : `zh-page ${locale}-page`}`}>
     <Header content={content} />

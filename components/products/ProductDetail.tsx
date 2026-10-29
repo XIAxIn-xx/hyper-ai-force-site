@@ -1,3 +1,4 @@
+import { FieldVideo } from "@/components/site/FieldVideo";
 import Link from "next/link";
 import { localizedPath } from "@/lib/site";
 import { ArrowLeft, ArrowRight, Check } from "lucide-react";
@@ -17,6 +18,7 @@ export function ProductDetail({ locale, slug }: { locale: Locale; slug: ProductS
   const copy = getProducts(locale);
   const product = copy.items.find((item) => item.slug === slug)!;
   const other = copy.items.find((item) => item.slug !== slug)!;
+  const language = locale === "en" ? 0 : locale === "zh-cn" ? 1 : 2;
   const specs = [...product.views.filter(view => view.weight).map(view => ({ label: `${copy.weight} · ${view.label}`, value: view.weight! })), ...product.specs];
   return (
     <div className={`product-detail-editorial pretty-copy ${locale === "en" ? "" : `zh-page ${locale}-page`}`}>
@@ -55,6 +57,23 @@ export function ProductDetail({ locale, slug }: { locale: Locale; slug: ProductS
             </div>
           </div>
         </section>
+        {slug === "force-01" && (
+          <section className="interior-hero py-16 text-white" aria-labelledby="field-video-title">
+            <div className="section-shell">
+              <h2 id="field-video-title" className="text-3xl font-bold md:text-4xl">{["FORCE 01 in action", "FORCE 01 实拍演示", "FORCE 01 實拍演示"][language]}</h2>
+              <div className="mt-10 grid gap-8 md:grid-cols-2">
+                <figure>
+                  <FieldVideo file="stairs" label={["Stair climbing", "楼梯攀爬", "樓梯攀爬"][language]} />
+                  <figcaption className="mt-3 text-sm text-slate-300">{["Stair climbing", "楼梯攀爬", "樓梯攀爬"][language]}</figcaption>
+                </figure>
+                <figure>
+                  <FieldVideo file="obstacles" label={["Obstacle course", "赛道演示", "賽道演示"][language]} />
+                  <figcaption className="mt-3 text-sm text-slate-300">{["Obstacle course", "赛道演示", "賽道演示"][language]}</figcaption>
+                </figure>
+              </div>
+            </div>
+          </section>
+        )}
         <section id="specifications" className="scroll-mt-20 titanium-section light-copy py-20">
           <div className="section-shell grid gap-10 lg:grid-cols-[1.4fr_1fr]">
             <div>
