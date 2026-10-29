@@ -21,7 +21,7 @@ export function CaseStudySection({ content }: CaseStudySectionProps) {
       <div className="pointer-events-none absolute inset-x-0 top-0 h-[360px] bg-[linear-gradient(180deg,rgba(3,10,16,0.08)_0%,rgba(3,10,16,0.2)_68%,rgba(3,10,16,0.55)_100%)] md:inset-0 md:h-full md:bg-[linear-gradient(90deg,rgba(3,10,16,0.72)_0%,rgba(3,10,16,0.48)_34%,rgba(3,10,16,0.15)_66%,rgba(3,10,16,0.05)_100%)]" />
       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[42%] bg-gradient-to-t from-[var(--bg-dark)] via-[var(--bg-dark)]/40 to-transparent" />
 
-      <div className="relative z-10 section-shell flex min-h-0 flex-col justify-end pb-12 pt-[312px] md:min-h-[680px] md:pb-6 md:pt-20 lg:min-h-[720px]">
+      <div className="pointer-events-none relative z-10 section-shell flex min-h-0 flex-col justify-end pb-12 pt-[312px] md:min-h-[680px] md:pb-6 md:pt-20 lg:min-h-[720px]">
         <Reveal className="w-full lg:-translate-x-4">
           <div className="max-w-[600px]">
             <p className="zh-eyebrow flex items-center gap-3 !text-[13px] !font-semibold !tracking-normal text-orange-200 sm:!text-sm">

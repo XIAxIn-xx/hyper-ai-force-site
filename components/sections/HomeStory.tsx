@@ -1,4 +1,3 @@
-import { FieldVideo } from "@/components/site/FieldVideo";
 import { imageSrc } from "@/lib/media";
 import Image from "next/image";
 import Link from "next/link";
@@ -10,10 +9,10 @@ import { localizedPath } from "@/lib/site";
 import styles from "./HomeStory.module.css";
 
 const applicationImages = [
-  { src: "/images/products/force-05-rescue.webp", width: 853, height: 853 },
-  { src: "/images/products/force-05-factory.webp", width: 852, height: 852 },
-  { src: "/images/products/force-01-warehouse.webp", width: 853, height: 853 },
-  { src: "/images/products/force-01-plaza.webp", width: 1106, height: 1106 }
+  { src: "/images/products/scenes-v2/force-05-rescue.webp", width: 1844, height: 853 },
+  { src: "/images/products/scenes-v2/force-01-factory.webp", width: 1843, height: 853 },
+  { src: "/images/products/scenes-v2/force-01-warehouse.webp", width: 1672, height: 941 },
+  { src: "/images/products/scenes-v2/force-05-perimeter.webp", width: 792, height: 446 }
 ];
 const valueIcons = [ShieldCheck, RadioTower, Timer];
 
@@ -40,19 +39,11 @@ export function HomeStory({ locale }: { locale: Locale }) {
         <div className={styles.productGrid}>
           {products.map((product, index) => {
             const item = copy.products.items[index];
-            const view = product.slug === "force-05"
-              ? { src: "/images/products/force-05-workshop.webp", width: 863, height: 863, label: product.model }
-              : product.views[0];
+            const view = product.views[0];
             return <article key={product.slug} className={styles.product}>
-              {product.slug === "force-01" ? (
-                <div className={`${styles.productImage} metallic-edge metallic-hover`}>
-                  <FieldVideo file="grass" label={locale === "en" ? "FORCE 01 · Grass traversal" : locale === "zh-cn" ? "FORCE 01 · 草地行走" : "FORCE 01 · 草地行走"} />
-                </div>
-              ) : (
               <Link href={productPath(locale, product.slug)} className={`${styles.productImage} metallic-edge metallic-hover`} aria-label={item.cta}>
                 <Image unoptimized src={imageSrc(view.src)} alt={`${product.model} · ${view.label}`} width={view.width} height={view.height} sizes="(max-width: 767px) calc(100vw - 32px), 570px" className={styles.contain} />
               </Link>
-              )}
               <div className={styles.productDetails}>
                 <p className={styles.category}>{item.category}</p>
                 <h3 className={styles.productName}>{product.model}</h3>

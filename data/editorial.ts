@@ -6,12 +6,12 @@ type Editorial = { index: string; scope: string; process: string; next: string; 
 
 const images = {
   technology: "/images/capabilities/backpack.png",
-  solutions: "/images/generated/glp-warehouse-patrol-1.png",
-  applications: "/images/field/jump.webp",
-  collaboration: "/images/field/rocks.webp",
+  solutions: "/images/products/scenes-v2/force-01-home.webp",
+  applications: "/images/products/scenes-v2/force-01-campus.webp",
+  collaboration: "/images/products/scenes-v2/force-05-exhibition.webp",
   about: "/images/hyper/19w-building.webp",
   contact: "/images/hyper/cyberport.webp",
-  resources: "/images/capabilities/autonomous-patrol-poster.jpg",
+  resources: "/images/capabilities/backpack-sensors.png",
 };
 
 export const editorial: Record<Locale, Editorial> = {

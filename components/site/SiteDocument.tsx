@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     alternateLocale: ["zh_HK", "zh_CN"],
     images: [
       {
-        url: "/images/generated/hyper-hero-robotics.png",
+        url: "/images/products/scenes-v2/force-01-villa.webp",
         width: 1536,
         height: 864,
         alt: "Hyper AI Force autonomous robotics"

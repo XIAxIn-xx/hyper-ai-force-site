@@ -27,13 +27,13 @@ export function SitePage({ locale, section }: { locale: Locale; section: Section
   const resource = resourceCopy[locale];
   // Give each route a dedicated lead image; never reuse its editorial image.
   const heroImages: Partial<Record<Section, string>> = {
-    products: "/images/generated/hyper-hero-robotics.png",
-    technology: "/images/field/stairs.webp",
-    solutions: "/images/generated/hyper-dog.png",
-    applications: "/images/generated/glp-warehouse-patrol-2.png",
-    collaboration: "/images/field/grass.webp",
+    products: "/images/products/scenes-v2/force-05-exhibition.webp",
+    technology: "/images/products/scenes-v2/force-01-factory.webp",
+    solutions: "/images/products/scenes-v2/force-01-station.webp",
+    applications: "/images/products/scenes-v2/force-05-rescue.webp",
+    collaboration: "/images/products/scenes-v2/force-05-factory.webp",
     about: "/images/hyper/cyberport-3-exterior.png",
-    resources: "/images/field/gravel.webp",
+    resources: "/images/products/scenes-v2/force-01-warehouse.webp",
     contact: "/images/hyper/19w-building.webp",
   };
   const heroImage = heroImages[section];

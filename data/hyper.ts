@@ -140,7 +140,7 @@ const content = {
         ],
         layout: "media-left",
         mediaType: "video",
-        mediaSrc: "/videos/field/obstacles.mp4",
+        mediaSrc: "/videos/field/gravel-web.mp4",
         poster: "/images/capabilities/autonomous-patrol-poster.jpg",
         mediaAlt: "Robot conducting an inspection at a logistics facility",
         mediaNote: "Autonomous Inspection in Complex Environments",
@@ -228,7 +228,7 @@ const content = {
           label: "Warehousing & Logistics",
           description: "Routine inspection across warehouse aisles, loading zones and park perimeters.",
           keywords: ["Autonomous Patrol", "Anomaly Detection"],
-          image: "/images/applications/warehouse-logistics.png",
+          image: "/images/products/scenes-v2/force-01-warehouse.webp",
           imageAlt: "Quadruped robot outside a logistics park"
         },
         {
@@ -236,7 +236,7 @@ const content = {
           label: "Campus Security",
           description: "Daily patrol and risk inspection for roads, perimeters and key areas.",
           keywords: ["Wide Coverage", "Stable Operation"],
-          image: "/images/applications/campus-security.png",
+          image: "/images/products/scenes-v2/force-01-station.webp",
           imageAlt: "Quadruped robot patrolling an industrial campus entrance"
         },
         {
@@ -244,7 +244,7 @@ const content = {
           label: "Fire & Emergency",
           description: "Suitable for hazard inspection, equipment checks and emergency support.",
           keywords: ["Environmental Sensing", "Rapid Response"],
-          image: "/images/applications/fire-emergency.png",
+          image: "/images/products/scenes-v2/force-05-rescue.webp",
           imageAlt: "Quadruped robot inspecting fire safety equipment"
         },
         {
@@ -252,7 +252,7 @@ const content = {
           label: "Community Security",
           description: "Daily patrol for public areas, garages and key points in residential communities.",
           keywords: ["Reduced Repetitive Patrols", "Faster Response"],
-          image: "/images/applications/community-security.png",
+          image: "/images/products/scenes-v2/force-01-villa.webp",
           imageAlt: "Quadruped robot patrolling a residential community"
         }
       ]
@@ -430,7 +430,7 @@ const content = {
         capabilities: ["多模態環境感知", "實時定位", "智能路徑規劃", "動態障礙物避讓"],
         layout: "media-left",
         mediaType: "video",
-        mediaSrc: "/videos/field/obstacles.mp4",
+        mediaSrc: "/videos/field/gravel-web.mp4",
         poster: "/images/capabilities/autonomous-patrol-poster.jpg",
         mediaAlt: "在物流設施進行巡檢的機器人",
         mediaNote: "複雜環境自主巡檢",
@@ -503,7 +503,7 @@ const content = {
           label: "倉儲物流",
           description: "面向倉庫通道、裝卸區域與園區周界的常態化巡檢。",
           keywords: ["自主巡航", "異常識別"],
-          image: "/images/applications/warehouse-logistics.png",
+          image: "/images/products/scenes-v2/force-01-warehouse.webp",
           imageAlt: "物流園區外進行巡檢的四足機器人"
         },
         {
@@ -511,7 +511,7 @@ const content = {
           label: "園區安防",
           description: "覆蓋道路、周界與重點區域的日常巡邏與風險排查。",
           keywords: ["大範圍覆蓋", "穩定運行"],
-          image: "/images/applications/campus-security.png",
+          image: "/images/products/scenes-v2/force-01-station.webp",
           imageAlt: "在工業園區入口巡邏的四足機器人"
         },
         {
@@ -519,7 +519,7 @@ const content = {
           label: "消防應急",
           description: "適用於隱患排查、設備巡檢與應急響應輔助。",
           keywords: ["環境感知", "快速響應"],
-          image: "/images/applications/fire-emergency.png",
+          image: "/images/products/scenes-v2/force-05-rescue.webp",
           imageAlt: "檢查消防設備的四足機器人"
         },
         {
@@ -527,7 +527,7 @@ const content = {
           label: "社區安防",
           description: "面向社區公共區域、地庫與重點點位的日常巡邏。",
           keywords: ["減少重複巡邏", "提升響應效率"],
-          image: "/images/applications/community-security.png",
+          image: "/images/products/scenes-v2/force-01-villa.webp",
           imageAlt: "在住宅社區巡邏的四足機器人"
         }
       ]
@@ -699,7 +699,7 @@ const content = {
         capabilities: ["多模态环境感知", "实时定位", "智能路径规划", "动态障碍物避让"],
         layout: "media-left",
         mediaType: "video",
-        mediaSrc: "/videos/field/obstacles.mp4",
+        mediaSrc: "/videos/field/gravel-web.mp4",
         poster: "/images/capabilities/autonomous-patrol-poster.jpg",
         mediaAlt: "在物流设施内进行巡检的机器人",
         mediaNote: "复杂环境自主巡检",
@@ -772,7 +772,7 @@ const content = {
           label: "仓储物流",
           description: "面向仓库通道、装卸区域与园区周界的常态化巡检。",
           keywords: ["自主巡航", "异常识别"],
-          image: "/images/applications/warehouse-logistics.png",
+          image: "/images/products/scenes-v2/force-01-warehouse.webp",
           imageAlt: "物流园区外进行巡检的四足机器人"
         },
         {
@@ -780,7 +780,7 @@ const content = {
           label: "园区安防",
           description: "覆盖道路、周界与重点区域的日常巡逻与风险排查。",
           keywords: ["大范围覆盖", "稳定运行"],
-          image: "/images/applications/campus-security.png",
+          image: "/images/products/scenes-v2/force-01-station.webp",
           imageAlt: "在工业园区入口巡逻的四足机器人"
         },
         {
@@ -788,7 +788,7 @@ const content = {
           label: "消防应急",
           description: "适用于隐患排查、设备巡检与应急响应辅助。",
           keywords: ["环境感知", "快速响应"],
-          image: "/images/applications/fire-emergency.png",
+          image: "/images/products/scenes-v2/force-05-rescue.webp",
           imageAlt: "检查消防设备的四足机器人"
         },
         {
@@ -796,7 +796,7 @@ const content = {
           label: "社区安防",
           description: "面向社区公共区域、地库与重点点位的日常巡逻。",
           keywords: ["减少重复巡逻", "提升响应效率"],
-          image: "/images/applications/community-security.png",
+          image: "/images/products/scenes-v2/force-01-villa.webp",
           imageAlt: "在住宅社区巡逻的四足机器人"
         }
       ]

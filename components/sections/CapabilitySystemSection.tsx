@@ -24,7 +24,7 @@ function CapabilityMedia({ item }: { item: Capability }) {
     <div
       data-media-key={item.resourceKey}
       className={`metallic-surface metallic-edge metallic-hover relative overflow-hidden rounded-2xl ${
-        item.mediaType === "image" ? "aspect-[16/9]" : "min-h-[320px] lg:min-h-[440px]"
+        item.mediaType === "image" ? "aspect-[16/9]" : "aspect-[16/9]"
       }`}
     >
       {item.mediaType === "image" && mediaImage ? (
@@ -39,7 +39,7 @@ function CapabilityMedia({ item }: { item: Capability }) {
 
       {item.mediaType === "video" && item.poster ? (
         <Image unoptimized
-          src="/videos/field/obstacles.jpg"
+          src="/videos/field/gravel.jpg"
           alt={item.mediaAlt}
           fill
           sizes="(max-width: 1023px) 100vw, 50vw"
@@ -48,12 +48,12 @@ function CapabilityMedia({ item }: { item: Capability }) {
       ) : null}
 
       {item.mediaType === "video" && item.mediaSrc ? (
-        <BackgroundVideo src={videos.patrol} poster={item.poster ? "/videos/field/obstacles.jpg" : undefined}
+        <BackgroundVideo src={videos.patrol} poster={item.poster ? "/videos/field/gravel.jpg" : undefined}
           label={item.mediaAlt} className="absolute inset-0 h-full w-full object-cover" />
       ) : null}
 
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[var(--bg-dark)]/85 via-transparent to-transparent" />
-      <div className="absolute inset-x-0 bottom-0 flex flex-wrap items-end justify-between gap-3 p-5">
+      <div className="pointer-events-none absolute inset-x-0 bottom-12 flex flex-wrap items-end justify-between gap-3 p-5">
         <p className="text-xs font-medium tracking-[0.08em] text-white/75">
           <ZhText>{item.mediaNote}</ZhText>
         </p>
