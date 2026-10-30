@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     title: seo.title,
     description: seo.description,
     url: "/zh-cn",
-    images: [{ url: "/videos/haiforce-hero-poster.jpg", width: 1920, height: 1080, alt: "Hyper AIForce 机器人平台" }],
+    images: [{ url: "/videos/haiforce-hero-poster.jpg", width: 1920, height: 1080, alt: "超流智能机器人平台" }],
     locale: "zh_CN"
   }
 };

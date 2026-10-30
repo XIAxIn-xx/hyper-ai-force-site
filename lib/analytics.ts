@@ -31,7 +31,8 @@ function pageIdentity(path: string) {
   const route = approved.find(route => localizedPath(locale, route) === path);
   if (route === undefined) return null;
   const name = route === "" ? labels[locale].home : route === "products/force-01" ? "FORCE 01" : route === "products/force-05" ? "FORCE 05" : labels[locale][route as typeof sections[number]];
-  return { page_location: window.location.origin + path, page_title: `${name} | Hyper AIForce`, page_referrer: "" };
+  const brand = locale === "en" ? "Hyper AIForce" : "超流智能";
+  return { page_location: window.location.origin + path, page_title: `${name} | ${brand}`, page_referrer: "" };
 }
 function clearAnalyticsCookies() {
   const domains = ["", ...window.location.hostname.split(".").map((_, index, parts) => parts.slice(index).join(".")).filter(domain => domain.includes(".")).map(domain => `; Domain=.${domain}`)];

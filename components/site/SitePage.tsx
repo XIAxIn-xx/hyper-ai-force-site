@@ -37,6 +37,7 @@ export function SitePage({ locale, section }: { locale: Locale; section: Section
     contact: "/images/hyper/19w-building.webp",
   };
   const heroImage = heroImages[section];
+  const brandName = locale === "en" ? "HYPER AIFORCE" : "超流智能";
   const related: Section[] = section === "products" ? ["technology", "resources"] : section === "technology" ? ["products", "solutions"] : section === "solutions" ? ["products", "applications"] : section === "applications" ? ["solutions", "collaboration"] : section === "collaboration" ? ["solutions", "about"] : section === "resources" ? ["products", "technology"] : ["products", "solutions"];
   return <div className={`interior-page upgraded-interior route-${section} pretty-copy ${locale === "en" ? "" : `zh-page ${locale}-page`}`}>
     <Header content={content} />
@@ -45,11 +46,11 @@ export function SitePage({ locale, section }: { locale: Locale; section: Section
         <div className="section-shell">
           <nav aria-label={locale === "en" ? "Breadcrumb" : locale === "zh-cn" ? "面包屑导航" : "麵包屑導覽"} className="mb-7 flex gap-3 text-sm text-slate-400"><Link href={localizedPath(locale)} className="hover:text-orange-200">{copy.home}</Link><span aria-hidden="true">/</span><span aria-current="page">{copy[section]}</span></nav>
           <div className={`interior-hero-presentation ${heroImage ? "has-media" : ""}`}><div>
-          <p className="text-sm font-semibold tracking-[0.16em] text-orange-300">HYPER AIFORCE</p>
+          <p className="text-sm font-semibold tracking-[0.16em] text-orange-300">{brandName}</p>
           <h1 className="mt-4 text-4xl font-bold md:text-6xl">{copy[section]}</h1>
           {descriptions[locale][section] && <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-300">{descriptions[locale][section]}</p>}
           </div>{heroImage && <div className="interior-hero-image"><Image unoptimized src={imageSrc(heroImage)} alt={copy[section]} width={1500} height={950} sizes="(max-width: 767px) 100vw, 50vw" priority /></div>}</div>
-          {!legal && <div className="interior-route-index"><span aria-hidden="true">{String(["products", "technology", "solutions", "applications", "collaboration", "about", "resources", "contact"].indexOf(section) + 1).padStart(2, "0")} / HYPER AIFORCE</span><a href="#route-content">{editorial[locale].index}<span aria-hidden="true">↓</span></a></div>}
+          {!legal && <div className="interior-route-index"><span aria-hidden="true">{String(["products", "technology", "solutions", "applications", "collaboration", "about", "resources", "contact"].indexOf(section) + 1).padStart(2, "0")} / {brandName}</span><a href="#route-content">{editorial[locale].index}<span aria-hidden="true">↓</span></a></div>}
         </div>
       </section>
       {!legal && section !== "products" && <ChapterNavigation locale={locale} section={section} />}

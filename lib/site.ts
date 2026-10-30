@@ -21,9 +21,11 @@ export function isSection(value: string): value is Section {
   return (sections as readonly string[]).includes(value);
 }
 export function sectionMetadata(locale: Locale, section: Section): Metadata {
-  const title = `${labels[locale][section]} | Hyper AIForce`;
-  const description = descriptions[locale][section] || `${labels[locale][section]} — Hyper AIForce`;
-  return { title, description, alternates: { canonical: localizedPath(locale, section), languages: Object.fromEntries(locales.map(l => [l === "en" ? "en" : l === "zh-cn" ? "zh-CN" : "zh-HK", localizedPath(l, section)])) }, openGraph: { title, description, url: localizedPath(locale, section), locale: locale === "en" ? "en_US" : locale === "zh-cn" ? "zh_CN" : "zh_HK", images: [{ url: "/images/generated/hyper-hero-robotics.png", width: 1536, height: 864, alt: "Hyper AIForce robotics" }] } };
+  const brand = locale === "en" ? "Hyper AIForce" : "超流智能";
+  const imageAlt = locale === "en" ? "Hyper AIForce robotics" : locale === "zh-cn" ? "超流智能机器人系统" : "超流智能機械人系統";
+  const title = `${labels[locale][section]} | ${brand}`;
+  const description = descriptions[locale][section] || `${labels[locale][section]} — ${brand}`;
+  return { title, description, alternates: { canonical: localizedPath(locale, section), languages: Object.fromEntries(locales.map(l => [l === "en" ? "en" : l === "zh-cn" ? "zh-CN" : "zh-HK", localizedPath(l, section)])) }, openGraph: { title, description, url: localizedPath(locale, section), locale: locale === "en" ? "en_US" : locale === "zh-cn" ? "zh_CN" : "zh_HK", images: [{ url: "/images/generated/hyper-hero-robotics.png", width: 1536, height: 864, alt: imageAlt }] } };
 }
 export const descriptions: Record<Locale, Partial<Record<Section, string>>> = {
   en: { products: "Explore FORCE 01 and FORCE 05 robotic inspection systems.", technology: "AI perception, autonomous patrol, teleoperation and robotic motion control.", solutions: "Connect robots, the RSP platform and deployment services in one inspection workflow.", applications: "Robotic inspection for security patrol, logistics parks and facility operations.", collaboration: "Explore deployment, system integration and service collaboration with Hyper AIForce.", resources: "Product literature, technical documentation and operating manuals.", about: "Learn about Hyper AIForce and its robotic security solutions.", contact: "Discuss your site, product requirements or a demonstration with Hyper AIForce." },

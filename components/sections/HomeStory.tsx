@@ -75,7 +75,7 @@ export function HomeStory({ locale }: { locale: Locale }) {
         <div className={styles.technologyGrid}>
           <figure className={`${styles.systemFigure} metallic-surface metallic-brushed metallic-edge metallic-hover`}>
             <Image unoptimized src={imageSrc("/images/capabilities/rsp-platform.png")} alt={copy.technology.imageAlt} width={2560} height={1440} sizes="(max-width: 1023px) calc(100vw - 32px), 660px" className={styles.systemImage} />
-            <figcaption>RSP <span aria-hidden="true">/</span> Hyper AIForce</figcaption>
+            <figcaption>RSP <span aria-hidden="true">/</span> {locale === "en" ? "Hyper AIForce" : "超流智能"}</figcaption>
             <div className={styles.systemConnection} aria-hidden="true"><span>FORCE 01 / FORCE 05</span><span>↔</span><span>RSP</span><span>↔</span><span>{locale === "en" ? "Operator" : locale === "zh-cn" ? "操作人员" : "操作人員"}</span></div>
           </figure>
           <div className={styles.capabilities}>

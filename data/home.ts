@@ -75,7 +75,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
     }
   },
   "zh-cn": {
-    seo: { title: "Hyper AIForce | 面向真实作业的机器人平台", description: "探索 FORCE 01 与 FORCE 05 机器人平台，了解远程观察、巡检与作业的应用场景、技术体系及部署合作方式。" },
+    seo: { title: "超流智能 | 面向真实作业的机器人平台", description: "探索 FORCE 01 与 FORCE 05 机器人平台，了解远程观察、巡检与作业的应用场景、技术体系及部署合作方式。" },
     hero: { title: "延伸你的触达，\n掌握每一次行动。", body: "面向复杂环境的机器人平台，支持远程观察、巡检与现场作业。", primary: "探索机器人产品", secondary: "联系销售" },
     products: { eyebrow: "02 / 机器人产品", title: "两大平台，\n同一使命。", body: "以智能机器人平台延伸人的触达，支持多样环境中的现场作业。", cta: "探索机器人产品", items: [
       { category: "四足机器人平台", body: "面向复杂环境的通用四足机器人平台，支持远程观察、巡检与现场作业。", cta: "探索 FORCE 01" },
@@ -92,7 +92,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       { title: "远程连接", body: "通过通信与远程访问能力，连接操作人员与现场机器人。" },
       { title: "智能系统", body: "以感知、作业软件与任务管理能力支持有效部署。" }
     ] },
-    value: { eyebrow: "05 / 为什么选择 Hyper AIForce", title: "工程能力，\n服务现场运营。", body: "智能机器人应当超越技术展示，为真实作业创造切实的价值。", items: [
+    value: { eyebrow: "05 / 为什么选择超流智能", title: "工程能力，\n服务现场运营。", body: "智能机器人应当超越技术展示，为真实作业创造切实的价值。", items: [
       { label: "安全", title: "降低人员暴露风险。", body: "通过机器人观察与探索，减少人员进入危险或不确定环境的需要。" },
       { label: "在场", title: "获取远程现场视野。", body: "通过实时远程访问与控制，延伸人的视野与作业触达。" },
       { label: "效率", title: "优化现场作业流程。", body: "减少重复到访，让团队将更多精力投入更高价值的任务。" }
@@ -103,7 +103,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
         { word: "AI.", label: "思考之力。", verbs: "感知。理解。决策。" },
         { word: "Force.", label: "行动之力。", verbs: "移动。触达。行动。" },
         { word: "You.", label: "价值所在。", verbs: "赋能。保护。掌握。" }
-      ], lines: ["理解现场的智能。", "付诸实践的力量。", "始终与你并肩的技术。"], body: "在 Hyper AIForce，智能是行动的起点。我们相信，技术在赋能人的时候，才真正找到自身的意义。",
+      ], lines: ["理解现场的智能。", "付诸实践的力量。", "始终与你并肩的技术。"], body: "在超流智能，智能是行动的起点。我们相信，技术在赋能人的时候，才真正找到自身的意义。",
       missionLabel: "我们的使命", mission: { title: "延伸人类能力。", body: "通过智能机器人，延伸人的感知与行动范围。" },
       visionLabel: "我们的愿景", vision: { title: "一个没有边界的世界。", body: "让距离与危险，不再定义人类能力的边界。" }
     },
@@ -114,7 +114,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
     ] }
   },
   "zh-hk": {
-    seo: { title: "Hyper AIForce | 面向真實作業的機械人平台", description: "探索 FORCE 01 與 FORCE 05 機械人平台，了解遠端觀察、巡檢與作業的應用場景、技術體系及部署合作方式。" },
+    seo: { title: "超流智能 | 面向真實作業的機械人平台", description: "探索 FORCE 01 與 FORCE 05 機械人平台，了解遠端觀察、巡檢與作業的應用場景、技術體系及部署合作方式。" },
     hero: { title: "延伸你的觸達，\n掌握每一次行動。", body: "面向複雜環境的機械人平台，支援遠端觀察、巡檢與現場作業。", primary: "探索機械人產品", secondary: "聯絡銷售" },
     products: { eyebrow: "02 / 機械人產品", title: "兩大平台，\n同一使命。", body: "以智能機械人平台延伸人的觸達，支援多樣環境中的現場作業。", cta: "探索機械人產品", items: [
       { category: "四足機械人平台", body: "面向複雜環境的通用四足機械人平台，支援遠端觀察、巡檢與現場作業。", cta: "探索 FORCE 01" },
@@ -131,7 +131,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       { title: "遠端連接", body: "透過通訊與遠端存取能力，連接操作人員與現場機械人。" },
       { title: "智能系統", body: "以感知、作業軟件與任務管理能力支援有效部署。" }
     ] },
-    value: { eyebrow: "05 / 為甚麼選擇 Hyper AIForce", title: "工程能力，\n服務現場營運。", body: "智能機械人應當超越技術展示，為真實作業創造切實的價值。", items: [
+    value: { eyebrow: "05 / 為甚麼選擇超流智能", title: "工程能力，\n服務現場營運。", body: "智能機械人應當超越技術展示，為真實作業創造切實的價值。", items: [
       { label: "安全", title: "降低人員暴露風險。", body: "透過機械人觀察與探索，減少人員進入危險或不確定環境的需要。" },
       { label: "在場", title: "取得遠程現場視野。", body: "透過即時遠端存取與控制，延伸人的視野與作業觸達。" },
       { label: "效率", title: "優化現場作業流程。", body: "減少重複到訪，讓團隊將更多精力投入更高價值的任務。" }
@@ -142,7 +142,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
         { word: "AI.", label: "思考之力。", verbs: "感知。理解。決策。" },
         { word: "Force.", label: "行動之力。", verbs: "移動。觸達。行動。" },
         { word: "You.", label: "價值所在。", verbs: "賦能。保護。掌握。" }
-      ], lines: ["理解現場的智能。", "付諸實踐的力量。", "始終與你並肩的技術。"], body: "在 Hyper AIForce，智能是行動的起點。我們相信，技術在賦能人的時候，才真正找到自身的意義。",
+      ], lines: ["理解現場的智能。", "付諸實踐的力量。", "始終與你並肩的技術。"], body: "在超流智能，智能是行動的起點。我們相信，技術在賦能人的時候，才真正找到自身的意義。",
       missionLabel: "我們的使命", mission: { title: "延伸人類能力。", body: "透過智能機械人，延伸人的感知與行動範圍。" },
       visionLabel: "我們的願景", vision: { title: "一個沒有邊界的世界。", body: "讓距離與危險，不再定義人類能力的邊界。" }
     },

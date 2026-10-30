@@ -12,7 +12,8 @@ function findProduct(locale: Locale, slug: string) {
 
 export function productMetadata(locale: Locale, slug: string): Metadata {
   const product = findProduct(locale, slug);
-  const title = `${product.model}${locale === "en" ? "" : ` ${product.name}`} | Hyper AIForce`;
+  const brand = locale === "en" ? "Hyper AIForce" : "超流智能";
+  const title = `${product.model}${locale === "en" ? "" : ` ${product.name}`} | ${brand}`;
   return {
     title, description: product.description,
     alternates: {

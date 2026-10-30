@@ -367,12 +367,12 @@ const content = {
       { label: "關於我們", href: "#about" }
     ],
     seo: {
-      title: "Hyper AIForce Limited | 超流智能有限公司",
+      title: "超流智能有限公司 | 超流智能",
       description:
         "超流智能有限公司專注 AI Robotics、具身智能、自主巡航與巡邏巡檢系統，服務物理安全、設施運維與關鍵基礎設施場景",
       keywords: [
         "超流智能有限公司",
-        "Hyper AIForce",
+        "超流智能",
         "AI Robotics",
         "具身智能",
         "自主巡邏機器人",
@@ -636,12 +636,12 @@ const content = {
       { label: "关于我们", href: "#about" }
     ],
     seo: {
-      title: "Hyper AIForce Limited | 超流智能有限公司",
+      title: "超流智能有限公司 | 超流智能",
       description:
         "超流智能有限公司专注 AI Robotics、具身智能、自主巡航与巡逻巡检系统，服务物理安全、设施运维与关键基础设施场景",
       keywords: [
         "超流智能有限公司",
-        "Hyper AIForce",
+        "超流智能",
         "AI Robotics",
         "具身智能",
         "自主巡逻机器人",

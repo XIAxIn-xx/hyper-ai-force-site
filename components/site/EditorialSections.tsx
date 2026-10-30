@@ -22,7 +22,7 @@ export function EditorialSections({ locale, section }: { locale: Locale; section
         </Reveal>
         <Reveal className="editorial-feature-media" delay={0.08}>
           <Image unoptimized src={imageSrc(page.image)} alt={labels[locale][section]} width={1600} height={1000} sizes="(max-width: 767px) 100vw, 60vw" className="editorial-image" />
-          <div className="editorial-media-caption"><span>HYPER AIFORCE</span><span>{labels[locale][section]}</span></div>
+          <div className="editorial-media-caption"><span>{locale === "en" ? "HYPER AIFORCE" : "超流智能"}</span><span>{labels[locale][section]}</span></div>
         </Reveal>
       </div>
     </section>
