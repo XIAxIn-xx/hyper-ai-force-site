@@ -8,7 +8,7 @@ const images = {
   technology: "/images/capabilities/backpack.png",
   solutions: "/images/products/scenes-v2/force-01-home.webp",
   applications: "/images/products/scenes-v2/force-01-campus.webp",
-  collaboration: "/images/products/scenes-v2/force-05-stadium.webp",
+  collaboration: "/images/products/scenes-v2/force-05-terminal.webp",
   about: "/images/hyper/19w-building.webp",
   contact: "/images/hyper/cyberport.webp",
   resources: "/images/capabilities/backpack-sensors.png",

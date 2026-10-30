@@ -1,3 +1,4 @@
+import { sphereStory } from "@/data/sphereScenes";
 import {
   Activity,
   BadgeCheck,
@@ -240,10 +241,10 @@ const content = {
           imageAlt: "Quadruped robot patrolling an industrial campus entrance"
         },
         {
-          icon: "Flame",
-          label: "Fire & Emergency",
-          description: "Suitable for hazard inspection, equipment checks and emergency support.",
-          keywords: ["Environmental Sensing", "Rapid Response"],
+          icon: "Building2",
+          label: sphereStory("en", "hospital").title,
+          description: sphereStory("en", "hospital").body,
+          keywords: ["Remote Observation", "Site Coordination"],
           image: "/images/products/scenes-v2/force-05-hospital.webp",
           imageAlt: "Spherical robot outside a hospital emergency entrance"
         },
@@ -515,10 +516,10 @@ const content = {
           imageAlt: "在工業園區入口巡邏的四足機器人"
         },
         {
-          icon: "Flame",
-          label: "消防應急",
-          description: "適用於隱患排查、設備巡檢與應急響應輔助。",
-          keywords: ["環境感知", "快速響應"],
+          icon: "Building2",
+          label: sphereStory("zh-cn", "hospital").title,
+          description: sphereStory("zh-cn", "hospital").body,
+          keywords: ["远程观察", "现场协调"],
           image: "/images/products/scenes-v2/force-05-hospital.webp",
           imageAlt: "球形機器人在醫院急診入口巡查"
         },
@@ -784,10 +785,10 @@ const content = {
           imageAlt: "在工业园区入口巡逻的四足机器人"
         },
         {
-          icon: "Flame",
-          label: "消防应急",
-          description: "适用于隐患排查、设备巡检与应急响应辅助。",
-          keywords: ["环境感知", "快速响应"],
+          icon: "Building2",
+          label: sphereStory("zh-hk", "hospital").title,
+          description: sphereStory("zh-hk", "hospital").body,
+          keywords: ["遠端觀察", "現場協調"],
           image: "/images/products/scenes-v2/force-05-hospital.webp",
           imageAlt: "球形机器人在医院急诊入口巡查"
         },

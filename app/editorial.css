@@ -145,3 +145,14 @@
   .editorial-next .editorial-cta { width: 100%; }
 }
 @media (prefers-reduced-motion: reduce) { .editorial-link > span, .editorial-cta { transition: none; } }
+
+/* Scene photography always belongs to an editorial task, never a loose gallery. */
+.sphere-scene-copy { max-width: 48rem; padding: 20px 0 8px; }
+.sphere-scene-copy h3 { margin: 0; font-size: clamp(1.15rem, 2vw, 1.5rem); line-height: 1.45; font-weight: 600; }
+.sphere-scene-copy p { margin: 10px 0 0; color: var(--text-secondary-light, #535b65); font-size: 14px; line-height: 1.9; }
+.product-catalogue-dark .sphere-scene-copy p, .interior-hero .sphere-scene-copy p { color: #cbd5e1; }
+.sphere-capability-strip { border-top: 1px solid #939da63d; padding-top: 32px; }
+.sphere-capability-strip .product-catalogue-benefits { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; }
+.sphere-capability-strip .editorial-kicker { grid-column: 1 / -1; margin: 0; }
+.product-benefit-row.sphere-text-benefit { display: block; max-width: 48rem; border-top: 1px solid #939da63d; padding-top: 32px; }
+@media (max-width: 767px) { .sphere-capability-strip .product-catalogue-benefits { grid-template-columns: 1fr; gap: 24px; } }

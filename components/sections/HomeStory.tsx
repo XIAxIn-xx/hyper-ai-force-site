@@ -1,3 +1,4 @@
+import { sphereStory } from "@/data/sphereScenes";
 import { imageSrc } from "@/lib/media";
 import Image from "next/image";
 import Link from "next/link";
@@ -39,7 +40,7 @@ export function HomeStory({ locale }: { locale: Locale }) {
         <div className={styles.productGrid}>
           {products.map((product, index) => {
             const item = copy.products.items[index];
-            const view = product.views[0];
+            const view = product.views[product.slug === "force-05" ? 3 : 0];
             return <article key={product.slug} className={styles.product}>
               <Link href={productPath(locale, product.slug)} className={`${styles.productImage} metallic-edge metallic-hover`} aria-label={item.cta}>
                 <Image unoptimized src={imageSrc(view.src)} alt={`${product.model} · ${view.label}`} width={view.width} height={view.height} sizes="(max-width: 767px) calc(100vw - 32px), 570px" className={styles.contain} />
@@ -47,7 +48,7 @@ export function HomeStory({ locale }: { locale: Locale }) {
               <div className={styles.productDetails}>
                 <p className={styles.category}>{item.category}</p>
                 <h3 className={styles.productName}>{product.model}</h3>
-                <p className={styles.body}>{item.body}</p>
+                <p className={styles.body}>{product.slug === "force-05" ? sphereStory(locale, "park").body : item.body}</p>
                 <Link href={productPath(locale, product.slug)} className={styles.textLink}>{item.cta}<ArrowUpRight size={18} aria-hidden="true" /></Link>
               </div>
             </article>;
@@ -60,10 +61,10 @@ export function HomeStory({ locale }: { locale: Locale }) {
       <div className="section-shell">
         <SectionIntro {...copy.applications} />
         <div className={styles.applicationGrid}>
-          {copy.applications.items.map((item, index) => <Link href={localizedPath(locale, "applications")} key={item.title} className={styles.application}>
+          {copy.applications.items.map((base, index) => { const story = index === 0 ? sphereStory(locale, "street") : index === 3 ? sphereStory(locale, "solar") : null; const item = story ?? base; return <Link href={localizedPath(locale, "applications")} key={item.title} className={styles.application}>
             <div className={styles.applicationImage}><Image unoptimized {...applicationImages[index]} src={imageSrc(applicationImages[index].src)} alt={item.title} sizes="(max-width: 767px) calc(100vw - 32px), 570px" className={styles.contain} /></div>
             <div className={styles.applicationCopy}><span className={styles.index}>0{index + 1}</span><div><h3>{item.title}</h3><p>{item.body}</p></div><ArrowUpRight className={styles.applicationArrow} size={20} aria-hidden="true" /></div>
-          </Link>)}
+          </Link>; })}
         </div>
         <Link href={localizedPath(locale, "applications")} className={`${styles.textLink} ${styles.sectionLink}`}>{copy.applications.cta}<ArrowUpRight size={18} aria-hidden="true" /></Link>
       </div>

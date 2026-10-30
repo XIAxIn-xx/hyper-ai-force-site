@@ -1,3 +1,4 @@
+import { sphereStory } from "@/data/sphereScenes";
 import Image from "next/image";
 import Link from "next/link";
 import type { Locale } from "@/data/hyper";
@@ -21,8 +22,9 @@ export function EditorialSections({ locale, section }: { locale: Locale; section
           <a className="editorial-link" href="#assessment">{copy.scope}<span aria-hidden="true">↓</span></a>
         </Reveal>
         <Reveal className="editorial-feature-media" delay={0.08}>
-          <Image unoptimized src={imageSrc(page.image)} alt={labels[locale][section]} width={1600} height={1000} sizes="(max-width: 767px) 100vw, 60vw" className="editorial-image" />
+          <Image unoptimized src={imageSrc(page.image)} alt={labels[locale][section]} width={section === "collaboration" ? 1448 : 1600} height={section === "collaboration" ? 1086 : 1000} sizes="(max-width: 767px) 100vw, 60vw" className="editorial-image" />
           <div className="editorial-media-caption"><span>{locale === "en" ? "HYPER AIFORCE" : "超流智能"}</span><span>{labels[locale][section]}</span></div>
+          {section === "collaboration" && <div className="sphere-scene-copy"><h3>{sphereStory(locale, "terminal").title}</h3><p>{sphereStory(locale, "terminal").body}</p></div>}
         </Reveal>
       </div>
     </section>

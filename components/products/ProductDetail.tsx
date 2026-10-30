@@ -29,7 +29,7 @@ export function ProductDetail({ locale, slug }: { locale: Locale; slug: ProductS
             <Link href={localizedPath(locale, "products")} className="mb-8 inline-flex min-h-11 items-center gap-2 text-sm text-slate-300 hover:text-orange-200"><ArrowLeft className="h-4 w-4" aria-hidden="true" />{copy.back}</Link>
             <div className="grid items-center gap-10 md:grid-cols-2 lg:gap-14">
               <div className="order-2 md:order-1">
-                <ProductFigure product={product} index={0} priority />
+                <ProductFigure product={product} index={slug === "force-05" ? 5 : 0} locale={locale} priority />
               </div>
               <div className="order-1 md:order-2">
                 <p className="text-sm font-semibold tracking-[0.16em] text-orange-300">{product.category}</p>
@@ -53,7 +53,7 @@ export function ProductDetail({ locale, slug }: { locale: Locale; slug: ProductS
           <div className="section-shell">
             <h2 className="text-3xl font-bold md:text-4xl">{copy.benefits}</h2>
             <div className="product-benefit-sequence mt-10">
-              {product.benefits.map((benefit, index) => <Reveal key={benefit.title}><article className={`product-benefit-row ${index % 2 ? "product-benefit-reverse" : ""}`}><ProductFigure product={product} index={index + 1} /><div><p className="editorial-kicker">0{index + 1} / {product.model}</p><h3>{benefit.title}</h3><p>{benefit.description}</p></div></article></Reveal>)}
+              {product.benefits.map((benefit, index) => <Reveal key={benefit.title}><article className={`product-benefit-row ${index % 2 ? "product-benefit-reverse" : ""} ${slug === "force-05" && index > 0 ? "sphere-text-benefit" : ""}`}>{(slug !== "force-05" || index === 0) && <ProductFigure product={product} index={slug === "force-05" ? 4 : index + 1} locale={locale} />}<div><p className="editorial-kicker">0{index + 1} / {product.model}</p><h3>{benefit.title}</h3><p>{benefit.description}</p></div></article></Reveal>)}
             </div>
           </div>
         </section>
@@ -92,7 +92,7 @@ export function ProductDetail({ locale, slug }: { locale: Locale; slug: ProductS
         <section id="product-applications" className="titanium-section light-copy py-20">
           <div className="section-shell">
             <h2 className="text-3xl font-bold">{copy.applications}</h2>
-            <div className="product-scene-posters">{product.views.slice(4).map((view, index) => <Reveal key={view.src}><ProductFigure product={product} index={index + 4} /></Reveal>)}</div>
+            {slug !== "force-05" && <div className="product-scene-posters">{product.views.slice(4).map((view, index) => <Reveal key={view.src}><ProductFigure product={product} index={index + 4} /></Reveal>)}</div>}
             <p className="editorial-scene-note">{editorial[locale].sceneNote}</p>
             <div className="mt-10 grid gap-6 sm:grid-cols-2">{copy.scenarios.map((item) => <article key={item.label} className="rounded-xl border border-[var(--border-light)] bg-white p-6"><h3 className="text-xl font-semibold">{item.label}</h3><p className="zh-copy mt-3 text-sm leading-7 text-slate-300">{item.description}</p></article>)}</div>
             <div className="mt-12 flex flex-wrap items-center justify-between gap-4 border-t border-white/10 pt-8"><p className="text-slate-400">{copy.related}</p><Link href={productPath(locale, other.slug)} className="inline-flex min-h-11 items-center gap-3 font-semibold text-orange-300 hover:text-orange-200">{other.model}{locale !== "en" ? ` · ${other.name}` : ""}<ArrowRight className="h-4 w-4" aria-hidden="true" /></Link></div>
