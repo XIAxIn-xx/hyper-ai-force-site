@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Play } from "lucide-react";
 
-// Load only on request. Always expose playback controls, including save-data users.
+// Load only on request. Keep visible control as an icon; do not add Play/播放 copy.
 export function BackgroundVideo({ src, poster, className, label = "GLP" }: {
   src: string; poster?: string; className?: string; label?: string;
 }) {
@@ -27,10 +27,10 @@ export function BackgroundVideo({ src, poster, className, label = "GLP" }: {
         setFailed(false);
         document.querySelectorAll("video").forEach(video => { if (video !== event.currentTarget) video.pause(); });
       }} onError={() => { setFailed(true); setActive(false); }} />
-    {!active && <button type="button" aria-label={`${label} · Play`}
+    {!active && <button type="button" aria-label={`${label} · 播放`}
       onClick={() => { setFailed(false); setActive(true); }}
-      className="absolute right-5 top-5 z-30 inline-flex min-h-12 items-center gap-2 rounded-full border border-white/60 bg-black/70 px-5 text-sm text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-orange-300">
-      <Play size={20} aria-hidden="true" /><span>{failed ? "Retry / 重试" : "Play / 播放"}</span>
+      className="absolute right-5 top-5 z-30 inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/60 bg-black/70 text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-orange-300">
+      <Play size={20} aria-hidden="true" />
     </button>}
   </>;
 }

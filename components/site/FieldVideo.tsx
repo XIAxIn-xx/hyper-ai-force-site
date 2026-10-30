@@ -37,7 +37,6 @@ export function FieldVideo({ file, label }: Props) {
           <span className="absolute inset-0 flex items-center justify-center bg-black/10 group-hover:bg-black/20">
             <span className="flex h-14 w-14 items-center justify-center rounded-full border border-white/60 bg-black/55 text-white"><Play className="h-6 w-6" aria-hidden="true" /></span>
           </span>
-          {failed && <span className="absolute inset-x-0 bottom-3 text-sm text-white">Retry / 重试</span>}
         </button>
       )}
     </div>
