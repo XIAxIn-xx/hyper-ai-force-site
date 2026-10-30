@@ -9,10 +9,10 @@ import { localizedPath } from "@/lib/site";
 import styles from "./HomeStory.module.css";
 
 const applicationImages = [
-  { src: "/images/products/scenes-v2/force-05-rescue.webp", width: 1844, height: 853 },
+  { src: "/images/products/scenes-v2/force-05-street.webp", width: 1672, height: 941 },
   { src: "/images/products/scenes-v2/force-01-factory.webp", width: 1843, height: 853 },
   { src: "/images/products/scenes-v2/force-01-warehouse.webp", width: 1672, height: 941 },
-  { src: "/images/products/scenes-v2/force-05-perimeter.webp", width: 792, height: 446 }
+  { src: "/images/products/scenes-v2/force-05-solar.webp", width: 1672, height: 941 }
 ];
 const valueIcons = [ShieldCheck, RadioTower, Timer];
 

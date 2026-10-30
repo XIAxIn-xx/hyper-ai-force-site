@@ -244,8 +244,8 @@ const content = {
           label: "Fire & Emergency",
           description: "Suitable for hazard inspection, equipment checks and emergency support.",
           keywords: ["Environmental Sensing", "Rapid Response"],
-          image: "/images/products/scenes-v2/force-05-rescue.webp",
-          imageAlt: "Quadruped robot inspecting fire safety equipment"
+          image: "/images/products/scenes-v2/force-05-hospital.webp",
+          imageAlt: "Spherical robot outside a hospital emergency entrance"
         },
         {
           icon: "Siren",
@@ -519,8 +519,8 @@ const content = {
           label: "消防應急",
           description: "適用於隱患排查、設備巡檢與應急響應輔助。",
           keywords: ["環境感知", "快速響應"],
-          image: "/images/products/scenes-v2/force-05-rescue.webp",
-          imageAlt: "檢查消防設備的四足機器人"
+          image: "/images/products/scenes-v2/force-05-hospital.webp",
+          imageAlt: "球形機器人在醫院急診入口巡查"
         },
         {
           icon: "Siren",
@@ -788,8 +788,8 @@ const content = {
           label: "消防应急",
           description: "适用于隐患排查、设备巡检与应急响应辅助。",
           keywords: ["环境感知", "快速响应"],
-          image: "/images/products/scenes-v2/force-05-rescue.webp",
-          imageAlt: "检查消防设备的四足机器人"
+          image: "/images/products/scenes-v2/force-05-hospital.webp",
+          imageAlt: "球形机器人在医院急诊入口巡查"
         },
         {
           icon: "Siren",

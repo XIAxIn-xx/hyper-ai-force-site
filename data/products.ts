@@ -24,12 +24,14 @@ function sceneViews(locale: Locale, slug: ProductSlug): Product["views"] {
     { file: "factory", labels: ["Factory · Legged", "工厂巡逻 · 点足版", "工廠巡邏 · 點足版"], width: 1843, height: 853, weight: 15.5 },
     { file: "station", labels: ["Station · Wheeled-leg", "车站巡检 · 轮足版", "車站巡檢 · 輪足版"], width: 1846, height: 852, weight: 22.5 },
   ] : [
-    { file: "office", labels: ["Office", "办公室", "辦公室"], width: 1823, height: 863, weight: undefined },
-    { file: "perimeter", labels: ["Perimeter patrol", "边界巡逻", "邊界巡邏"], width: 792, height: 446, weight: undefined },
-    { file: "desert", labels: ["Desert", "沙漠滚动", "沙漠滾動"], width: 792, height: 366, weight: undefined },
-    { file: "rescue", labels: ["Rescue", "废墟救援", "廢墟救援"], width: 1844, height: 853, weight: undefined },
-    { file: "factory", labels: ["Factory patrol", "工厂巡逻", "工廠巡邏"], width: 1846, height: 852, weight: undefined },
-    { file: "exhibition", labels: ["Exhibition", "会展巡逻", "會展巡邏"], width: 1846, height: 852, weight: undefined },
+    { file: "street", labels: ["Street patrol", "街道巡逻", "街道巡邏"], width: 1672, height: 941, weight: undefined },
+    { file: "solar", labels: ["Solar farm", "光伏农场", "光伏農場"], width: 1672, height: 941, weight: undefined },
+    { file: "hospital", labels: ["Hospital security", "医院安保", "醫院安保"], width: 1672, height: 941, weight: undefined },
+    { file: "park", labels: ["Park patrol", "公园巡逻", "公園巡邏"], width: 1672, height: 941, weight: undefined },
+    { file: "port", labels: ["Port patrol", "港口巡逻", "港口巡邏"], width: 1672, height: 941, weight: undefined },
+    { file: "parking", labels: ["Car park inspection", "车库巡检", "車庫巡檢"], width: 1672, height: 941, weight: undefined },
+    { file: "stadium", labels: ["Stadium security", "球场安保", "球場安保"], width: 1672, height: 941, weight: undefined },
+    { file: "terminal", labels: ["Terminal security", "航站楼安保", "航站樓安保"], width: 1448, height: 1086, weight: undefined },
   ];
   const language = locale === "en" ? 0 : locale === "zh-cn" ? 1 : 2;
   return scenes.map(({ file, labels, width, height, weight }) => ({
