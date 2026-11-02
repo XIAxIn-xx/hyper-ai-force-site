@@ -56,6 +56,7 @@
 
 html {
   scroll-behavior: smooth;
+  scrollbar-gutter: stable;
 }
 
 body {
@@ -71,6 +72,26 @@ body {
 .section-shell {
   width: min(1180px, calc(100% - 32px));
   margin: 0 auto;
+}
+
+/* Fit the lead message and primary actions into ordinary laptop viewports. */
+.home-hero-content {
+  min-height: clamp(620px, calc(100svh - 80px), 880px);
+  padding-bottom: 48px;
+}
+
+@media (max-width: 767px) {
+  .home-hero-content {
+    min-height: calc(100svh - 80px);
+    padding-bottom: 64px;
+  }
+  .zh-page .home-hero .zh-hero-title {
+    font-size: clamp(28px, 8.8vw, 42px);
+    line-height: 1.2;
+  }
+  .home-hero .zh-hero-title .zh-title-line {
+    display: block;
+  }
 }
 
 .tech-grid {

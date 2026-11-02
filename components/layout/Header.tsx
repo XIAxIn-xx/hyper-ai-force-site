@@ -58,7 +58,7 @@ export function Header({ content, home = false }: HeaderProps) {
           href={localizedPath(item.lang === "en" ? "en" : item.lang === "zh-CN" ? "zh-cn" : "zh-hk", currentPage)}
           onClick={() => setLanguageOpen(false)}
           className={cn(
-            "flex h-9 items-center rounded-md px-3 text-sm font-medium transition-colors",
+            "flex min-h-11 items-center rounded-md px-3 text-sm font-medium transition-colors",
               content.lang === item.lang
                 ? "bg-orange-500 text-[var(--text-primary-light)]"
               : "text-slate-300 hover:bg-white/10 hover:text-brand"
@@ -77,7 +77,7 @@ export function Header({ content, home = false }: HeaderProps) {
       aria-expanded={languageOpen}
       onClick={() => { setLanguageOpen((value) => !value); setProductsOpen(false); }}
       className={cn(
-        "inline-flex h-10 items-center gap-2 rounded-md border px-3 transition-colors",
+        "inline-flex h-11 items-center gap-2 rounded-md border px-3 transition-colors",
         scrolled || open || languageOpen
           ? "border-white/15 bg-[color-mix(in_srgb,var(--surface-dark)_80%,transparent)] text-white hover:bg-white/10"
           : "border-white/15 text-white hover:bg-white/10"
@@ -99,7 +99,10 @@ export function Header({ content, home = false }: HeaderProps) {
 
   useEffect(() => {
     const closeProducts = (event: PointerEvent) => {
-      if (event.target instanceof Element && !event.target.closest("[data-products-nav]")) setProductsOpen(false);
+      if (!(event.target instanceof Element)) return;
+      if (!event.target.closest("[data-products-nav]")) setProductsOpen(false);
+      if (!event.target.closest("[data-language-nav]")) setLanguageOpen(false);
+      if (!event.target.closest(".site-header")) setOpen(false);
     };
     document.addEventListener("pointerdown", closeProducts);
     return () => document.removeEventListener("pointerdown", closeProducts);
@@ -173,7 +176,7 @@ export function Header({ content, home = false }: HeaderProps) {
           </span>
         </Link>
 
-        <nav
+        <nav aria-label={locale === "en" ? "Main navigation" : locale === "zh-cn" ? "主导航" : "主導覽"}
           className={cn(
             "hidden items-center gap-4 text-sm transition-colors xl:flex",
             "text-slate-300"
@@ -198,7 +201,7 @@ export function Header({ content, home = false }: HeaderProps) {
         </nav>
 
         <div className="hidden items-center gap-3 xl:flex">
-          <div className="relative">
+          <div data-language-nav className="relative" onBlur={event => { if (!event.currentTarget.contains(event.relatedTarget)) setLanguageOpen(false); }}>
             {languageTrigger}
             {languageOpen ? languageMenu("absolute right-0 top-full z-10 mt-2 w-32") : null}
           </div>
@@ -209,10 +212,10 @@ export function Header({ content, home = false }: HeaderProps) {
 
         <div className="flex items-center gap-2 xl:hidden">
           {home && <Link href={localizedPath(locale, "contact")} data-analytics-event="inquiry_click" className="inline-flex min-h-11 items-center rounded-md brand-button px-3 text-xs font-semibold">{content.contact.navButton}</Link>}
-          {languageTrigger}
+          <div data-language-nav>{languageTrigger}</div>
           <button
             className={cn(
-              "inline-flex h-10 w-10 items-center justify-center rounded-md border transition-colors",
+              "inline-flex h-11 w-11 items-center justify-center rounded-md border transition-colors",
               "border-white/15 text-white hover:bg-white/10"
             )}
             aria-label={locale === "en" ? "Toggle navigation" : locale === "zh-cn" ? "展开导航" : "展開導覽"}
@@ -229,7 +232,7 @@ export function Header({ content, home = false }: HeaderProps) {
         </div>
       </div>
 
-      {languageOpen ? <div className="absolute right-4 top-20 xl:hidden">{languageMenu("w-32")}</div> : null}
+      {languageOpen ? <div data-language-nav className="absolute right-4 top-20 xl:hidden" onBlur={event => { if (!event.currentTarget.contains(event.relatedTarget)) setLanguageOpen(false); }}>{languageMenu("w-32")}</div> : null}
 
       {open ? (
         <div id="mobile-navigation" className="max-h-[calc(100dvh-5rem)] overflow-y-auto border-t border-white/10 bg-[color-mix(in_srgb,var(--bg-dark)_95%,transparent)] shadow-[0_18px_36px_rgba(0,0,0,0.3)] backdrop-blur-xl xl:hidden">
@@ -244,7 +247,7 @@ export function Header({ content, home = false }: HeaderProps) {
                   setOpen(false);
                   setLanguageOpen(false);
                 }}
-                className="rounded-md px-2 py-2 hover:bg-white/10 hover:text-brand"
+                className={cn("flex min-h-11 items-center rounded-md px-2 py-2 hover:bg-white/10 hover:text-brand", pathname === item.href && "text-brand")}
               >
                 {item.label}
               </Link>

@@ -54,7 +54,7 @@ export function HeroSection({ content }: HeroSectionProps) {
   }, [playback]);
 
   return (
-    <section className="hero-material relative min-h-[960px] overflow-hidden bg-[var(--bg-dark)] pt-20 text-white md:min-h-[1040px]">
+    <section className="home-hero hero-material relative overflow-hidden bg-[var(--bg-dark)] pt-20 text-white">
       <video
         ref={videoRef}
         poster={imageSrc("/videos/haiforce-hero-poster.jpg")}
@@ -74,8 +74,8 @@ export function HeroSection({ content }: HeroSectionProps) {
       <div className="hero-shade absolute inset-0" />
       <div className="absolute bottom-0 left-0 h-48 w-full bg-gradient-to-t from-[var(--bg-dark)] to-transparent" />
 
-      <div className="section-shell relative z-10 flex min-h-[880px] items-center md:min-h-[960px]">
-        <div className="max-w-[840px] py-24">
+      <div className="home-hero-content section-shell relative z-10 flex items-center">
+        <div className="max-w-[840px] py-14 md:py-16">
           <motion.div
             initial={false}
             animate={{ opacity: 1, y: 0 }}
@@ -90,11 +90,11 @@ export function HeroSection({ content }: HeroSectionProps) {
             transition={{ duration: reduced ? 0 : 0.6, delay: reduced ? 0 : 0.1 }}
             className={
               content.lang === "en"
-                ? "zh-title relative mt-7 max-w-[840px] text-5xl font-black leading-[1.02] tracking-normal md:-left-5 md:text-7xl"
+                ? "zh-title mt-6 max-w-[840px] text-[clamp(2.25rem,5vw,4.5rem)] font-bold leading-[1.06] tracking-[-0.025em]"
                 : "zh-title zh-hero-title mt-7 max-w-[700px]"
             }
           >
-            {content.hero.title.split("\n").map((line) => (
+            {(content.lang === "en" ? content.hero.title : content.hero.title.replace("的", "的\n")).split("\n").map((line) => (
               <span key={line} className="zh-title-line">
                 <ZhText>{line}</ZhText>
               </span>
@@ -104,7 +104,7 @@ export function HeroSection({ content }: HeroSectionProps) {
             initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.75, delay: 0.16 }}
-            className="zh-copy zh-hero-copy mt-7 max-w-2xl text-lg leading-8 text-slate-300 md:text-xl"
+            className="zh-copy zh-hero-copy mt-6 max-w-2xl text-base leading-7 text-slate-300 md:text-lg md:leading-8"
           >
             <ZhText>{content.hero.subtitle}</ZhText>
           </motion.p>
