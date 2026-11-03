@@ -12,6 +12,10 @@ export function EditorialSections({ locale, section }: { locale: Locale; section
   const page = copy.pages[section];
   if (!page) return null;
   const timeline = section === "collaboration" || section === "solutions";
+  const [imageWidth, imageHeight] = ({
+    technology: [1254, 1254], solutions: [1846, 852], applications: [1672, 941],
+    collaboration: [1448, 1086], about: [1448, 1086], resources: [1600, 900], contact: [1296, 861],
+  } as Record<string, [number, number]>)[section];
   return <div className={`editorial-story editorial-${section}`}>
     <section id="perspective" className="editorial-feature">
       <div className="section-shell editorial-feature-grid">
@@ -22,7 +26,7 @@ export function EditorialSections({ locale, section }: { locale: Locale; section
           <a className="editorial-link" href="#assessment">{copy.scope}<span aria-hidden="true">↓</span></a>
         </Reveal>
         <Reveal className="editorial-feature-media" delay={0.08}>
-          <Image unoptimized src={imageSrc(page.image)} alt={labels[locale][section]} width={section === "collaboration" ? 1448 : 1600} height={section === "collaboration" ? 1086 : 1000} sizes="(max-width: 767px) 100vw, 60vw" className="editorial-image" />
+          <Image unoptimized src={imageSrc(page.image)} alt={labels[locale][section]} width={imageWidth} height={imageHeight} sizes="(max-width: 900px) calc(100vw - 32px), 60vw" className="editorial-image" />
           <div className="editorial-media-caption"><span>{locale === "en" ? "HYPER AIFORCE" : "超流智能"}</span><span>{labels[locale][section]}</span></div>
           {section === "collaboration" && <div className="sphere-scene-copy"><h3>{sphereStory(locale, "terminal").title}</h3><p>{sphereStory(locale, "terminal").body}</p></div>}
         </Reveal>

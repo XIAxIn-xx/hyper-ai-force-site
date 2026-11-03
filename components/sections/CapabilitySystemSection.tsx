@@ -23,7 +23,7 @@ function CapabilityMedia({ item }: { item: Capability }) {
   return (
     <div
       data-media-key={item.resourceKey}
-      className={`metallic-surface metallic-edge metallic-hover relative overflow-hidden rounded-2xl ${
+      className={`metallic-surface metallic-edge metallic-hover relative overflow-hidden rounded-[var(--card-radius)] ${
         item.mediaType === "image" ? "aspect-[16/9]" : "aspect-[16/9]"
       }`}
     >

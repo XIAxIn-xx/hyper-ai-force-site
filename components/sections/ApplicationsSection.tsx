@@ -52,7 +52,7 @@ export function ApplicationsSection({ content }: ApplicationsSectionProps) {
                   onMouseEnter={() => setActiveIndex(index)}
                   onFocus={() => setActiveIndex(index)}
                   onClick={() => setActiveIndex(index)}
-                  className={`group relative flex h-full min-h-[128px] w-full overflow-hidden rounded-2xl border text-left outline-none transition-[border-color,box-shadow] duration-500 ${
+                  className={`group relative flex h-full min-h-[128px] w-full overflow-hidden rounded-[var(--card-radius)] border text-left outline-none transition-[border-color,box-shadow] duration-500 ${
                     isActive
                       ? "border-orange-200/55 shadow-[0_18px_50px_rgba(0,0,0,0.28)] focus-visible:ring-2 focus-visible:ring-orange-300/80"
                       : "border-white/12 focus-visible:border-orange-300/60 focus-visible:ring-2 focus-visible:ring-orange-300/80"

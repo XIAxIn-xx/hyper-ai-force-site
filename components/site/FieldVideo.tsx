@@ -21,7 +21,7 @@ export function FieldVideo({ file, label }: Props) {
   }, [active]);
   const poster = `/videos/field/${file}.jpg`;
   return (
-    <div className="relative aspect-video w-full overflow-hidden rounded-2xl bg-black">
+    <div className="relative aspect-video w-full overflow-hidden rounded-[var(--card-radius)] bg-black">
       {active ? (
         <video ref={videoRef} controls autoPlay muted playsInline preload="metadata" poster={poster}
           src={`/videos/field/${file}-web.mp4`} aria-label={label}

@@ -11,18 +11,19 @@ type AboutSectionProps = {
 
 export function AboutSection({ content }: AboutSectionProps) {
   const copyParagraphs = (Array.isArray(content.about.copy) ? content.about.copy : [content.about.copy]) as readonly string[];
-  const isEnglish = content.lang === "en";
 
   return (
     <section id="about" className="titanium-section light-copy py-16 md:py-20">
       <div className="section-shell grid gap-10 lg:grid-cols-[46fr_54fr] lg:items-stretch lg:gap-12">
         <Reveal>
-          <div className={`metallic-edge relative aspect-[4/3] w-full overflow-hidden rounded-lg border border-white/10 bg-[var(--bg-dark)] shadow-[0_18px_42px_rgba(0,0,0,0.28)] lg:aspect-auto lg:h-full ${isEnglish ? "lg:mt-9" : ""}`}>
+          <div className="metallic-edge relative mx-auto w-full max-w-[400px] overflow-hidden rounded-[var(--card-radius)] border border-white/10 shadow-[0_18px_42px_rgba(0,0,0,0.28)]">
             <Image unoptimized
               src={imageSrc("/images/hyper/cyberport.png")}
               alt="Cyberport Entrepreneurship Centre"
-              fill
-              className="object-cover"
+              width={711}
+              height={1008}
+              sizes="(max-width: 767px) calc(100vw - 32px), 400px"
+              className="block h-auto w-full"
             />
           </div>
         </Reveal>

@@ -26,12 +26,12 @@ export function SitePage({ locale, section }: { locale: Locale; section: Section
   const legal = legalSections.includes(section);
   const resource = resourceCopy[locale];
   // Give each route a dedicated lead image; never reuse its editorial image.
-  const heroImages: Partial<Record<Section, string>> = {
-    technology: "/images/products/scenes-v2/force-01-factory.webp",
-    solutions: "/images/products/scenes-v2/force-01-station.webp",
-    about: "/images/hyper/cyberport-3-exterior.png",
-    resources: "/images/products/scenes-v2/force-01-warehouse.webp",
-    contact: "/images/hyper/19w-building.webp",
+  const heroImages: Partial<Record<Section, { src: string; width: number; height: number }>> = {
+    technology: { src: "/images/products/scenes-v2/force-01-factory.webp", width: 1843, height: 853 },
+    solutions: { src: "/images/products/scenes-v2/force-01-station.webp", width: 1846, height: 852 },
+    about: { src: "/images/hyper/cyberport-3-exterior.png", width: 1558, height: 1010 },
+    resources: { src: "/images/products/scenes-v2/force-01-warehouse.webp", width: 1672, height: 941 },
+    contact: { src: "/images/hyper/19w-building.webp", width: 1360, height: 927 },
   };
   const heroImage = heroImages[section];
   const brandName = locale === "en" ? "HYPER AIFORCE" : "超流智能";
@@ -46,7 +46,7 @@ export function SitePage({ locale, section }: { locale: Locale; section: Section
           <p className="text-sm font-semibold tracking-[0.16em] text-orange-300">{brandName}</p>
           <h1 className="mt-4 text-4xl font-bold md:text-6xl">{copy[section]}</h1>
           {descriptions[locale][section] && <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-300">{descriptions[locale][section]}</p>}
-          </div>{heroImage && <div className="interior-hero-image"><Image unoptimized src={imageSrc(heroImage)} alt={copy[section]} width={1500} height={950} sizes="(max-width: 767px) 100vw, 50vw" priority /></div>}</div>
+          </div>{heroImage && <div className="interior-hero-image"><Image unoptimized src={imageSrc(heroImage.src)} alt={copy[section]} width={heroImage.width} height={heroImage.height} sizes="(max-width: 600px) calc(100vw - 32px), 50vw" priority /></div>}</div>
           {!legal && <div className="interior-route-index"><span aria-hidden="true">{String(["products", "technology", "solutions", "applications", "collaboration", "about", "resources", "contact"].indexOf(section) + 1).padStart(2, "0")} / {brandName}</span><a href="#route-content">{editorial[locale].index}<span aria-hidden="true">↓</span></a></div>}
         </div>
       </section>

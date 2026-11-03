@@ -12,8 +12,9 @@
 .support { max-width: 480px; font-size: 16px; line-height: 1.85; color: var(--home-muted); }
 .productGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
 .product { min-width: 0; }
-.productImage { display: flex; align-items: center; aspect-ratio: 16 / 10; overflow: hidden; padding: 12px; border-radius: var(--card-radius); background: var(--surface-titanium); background-image: var(--metal-silver-reflection), var(--metal-silver-grain); }
+.productImage { display: block; aspect-ratio: 16 / 9; overflow: hidden; border-radius: var(--card-radius); }
 .contain { display: block; width: 100%; height: auto; object-fit: contain; }
+.productImage > img, .applicationImage > img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
 
 .productDetails { padding-top: 26px; }
 .category { font-size: 12px; color: var(--home-muted); letter-spacing: .06em; }
@@ -24,8 +25,7 @@
 .textLink:hover svg { transform: translate(2px, -2px); }
 .applicationGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px 32px; }
 .application { color: inherit; }
-.applicationImage { border: 1px solid var(--border-light); border-radius: var(--card-radius); aspect-ratio: 16 / 9; display: flex; align-items: center; overflow: hidden; background: var(--border-light); }
-.applicationImage .contain { max-height: 100%; }
+.applicationImage { border-radius: var(--card-radius); aspect-ratio: 16 / 9; overflow: hidden; }
 .applicationCopy { display: grid; grid-template-columns: auto 1fr auto; align-items: start; gap: 16px; padding-top: 22px; }
 .index { font: 12px/1.8 ui-monospace, monospace; color: var(--home-accent); }
 .applicationCopy h3 { font-size: 20px; line-height: 1.4; font-weight: 600; }
@@ -53,7 +53,7 @@
 .value h3 { margin: 32px 0 18px; font-size: 25px; line-height: 1.4; font-weight: 600; }
 .value p { color: var(--home-muted); font-size: 14px; line-height: 1.85; }
 .caseGrid { display: grid; grid-template-columns: 1.35fr .8fr; align-items: center; gap: 56px; }
-.caseImage { display: block; }
+.caseImage { display: block; overflow: hidden; border-radius: var(--card-radius); }
 .caseCopy h3 { margin-top: 16px; font-size: 30px; line-height: 1.25; font-weight: 600; }
 .caseCopy > p:not(.eyebrow) { margin-top: 20px; font-size: 14px; line-height: 1.85; color: var(--home-muted); }
 .caseCopy .outcome { padding-top: 20px; border-top: 1px solid var(--border-light); }
@@ -95,7 +95,6 @@
   .heading { font-size: 34px; }
   .support { font-size: 15px; }
   .productGrid, .applicationGrid, .valueGrid, .cooperationGrid { grid-template-columns: 1fr; gap: 36px; }
-  .productImage { aspect-ratio: 16 / 10; }
   .applicationCopy { gap: 12px; }
   .applicationCopy h3 { font-size: 19px; }
   .value h3 { margin-top: 22px; font-size: 23px; }
