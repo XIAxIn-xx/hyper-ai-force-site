@@ -301,7 +301,7 @@ const content = {
       button: "Contact Us / Request a Demo",
       navButton: "Contact us",
       address:
-        "Building 19W, No.19 Science Park West Avenue, Hong Kong Science Park, Pak Shek Kok, New Territories, Hong Kong",
+        "Units 617-620, Level 6, Core E, Cyberport 3, 100 Cyberport Road, Hong Kong",
       fields: {
         name: "Name",
         company: "Company",
@@ -577,7 +577,7 @@ const content = {
         "告訴我們您的設施、巡邏工作量或巡檢場景，\n我們將為您匹配合適的解決方案",
       button: "聯絡我們 / 預約演示",
       navButton: "聯絡我們",
-      address: "香港新界白石角香港科學園科技大道西19號19W大樓",
+      address: "香港數碼港道 100 號數碼港3座E核心區6樓617–620 室",
       fields: {
         name: "姓名",
         company: "公司",
@@ -846,7 +846,7 @@ const content = {
         "告诉我们您的设施、巡逻工作量或巡检场景，\n我们将为您匹配合适的解决方案",
       button: "联系我们 / 预约演示",
       navButton: "联系我们",
-      address: "香港新界白石角香港科学园科技大道西19号19W大楼",
+      address: "香港数码港道 100 号数码港3座E核心区6楼617–620 室",
       fields: {
         name: "姓名",
         company: "公司",
