@@ -24,7 +24,7 @@ export function RspControlPanel({ locale, snapshot, stageLabel }: RspControlPane
           stage: "當前階段",
           dispatch: "任務已下發",
           ready: "任務準備中",
-          remote: "已觸發遠程接管"
+          remote: "已觸發超遠距接管"
         }
       : locale === "zh-cn"
         ? {
@@ -38,7 +38,7 @@ export function RspControlPanel({ locale, snapshot, stageLabel }: RspControlPane
             stage: "当前阶段",
             dispatch: "任务已下发",
             ready: "任务准备中",
-            remote: "已触发远程接管"
+            remote: "已触发超远距接管"
           }
         : {
             platform: "ROBOT SCHEDULING PLATFORM",
@@ -51,7 +51,7 @@ export function RspControlPanel({ locale, snapshot, stageLabel }: RspControlPane
             stage: "CURRENT STAGE",
             dispatch: "TASK DISPATCHED",
             ready: "TASK READY",
-            remote: "REMOTE TAKEOVER TRIGGERED"
+            remote: "ULTRA-RANGE TAKEOVER TRIGGERED"
           };
 
   const progress = Math.round(snapshot.routeProgress * 100);

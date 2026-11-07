@@ -17,7 +17,7 @@ type HomeCopy = {
 export const homeCopy: Record<Locale, HomeCopy> = {
   en: {
     seo: { title: "Hyper AIForce | Robotic Platforms for Real-World Operations", description: "Explore FORCE 01 and FORCE 05 robotic platforms for remote observation, inspection and operations. Discover applications, technology and deployment partnerships with Hyper AIForce." },
-    hero: { title: "Extend Your Reach.\nStay in Control.", body: "Robotic platforms for remote observation, inspection, and operations across demanding environments.", primary: "Explore Our Robots", secondary: "Contact Sales" },
+    hero: { title: "Extend Your Reach.\nStay in Control.", body: "Robotic platforms for ultra-range teleoperation — operating robots across distant sites beyond visual line of sight (BVLOS), subject to network coverage and deployment configuration.", primary: "Explore Our Robots", secondary: "Contact Sales" },
     products: {
       eyebrow: "02 / OUR ROBOTS", title: "Two Platforms.\nOne Purpose.", body: "Robotic platforms for remote observation, inspection and site operations.", cta: "Explore Our Robots",
       items: [
@@ -39,7 +39,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       imageAlt: "Existing RSP platform interface showing a site map and perception view", note: "Capabilities, software and payloads depend on the selected system and project configuration. Remote operation, assisted functions and autonomous modes are distinct and must be confirmed for the deployment.",
       items: [
         { title: "Robotic Platforms", body: "Mobility and modular hardware designed for real-world operations." },
-        { title: "Remote Connectivity", body: "Communication and remote access capabilities that connect operators with robots in the field." },
+        { title: "Remote Connectivity", body: "Network connectivity links operators with robots across distant sites for BVLOS operation, subject to coverage and configuration." },
         { title: "Intelligent Systems", body: "Perception, operational software, and mission management capabilities that support effective deployment." }
       ]
     },
@@ -47,7 +47,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       eyebrow: "05 / WHY HYPER AIFORCE", title: "Operational Value.\nEngineering Focus.", body: "Robotic deployment focused on personnel safety, remote visibility and operational efficiency.",
       items: [
         { label: "Safety", title: "Reduced Personnel Exposure.", body: "Support remote assessment before personnel enter hazardous or uncertain environments." },
-        { label: "Presence", title: "Remote Site Visibility.", body: "Connect operators with site observations and remote control functions." },
+        { label: "Presence", title: "Remote Site Visibility.", body: "Connect operators with site observations and ultra-range teleoperation functions." },
         { label: "Efficiency", title: "Coordinated Site Operations.", body: "Reduce repetitive site visits and support structured inspection workflows." }
       ]
     },
@@ -76,7 +76,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
   },
   "zh-cn": {
     seo: { title: "超流智能 | 面向真实作业的机器人平台", description: "探索 FORCE 01 与 FORCE 05 机器人平台，了解远程观察、巡检与作业的应用场景、技术体系及部署合作方式。" },
-    hero: { title: "延伸你的触达，\n掌握每一次行动。", body: "面向复杂环境的机器人平台，支持远程观察、巡检与现场作业。", primary: "探索机器人产品", secondary: "联系销售" },
+    hero: { title: "延伸你的触达，\n掌握每一次行动。", body: "面向复杂环境的机器人平台，支持超远距遥操（Ultra-range Teleoperation），即通过网络跨场地、超出操作员直接视线范围操控机器人（BVLOS，Beyond Visual Line of Sight）。具体范围取决于通信覆盖与部署配置。", primary: "探索机器人产品", secondary: "联系销售" },
     products: { eyebrow: "02 / 机器人产品", title: "两大平台，\n同一使命。", body: "以智能机器人平台延伸人的触达，支持多样环境中的现场作业。", cta: "探索机器人产品", items: [
       { category: "四足机器人平台", body: "面向复杂环境的通用四足机器人平台，支持远程观察、巡检与现场作业。", cta: "探索 FORCE 01" },
       { category: "球形机器人平台", body: "以球形移动平台，为移动探索与远程观察提供另一种方式。", cta: "探索 FORCE 05" }
@@ -89,12 +89,12 @@ export const homeCopy: Record<Locale, HomeCopy> = {
     ] },
     technology: { eyebrow: "04 / 技术体系", title: "协同运行的技术体系。", body: "将移动、感知、通信与人的控制相连接，构建软硬件协同的机器人体系。", cta: "探索技术能力", solutions: "探索解决方案", imageAlt: "现有 RSP 平台界面，展示场地地图与感知视图", note: "具体能力、软件及载荷取决于所选系统和项目配置。远程操作、辅助功能与自主模式有所区别，部署前需按项目确认。", items: [
       { title: "机器人平台", body: "面向真实作业的移动能力与模块化硬件。" },
-      { title: "远程连接", body: "通过通信与远程访问能力，连接操作人员与现场机器人。" },
+      { title: "远程连接", body: "通过网络连接异地操作人员与现场机器人，支持超视距（BVLOS）作业，具体范围取决于通信覆盖与配置。" },
       { title: "智能系统", body: "以感知、作业软件与任务管理能力支持有效部署。" }
     ] },
     value: { eyebrow: "05 / 为什么选择超流智能", title: "工程能力，\n服务现场运营。", body: "智能机器人应当超越技术展示，为真实作业创造切实的价值。", items: [
       { label: "安全", title: "降低人员暴露风险。", body: "通过机器人观察与探索，减少人员进入危险或不确定环境的需要。" },
-      { label: "在场", title: "获取远程现场视野。", body: "通过实时远程访问与控制，延伸人的视野与作业触达。" },
+      { label: "在场", title: "获取远程现场视野。", body: "通过超远距遥操，跨场地获取实时视野并操控机器人，延伸人的作业触达。" },
       { label: "效率", title: "优化现场作业流程。", body: "减少重复到访，让团队将更多精力投入更高价值的任务。" }
     ] },
     field: { eyebrow: "06 / 实践验证", title: "在实践中验证。", body: "实际部署，连接现场运营。", name: "普洛斯物流园巡检项目", description: "在物流园环境中，将机器人巡检、RSP 平台与现场运营连接起来。", outcome: "项目将远程现场观察、巡检记录与协同任务管理纳入统一的作业流程。", cta: "查看项目案例", imageAlt: "普洛斯物流园现场机器人，截取自现有部署视频" },
@@ -115,7 +115,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
   },
   "zh-hk": {
     seo: { title: "超流智能 | 面向真實作業的機械人平台", description: "探索 FORCE 01 與 FORCE 05 機械人平台，了解遠端觀察、巡檢與作業的應用場景、技術體系及部署合作方式。" },
-    hero: { title: "延伸你的觸達，\n掌握每一次行動。", body: "面向複雜環境的機械人平台，支援遠端觀察、巡檢與現場作業。", primary: "探索機械人產品", secondary: "聯絡銷售" },
+    hero: { title: "延伸你的觸達，\n掌握每一次行動。", body: "面向複雜環境的機械人平台，支援超遠距遙操（Ultra-range Teleoperation），即透過網絡跨場地、超出操作員直接視線範圍操控機械人（BVLOS，Beyond Visual Line of Sight）。具體範圍取決於通訊覆蓋與部署配置。", primary: "探索機械人產品", secondary: "聯絡銷售" },
     products: { eyebrow: "02 / 機械人產品", title: "兩大平台，\n同一使命。", body: "以智能機械人平台延伸人的觸達，支援多樣環境中的現場作業。", cta: "探索機械人產品", items: [
       { category: "四足機械人平台", body: "面向複雜環境的通用四足機械人平台，支援遠端觀察、巡檢與現場作業。", cta: "探索 FORCE 01" },
       { category: "球形機械人平台", body: "以球形移動平台，為移動探索與遠端觀察提供另一種方式。", cta: "探索 FORCE 05" }
@@ -128,12 +128,12 @@ export const homeCopy: Record<Locale, HomeCopy> = {
     ] },
     technology: { eyebrow: "04 / 技術體系", title: "協同運行的技術體系。", body: "將移動、感知、通訊與人的控制相連接，構建軟硬件協同的機械人體系。", cta: "探索技術能力", solutions: "探索解決方案", imageAlt: "現有 RSP 平台介面，展示場地地圖與感知視圖", note: "具體能力、軟件及載荷取決於所選系統和項目配置。遠端操作、輔助功能與自主模式有所區別，部署前需按項目確認。", items: [
       { title: "機械人平台", body: "面向真實作業的移動能力與模組化硬件。" },
-      { title: "遠端連接", body: "透過通訊與遠端存取能力，連接操作人員與現場機械人。" },
+      { title: "遠端連接", body: "透過網絡連接異地操作人員與現場機械人，支援超視距（BVLOS）作業，具體範圍取決於通訊覆蓋與配置。" },
       { title: "智能系統", body: "以感知、作業軟件與任務管理能力支援有效部署。" }
     ] },
     value: { eyebrow: "05 / 為甚麼選擇超流智能", title: "工程能力，\n服務現場營運。", body: "智能機械人應當超越技術展示，為真實作業創造切實的價值。", items: [
       { label: "安全", title: "降低人員暴露風險。", body: "透過機械人觀察與探索，減少人員進入危險或不確定環境的需要。" },
-      { label: "在場", title: "取得遠程現場視野。", body: "透過即時遠端存取與控制，延伸人的視野與作業觸達。" },
+      { label: "在場", title: "取得遠程現場視野。", body: "透過超遠距遙操，跨場地取得即時視野並操控機械人，延伸人的作業觸達。" },
       { label: "效率", title: "優化現場作業流程。", body: "減少重複到訪，讓團隊將更多精力投入更高價值的任務。" }
     ] },
     field: { eyebrow: "06 / 實踐驗證", title: "在實踐中驗證。", body: "實際部署，連接現場營運。", name: "普洛斯物流園巡檢項目", description: "在物流園環境中，將機械人巡檢、RSP 平台與現場營運連接起來。", outcome: "項目將遠端現場觀察、巡檢記錄與協同任務管理納入統一的作業流程。", cta: "查看項目案例", imageAlt: "普洛斯物流園現場機械人，截取自現有部署影片" },

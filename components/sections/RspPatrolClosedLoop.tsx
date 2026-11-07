@@ -24,7 +24,7 @@ export function RspPatrolClosedLoop({ locale, steps }: RspPatrolClosedLoopProps)
         ready: "任务准备中",
         dispatch: "RSP 正在下发任务",
         patrol: "机器狗自主巡检中",
-        exception: "发现异常，远程接管已触发",
+        exception: "发现异常，超远距接管已触发",
         return: "巡检数据正在回传",
         complete: "巡检闭环已完成"
       }
@@ -32,7 +32,7 @@ export function RspPatrolClosedLoop({ locale, steps }: RspPatrolClosedLoopProps)
         ready: "Task preparation",
         dispatch: "RSP dispatching patrol task",
         patrol: "Robot dog performing autonomous patrol",
-        exception: "Exception found, remote takeover triggered",
+        exception: "Exception found, ultra-range takeover triggered",
         return: "Inspection data returning to RSP",
         complete: "Inspection loop complete"
       };

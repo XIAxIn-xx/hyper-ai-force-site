@@ -76,18 +76,18 @@ const catalogues: Record<Locale, Catalogue> = {
     ],
     items: [
       {
-        slug: "force-01", model: "FORCE 01", name: "FORCE 01", category: "Panoramic Teleoperated Robot",
+        slug: "force-01", model: "FORCE 01", name: "FORCE 01", category: "Panoramic Ultra-range Teleoperation Robot",
         tagline: "Reach the scene. See the whole picture.",
-        description: "A legged or wheeled-leg robot with an integrated panoramic teleoperation backpack. See the surroundings, move through the site and investigate from a remote location.",
+        description: "A legged or wheeled-leg robot with an integrated panoramic backpack for ultra-range teleoperation. Operate across distant sites beyond visual line of sight (BVLOS), using live video and motion control. Operating distance depends on network coverage and configuration.",
         views: sceneViews("en", "force-01"),
         highlights: [{ value: "360°", label: "Surrounding views" }, { value: "4 × 1080p", label: "Video encoding, up to 60 fps" }, { value: "4G / 5G", label: "Remote connectivity" }],
         benefits: [
           { title: "Understand the scene before entering", description: "Four low-light cameras provide views around the robot, helping operators check blind spots and confirm changing conditions." },
-          { title: "Be there without the journey", description: "Live video and remote motion control let operators move closer, change viewpoint and inspect without repeated site visits." },
+          { title: "Be there without the journey", description: "Live video and ultra-range teleoperation let operators at distant sites move the robot closer, change viewpoint and inspect without repeated site visits." },
           { title: "Choose how you reach the scene", description: "Select a legged or wheeled-leg configuration to suit the routes and surfaces at your site. Add sensing payloads to match the task." }
         ],
         specs: [
-          { label: "Configuration", value: "Robot body + panoramic teleoperation backpack" },
+          { label: "Configuration", value: "Robot body + panoramic ultra-range teleoperation backpack" },
           { label: "Backpack cameras", value: "4 × 2 MP low-light cameras" },
           { label: "Video encoding", value: "Up to 4 × 1080p at 60 fps" },
           { label: "Edge AI", value: "Up to 6 TOPS NPU, depending on module" },
@@ -96,7 +96,7 @@ const catalogues: Record<Locale, Catalogue> = {
           { label: "Development", value: "Python / C++ / ROS 2" }
         ],
         note: "Combined weight is calculated from the battery-equipped body plus the 518 g backpack, excluding mounting hardware and cables. Encoding capability is not a guaranteed network streaming rate. Final configuration determines endurance and available payload.",
-        payloads: ["Panoramic teleoperation backpack", "Optional thermal imaging", "Additional sensing modules", "Task-specific integration"]
+        payloads: ["Panoramic ultra-range teleoperation backpack", "Optional thermal imaging", "Additional sensing modules", "Task-specific integration"]
       },
       {
         slug: "force-05", model: "FORCE 05", name: "FORCE 05", category: "Spherical Mobile Inspection Robot",
@@ -149,14 +149,14 @@ const catalogues: Record<Locale, Catalogue> = {
     ],
     items: [
       {
-        slug: "force-01", model: "FORCE 01", name: "原力一号", category: "360°全景遥操机器人",
+        slug: "force-01", model: "FORCE 01", name: "原力一号", category: "360°全景超远距遥操机器人",
         tagline: "灵活抵达，全景掌握。",
-        description: "点足或轮足本体，集成全景遥操背包。通过远程观察与移动控制，替你进入现场、靠近目标、核查异常。",
+        description: "点足或轮足本体，集成全景遥操背包，支持超远距遥操（Ultra-range Teleoperation）。通过网络跨场地开展 BVLOS（Beyond Visual Line of Sight，超视距）观察与移动控制，靠近目标、核查异常。操作范围取决于通信覆盖与配置。",
         views: sceneViews("zh-cn", "force-01"),
         highlights: [{ value: "360°", label: "全景观察" }, { value: "4 × 1080p", label: "最高 60 fps 视频编码" }, { value: "4G / 5G", label: "远程连接" }],
         benefits: [
           { title: "先看清，再决定是否到场", description: "四路低照度摄像头覆盖机器人周边视野，帮助远程操作人员查看盲区、确认现场变化。" },
-          { title: "人在远方，也能靠近查看", description: "结合实时图传与移动控制，远程调整位置和观察角度，减少反复到访与人员暴露。" },
+          { title: "人在远方，也能靠近查看", description: "结合实时图传与超远距遥操，跨场地调整机器人位置和观察角度，减少反复到访与人员暴露。" },
           { title: "按场地选择抵达方式", description: "点足与轮足两种形态，适配不同通行路线与地面条件；按任务扩展所需感知载荷。" }
         ],
         specs: [
@@ -222,14 +222,14 @@ const catalogues: Record<Locale, Catalogue> = {
     ],
     items: [
       {
-        slug: "force-01", model: "FORCE 01", name: "原力一號", category: "360°全景遙操機器人",
+        slug: "force-01", model: "FORCE 01", name: "原力一號", category: "360°全景超遠距遙操機器人",
         tagline: "靈活抵達，全景掌握。",
-        description: "點足或輪足本體，集成全景遙操背包。透過遠程觀察與移動控制，替你進入現場、靠近目標、核查異常。",
+        description: "點足或輪足本體，集成全景遙操背包，支援超遠距遙操（Ultra-range Teleoperation）。透過網絡跨場地進行 BVLOS（Beyond Visual Line of Sight，超視距）觀察與移動控制，靠近目標、核查異常。操作範圍取決於通訊覆蓋與配置。",
         views: sceneViews("zh-hk", "force-01"),
         highlights: [{ value: "360°", label: "全景觀察" }, { value: "4 × 1080p", label: "最高 60 fps 影片編碼" }, { value: "4G / 5G", label: "遠程連接" }],
         benefits: [
           { title: "先看清，再決定是否到場", description: "四路低照度攝像頭覆蓋機器人周邊視野，幫助遠程操作人員查看盲區、確認現場變化。" },
-          { title: "人在遠方，也能靠近查看", description: "結合即時圖傳與移動控制，遠程調整位置和觀察角度，減少反覆到訪與人員暴露。" },
+          { title: "人在遠方，也能靠近查看", description: "結合即時圖傳與超遠距遙操，跨場地調整機器人位置和觀察角度，減少反覆到訪與人員暴露。" },
           { title: "按場地選擇抵達方式", description: "點足與輪足兩種形態，適配不同通行路線與地面條件；按任務擴展所需感知載荷。" }
         ],
         specs: [

@@ -87,13 +87,13 @@ const content = {
       slogan: "AI Force Be With You",
       title: "Intelligent Robotic Solutions for Physical Security",
       subtitle:
-        "We combine AI perception, autonomous patrol, teleoperation, motion control and service delivery to provide rapidly deployable robotic solutions for security patrol and other physical-security scenarios.",
+        "We combine AI perception, autonomous patrol, ultra-range teleoperation, motion control and service delivery to provide rapidly deployable robotic solutions for security patrol and other physical-security scenarios.",
       primaryCta: "Request a Demo",
       secondaryCta: "Explore Technology",
       stats: [
   { value: "Autonomous Patrol", label: "Autonomous navigation and intelligent patrol execution" },
 
-  { value: "Teleoperation", label: "Remote control and real-time robotic operation" },
+  { value: "Ultra-range Teleoperation", label: "Ultra-range teleoperation and real-time robotic operation" },
 
   { value: "AI +", label: "Perception, decision-making and edge intelligence" },
 
@@ -104,25 +104,25 @@ const content = {
       eyebrow: "WHY ROBOTIC SECURITY",
       title: "Deploy robotic systems into high-risk, repetitive and blind-spot operational environments.",
       copy:
-        "Security patrol still depends on high-cost patrol labor, manual observation and delayed response. Hyper AIForce combines autonomous patrol, AI perception and teleoperation into a deployable robotic operating platform.",
+        "Security patrol still depends on high-cost patrol labor, manual observation and delayed response. Hyper AIForce combines autonomous patrol, AI perception and ultra-range teleoperation into a deployable robotic operating platform.",
       points: [
         "Labor-intensive patrols are costly and hard to scale.",
         "Repetitive night patrols and perimeter checks make it harder to maintain consistent attention.",
         "Hazardous, remote or weather-exposed sites increase personnel risk.",
-        "Critical incidents need real-time alerts, evidence and teleoperation."
+        "Critical incidents need real-time alerts, evidence and ultra-range teleoperation."
       ]
     },
     overview: {
       eyebrow: "Solutions",
       title: "Building a robotic solution loop",
       copy:
-        "Autonomous patrol and teleoperation form the core capabilities, while the RSP scheduling platform and backpack-and-sensor integration provide the software and hardware foundation for deployment.",
+        "Autonomous patrol and ultra-range teleoperation form the core capabilities, while the RSP scheduling platform and backpack-and-sensor integration provide the software and hardware foundation for deployment.",
       steps: [
         { icon: "PackageCheck", label: "Task Assignment" },
         { icon: "CloudCog", label: "RSP Orchestration" },
         { icon: "Route", label: "Autonomous Patrol and Execution" },
         { icon: "Activity", label: "Payload Sensing and AI Detection" },
-        { icon: "Radio", label: "Remote Intervention for Exceptions" },
+        { icon: "Radio", label: "Ultra-range Intervention for Exceptions" },
         { icon: "BadgeCheck", label: "Inspection Records and Data Loop" }
       ]
     },
@@ -152,12 +152,12 @@ const content = {
       },
       {
         number: "02",
-        label: "Core Capability · Teleoperation",
-        title: "Seamless Remote Intervention and Real-Time Robot Control",
+        label: "Core Capability · Ultra-range Teleoperation",
+        title: "Ultra-range Teleoperation Beyond Line of Sight",
         description:
-          "When unexpected conditions, challenging terrain, or situations requiring human judgment arise, remote operators can seamlessly connect to on-site robots and use low-latency live video for remote teleoperation.",
+          "Ultra-range teleoperation connects operators with robots across distant sites for BVLOS (Beyond Visual Line of Sight) operation. Live video and motion control support human intervention when judgment is needed. Operating distance and latency depend on network coverage, link quality and deployment configuration.",
         capabilities: [
-          "Remote Robot Access",
+          "Robot Access Across Distant Sites",
           "Low-Latency Video and Control",
           "Seamless Manual Handover",
           "Rapid Exception Response"
@@ -166,8 +166,8 @@ const content = {
         mediaType: "image",
         mediaSrc: "/images/capabilities/teleoperation.png",
         poster: null,
-        mediaAlt: "Remote teleoperation workstation",
-        mediaNote: "Teleoperation Workstation",
+        mediaAlt: "Remote ultra-range teleoperation workstation",
+        mediaNote: "Ultra-range Teleoperation Workstation",
         mediaSlots: [],
         resourceKey: "media.remoteTeleoperation",
         mediaPlaceholderText: "Approved real media can replace this asset through the field above.",
@@ -284,7 +284,7 @@ const content = {
       eyebrow: "About Hyper AIForce",
       title: "Intelligent Robotics Provider for Physical Security Solutions",
       copy: [
-        "Hyper AIForce deploys robots for physical-security applications, including security patrol, warehousing and logistics, and community security. Its offering combines autonomous patrol, teleoperation and multi-robot scheduling with end-to-end deployment and operations support.",
+        "Hyper AIForce deploys robots for physical-security applications, including security patrol, warehousing and logistics, and community security. Its offering combines autonomous patrol, ultra-range teleoperation and multi-robot scheduling with end-to-end deployment and operations support.",
         "Hyper AIForce uses robots to handle night-time, repetitive and high-risk autonomous inspection tasks, with remote operators taking control when needed. Customers gain wider inspection coverage, lower personnel exposure and more reliable operations."
       ],
       bullets: [
@@ -313,7 +313,7 @@ const content = {
       },
       options: ["FORCE 01", "FORCE 05", 
         "Autonomous Patrol",
-        "Teleoperation",
+        "Ultra-range Teleoperation",
         "RSP",
         "Backpack and Sensors",
         "Others"
@@ -385,12 +385,12 @@ const content = {
       slogan: "AI Force Be With You",
       title: "面向物理安全的智能機器人解決方案",
       subtitle:
-        "我們將 AI 感知、自主巡航、遠程遙操、運動控制與場景交付能力相結合，為安防巡邏等物理安全場景提供快速部署的機器人解決方案。",
+        "我們將 AI 感知、自主巡航、超遠距遙操、運動控制與場景交付能力相結合，為安防巡邏等物理安全場景提供快速部署的機器人解決方案。",
       primaryCta: "預約演示",
       secondaryCta: "了解技術",
       stats: [
         { value: "自主巡航", label: "自主巡邏與智能巡檢執行能力" },
-        { value: "遠程接管", label: "低延遲遠程操控與緊急介入能力" },
+        { value: "超遠距接管", label: "低延遲超遠距遙操與緊急介入能力" },
         { value: "AI 感知", label: "異常識別與多傳感器融合能力" },
         { value: "7×24 運行", label: "持續運行與全天候覆蓋能力" }
       ]
@@ -399,7 +399,7 @@ const content = {
       eyebrow: "為什麼需要機器人安防",
       title: "將機器人部署至高風險、重複性及有視野盲區的作業環境中",
       copy:
-        "安防巡邏仍高度依賴人工巡邏、現場觀察和事後處置。超流智能將自主巡航、AI 異常識別與遠程接管結合，形成可持續運行的機器人巡邏能力。",
+        "安防巡邏仍高度依賴人工巡邏、現場觀察和事後處置。超流智能將自主巡航、AI 異常識別與超遠距接管結合，形成可持續運行的機器人巡邏能力。",
       points: [
         "大範圍巡邏依賴人力，成本高且難以長期覆蓋",
         "人在夜間、周界與重複檢查容易出現注意力下降",
@@ -411,13 +411,13 @@ const content = {
       eyebrow: "解決方案",
       title: "構建機器人解決方案閉環",
       copy:
-        "自主巡航與遠程遙操構成核心能力，RSP 調度平台與背包、傳感器集成提供軟硬件產品基礎，支援機器人部署與持續營運。",
+        "自主巡航與超遠距遙操構成核心能力，RSP 調度平台與背包、傳感器集成提供軟硬件產品基礎，支援機器人部署與持續營運。",
       steps: [
         { icon: "PackageCheck", label: "任務下發" },
         { icon: "CloudCog", label: "RSP 統一調度" },
         { icon: "Route", label: "自主巡航與任務執行" },
         { icon: "Activity", label: "載荷採集與 AI 識別" },
-        { icon: "Radio", label: "異常觸發遠程接管" },
+        { icon: "Radio", label: "異常觸發超遠距接管" },
         { icon: "BadgeCheck", label: "巡檢記錄與數據閉環" }
       ]
     },
@@ -442,17 +442,17 @@ const content = {
       },
       {
         number: "02",
-        label: "核心能力 · 遠程操控",
+        label: "核心能力 · 超遠距遙操",
         title: "即時介入，精準接管",
         description:
-          "當遇到突發狀況、複雜地形或需要人工判斷的情形時，遠程操作員可無縫連接現場機器人，通過低時延即時視頻實現遠程遙操。",
-        capabilities: ["遠程機器人接入", "低時延視頻與控制", "自主與人工模式無縫切換", "異常情況快速響應"],
+          "超遠距遙操（Ultra-range Teleoperation）透過網絡連接異地操作員與現場機器人，支援 BVLOS（Beyond Visual Line of Sight，超視距）作業。遇到突發狀況、複雜地形或需要人工判斷時，操作員可藉助即時視頻與移動控制介入。操作距離與時延取決於通訊覆蓋、鏈路質素及部署配置。",
+        capabilities: ["跨場地機器人接入", "低時延視頻與控制", "自主與人工模式無縫切換", "異常情況快速響應"],
         layout: "media-right",
         mediaType: "image",
         mediaSrc: "/images/capabilities/teleoperation.png",
         poster: null,
-        mediaAlt: "遠程遙操工作台",
-        mediaNote: "遠程遙操工作台",
+        mediaAlt: "超遠距遙操工作台",
+        mediaNote: "超遠距遙操工作台",
         mediaSlots: [],
         resourceKey: "media.remoteTeleoperation",
         mediaPlaceholderText: "可通過上方字段替換為已確認的真實素材。",
@@ -561,8 +561,8 @@ const content = {
       eyebrow: "關於超流智能",
       title: "智能機器人物理安全解決方案服務商",
       copy: [
-        "超流智能專注於機器人在安防巡邏、物流倉儲及社區安防等物理安全場景中的應用，圍繞自主巡航、遠程遙操與多機調度，提供從方案配置、部署調試到持續運維的服務。",
-        "超流智能通過機器人承擔夜間、重複及高風險的自主巡檢任務，並在需要時由人工遠程遙操，幫助客戶擴大巡檢覆蓋、降低人員暴露風險，實現更高效、更穩定的長期營運。"
+        "超流智能專注於機器人在安防巡邏、物流倉儲及社區安防等物理安全場景中的應用，圍繞自主巡航、超遠距遙操與多機調度，提供從方案配置、部署調試到持續運維的服務。",
+        "超流智能通過機器人承擔夜間、重複及高風險的自主巡檢任務，並在需要時由人工超遠距遙操，幫助客戶擴大巡檢覆蓋、降低人員暴露風險，實現更高效、更穩定的長期營運。"
       ],
       bullets: [
         "面向物理世界產業的具身智能",
@@ -587,7 +587,7 @@ const content = {
         interest: "感興趣的產品 / 方案",
         message: "需求描述"
       },
-      options: ["FORCE 01 原力一號", "FORCE 05 原力五號", "自主巡航", "遠程遙操", "RSP", "背包與傳感器", "其他"],
+      options: ["FORCE 01 原力一號", "FORCE 05 原力五號", "自主巡航", "超遠距遙操", "RSP", "背包與傳感器", "其他"],
       countryCodes: [
         { value: "+852", label: "香港（+852）" },
         { value: "+86", label: "中國內地（+86）" },
@@ -654,12 +654,12 @@ const content = {
       slogan: "AI Force Be With You",
       title: "面向物理安全的智能机器人解决方案",
       subtitle:
-        "我们将 AI 感知、自主巡航、远程遥操、运动控制与场景交付能力相结合，为安防巡逻等物理安全场景提供快速部署的机器人解决方案。",
+        "我们将 AI 感知、自主巡航、超远距遥操、运动控制与场景交付能力相结合，为安防巡逻等物理安全场景提供快速部署的机器人解决方案。",
       primaryCta: "预约演示",
       secondaryCta: "了解技术",
       stats: [
         { value: "自主巡航", label: "自主巡逻与智能巡检执行能力" },
-        { value: "远程接管", label: "低延迟远程操控与紧急介入能力" },
+        { value: "超远距接管", label: "低延迟超远距遥操与紧急介入能力" },
         { value: "AI 感知", label: "异常识别与多传感器融合能力" },
         { value: "7×24 运行", label: "持续运行与全天候覆盖能力" }
       ]
@@ -668,7 +668,7 @@ const content = {
       eyebrow: "为什么需要机器人安防",
       title: "将机器人部署至高风险、重复性及有视野盲区的作业环境中",
       copy:
-        "安防巡逻仍高度依赖人工巡逻、现场观察和事后处置。超流智能将自主巡航、AI 异常识别与远程接管结合，形成可持续运行的机器人巡逻能力。",
+        "安防巡逻仍高度依赖人工巡逻、现场观察和事后处置。超流智能将自主巡航、AI 异常识别与超远距接管结合，形成可持续运行的机器人巡逻能力。",
       points: [
         "大范围巡逻依赖人力，成本高且难以长期覆盖",
         "人在夜间、周界与重复检查容易出现注意力下降",
@@ -680,13 +680,13 @@ const content = {
       eyebrow: "解决方案",
       title: "构建机器人解决方案闭环",
       copy:
-        "自主巡航与远程遥操构成核心能力，RSP 调度平台与背包、传感器集成提供软硬件产品基础，支持机器人部署与持续运营。",
+        "自主巡航与超远距遥操构成核心能力，RSP 调度平台与背包、传感器集成提供软硬件产品基础，支持机器人部署与持续运营。",
       steps: [
         { icon: "PackageCheck", label: "任务下发" },
         { icon: "CloudCog", label: "RSP 统一调度" },
         { icon: "Route", label: "自主巡航与任务执行" },
         { icon: "Activity", label: "载荷采集与 AI 识别" },
-        { icon: "Radio", label: "异常触发远程接管" },
+        { icon: "Radio", label: "异常触发超远距接管" },
         { icon: "BadgeCheck", label: "巡检记录与数据闭环" }
       ]
     },
@@ -711,17 +711,17 @@ const content = {
       },
       {
         number: "02",
-        label: "核心能力 · 远程操控",
+        label: "核心能力 · 超远距遥操",
         title: "即时介入，精准接管",
         description:
-          "当遇到突发状况、复杂地形或需要人工判断的情形时，远程操作员可无缝连接现场机器人，通过低时延实时视频实现远程遥操。",
-        capabilities: ["远程机器人接入", "低时延视频与控制", "自主与人工模式无缝切换", "异常情况快速响应"],
+          "超远距遥操（Ultra-range Teleoperation）通过网络连接异地操作员与现场机器人，支持 BVLOS（Beyond Visual Line of Sight，超视距）作业。遇到突发状况、复杂地形或需要人工判断时，操作员可借助实时视频与移动控制介入。操作距离与时延取决于通信覆盖、链路质量及部署配置。",
+        capabilities: ["跨场地机器人接入", "低时延视频与控制", "自主与人工模式无缝切换", "异常情况快速响应"],
         layout: "media-right",
         mediaType: "image",
         mediaSrc: "/images/capabilities/teleoperation.png",
         poster: null,
-        mediaAlt: "远程遥操工作台",
-        mediaNote: "远程遥操工作台",
+        mediaAlt: "超远距遥操工作台",
+        mediaNote: "超远距遥操工作台",
         mediaSlots: [],
         resourceKey: "media.remoteTeleoperation",
         mediaPlaceholderText: "可通过上方字段替换为已确认的真实素材。",
@@ -830,8 +830,8 @@ const content = {
       eyebrow: "关于超流智能",
       title: "智能机器人物理安全解决方案服务商",
       copy: [
-        "超流智能专注于机器人在安防巡逻、物流仓储和社区安防等物理安全场景中的应用，围绕自主巡航、远程遥操与多机调度，提供从方案配置、部署调试到持续运营的一站式服务。",
-        "超流智能赋能客户构建自主巡检与远程遥操相结合的机器人巡检方案，让机器人承担夜间、重复性及高风险任务，并在复杂情况或异常事件发生时由人工及时远程介入，帮助客户扩大巡检覆盖范围、降低人员暴露风险，提升长期运营效率与稳定性。"
+        "超流智能专注于机器人在安防巡逻、物流仓储和社区安防等物理安全场景中的应用，围绕自主巡航、超远距遥操与多机调度，提供从方案配置、部署调试到持续运营的一站式服务。",
+        "超流智能赋能客户构建自主巡检与超远距遥操相结合的机器人巡检方案，让机器人承担夜间、重复性及高风险任务，并在复杂情况或异常事件发生时由人工及时超远距介入，帮助客户扩大巡检覆盖范围、降低人员暴露风险，提升长期运营效率与稳定性。"
       ],
       bullets: [
         "面向物理世界产业的具身智能",
@@ -856,7 +856,7 @@ const content = {
         interest: "感兴趣的产品 / 方案",
         message: "需求描述"
       },
-      options: ["FORCE 01 原力一号", "FORCE 05 原力五号", "自主巡航", "远程遥操", "RSP", "背包与传感器", "其他"],
+      options: ["FORCE 01 原力一号", "FORCE 05 原力五号", "自主巡航", "超远距遥操", "RSP", "背包与传感器", "其他"],
       countryCodes: [
         { value: "+852", label: "香港（+852）" },
         { value: "+86", label: "中国内地（+86）" },

@@ -17,7 +17,7 @@ export function PatrolStatusCard({ locale, snapshot }: PatrolStatusCardProps) {
         points: "巡检点位",
         anomaly: "异常事件",
         archived: "数据已归档",
-        remote: "远程接管已完成"
+        remote: "超远距接管已完成"
       }
     : {
         eyebrow: "INSPECTION RECORD",
@@ -25,7 +25,7 @@ export function PatrolStatusCard({ locale, snapshot }: PatrolStatusCardProps) {
         points: "PATROL POINTS",
         anomaly: "ANOMALIES",
         archived: "DATA ARCHIVED",
-        remote: "REMOTE TAKEOVER COMPLETE"
+        remote: "ULTRA-RANGE TAKEOVER COMPLETE"
       };
 
   return (
