@@ -242,11 +242,11 @@ const content = {
         },
         {
           icon: "Building2",
-          label: sphereStory("en", "hospital").title,
-          description: sphereStory("en", "hospital").body,
+          label: sphereStory("en", "emergency").title,
+          description: sphereStory("en", "emergency").body,
           keywords: ["Remote Observation", "Site Coordination"],
-          image: "/images/products/scenes-v2/force-05-hospital.webp",
-          imageAlt: "Spherical robot outside a hospital emergency entrance"
+          image: "/images/products/force05-20261109/force-05-emergency.webp",
+          imageAlt: "FORCE 05 in an illustrative robot-assisted emergency assessment scenario"
         },
         {
           icon: "Siren",
@@ -517,11 +517,11 @@ const content = {
         },
         {
           icon: "Building2",
-          label: sphereStory("zh-cn", "hospital").title,
-          description: sphereStory("zh-cn", "hospital").body,
+          label: sphereStory("zh-cn", "emergency").title,
+          description: sphereStory("zh-cn", "emergency").body,
           keywords: ["远程观察", "现场协调"],
-          image: "/images/products/scenes-v2/force-05-hospital.webp",
-          imageAlt: "球形機器人在醫院急診入口巡查"
+          image: "/images/products/force05-20261109/force-05-emergency.webp",
+          imageAlt: "FORCE 05 輔助應急現場評估的場景示意"
         },
         {
           icon: "Siren",
@@ -786,11 +786,11 @@ const content = {
         },
         {
           icon: "Building2",
-          label: sphereStory("zh-hk", "hospital").title,
-          description: sphereStory("zh-hk", "hospital").body,
+          label: sphereStory("zh-hk", "emergency").title,
+          description: sphereStory("zh-hk", "emergency").body,
           keywords: ["遠端觀察", "現場協調"],
-          image: "/images/products/scenes-v2/force-05-hospital.webp",
-          imageAlt: "球形机器人在医院急诊入口巡查"
+          image: "/images/products/force05-20261109/force-05-emergency.webp",
+          imageAlt: "FORCE 05 辅助应急现场评估的场景示意"
         },
         {
           icon: "Siren",

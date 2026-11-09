@@ -1,6 +1,16 @@
 import type { Locale } from "@/data/hyper";
 
 const stories = {
+  testing: [
+    ["Two platforms in an outdoor test environment", "Explore robot mobility and on-site observation in an outdoor testing environment. Deployment routes and communications are assessed for each site."],
+    ["双平台，走进户外测试环境", "在户外测试环境中探索机器人的移动与现场观察能力，按场地评估运行路线、地面条件及通信覆盖。"],
+    ["雙平台，走進戶外測試環境", "在戶外測試環境中探索機械人的移動與現場觀察能力，按場地評估運行路線、地面條件及通訊覆蓋。"],
+  ],
+  emergency: [
+    ["Assess the scene from a distance", "A robot-assisted emergency assessment scenario. Define operating boundaries, communications and specialist responsibilities before deployment."],
+    ["拉开距离，辅助现场评估", "机器人辅助应急现场评估的场景示意。部署前需明确运行边界、通信条件与专业人员职责。"],
+    ["拉開距離，輔助現場評估", "機械人輔助應急現場評估的場景示意。部署前需明確運行邊界、通訊條件與專業人員職責。"],
+  ],
   park: [
     ["A presence along everyday routes", "Observe park paths and shared spaces remotely, helping teams check conditions before sending staff."],
     ["沿日常路线，延伸现场视野", "从公园步道到社区公共空间，远程查看现场情况，为管理人员安排巡查提供依据。"],

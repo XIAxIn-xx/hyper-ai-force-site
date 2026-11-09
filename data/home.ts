@@ -68,9 +68,9 @@ export const homeCopy: Record<Locale, HomeCopy> = {
     cooperation: {
       eyebrow: "08 / WORK WITH US", title: "Deployment.\nIntegration. Partnership.", body: "Discuss robotic platform requirements, system integration and project delivery with Hyper AIForce.", cta: "Discuss Your Project", secondary: "Contact Us",
       items: [
-        { title: "RaaS — Robotics as a Service", body: "Flexible robotic deployment through service-oriented models." },
         { title: "Direct Purchase", body: "Robotic platforms and supporting systems for long-term operations." },
-        { title: "Integration & Partnership", body: "Collaboration opportunities for integrators, distributors, and technology partners." }
+        { title: "Integration & Partnership", body: "Collaboration opportunities for integrators, distributors, and technology partners." },
+        { title: "RaaS — Robotics as a Service", body: "Flexible robotic deployment through service-oriented models." }
       ]
     }
   },
@@ -108,9 +108,9 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       visionLabel: "我们的愿景", vision: { title: "一个没有边界的世界。", body: "让距离与危险，不再定义人类能力的边界。" }
     },
     cooperation: { eyebrow: "08 / 携手合作", title: "部署、集成\n与项目合作。", body: "围绕机器人选型、系统集成与项目交付，建立清晰的合作路径。", cta: "沟通项目需求", secondary: "联系我们", items: [
-      { title: "RaaS — 机器人即服务", body: "通过服务模式，灵活部署机器人。" },
       { title: "直接采购", body: "为长期作业提供机器人平台与配套系统。" },
-      { title: "集成与合作", body: "面向集成商、经销商及技术伙伴的合作机会。" }
+      { title: "集成与合作", body: "面向集成商、经销商及技术伙伴的合作机会。" },
+      { title: "RaaS — 机器人即服务", body: "通过服务模式，灵活部署机器人。" }
     ] }
   },
   "zh-hk": {
@@ -147,9 +147,9 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       visionLabel: "我們的願景", vision: { title: "一個沒有邊界的世界。", body: "讓距離與危險，不再定義人類能力的邊界。" }
     },
     cooperation: { eyebrow: "08 / 攜手合作", title: "部署、整合\n與項目合作。", body: "圍繞機器人選型、系統整合與項目交付，建立清晰的合作路徑。", cta: "溝通項目需求", secondary: "聯絡我們", items: [
-      { title: "RaaS — 機械人即服務", body: "透過服務模式，靈活部署機械人。" },
       { title: "直接採購", body: "為長期作業提供機械人平台與配套系統。" },
-      { title: "整合與合作", body: "面向整合商、經銷商及技術夥伴的合作機會。" }
+      { title: "整合與合作", body: "面向整合商、經銷商及技術夥伴的合作機會。" },
+      { title: "RaaS — 機械人即服務", body: "透過服務模式，靈活部署機械人。" }
     ] }
   }
 };

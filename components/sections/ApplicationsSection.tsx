@@ -37,6 +37,7 @@ export function ApplicationsSection({ content }: ApplicationsSectionProps) {
           {content.applications.items.map((item, index) => {
             const Icon = getIcon(item.icon);
             const isActive = activeIndex === index;
+            const isSphereScene = item.image.includes("/force05-20261109/");
 
             return (
               <Reveal
@@ -53,7 +54,7 @@ export function ApplicationsSection({ content }: ApplicationsSectionProps) {
                   onFocus={() => setActiveIndex(index)}
                   onClick={() => setActiveIndex(index)}
                   className={`group relative flex h-full min-h-[128px] w-full overflow-hidden rounded-[var(--card-radius)] border text-left outline-none transition-[border-color,box-shadow] duration-500 ${
-                    isActive
+                    isSphereScene && isActive ? "min-h-[560px] bg-[var(--bg-dark)] md:min-h-0 border-orange-200/55 focus-visible:ring-2 focus-visible:ring-orange-300/80" : isActive
                       ? "border-orange-200/55 shadow-[0_18px_50px_rgba(0,0,0,0.28)] focus-visible:ring-2 focus-visible:ring-orange-300/80"
                       : "border-white/12 focus-visible:border-orange-300/60 focus-visible:ring-2 focus-visible:ring-orange-300/80"
                   }`}
@@ -63,9 +64,9 @@ export function ApplicationsSection({ content }: ApplicationsSectionProps) {
                     alt={item.imageAlt}
                     fill
                     sizes="(max-width: 767px) 100vw, 60vw"
-                    className={`object-cover transition duration-700 ease-out ${isActive ? "scale-105 brightness-[0.72]" : "brightness-[0.42] group-hover:scale-105 group-hover:brightness-[0.56]"}`}
+                    className={`object-cover transition duration-700 ease-out ${isSphereScene && isActive ? "!h-[55%] !scale-100 object-bottom" : ""} ${isActive ? "scale-105 brightness-[0.72]" : "brightness-[0.42] group-hover:scale-105 group-hover:brightness-[0.56]"}`}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg-dark)] via-[var(--bg-dark)]/35 to-[var(--bg-dark)]/5" />
+                  <div className={`absolute inset-0 bg-gradient-to-t from-[var(--bg-dark)] via-[var(--bg-dark)]/35 to-[var(--bg-dark)]/5 ${isSphereScene && isActive ? "hidden" : ""}`} />
                   <div className="absolute inset-x-0 bottom-0 p-5 md:p-7">
                     <div className="flex items-end justify-between gap-4">
                       <div className="min-w-0">

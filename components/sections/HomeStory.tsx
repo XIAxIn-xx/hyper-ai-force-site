@@ -10,10 +10,10 @@ import { localizedPath } from "@/lib/site";
 import styles from "./HomeStory.module.css";
 
 const applicationImages = [
-  { src: "/images/products/scenes-v2/force-05-street.webp", width: 1672, height: 941 },
+  { src: "/images/products/force05-20261109/force-05-street.webp", width: 1672, height: 941 },
   { src: "/images/products/scenes-v2/force-01-factory.webp", width: 1843, height: 853 },
   { src: "/images/products/scenes-v2/force-01-warehouse.webp", width: 1672, height: 941 },
-  { src: "/images/products/scenes-v2/force-05-solar.webp", width: 1672, height: 941 }
+  { src: "/images/products/force05-20261109/force-05-solar.webp", width: 1672, height: 941 }
 ];
 const valueIcons = [ShieldCheck, RadioTower, Timer];
 
@@ -48,7 +48,7 @@ export function HomeStory({ locale }: { locale: Locale }) {
               <div className={styles.productDetails}>
                 <p className={styles.category}>{item.category}</p>
                 <h3 className={styles.productName}>{product.model}</h3>
-                <p className={styles.body}>{product.slug === "force-05" ? sphereStory(locale, "park").body : item.body}</p>
+                <p className={styles.body}>{product.slug === "force-05" ? sphereStory(locale, "testing").body : item.body}</p>
                 <Link href={productPath(locale, product.slug)} className={styles.textLink}>{item.cta}<ArrowUpRight size={18} aria-hidden="true" /></Link>
               </div>
             </article>;
