@@ -48,7 +48,7 @@ export function HomeStory({ locale }: { locale: Locale }) {
               <div className={styles.productDetails}>
                 <p className={styles.category}>{item.category}</p>
                 <h3 className={styles.productName}>{product.model}</h3>
-                <p className={styles.body}>{product.slug === "force-05" ? sphereStory(locale, "testing").body : item.body}</p>
+                <p className={styles.body}>{product.slug === "force-05" ? sphereStory(locale, "parking").body : item.body}</p>
                 <Link href={productPath(locale, product.slug)} className={styles.textLink}>{item.cta}<ArrowUpRight size={18} aria-hidden="true" /></Link>
               </div>
             </article>;

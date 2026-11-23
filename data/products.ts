@@ -27,7 +27,7 @@ function sceneViews(locale: Locale, slug: ProductSlug): Product["views"] {
     { file: "street", labels: ["Street patrol", "街道巡逻", "街道巡邏"], width: 1672, height: 941, weight: undefined },
     { file: "solar", labels: ["Solar farm", "光伏农场", "光伏農場"], width: 1672, height: 941, weight: undefined },
     { file: "emergency", labels: ["Emergency assessment", "应急现场评估", "應急現場評估"], width: 1827, height: 861, weight: undefined },
-    { file: "testing", labels: ["Outdoor testing environment", "户外测试环境", "戶外測試環境"], width: 1734, height: 907, weight: undefined },
+    { file: "parking", labels: ["Car park inspection", "车库巡检", "車庫巡檢"], width: 1672, height: 941, weight: undefined },
     { file: "port", labels: ["Port patrol", "港口巡逻", "港口巡邏"], width: 1672, height: 941, weight: undefined },
     { file: "closeup", labels: ["Product close-up", "产品特写", "產品特寫"], width: 1254, height: 1254, weight: undefined },
     { file: "stadium", labels: ["Stadium security", "球场安保", "球場安保"], width: 1672, height: 941, weight: undefined },

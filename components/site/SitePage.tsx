@@ -31,7 +31,7 @@ export function SitePage({ locale, section }: { locale: Locale; section: Section
     solutions: { src: "/images/products/scenes-v2/force-01-station.webp", width: 1846, height: 852 },
     about: { src: "/images/hyper/cyberport-3-exterior.png", width: 1558, height: 1010 },
     resources: { src: "/images/products/scenes-v2/force-01-warehouse.webp", width: 1672, height: 941 },
-    contact: { src: "/images/hyper/19w-building.webp", width: 1360, height: 927 },
+    contact: { src: "/images/hyper/contact-office.jpg", width: 650, height: 433 },
   };
   const heroImage = heroImages[section];
   const brandName = locale === "en" ? "HYPER AIFORCE" : "超流智能";
