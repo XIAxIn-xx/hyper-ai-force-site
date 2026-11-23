@@ -1,10 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import { imageSrc, videos } from "@/lib/media";
+import { videos } from "@/lib/media";
 import { BackgroundVideo } from "@/components/site/BackgroundVideo";
 
-const posterSrc = imageSrc("/images/generated/glp-robot-inspection-poster.jpg");
+const posterSrc = "/images/generated/glp-case-study-b-poster-20261123.jpg";
 export function CaseStudyMedia({ alt, className = "" }: { alt: string; className?: string }) {
   return <div className={`absolute overflow-hidden bg-[var(--bg-dark)] ${className}`}>
     <Image src={posterSrc} alt={alt} fill unoptimized sizes="100vw"

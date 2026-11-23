@@ -22,5 +22,6 @@ export const videos = {
   "heroDesktop": "/videos/optimized/heroDesktop-149af0196981.mp4",
   "heroMobile": "/videos/optimized/heroMobile-5fe238c26956.mp4",
   "patrol": "/videos/field/gravel-web.mp4",
-  "caseStudy": "/videos/optimized/caseStudy-d41bb63f7569.mp4"
+  "caseStudy": "/videos/optimized/glp-case-study-b-20261123.mp4",
+  "glpField": "/videos/optimized/glp-case-study-a-20261123.mp4"
 } as const;

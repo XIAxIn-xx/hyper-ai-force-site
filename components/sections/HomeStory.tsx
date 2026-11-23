@@ -1,5 +1,5 @@
 import { sphereStory } from "@/data/sphereScenes";
-import { imageSrc } from "@/lib/media";
+import { imageSrc, videos } from "@/lib/media";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, ArrowRight, ShieldCheck, RadioTower, Timer } from "lucide-react";
@@ -7,6 +7,7 @@ import type { Locale } from "@/data/hyper";
 import { homeCopy } from "@/data/home";
 import { getProducts, productPath } from "@/data/products";
 import { localizedPath } from "@/lib/site";
+import { BackgroundVideo } from "@/components/site/BackgroundVideo";
 import styles from "./HomeStory.module.css";
 
 const applicationImages = [
@@ -106,7 +107,9 @@ export function HomeStory({ locale }: { locale: Locale }) {
       <div className="section-shell">
         <SectionIntro {...copy.field} />
         <div className={styles.caseGrid}>
-          <Link href={casePath} aria-label={copy.field.cta} className={styles.caseImage}><Image unoptimized src={imageSrc("/images/home/glp-field.jpg")} alt={copy.field.imageAlt} width={1280} height={720} sizes="(max-width: 1023px) calc(100vw - 32px), 730px" className={styles.contain} /></Link>
+          <div className={styles.caseImage}>
+            <BackgroundVideo src={videos.glpField} poster="/images/generated/glp-case-study-a-poster-20261123.jpg" label={copy.field.imageAlt} className={styles.caseVideo} />
+          </div>
           <article className={styles.caseCopy}><p className={styles.eyebrow}>GLP</p><h3>{copy.field.name}</h3><p>{copy.field.description}</p><p className={styles.outcome}>{copy.field.outcome}</p><Link href={casePath} className={styles.textLink}>{copy.field.cta}<ArrowUpRight size={18} aria-hidden="true" /></Link></article>
         </div>
       </div>
